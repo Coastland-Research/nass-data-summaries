@@ -1,5 +1,19 @@
 project:
+  type: website
+  output-dir: docs
   title: "nass-data-summaries"
 
+website: 
+  sidebar: false
+  
+repo-url: https://github.com/Coastland-Research/nass-data-summaries.git
+  
+format: 
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-location: left
+    
 editor: visual
 

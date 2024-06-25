@@ -1,11 +1,71 @@
 ---
-title: "nass-data-summaries"
+title: "Nass Data Summary"
 ---
 
-## Nass data summary outline
+## 1. Background
 
-new doc for Nass salmon data report
+introduction to Nass watershed and salmon
 
-```{r}
-1 + 1
-```
+## 2. Summary
+
+## 3. Escapement Goals
+
+## 4. Sockeye Salmon
+
+a.  Area 3
+
+b.  Conservation Units
+
+c.  Streams
+
+d.  Exploitation Rates
+
+## 5. Chinook Salmon
+
+a.  Area 3
+
+b.  Conservation Units
+
+c.  Streams
+
+d.  Exploitation Rates
+
+## Coho Salmon
+
+a.  Area 3
+
+b.  Conservation Units
+
+c.  Streams
+
+d.  Exploitation Rates
+
+## Pink Salmon
+
+a.  Area 3
+
+b.  Conservation Units
+
+c.  Streams
+
+d.  Exploitation Rates
+
+## Chum Salmon
+
+a.  Area 3
+
+b.  Conservation Units
+
+c.  Streams
+
+d.  Exploitation Rates
+
+## Steelhead Trout
+
+a.  Area 3
+
+b.  Conservation Units
+
+c.  Streams
+
+d.  Exploitation Rates
