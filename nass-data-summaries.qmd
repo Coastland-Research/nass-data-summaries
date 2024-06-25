@@ -1,0 +1,11 @@
+---
+title: "nass-data-summaries"
+---
+
+## Nass data summary outline
+
+new doc for Nass salmon data report
+
+```{r}
+1 + 1
+```
