@@ -2,13 +2,63 @@
 title: "Nass Data Summary"
 ---
 
+```{r}
+#| include: false
+
+library(tidyverse)
+library(reshape2)
+```
+
 ## 1. Background
 
 introduction to Nass watershed and salmon
 
 ## 2. Summary
 
+example - modified some code from Joe's Shiny app to make a plot of harvests and escapement by year and CU - this is not very useful to look at, better if broken down by species and smaller timeframes
+
+```{r}
+#| warning: false
+#| message: false
+
+salmon <- readRDS("salmon.rds")
+exploitation <- readRDS("exploitation.rds")
+
+# Exploitation plot    
+ggplot(exploitation, aes(x = Year, y = Fish/100000, fill = Proportion)) + 
+  geom_col(position = "stack") +
+  scale_fill_manual(values = c("gray78", "gray46")) +
+  labs(x = "Year", y = "x100,000 Salmon", title = "Area 3 Exploitation by Year")+
+  facet_wrap(~`Species Name`) +
+  theme(axis.text.x = element_text(angle = 45, hjust=1))
+
+# Salmon data plot
+
+ggplot(salmon, aes(x = `CU Name`, y = Fish/100000, fill = Proportion)) +
+  geom_col() +
+  #theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+  labs(y = "x100,000 Salmon", x = "Conservation Unit", title = "Breakdown by CU")
+
+```
+
+}
+
 ## 3. Escapement Goals
+simple plot of escapement goal and min (minimum?) goal for each species
+```{r}
+#| message: false
+#| echo: false
+
+esc_goals <- read_csv("data/nass salmon escapement goals.csv", show_col_types = FALSE)
+
+esc_reshaped <- melt(esc_goals, id.vars = 'species')
+
+ggplot(esc_reshaped, aes(x = species, y = value, fill=variable)) +
+  geom_col(position='dodge') +
+  ylab("Goal number") +
+  xlab("Species")
+
+```
 
 ## 4. Sockeye Salmon
 
