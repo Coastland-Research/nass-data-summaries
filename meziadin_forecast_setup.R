@@ -60,3 +60,5 @@ mez_forecastr <- all_mezdata_long %>%
          Forecasting_Year = "2024") %>%
   select(Stock_Name, Stock_Species, Stock_Abundance, Forecasting_Year, Run_Year, Brood_Year,
          Age_Class, Average_Terminal_Run)
+
+write.csv(mez_forecastr, "~/coastland/nass-data-summaries/data/mez_forecastr.csv")
