@@ -1,1777 +1,445 @@
-"","Stock_Name","Stock_Species","Stock_Abundance","Forecasting_Year","Run_Year","Brood_Year","Age_Class","Average_Terminal_Run"
-"1","Meziadin","Sockeye","Terminal Run","2024",1954,1951,"3",NA
-"2","Meziadin","Sockeye","Terminal Run","2024",1954,1950,"4",NA
-"3","Meziadin","Sockeye","Terminal Run","2024",1954,1949,"5",NA
-"4","Meziadin","Sockeye","Terminal Run","2024",1954,1948,"6",NA
-"5","Meziadin","Sockeye","Terminal Run","2024",1954,1951,"3",NA
-"6","Meziadin","Sockeye","Terminal Run","2024",1954,1950,"4",NA
-"7","Meziadin","Sockeye","Terminal Run","2024",1954,1949,"5",NA
-"8","Meziadin","Sockeye","Terminal Run","2024",1954,1948,"6",NA
-"9","Meziadin","Sockeye","Terminal Run","2024",1954,1951,"3",NA
-"10","Meziadin","Sockeye","Terminal Run","2024",1954,1950,"4",NA
-"11","Meziadin","Sockeye","Terminal Run","2024",1954,1949,"5",NA
-"12","Meziadin","Sockeye","Terminal Run","2024",1954,1948,"6",NA
-"13","Meziadin","Sockeye","Terminal Run","2024",1954,1951,"3",NA
-"14","Meziadin","Sockeye","Terminal Run","2024",1954,1950,"4",NA
-"15","Meziadin","Sockeye","Terminal Run","2024",1954,1949,"5",NA
-"16","Meziadin","Sockeye","Terminal Run","2024",1954,1948,"6",NA
-"17","Meziadin","Sockeye","Terminal Run","2024",1955,1952,"3",NA
-"18","Meziadin","Sockeye","Terminal Run","2024",1955,1951,"4",NA
-"19","Meziadin","Sockeye","Terminal Run","2024",1955,1950,"5",NA
-"20","Meziadin","Sockeye","Terminal Run","2024",1955,1949,"6",NA
-"21","Meziadin","Sockeye","Terminal Run","2024",1955,1952,"3",NA
-"22","Meziadin","Sockeye","Terminal Run","2024",1955,1951,"4",NA
-"23","Meziadin","Sockeye","Terminal Run","2024",1955,1950,"5",NA
-"24","Meziadin","Sockeye","Terminal Run","2024",1955,1949,"6",NA
-"25","Meziadin","Sockeye","Terminal Run","2024",1955,1952,"3",NA
-"26","Meziadin","Sockeye","Terminal Run","2024",1955,1951,"4",NA
-"27","Meziadin","Sockeye","Terminal Run","2024",1955,1950,"5",NA
-"28","Meziadin","Sockeye","Terminal Run","2024",1955,1949,"6",NA
-"29","Meziadin","Sockeye","Terminal Run","2024",1955,1952,"3",NA
-"30","Meziadin","Sockeye","Terminal Run","2024",1955,1951,"4",NA
-"31","Meziadin","Sockeye","Terminal Run","2024",1955,1950,"5",NA
-"32","Meziadin","Sockeye","Terminal Run","2024",1955,1949,"6",NA
-"33","Meziadin","Sockeye","Terminal Run","2024",1956,1953,"3",NA
-"34","Meziadin","Sockeye","Terminal Run","2024",1956,1952,"4",NA
-"35","Meziadin","Sockeye","Terminal Run","2024",1956,1951,"5",NA
-"36","Meziadin","Sockeye","Terminal Run","2024",1956,1950,"6",NA
-"37","Meziadin","Sockeye","Terminal Run","2024",1956,1953,"3",NA
-"38","Meziadin","Sockeye","Terminal Run","2024",1956,1952,"4",NA
-"39","Meziadin","Sockeye","Terminal Run","2024",1956,1951,"5",NA
-"40","Meziadin","Sockeye","Terminal Run","2024",1956,1950,"6",NA
-"41","Meziadin","Sockeye","Terminal Run","2024",1956,1953,"3",NA
-"42","Meziadin","Sockeye","Terminal Run","2024",1956,1952,"4",NA
-"43","Meziadin","Sockeye","Terminal Run","2024",1956,1951,"5",NA
-"44","Meziadin","Sockeye","Terminal Run","2024",1956,1950,"6",NA
-"45","Meziadin","Sockeye","Terminal Run","2024",1956,1953,"3",NA
-"46","Meziadin","Sockeye","Terminal Run","2024",1956,1952,"4",NA
-"47","Meziadin","Sockeye","Terminal Run","2024",1956,1951,"5",NA
-"48","Meziadin","Sockeye","Terminal Run","2024",1956,1950,"6",NA
-"49","Meziadin","Sockeye","Terminal Run","2024",1957,1954,"3",NA
-"50","Meziadin","Sockeye","Terminal Run","2024",1957,1953,"4",NA
-"51","Meziadin","Sockeye","Terminal Run","2024",1957,1952,"5",NA
-"52","Meziadin","Sockeye","Terminal Run","2024",1957,1951,"6",NA
-"53","Meziadin","Sockeye","Terminal Run","2024",1957,1954,"3",NA
-"54","Meziadin","Sockeye","Terminal Run","2024",1957,1953,"4",NA
-"55","Meziadin","Sockeye","Terminal Run","2024",1957,1952,"5",NA
-"56","Meziadin","Sockeye","Terminal Run","2024",1957,1951,"6",NA
-"57","Meziadin","Sockeye","Terminal Run","2024",1957,1954,"3",NA
-"58","Meziadin","Sockeye","Terminal Run","2024",1957,1953,"4",NA
-"59","Meziadin","Sockeye","Terminal Run","2024",1957,1952,"5",NA
-"60","Meziadin","Sockeye","Terminal Run","2024",1957,1951,"6",NA
-"61","Meziadin","Sockeye","Terminal Run","2024",1957,1954,"3",NA
-"62","Meziadin","Sockeye","Terminal Run","2024",1957,1953,"4",NA
-"63","Meziadin","Sockeye","Terminal Run","2024",1957,1952,"5",NA
-"64","Meziadin","Sockeye","Terminal Run","2024",1957,1951,"6",NA
-"65","Meziadin","Sockeye","Terminal Run","2024",1958,1955,"3",NA
-"66","Meziadin","Sockeye","Terminal Run","2024",1958,1954,"4",NA
-"67","Meziadin","Sockeye","Terminal Run","2024",1958,1953,"5",NA
-"68","Meziadin","Sockeye","Terminal Run","2024",1958,1952,"6",NA
-"69","Meziadin","Sockeye","Terminal Run","2024",1958,1955,"3",NA
-"70","Meziadin","Sockeye","Terminal Run","2024",1958,1954,"4",NA
-"71","Meziadin","Sockeye","Terminal Run","2024",1958,1953,"5",NA
-"72","Meziadin","Sockeye","Terminal Run","2024",1958,1952,"6",NA
-"73","Meziadin","Sockeye","Terminal Run","2024",1958,1955,"3",NA
-"74","Meziadin","Sockeye","Terminal Run","2024",1958,1954,"4",NA
-"75","Meziadin","Sockeye","Terminal Run","2024",1958,1953,"5",NA
-"76","Meziadin","Sockeye","Terminal Run","2024",1958,1952,"6",NA
-"77","Meziadin","Sockeye","Terminal Run","2024",1958,1955,"3",NA
-"78","Meziadin","Sockeye","Terminal Run","2024",1958,1954,"4",NA
-"79","Meziadin","Sockeye","Terminal Run","2024",1958,1953,"5",NA
-"80","Meziadin","Sockeye","Terminal Run","2024",1958,1952,"6",NA
-"81","Meziadin","Sockeye","Terminal Run","2024",1959,1956,"3",NA
-"82","Meziadin","Sockeye","Terminal Run","2024",1959,1955,"4",NA
-"83","Meziadin","Sockeye","Terminal Run","2024",1959,1954,"5",NA
-"84","Meziadin","Sockeye","Terminal Run","2024",1959,1953,"6",NA
-"85","Meziadin","Sockeye","Terminal Run","2024",1959,1956,"3",NA
-"86","Meziadin","Sockeye","Terminal Run","2024",1959,1955,"4",NA
-"87","Meziadin","Sockeye","Terminal Run","2024",1959,1954,"5",NA
-"88","Meziadin","Sockeye","Terminal Run","2024",1959,1953,"6",NA
-"89","Meziadin","Sockeye","Terminal Run","2024",1959,1956,"3",NA
-"90","Meziadin","Sockeye","Terminal Run","2024",1959,1955,"4",NA
-"91","Meziadin","Sockeye","Terminal Run","2024",1959,1954,"5",NA
-"92","Meziadin","Sockeye","Terminal Run","2024",1959,1953,"6",NA
-"93","Meziadin","Sockeye","Terminal Run","2024",1959,1956,"3",NA
-"94","Meziadin","Sockeye","Terminal Run","2024",1959,1955,"4",NA
-"95","Meziadin","Sockeye","Terminal Run","2024",1959,1954,"5",NA
-"96","Meziadin","Sockeye","Terminal Run","2024",1959,1953,"6",NA
-"97","Meziadin","Sockeye","Terminal Run","2024",1960,1957,"3",NA
-"98","Meziadin","Sockeye","Terminal Run","2024",1960,1956,"4",NA
-"99","Meziadin","Sockeye","Terminal Run","2024",1960,1955,"5",NA
-"100","Meziadin","Sockeye","Terminal Run","2024",1960,1954,"6",NA
-"101","Meziadin","Sockeye","Terminal Run","2024",1960,1957,"3",NA
-"102","Meziadin","Sockeye","Terminal Run","2024",1960,1956,"4",NA
-"103","Meziadin","Sockeye","Terminal Run","2024",1960,1955,"5",NA
-"104","Meziadin","Sockeye","Terminal Run","2024",1960,1954,"6",NA
-"105","Meziadin","Sockeye","Terminal Run","2024",1960,1957,"3",NA
-"106","Meziadin","Sockeye","Terminal Run","2024",1960,1956,"4",NA
-"107","Meziadin","Sockeye","Terminal Run","2024",1960,1955,"5",NA
-"108","Meziadin","Sockeye","Terminal Run","2024",1960,1954,"6",NA
-"109","Meziadin","Sockeye","Terminal Run","2024",1960,1957,"3",NA
-"110","Meziadin","Sockeye","Terminal Run","2024",1960,1956,"4",NA
-"111","Meziadin","Sockeye","Terminal Run","2024",1960,1955,"5",NA
-"112","Meziadin","Sockeye","Terminal Run","2024",1960,1954,"6",NA
-"113","Meziadin","Sockeye","Terminal Run","2024",1961,1958,"3",NA
-"114","Meziadin","Sockeye","Terminal Run","2024",1961,1957,"4",NA
-"115","Meziadin","Sockeye","Terminal Run","2024",1961,1956,"5",NA
-"116","Meziadin","Sockeye","Terminal Run","2024",1961,1955,"6",NA
-"117","Meziadin","Sockeye","Terminal Run","2024",1961,1958,"3",NA
-"118","Meziadin","Sockeye","Terminal Run","2024",1961,1957,"4",NA
-"119","Meziadin","Sockeye","Terminal Run","2024",1961,1956,"5",NA
-"120","Meziadin","Sockeye","Terminal Run","2024",1961,1955,"6",NA
-"121","Meziadin","Sockeye","Terminal Run","2024",1961,1958,"3",NA
-"122","Meziadin","Sockeye","Terminal Run","2024",1961,1957,"4",NA
-"123","Meziadin","Sockeye","Terminal Run","2024",1961,1956,"5",NA
-"124","Meziadin","Sockeye","Terminal Run","2024",1961,1955,"6",NA
-"125","Meziadin","Sockeye","Terminal Run","2024",1961,1958,"3",NA
-"126","Meziadin","Sockeye","Terminal Run","2024",1961,1957,"4",NA
-"127","Meziadin","Sockeye","Terminal Run","2024",1961,1956,"5",NA
-"128","Meziadin","Sockeye","Terminal Run","2024",1961,1955,"6",NA
-"129","Meziadin","Sockeye","Terminal Run","2024",1962,1959,"3",NA
-"130","Meziadin","Sockeye","Terminal Run","2024",1962,1958,"4",NA
-"131","Meziadin","Sockeye","Terminal Run","2024",1962,1957,"5",NA
-"132","Meziadin","Sockeye","Terminal Run","2024",1962,1956,"6",NA
-"133","Meziadin","Sockeye","Terminal Run","2024",1962,1959,"3",NA
-"134","Meziadin","Sockeye","Terminal Run","2024",1962,1958,"4",NA
-"135","Meziadin","Sockeye","Terminal Run","2024",1962,1957,"5",NA
-"136","Meziadin","Sockeye","Terminal Run","2024",1962,1956,"6",NA
-"137","Meziadin","Sockeye","Terminal Run","2024",1962,1959,"3",NA
-"138","Meziadin","Sockeye","Terminal Run","2024",1962,1958,"4",NA
-"139","Meziadin","Sockeye","Terminal Run","2024",1962,1957,"5",NA
-"140","Meziadin","Sockeye","Terminal Run","2024",1962,1956,"6",NA
-"141","Meziadin","Sockeye","Terminal Run","2024",1962,1959,"3",NA
-"142","Meziadin","Sockeye","Terminal Run","2024",1962,1958,"4",NA
-"143","Meziadin","Sockeye","Terminal Run","2024",1962,1957,"5",NA
-"144","Meziadin","Sockeye","Terminal Run","2024",1962,1956,"6",NA
-"145","Meziadin","Sockeye","Terminal Run","2024",1963,1960,"3",NA
-"146","Meziadin","Sockeye","Terminal Run","2024",1963,1959,"4",NA
-"147","Meziadin","Sockeye","Terminal Run","2024",1963,1958,"5",NA
-"148","Meziadin","Sockeye","Terminal Run","2024",1963,1957,"6",NA
-"149","Meziadin","Sockeye","Terminal Run","2024",1963,1960,"3",NA
-"150","Meziadin","Sockeye","Terminal Run","2024",1963,1959,"4",NA
-"151","Meziadin","Sockeye","Terminal Run","2024",1963,1958,"5",NA
-"152","Meziadin","Sockeye","Terminal Run","2024",1963,1957,"6",NA
-"153","Meziadin","Sockeye","Terminal Run","2024",1963,1960,"3",NA
-"154","Meziadin","Sockeye","Terminal Run","2024",1963,1959,"4",NA
-"155","Meziadin","Sockeye","Terminal Run","2024",1963,1958,"5",NA
-"156","Meziadin","Sockeye","Terminal Run","2024",1963,1957,"6",NA
-"157","Meziadin","Sockeye","Terminal Run","2024",1963,1960,"3",NA
-"158","Meziadin","Sockeye","Terminal Run","2024",1963,1959,"4",NA
-"159","Meziadin","Sockeye","Terminal Run","2024",1963,1958,"5",NA
-"160","Meziadin","Sockeye","Terminal Run","2024",1963,1957,"6",NA
-"161","Meziadin","Sockeye","Terminal Run","2024",1964,1961,"3",NA
-"162","Meziadin","Sockeye","Terminal Run","2024",1964,1960,"4",NA
-"163","Meziadin","Sockeye","Terminal Run","2024",1964,1959,"5",NA
-"164","Meziadin","Sockeye","Terminal Run","2024",1964,1958,"6",NA
-"165","Meziadin","Sockeye","Terminal Run","2024",1964,1961,"3",NA
-"166","Meziadin","Sockeye","Terminal Run","2024",1964,1960,"4",NA
-"167","Meziadin","Sockeye","Terminal Run","2024",1964,1959,"5",NA
-"168","Meziadin","Sockeye","Terminal Run","2024",1964,1958,"6",NA
-"169","Meziadin","Sockeye","Terminal Run","2024",1964,1961,"3",NA
-"170","Meziadin","Sockeye","Terminal Run","2024",1964,1960,"4",NA
-"171","Meziadin","Sockeye","Terminal Run","2024",1964,1959,"5",NA
-"172","Meziadin","Sockeye","Terminal Run","2024",1964,1958,"6",NA
-"173","Meziadin","Sockeye","Terminal Run","2024",1964,1961,"3",NA
-"174","Meziadin","Sockeye","Terminal Run","2024",1964,1960,"4",NA
-"175","Meziadin","Sockeye","Terminal Run","2024",1964,1959,"5",NA
-"176","Meziadin","Sockeye","Terminal Run","2024",1964,1958,"6",NA
-"177","Meziadin","Sockeye","Terminal Run","2024",1965,1962,"3",NA
-"178","Meziadin","Sockeye","Terminal Run","2024",1965,1961,"4",NA
-"179","Meziadin","Sockeye","Terminal Run","2024",1965,1960,"5",NA
-"180","Meziadin","Sockeye","Terminal Run","2024",1965,1959,"6",NA
-"181","Meziadin","Sockeye","Terminal Run","2024",1965,1962,"3",NA
-"182","Meziadin","Sockeye","Terminal Run","2024",1965,1961,"4",NA
-"183","Meziadin","Sockeye","Terminal Run","2024",1965,1960,"5",NA
-"184","Meziadin","Sockeye","Terminal Run","2024",1965,1959,"6",NA
-"185","Meziadin","Sockeye","Terminal Run","2024",1965,1962,"3",NA
-"186","Meziadin","Sockeye","Terminal Run","2024",1965,1961,"4",NA
-"187","Meziadin","Sockeye","Terminal Run","2024",1965,1960,"5",NA
-"188","Meziadin","Sockeye","Terminal Run","2024",1965,1959,"6",NA
-"189","Meziadin","Sockeye","Terminal Run","2024",1965,1962,"3",NA
-"190","Meziadin","Sockeye","Terminal Run","2024",1965,1961,"4",NA
-"191","Meziadin","Sockeye","Terminal Run","2024",1965,1960,"5",NA
-"192","Meziadin","Sockeye","Terminal Run","2024",1965,1959,"6",NA
-"193","Meziadin","Sockeye","Terminal Run","2024",1966,1963,"3",NA
-"194","Meziadin","Sockeye","Terminal Run","2024",1966,1962,"4",NA
-"195","Meziadin","Sockeye","Terminal Run","2024",1966,1961,"5",NA
-"196","Meziadin","Sockeye","Terminal Run","2024",1966,1960,"6",NA
-"197","Meziadin","Sockeye","Terminal Run","2024",1966,1963,"3",NA
-"198","Meziadin","Sockeye","Terminal Run","2024",1966,1962,"4",NA
-"199","Meziadin","Sockeye","Terminal Run","2024",1966,1961,"5",NA
-"200","Meziadin","Sockeye","Terminal Run","2024",1966,1960,"6",NA
-"201","Meziadin","Sockeye","Terminal Run","2024",1966,1963,"3",NA
-"202","Meziadin","Sockeye","Terminal Run","2024",1966,1962,"4",NA
-"203","Meziadin","Sockeye","Terminal Run","2024",1966,1961,"5",NA
-"204","Meziadin","Sockeye","Terminal Run","2024",1966,1960,"6",NA
-"205","Meziadin","Sockeye","Terminal Run","2024",1966,1963,"3",NA
-"206","Meziadin","Sockeye","Terminal Run","2024",1966,1962,"4",NA
-"207","Meziadin","Sockeye","Terminal Run","2024",1966,1961,"5",NA
-"208","Meziadin","Sockeye","Terminal Run","2024",1966,1960,"6",NA
-"209","Meziadin","Sockeye","Terminal Run","2024",1967,1964,"3",NA
-"210","Meziadin","Sockeye","Terminal Run","2024",1967,1963,"4",NA
-"211","Meziadin","Sockeye","Terminal Run","2024",1967,1962,"5",NA
-"212","Meziadin","Sockeye","Terminal Run","2024",1967,1961,"6",NA
-"213","Meziadin","Sockeye","Terminal Run","2024",1967,1964,"3",NA
-"214","Meziadin","Sockeye","Terminal Run","2024",1967,1963,"4",NA
-"215","Meziadin","Sockeye","Terminal Run","2024",1967,1962,"5",NA
-"216","Meziadin","Sockeye","Terminal Run","2024",1967,1961,"6",NA
-"217","Meziadin","Sockeye","Terminal Run","2024",1967,1964,"3",NA
-"218","Meziadin","Sockeye","Terminal Run","2024",1967,1963,"4",NA
-"219","Meziadin","Sockeye","Terminal Run","2024",1967,1962,"5",NA
-"220","Meziadin","Sockeye","Terminal Run","2024",1967,1961,"6",NA
-"221","Meziadin","Sockeye","Terminal Run","2024",1967,1964,"3",NA
-"222","Meziadin","Sockeye","Terminal Run","2024",1967,1963,"4",NA
-"223","Meziadin","Sockeye","Terminal Run","2024",1967,1962,"5",NA
-"224","Meziadin","Sockeye","Terminal Run","2024",1967,1961,"6",NA
-"225","Meziadin","Sockeye","Terminal Run","2024",1968,1965,"3",NA
-"226","Meziadin","Sockeye","Terminal Run","2024",1968,1964,"4",NA
-"227","Meziadin","Sockeye","Terminal Run","2024",1968,1963,"5",NA
-"228","Meziadin","Sockeye","Terminal Run","2024",1968,1962,"6",NA
-"229","Meziadin","Sockeye","Terminal Run","2024",1968,1965,"3",NA
-"230","Meziadin","Sockeye","Terminal Run","2024",1968,1964,"4",NA
-"231","Meziadin","Sockeye","Terminal Run","2024",1968,1963,"5",NA
-"232","Meziadin","Sockeye","Terminal Run","2024",1968,1962,"6",NA
-"233","Meziadin","Sockeye","Terminal Run","2024",1968,1965,"3",NA
-"234","Meziadin","Sockeye","Terminal Run","2024",1968,1964,"4",NA
-"235","Meziadin","Sockeye","Terminal Run","2024",1968,1963,"5",NA
-"236","Meziadin","Sockeye","Terminal Run","2024",1968,1962,"6",NA
-"237","Meziadin","Sockeye","Terminal Run","2024",1968,1965,"3",NA
-"238","Meziadin","Sockeye","Terminal Run","2024",1968,1964,"4",NA
-"239","Meziadin","Sockeye","Terminal Run","2024",1968,1963,"5",NA
-"240","Meziadin","Sockeye","Terminal Run","2024",1968,1962,"6",NA
-"241","Meziadin","Sockeye","Terminal Run","2024",1969,1966,"3",NA
-"242","Meziadin","Sockeye","Terminal Run","2024",1969,1965,"4",NA
-"243","Meziadin","Sockeye","Terminal Run","2024",1969,1964,"5",NA
-"244","Meziadin","Sockeye","Terminal Run","2024",1969,1963,"6",NA
-"245","Meziadin","Sockeye","Terminal Run","2024",1969,1966,"3",NA
-"246","Meziadin","Sockeye","Terminal Run","2024",1969,1965,"4",NA
-"247","Meziadin","Sockeye","Terminal Run","2024",1969,1964,"5",NA
-"248","Meziadin","Sockeye","Terminal Run","2024",1969,1963,"6",NA
-"249","Meziadin","Sockeye","Terminal Run","2024",1969,1966,"3",NA
-"250","Meziadin","Sockeye","Terminal Run","2024",1969,1965,"4",NA
-"251","Meziadin","Sockeye","Terminal Run","2024",1969,1964,"5",NA
-"252","Meziadin","Sockeye","Terminal Run","2024",1969,1963,"6",NA
-"253","Meziadin","Sockeye","Terminal Run","2024",1969,1966,"3",NA
-"254","Meziadin","Sockeye","Terminal Run","2024",1969,1965,"4",NA
-"255","Meziadin","Sockeye","Terminal Run","2024",1969,1964,"5",NA
-"256","Meziadin","Sockeye","Terminal Run","2024",1969,1963,"6",NA
-"257","Meziadin","Sockeye","Terminal Run","2024",1970,1967,"3",NA
-"258","Meziadin","Sockeye","Terminal Run","2024",1970,1966,"4",NA
-"259","Meziadin","Sockeye","Terminal Run","2024",1970,1965,"5",NA
-"260","Meziadin","Sockeye","Terminal Run","2024",1970,1964,"6",NA
-"261","Meziadin","Sockeye","Terminal Run","2024",1970,1967,"3",NA
-"262","Meziadin","Sockeye","Terminal Run","2024",1970,1966,"4",NA
-"263","Meziadin","Sockeye","Terminal Run","2024",1970,1965,"5",NA
-"264","Meziadin","Sockeye","Terminal Run","2024",1970,1964,"6",NA
-"265","Meziadin","Sockeye","Terminal Run","2024",1970,1967,"3",NA
-"266","Meziadin","Sockeye","Terminal Run","2024",1970,1966,"4",NA
-"267","Meziadin","Sockeye","Terminal Run","2024",1970,1965,"5",NA
-"268","Meziadin","Sockeye","Terminal Run","2024",1970,1964,"6",NA
-"269","Meziadin","Sockeye","Terminal Run","2024",1970,1967,"3",NA
-"270","Meziadin","Sockeye","Terminal Run","2024",1970,1966,"4",NA
-"271","Meziadin","Sockeye","Terminal Run","2024",1970,1965,"5",NA
-"272","Meziadin","Sockeye","Terminal Run","2024",1970,1964,"6",NA
-"273","Meziadin","Sockeye","Terminal Run","2024",1971,1968,"3",NA
-"274","Meziadin","Sockeye","Terminal Run","2024",1971,1967,"4",NA
-"275","Meziadin","Sockeye","Terminal Run","2024",1971,1966,"5",NA
-"276","Meziadin","Sockeye","Terminal Run","2024",1971,1965,"6",NA
-"277","Meziadin","Sockeye","Terminal Run","2024",1971,1968,"3",NA
-"278","Meziadin","Sockeye","Terminal Run","2024",1971,1967,"4",NA
-"279","Meziadin","Sockeye","Terminal Run","2024",1971,1966,"5",NA
-"280","Meziadin","Sockeye","Terminal Run","2024",1971,1965,"6",NA
-"281","Meziadin","Sockeye","Terminal Run","2024",1971,1968,"3",NA
-"282","Meziadin","Sockeye","Terminal Run","2024",1971,1967,"4",NA
-"283","Meziadin","Sockeye","Terminal Run","2024",1971,1966,"5",NA
-"284","Meziadin","Sockeye","Terminal Run","2024",1971,1965,"6",NA
-"285","Meziadin","Sockeye","Terminal Run","2024",1971,1968,"3",NA
-"286","Meziadin","Sockeye","Terminal Run","2024",1971,1967,"4",NA
-"287","Meziadin","Sockeye","Terminal Run","2024",1971,1966,"5",NA
-"288","Meziadin","Sockeye","Terminal Run","2024",1971,1965,"6",NA
-"289","Meziadin","Sockeye","Terminal Run","2024",1972,1969,"3",NA
-"290","Meziadin","Sockeye","Terminal Run","2024",1972,1968,"4",NA
-"291","Meziadin","Sockeye","Terminal Run","2024",1972,1967,"5",NA
-"292","Meziadin","Sockeye","Terminal Run","2024",1972,1966,"6",NA
-"293","Meziadin","Sockeye","Terminal Run","2024",1972,1969,"3",NA
-"294","Meziadin","Sockeye","Terminal Run","2024",1972,1968,"4",NA
-"295","Meziadin","Sockeye","Terminal Run","2024",1972,1967,"5",NA
-"296","Meziadin","Sockeye","Terminal Run","2024",1972,1966,"6",NA
-"297","Meziadin","Sockeye","Terminal Run","2024",1972,1969,"3",NA
-"298","Meziadin","Sockeye","Terminal Run","2024",1972,1968,"4",NA
-"299","Meziadin","Sockeye","Terminal Run","2024",1972,1967,"5",NA
-"300","Meziadin","Sockeye","Terminal Run","2024",1972,1966,"6",NA
-"301","Meziadin","Sockeye","Terminal Run","2024",1972,1969,"3",NA
-"302","Meziadin","Sockeye","Terminal Run","2024",1972,1968,"4",NA
-"303","Meziadin","Sockeye","Terminal Run","2024",1972,1967,"5",NA
-"304","Meziadin","Sockeye","Terminal Run","2024",1972,1966,"6",NA
-"305","Meziadin","Sockeye","Terminal Run","2024",1973,1970,"3",NA
-"306","Meziadin","Sockeye","Terminal Run","2024",1973,1969,"4",NA
-"307","Meziadin","Sockeye","Terminal Run","2024",1973,1968,"5",NA
-"308","Meziadin","Sockeye","Terminal Run","2024",1973,1967,"6",NA
-"309","Meziadin","Sockeye","Terminal Run","2024",1973,1970,"3",NA
-"310","Meziadin","Sockeye","Terminal Run","2024",1973,1969,"4",NA
-"311","Meziadin","Sockeye","Terminal Run","2024",1973,1968,"5",NA
-"312","Meziadin","Sockeye","Terminal Run","2024",1973,1967,"6",NA
-"313","Meziadin","Sockeye","Terminal Run","2024",1973,1970,"3",NA
-"314","Meziadin","Sockeye","Terminal Run","2024",1973,1969,"4",NA
-"315","Meziadin","Sockeye","Terminal Run","2024",1973,1968,"5",NA
-"316","Meziadin","Sockeye","Terminal Run","2024",1973,1967,"6",NA
-"317","Meziadin","Sockeye","Terminal Run","2024",1973,1970,"3",NA
-"318","Meziadin","Sockeye","Terminal Run","2024",1973,1969,"4",NA
-"319","Meziadin","Sockeye","Terminal Run","2024",1973,1968,"5",NA
-"320","Meziadin","Sockeye","Terminal Run","2024",1973,1967,"6",NA
-"321","Meziadin","Sockeye","Terminal Run","2024",1974,1971,"3",NA
-"322","Meziadin","Sockeye","Terminal Run","2024",1974,1970,"4",NA
-"323","Meziadin","Sockeye","Terminal Run","2024",1974,1969,"5",NA
-"324","Meziadin","Sockeye","Terminal Run","2024",1974,1968,"6",NA
-"325","Meziadin","Sockeye","Terminal Run","2024",1974,1971,"3",NA
-"326","Meziadin","Sockeye","Terminal Run","2024",1974,1970,"4",NA
-"327","Meziadin","Sockeye","Terminal Run","2024",1974,1969,"5",NA
-"328","Meziadin","Sockeye","Terminal Run","2024",1974,1968,"6",NA
-"329","Meziadin","Sockeye","Terminal Run","2024",1974,1971,"3",NA
-"330","Meziadin","Sockeye","Terminal Run","2024",1974,1970,"4",NA
-"331","Meziadin","Sockeye","Terminal Run","2024",1974,1969,"5",NA
-"332","Meziadin","Sockeye","Terminal Run","2024",1974,1968,"6",NA
-"333","Meziadin","Sockeye","Terminal Run","2024",1974,1971,"3",NA
-"334","Meziadin","Sockeye","Terminal Run","2024",1974,1970,"4",NA
-"335","Meziadin","Sockeye","Terminal Run","2024",1974,1969,"5",NA
-"336","Meziadin","Sockeye","Terminal Run","2024",1974,1968,"6",NA
-"337","Meziadin","Sockeye","Terminal Run","2024",1975,1972,"3",NA
-"338","Meziadin","Sockeye","Terminal Run","2024",1975,1971,"4",NA
-"339","Meziadin","Sockeye","Terminal Run","2024",1975,1970,"5",NA
-"340","Meziadin","Sockeye","Terminal Run","2024",1975,1969,"6",NA
-"341","Meziadin","Sockeye","Terminal Run","2024",1975,1972,"3",NA
-"342","Meziadin","Sockeye","Terminal Run","2024",1975,1971,"4",NA
-"343","Meziadin","Sockeye","Terminal Run","2024",1975,1970,"5",NA
-"344","Meziadin","Sockeye","Terminal Run","2024",1975,1969,"6",NA
-"345","Meziadin","Sockeye","Terminal Run","2024",1975,1972,"3",NA
-"346","Meziadin","Sockeye","Terminal Run","2024",1975,1971,"4",NA
-"347","Meziadin","Sockeye","Terminal Run","2024",1975,1970,"5",NA
-"348","Meziadin","Sockeye","Terminal Run","2024",1975,1969,"6",NA
-"349","Meziadin","Sockeye","Terminal Run","2024",1975,1972,"3",NA
-"350","Meziadin","Sockeye","Terminal Run","2024",1975,1971,"4",NA
-"351","Meziadin","Sockeye","Terminal Run","2024",1975,1970,"5",NA
-"352","Meziadin","Sockeye","Terminal Run","2024",1975,1969,"6",NA
-"353","Meziadin","Sockeye","Terminal Run","2024",1976,1973,"3",NA
-"354","Meziadin","Sockeye","Terminal Run","2024",1976,1972,"4",NA
-"355","Meziadin","Sockeye","Terminal Run","2024",1976,1971,"5",NA
-"356","Meziadin","Sockeye","Terminal Run","2024",1976,1970,"6",NA
-"357","Meziadin","Sockeye","Terminal Run","2024",1976,1973,"3",NA
-"358","Meziadin","Sockeye","Terminal Run","2024",1976,1972,"4",NA
-"359","Meziadin","Sockeye","Terminal Run","2024",1976,1971,"5",NA
-"360","Meziadin","Sockeye","Terminal Run","2024",1976,1970,"6",NA
-"361","Meziadin","Sockeye","Terminal Run","2024",1976,1973,"3",NA
-"362","Meziadin","Sockeye","Terminal Run","2024",1976,1972,"4",NA
-"363","Meziadin","Sockeye","Terminal Run","2024",1976,1971,"5",NA
-"364","Meziadin","Sockeye","Terminal Run","2024",1976,1970,"6",NA
-"365","Meziadin","Sockeye","Terminal Run","2024",1976,1973,"3",NA
-"366","Meziadin","Sockeye","Terminal Run","2024",1976,1972,"4",NA
-"367","Meziadin","Sockeye","Terminal Run","2024",1976,1971,"5",NA
-"368","Meziadin","Sockeye","Terminal Run","2024",1976,1970,"6",NA
-"369","Meziadin","Sockeye","Terminal Run","2024",1977,1974,"3",NA
-"370","Meziadin","Sockeye","Terminal Run","2024",1977,1973,"4",NA
-"371","Meziadin","Sockeye","Terminal Run","2024",1977,1972,"5",NA
-"372","Meziadin","Sockeye","Terminal Run","2024",1977,1971,"6",NA
-"373","Meziadin","Sockeye","Terminal Run","2024",1977,1974,"3",NA
-"374","Meziadin","Sockeye","Terminal Run","2024",1977,1973,"4",NA
-"375","Meziadin","Sockeye","Terminal Run","2024",1977,1972,"5",NA
-"376","Meziadin","Sockeye","Terminal Run","2024",1977,1971,"6",NA
-"377","Meziadin","Sockeye","Terminal Run","2024",1977,1974,"3",NA
-"378","Meziadin","Sockeye","Terminal Run","2024",1977,1973,"4",NA
-"379","Meziadin","Sockeye","Terminal Run","2024",1977,1972,"5",NA
-"380","Meziadin","Sockeye","Terminal Run","2024",1977,1971,"6",NA
-"381","Meziadin","Sockeye","Terminal Run","2024",1977,1974,"3",NA
-"382","Meziadin","Sockeye","Terminal Run","2024",1977,1973,"4",NA
-"383","Meziadin","Sockeye","Terminal Run","2024",1977,1972,"5",NA
-"384","Meziadin","Sockeye","Terminal Run","2024",1977,1971,"6",NA
-"385","Meziadin","Sockeye","Terminal Run","2024",1978,1975,"3",NA
-"386","Meziadin","Sockeye","Terminal Run","2024",1978,1974,"4",NA
-"387","Meziadin","Sockeye","Terminal Run","2024",1978,1973,"5",NA
-"388","Meziadin","Sockeye","Terminal Run","2024",1978,1972,"6",NA
-"389","Meziadin","Sockeye","Terminal Run","2024",1978,1975,"3",NA
-"390","Meziadin","Sockeye","Terminal Run","2024",1978,1974,"4",NA
-"391","Meziadin","Sockeye","Terminal Run","2024",1978,1973,"5",NA
-"392","Meziadin","Sockeye","Terminal Run","2024",1978,1972,"6",NA
-"393","Meziadin","Sockeye","Terminal Run","2024",1978,1975,"3",NA
-"394","Meziadin","Sockeye","Terminal Run","2024",1978,1974,"4",NA
-"395","Meziadin","Sockeye","Terminal Run","2024",1978,1973,"5",NA
-"396","Meziadin","Sockeye","Terminal Run","2024",1978,1972,"6",NA
-"397","Meziadin","Sockeye","Terminal Run","2024",1978,1975,"3",NA
-"398","Meziadin","Sockeye","Terminal Run","2024",1978,1974,"4",NA
-"399","Meziadin","Sockeye","Terminal Run","2024",1978,1973,"5",NA
-"400","Meziadin","Sockeye","Terminal Run","2024",1978,1972,"6",NA
-"401","Meziadin","Sockeye","Terminal Run","2024",1979,1976,"3",NA
-"402","Meziadin","Sockeye","Terminal Run","2024",1979,1975,"4",NA
-"403","Meziadin","Sockeye","Terminal Run","2024",1979,1974,"5",NA
-"404","Meziadin","Sockeye","Terminal Run","2024",1979,1973,"6",NA
-"405","Meziadin","Sockeye","Terminal Run","2024",1979,1976,"3",NA
-"406","Meziadin","Sockeye","Terminal Run","2024",1979,1975,"4",NA
-"407","Meziadin","Sockeye","Terminal Run","2024",1979,1974,"5",NA
-"408","Meziadin","Sockeye","Terminal Run","2024",1979,1973,"6",NA
-"409","Meziadin","Sockeye","Terminal Run","2024",1979,1976,"3",NA
-"410","Meziadin","Sockeye","Terminal Run","2024",1979,1975,"4",NA
-"411","Meziadin","Sockeye","Terminal Run","2024",1979,1974,"5",NA
-"412","Meziadin","Sockeye","Terminal Run","2024",1979,1973,"6",NA
-"413","Meziadin","Sockeye","Terminal Run","2024",1979,1976,"3",NA
-"414","Meziadin","Sockeye","Terminal Run","2024",1979,1975,"4",NA
-"415","Meziadin","Sockeye","Terminal Run","2024",1979,1974,"5",NA
-"416","Meziadin","Sockeye","Terminal Run","2024",1979,1973,"6",NA
-"417","Meziadin","Sockeye","Terminal Run","2024",1980,1977,"3",NA
-"418","Meziadin","Sockeye","Terminal Run","2024",1980,1976,"4",NA
-"419","Meziadin","Sockeye","Terminal Run","2024",1980,1975,"5",NA
-"420","Meziadin","Sockeye","Terminal Run","2024",1980,1974,"6",NA
-"421","Meziadin","Sockeye","Terminal Run","2024",1980,1977,"3",NA
-"422","Meziadin","Sockeye","Terminal Run","2024",1980,1976,"4",NA
-"423","Meziadin","Sockeye","Terminal Run","2024",1980,1975,"5",NA
-"424","Meziadin","Sockeye","Terminal Run","2024",1980,1974,"6",NA
-"425","Meziadin","Sockeye","Terminal Run","2024",1980,1977,"3",NA
-"426","Meziadin","Sockeye","Terminal Run","2024",1980,1976,"4",NA
-"427","Meziadin","Sockeye","Terminal Run","2024",1980,1975,"5",NA
-"428","Meziadin","Sockeye","Terminal Run","2024",1980,1974,"6",NA
-"429","Meziadin","Sockeye","Terminal Run","2024",1980,1977,"3",NA
-"430","Meziadin","Sockeye","Terminal Run","2024",1980,1976,"4",NA
-"431","Meziadin","Sockeye","Terminal Run","2024",1980,1975,"5",NA
-"432","Meziadin","Sockeye","Terminal Run","2024",1980,1974,"6",NA
-"433","Meziadin","Sockeye","Terminal Run","2024",1981,1978,"3",NA
-"434","Meziadin","Sockeye","Terminal Run","2024",1981,1977,"4",NA
-"435","Meziadin","Sockeye","Terminal Run","2024",1981,1976,"5",NA
-"436","Meziadin","Sockeye","Terminal Run","2024",1981,1975,"6",NA
-"437","Meziadin","Sockeye","Terminal Run","2024",1981,1978,"3",NA
-"438","Meziadin","Sockeye","Terminal Run","2024",1981,1977,"4",NA
-"439","Meziadin","Sockeye","Terminal Run","2024",1981,1976,"5",NA
-"440","Meziadin","Sockeye","Terminal Run","2024",1981,1975,"6",NA
-"441","Meziadin","Sockeye","Terminal Run","2024",1981,1978,"3",NA
-"442","Meziadin","Sockeye","Terminal Run","2024",1981,1977,"4",NA
-"443","Meziadin","Sockeye","Terminal Run","2024",1981,1976,"5",NA
-"444","Meziadin","Sockeye","Terminal Run","2024",1981,1975,"6",NA
-"445","Meziadin","Sockeye","Terminal Run","2024",1981,1978,"3",NA
-"446","Meziadin","Sockeye","Terminal Run","2024",1981,1977,"4",NA
-"447","Meziadin","Sockeye","Terminal Run","2024",1981,1976,"5",NA
-"448","Meziadin","Sockeye","Terminal Run","2024",1981,1975,"6",NA
-"449","Meziadin","Sockeye","Terminal Run","2024",1982,1979,"3",NA
-"450","Meziadin","Sockeye","Terminal Run","2024",1982,1978,"4",NA
-"451","Meziadin","Sockeye","Terminal Run","2024",1982,1977,"5",NA
-"452","Meziadin","Sockeye","Terminal Run","2024",1982,1976,"6",NA
-"453","Meziadin","Sockeye","Terminal Run","2024",1982,1979,"3",NA
-"454","Meziadin","Sockeye","Terminal Run","2024",1982,1978,"4",NA
-"455","Meziadin","Sockeye","Terminal Run","2024",1982,1977,"5",NA
-"456","Meziadin","Sockeye","Terminal Run","2024",1982,1976,"6",NA
-"457","Meziadin","Sockeye","Terminal Run","2024",1982,1979,"3",NA
-"458","Meziadin","Sockeye","Terminal Run","2024",1982,1978,"4",NA
-"459","Meziadin","Sockeye","Terminal Run","2024",1982,1977,"5",NA
-"460","Meziadin","Sockeye","Terminal Run","2024",1982,1976,"6",NA
-"461","Meziadin","Sockeye","Terminal Run","2024",1982,1979,"3",NA
-"462","Meziadin","Sockeye","Terminal Run","2024",1982,1978,"4",NA
-"463","Meziadin","Sockeye","Terminal Run","2024",1982,1977,"5",NA
-"464","Meziadin","Sockeye","Terminal Run","2024",1982,1976,"6",NA
-"465","Meziadin","Sockeye","Terminal Run","2024",1982,1979,"3",0
-"466","Meziadin","Sockeye","Terminal Run","2024",1982,1978,"4",54605.180816
-"467","Meziadin","Sockeye","Terminal Run","2024",1982,1977,"5",573354.398568
-"468","Meziadin","Sockeye","Terminal Run","2024",1982,1976,"6",54605.180816
-"469","Meziadin","Sockeye","Terminal Run","2024",1982,1979,"3",0
-"470","Meziadin","Sockeye","Terminal Run","2024",1982,1978,"4",54605.180816
-"471","Meziadin","Sockeye","Terminal Run","2024",1982,1977,"5",573354.398568
-"472","Meziadin","Sockeye","Terminal Run","2024",1982,1976,"6",54605.180816
-"473","Meziadin","Sockeye","Terminal Run","2024",1982,1979,"3",0
-"474","Meziadin","Sockeye","Terminal Run","2024",1982,1978,"4",54605.180816
-"475","Meziadin","Sockeye","Terminal Run","2024",1982,1977,"5",573354.398568
-"476","Meziadin","Sockeye","Terminal Run","2024",1982,1976,"6",54605.180816
-"477","Meziadin","Sockeye","Terminal Run","2024",1982,1979,"3",0
-"478","Meziadin","Sockeye","Terminal Run","2024",1982,1978,"4",54605.180816
-"479","Meziadin","Sockeye","Terminal Run","2024",1982,1977,"5",573354.398568
-"480","Meziadin","Sockeye","Terminal Run","2024",1982,1976,"6",54605.180816
-"481","Meziadin","Sockeye","Terminal Run","2024",1983,1980,"3",NA
-"482","Meziadin","Sockeye","Terminal Run","2024",1983,1979,"4",NA
-"483","Meziadin","Sockeye","Terminal Run","2024",1983,1978,"5",NA
-"484","Meziadin","Sockeye","Terminal Run","2024",1983,1977,"6",NA
-"485","Meziadin","Sockeye","Terminal Run","2024",1983,1980,"3",NA
-"486","Meziadin","Sockeye","Terminal Run","2024",1983,1979,"4",NA
-"487","Meziadin","Sockeye","Terminal Run","2024",1983,1978,"5",NA
-"488","Meziadin","Sockeye","Terminal Run","2024",1983,1977,"6",NA
-"489","Meziadin","Sockeye","Terminal Run","2024",1983,1980,"3",NA
-"490","Meziadin","Sockeye","Terminal Run","2024",1983,1979,"4",NA
-"491","Meziadin","Sockeye","Terminal Run","2024",1983,1978,"5",NA
-"492","Meziadin","Sockeye","Terminal Run","2024",1983,1977,"6",NA
-"493","Meziadin","Sockeye","Terminal Run","2024",1983,1980,"3",NA
-"494","Meziadin","Sockeye","Terminal Run","2024",1983,1979,"4",NA
-"495","Meziadin","Sockeye","Terminal Run","2024",1983,1978,"5",NA
-"496","Meziadin","Sockeye","Terminal Run","2024",1983,1977,"6",NA
-"497","Meziadin","Sockeye","Terminal Run","2024",1983,1980,"3",5614.64657694392
-"498","Meziadin","Sockeye","Terminal Run","2024",1983,1979,"4",127532.681888944
-"499","Meziadin","Sockeye","Terminal Run","2024",1983,1978,"5",318965.386324104
-"500","Meziadin","Sockeye","Terminal Run","2024",1983,1977,"6",55700.8568743493
-"501","Meziadin","Sockeye","Terminal Run","2024",1983,1980,"3",5614.64657694392
-"502","Meziadin","Sockeye","Terminal Run","2024",1983,1979,"4",127532.681888944
-"503","Meziadin","Sockeye","Terminal Run","2024",1983,1978,"5",318965.386324104
-"504","Meziadin","Sockeye","Terminal Run","2024",1983,1977,"6",55700.8568743493
-"505","Meziadin","Sockeye","Terminal Run","2024",1983,1980,"3",5614.64657694392
-"506","Meziadin","Sockeye","Terminal Run","2024",1983,1979,"4",127532.681888944
-"507","Meziadin","Sockeye","Terminal Run","2024",1983,1978,"5",318965.386324104
-"508","Meziadin","Sockeye","Terminal Run","2024",1983,1977,"6",55700.8568743493
-"509","Meziadin","Sockeye","Terminal Run","2024",1983,1980,"3",5614.64657694392
-"510","Meziadin","Sockeye","Terminal Run","2024",1983,1979,"4",127532.681888944
-"511","Meziadin","Sockeye","Terminal Run","2024",1983,1978,"5",318965.386324104
-"512","Meziadin","Sockeye","Terminal Run","2024",1983,1977,"6",55700.8568743493
-"513","Meziadin","Sockeye","Terminal Run","2024",1984,1981,"3",0
-"514","Meziadin","Sockeye","Terminal Run","2024",1984,1980,"4",35213.327541
-"515","Meziadin","Sockeye","Terminal Run","2024",1984,1979,"5",289531.804226
-"516","Meziadin","Sockeye","Terminal Run","2024",1984,1978,"6",66514.063133
-"517","Meziadin","Sockeye","Terminal Run","2024",1984,1981,"3",0
-"518","Meziadin","Sockeye","Terminal Run","2024",1984,1980,"4",35213.327541
-"519","Meziadin","Sockeye","Terminal Run","2024",1984,1979,"5",289531.804226
-"520","Meziadin","Sockeye","Terminal Run","2024",1984,1978,"6",66514.063133
-"521","Meziadin","Sockeye","Terminal Run","2024",1984,1981,"3",0
-"522","Meziadin","Sockeye","Terminal Run","2024",1984,1980,"4",35213.327541
-"523","Meziadin","Sockeye","Terminal Run","2024",1984,1979,"5",289531.804226
-"524","Meziadin","Sockeye","Terminal Run","2024",1984,1978,"6",66514.063133
-"525","Meziadin","Sockeye","Terminal Run","2024",1984,1981,"3",0
-"526","Meziadin","Sockeye","Terminal Run","2024",1984,1980,"4",35213.327541
-"527","Meziadin","Sockeye","Terminal Run","2024",1984,1979,"5",289531.804226
-"528","Meziadin","Sockeye","Terminal Run","2024",1984,1978,"6",66514.063133
-"529","Meziadin","Sockeye","Terminal Run","2024",1984,1981,"3",NA
-"530","Meziadin","Sockeye","Terminal Run","2024",1984,1980,"4",NA
-"531","Meziadin","Sockeye","Terminal Run","2024",1984,1979,"5",NA
-"532","Meziadin","Sockeye","Terminal Run","2024",1984,1978,"6",NA
-"533","Meziadin","Sockeye","Terminal Run","2024",1984,1981,"3",NA
-"534","Meziadin","Sockeye","Terminal Run","2024",1984,1980,"4",NA
-"535","Meziadin","Sockeye","Terminal Run","2024",1984,1979,"5",NA
-"536","Meziadin","Sockeye","Terminal Run","2024",1984,1978,"6",NA
-"537","Meziadin","Sockeye","Terminal Run","2024",1984,1981,"3",NA
-"538","Meziadin","Sockeye","Terminal Run","2024",1984,1980,"4",NA
-"539","Meziadin","Sockeye","Terminal Run","2024",1984,1979,"5",NA
-"540","Meziadin","Sockeye","Terminal Run","2024",1984,1978,"6",NA
-"541","Meziadin","Sockeye","Terminal Run","2024",1984,1981,"3",NA
-"542","Meziadin","Sockeye","Terminal Run","2024",1984,1980,"4",NA
-"543","Meziadin","Sockeye","Terminal Run","2024",1984,1979,"5",NA
-"544","Meziadin","Sockeye","Terminal Run","2024",1984,1978,"6",NA
-"545","Meziadin","Sockeye","Terminal Run","2024",1985,1982,"3",0
-"546","Meziadin","Sockeye","Terminal Run","2024",1985,1981,"4",203035.46928
-"547","Meziadin","Sockeye","Terminal Run","2024",1985,1980,"5",323587.779165
-"548","Meziadin","Sockeye","Terminal Run","2024",1985,1979,"6",114207.45147
-"549","Meziadin","Sockeye","Terminal Run","2024",1985,1982,"3",0
-"550","Meziadin","Sockeye","Terminal Run","2024",1985,1981,"4",203035.46928
-"551","Meziadin","Sockeye","Terminal Run","2024",1985,1980,"5",323587.779165
-"552","Meziadin","Sockeye","Terminal Run","2024",1985,1979,"6",114207.45147
-"553","Meziadin","Sockeye","Terminal Run","2024",1985,1982,"3",0
-"554","Meziadin","Sockeye","Terminal Run","2024",1985,1981,"4",203035.46928
-"555","Meziadin","Sockeye","Terminal Run","2024",1985,1980,"5",323587.779165
-"556","Meziadin","Sockeye","Terminal Run","2024",1985,1979,"6",114207.45147
-"557","Meziadin","Sockeye","Terminal Run","2024",1985,1982,"3",0
-"558","Meziadin","Sockeye","Terminal Run","2024",1985,1981,"4",203035.46928
-"559","Meziadin","Sockeye","Terminal Run","2024",1985,1980,"5",323587.779165
-"560","Meziadin","Sockeye","Terminal Run","2024",1985,1979,"6",114207.45147
-"561","Meziadin","Sockeye","Terminal Run","2024",1985,1982,"3",NA
-"562","Meziadin","Sockeye","Terminal Run","2024",1985,1981,"4",NA
-"563","Meziadin","Sockeye","Terminal Run","2024",1985,1980,"5",NA
-"564","Meziadin","Sockeye","Terminal Run","2024",1985,1979,"6",NA
-"565","Meziadin","Sockeye","Terminal Run","2024",1985,1982,"3",NA
-"566","Meziadin","Sockeye","Terminal Run","2024",1985,1981,"4",NA
-"567","Meziadin","Sockeye","Terminal Run","2024",1985,1980,"5",NA
-"568","Meziadin","Sockeye","Terminal Run","2024",1985,1979,"6",NA
-"569","Meziadin","Sockeye","Terminal Run","2024",1985,1982,"3",NA
-"570","Meziadin","Sockeye","Terminal Run","2024",1985,1981,"4",NA
-"571","Meziadin","Sockeye","Terminal Run","2024",1985,1980,"5",NA
-"572","Meziadin","Sockeye","Terminal Run","2024",1985,1979,"6",NA
-"573","Meziadin","Sockeye","Terminal Run","2024",1985,1982,"3",NA
-"574","Meziadin","Sockeye","Terminal Run","2024",1985,1981,"4",NA
-"575","Meziadin","Sockeye","Terminal Run","2024",1985,1980,"5",NA
-"576","Meziadin","Sockeye","Terminal Run","2024",1985,1979,"6",NA
-"577","Meziadin","Sockeye","Terminal Run","2024",1986,1983,"3",0
-"578","Meziadin","Sockeye","Terminal Run","2024",1986,1982,"4",38449.451062
-"579","Meziadin","Sockeye","Terminal Run","2024",1986,1981,"5",213219.683162
-"580","Meziadin","Sockeye","Terminal Run","2024",1986,1980,"6",97871.329976
-"581","Meziadin","Sockeye","Terminal Run","2024",1986,1983,"3",0
-"582","Meziadin","Sockeye","Terminal Run","2024",1986,1982,"4",38449.451062
-"583","Meziadin","Sockeye","Terminal Run","2024",1986,1981,"5",213219.683162
-"584","Meziadin","Sockeye","Terminal Run","2024",1986,1980,"6",97871.329976
-"585","Meziadin","Sockeye","Terminal Run","2024",1986,1983,"3",0
-"586","Meziadin","Sockeye","Terminal Run","2024",1986,1982,"4",38449.451062
-"587","Meziadin","Sockeye","Terminal Run","2024",1986,1981,"5",213219.683162
-"588","Meziadin","Sockeye","Terminal Run","2024",1986,1980,"6",97871.329976
-"589","Meziadin","Sockeye","Terminal Run","2024",1986,1983,"3",0
-"590","Meziadin","Sockeye","Terminal Run","2024",1986,1982,"4",38449.451062
-"591","Meziadin","Sockeye","Terminal Run","2024",1986,1981,"5",213219.683162
-"592","Meziadin","Sockeye","Terminal Run","2024",1986,1980,"6",97871.329976
-"593","Meziadin","Sockeye","Terminal Run","2024",1986,1983,"3",NA
-"594","Meziadin","Sockeye","Terminal Run","2024",1986,1982,"4",NA
-"595","Meziadin","Sockeye","Terminal Run","2024",1986,1981,"5",NA
-"596","Meziadin","Sockeye","Terminal Run","2024",1986,1980,"6",NA
-"597","Meziadin","Sockeye","Terminal Run","2024",1986,1983,"3",NA
-"598","Meziadin","Sockeye","Terminal Run","2024",1986,1982,"4",NA
-"599","Meziadin","Sockeye","Terminal Run","2024",1986,1981,"5",NA
-"600","Meziadin","Sockeye","Terminal Run","2024",1986,1980,"6",NA
-"601","Meziadin","Sockeye","Terminal Run","2024",1986,1983,"3",NA
-"602","Meziadin","Sockeye","Terminal Run","2024",1986,1982,"4",NA
-"603","Meziadin","Sockeye","Terminal Run","2024",1986,1981,"5",NA
-"604","Meziadin","Sockeye","Terminal Run","2024",1986,1980,"6",NA
-"605","Meziadin","Sockeye","Terminal Run","2024",1986,1983,"3",NA
-"606","Meziadin","Sockeye","Terminal Run","2024",1986,1982,"4",NA
-"607","Meziadin","Sockeye","Terminal Run","2024",1986,1981,"5",NA
-"608","Meziadin","Sockeye","Terminal Run","2024",1986,1980,"6",NA
-"609","Meziadin","Sockeye","Terminal Run","2024",1987,1984,"3",NA
-"610","Meziadin","Sockeye","Terminal Run","2024",1987,1983,"4",NA
-"611","Meziadin","Sockeye","Terminal Run","2024",1987,1982,"5",NA
-"612","Meziadin","Sockeye","Terminal Run","2024",1987,1981,"6",NA
-"613","Meziadin","Sockeye","Terminal Run","2024",1987,1984,"3",NA
-"614","Meziadin","Sockeye","Terminal Run","2024",1987,1983,"4",NA
-"615","Meziadin","Sockeye","Terminal Run","2024",1987,1982,"5",NA
-"616","Meziadin","Sockeye","Terminal Run","2024",1987,1981,"6",NA
-"617","Meziadin","Sockeye","Terminal Run","2024",1987,1984,"3",NA
-"618","Meziadin","Sockeye","Terminal Run","2024",1987,1983,"4",NA
-"619","Meziadin","Sockeye","Terminal Run","2024",1987,1982,"5",NA
-"620","Meziadin","Sockeye","Terminal Run","2024",1987,1981,"6",NA
-"621","Meziadin","Sockeye","Terminal Run","2024",1987,1984,"3",NA
-"622","Meziadin","Sockeye","Terminal Run","2024",1987,1983,"4",NA
-"623","Meziadin","Sockeye","Terminal Run","2024",1987,1982,"5",NA
-"624","Meziadin","Sockeye","Terminal Run","2024",1987,1981,"6",NA
-"625","Meziadin","Sockeye","Terminal Run","2024",1987,1984,"3",0
-"626","Meziadin","Sockeye","Terminal Run","2024",1987,1983,"4",59072.257455
-"627","Meziadin","Sockeye","Terminal Run","2024",1987,1982,"5",291423.136778
-"628","Meziadin","Sockeye","Terminal Run","2024",1987,1981,"6",43319.655467
-"629","Meziadin","Sockeye","Terminal Run","2024",1987,1984,"3",0
-"630","Meziadin","Sockeye","Terminal Run","2024",1987,1983,"4",59072.257455
-"631","Meziadin","Sockeye","Terminal Run","2024",1987,1982,"5",291423.136778
-"632","Meziadin","Sockeye","Terminal Run","2024",1987,1981,"6",43319.655467
-"633","Meziadin","Sockeye","Terminal Run","2024",1987,1984,"3",0
-"634","Meziadin","Sockeye","Terminal Run","2024",1987,1983,"4",59072.257455
-"635","Meziadin","Sockeye","Terminal Run","2024",1987,1982,"5",291423.136778
-"636","Meziadin","Sockeye","Terminal Run","2024",1987,1981,"6",43319.655467
-"637","Meziadin","Sockeye","Terminal Run","2024",1987,1984,"3",0
-"638","Meziadin","Sockeye","Terminal Run","2024",1987,1983,"4",59072.257455
-"639","Meziadin","Sockeye","Terminal Run","2024",1987,1982,"5",291423.136778
-"640","Meziadin","Sockeye","Terminal Run","2024",1987,1981,"6",43319.655467
-"641","Meziadin","Sockeye","Terminal Run","2024",1988,1985,"3",NA
-"642","Meziadin","Sockeye","Terminal Run","2024",1988,1984,"4",NA
-"643","Meziadin","Sockeye","Terminal Run","2024",1988,1983,"5",NA
-"644","Meziadin","Sockeye","Terminal Run","2024",1988,1982,"6",NA
-"645","Meziadin","Sockeye","Terminal Run","2024",1988,1985,"3",NA
-"646","Meziadin","Sockeye","Terminal Run","2024",1988,1984,"4",NA
-"647","Meziadin","Sockeye","Terminal Run","2024",1988,1983,"5",NA
-"648","Meziadin","Sockeye","Terminal Run","2024",1988,1982,"6",NA
-"649","Meziadin","Sockeye","Terminal Run","2024",1988,1985,"3",NA
-"650","Meziadin","Sockeye","Terminal Run","2024",1988,1984,"4",NA
-"651","Meziadin","Sockeye","Terminal Run","2024",1988,1983,"5",NA
-"652","Meziadin","Sockeye","Terminal Run","2024",1988,1982,"6",NA
-"653","Meziadin","Sockeye","Terminal Run","2024",1988,1985,"3",NA
-"654","Meziadin","Sockeye","Terminal Run","2024",1988,1984,"4",NA
-"655","Meziadin","Sockeye","Terminal Run","2024",1988,1983,"5",NA
-"656","Meziadin","Sockeye","Terminal Run","2024",1988,1982,"6",NA
-"657","Meziadin","Sockeye","Terminal Run","2024",1988,1985,"3",0
-"658","Meziadin","Sockeye","Terminal Run","2024",1988,1984,"4",41886.021827
-"659","Meziadin","Sockeye","Terminal Run","2024",1988,1983,"5",264204.137678
-"660","Meziadin","Sockeye","Terminal Run","2024",1988,1982,"6",16110.008395
-"661","Meziadin","Sockeye","Terminal Run","2024",1988,1985,"3",0
-"662","Meziadin","Sockeye","Terminal Run","2024",1988,1984,"4",41886.021827
-"663","Meziadin","Sockeye","Terminal Run","2024",1988,1983,"5",264204.137678
-"664","Meziadin","Sockeye","Terminal Run","2024",1988,1982,"6",16110.008395
-"665","Meziadin","Sockeye","Terminal Run","2024",1988,1985,"3",0
-"666","Meziadin","Sockeye","Terminal Run","2024",1988,1984,"4",41886.021827
-"667","Meziadin","Sockeye","Terminal Run","2024",1988,1983,"5",264204.137678
-"668","Meziadin","Sockeye","Terminal Run","2024",1988,1982,"6",16110.008395
-"669","Meziadin","Sockeye","Terminal Run","2024",1988,1985,"3",0
-"670","Meziadin","Sockeye","Terminal Run","2024",1988,1984,"4",41886.021827
-"671","Meziadin","Sockeye","Terminal Run","2024",1988,1983,"5",264204.137678
-"672","Meziadin","Sockeye","Terminal Run","2024",1988,1982,"6",16110.008395
-"673","Meziadin","Sockeye","Terminal Run","2024",1989,1986,"3",0
-"674","Meziadin","Sockeye","Terminal Run","2024",1989,1985,"4",36221.689692
-"675","Meziadin","Sockeye","Terminal Run","2024",1989,1984,"5",86529.592042
-"676","Meziadin","Sockeye","Terminal Run","2024",1989,1983,"6",78480.327666
-"677","Meziadin","Sockeye","Terminal Run","2024",1989,1986,"3",0
-"678","Meziadin","Sockeye","Terminal Run","2024",1989,1985,"4",36221.689692
-"679","Meziadin","Sockeye","Terminal Run","2024",1989,1984,"5",86529.592042
-"680","Meziadin","Sockeye","Terminal Run","2024",1989,1983,"6",78480.327666
-"681","Meziadin","Sockeye","Terminal Run","2024",1989,1986,"3",0
-"682","Meziadin","Sockeye","Terminal Run","2024",1989,1985,"4",36221.689692
-"683","Meziadin","Sockeye","Terminal Run","2024",1989,1984,"5",86529.592042
-"684","Meziadin","Sockeye","Terminal Run","2024",1989,1983,"6",78480.327666
-"685","Meziadin","Sockeye","Terminal Run","2024",1989,1986,"3",0
-"686","Meziadin","Sockeye","Terminal Run","2024",1989,1985,"4",36221.689692
-"687","Meziadin","Sockeye","Terminal Run","2024",1989,1984,"5",86529.592042
-"688","Meziadin","Sockeye","Terminal Run","2024",1989,1983,"6",78480.327666
-"689","Meziadin","Sockeye","Terminal Run","2024",1989,1986,"3",NA
-"690","Meziadin","Sockeye","Terminal Run","2024",1989,1985,"4",NA
-"691","Meziadin","Sockeye","Terminal Run","2024",1989,1984,"5",NA
-"692","Meziadin","Sockeye","Terminal Run","2024",1989,1983,"6",NA
-"693","Meziadin","Sockeye","Terminal Run","2024",1989,1986,"3",NA
-"694","Meziadin","Sockeye","Terminal Run","2024",1989,1985,"4",NA
-"695","Meziadin","Sockeye","Terminal Run","2024",1989,1984,"5",NA
-"696","Meziadin","Sockeye","Terminal Run","2024",1989,1983,"6",NA
-"697","Meziadin","Sockeye","Terminal Run","2024",1989,1986,"3",NA
-"698","Meziadin","Sockeye","Terminal Run","2024",1989,1985,"4",NA
-"699","Meziadin","Sockeye","Terminal Run","2024",1989,1984,"5",NA
-"700","Meziadin","Sockeye","Terminal Run","2024",1989,1983,"6",NA
-"701","Meziadin","Sockeye","Terminal Run","2024",1989,1986,"3",NA
-"702","Meziadin","Sockeye","Terminal Run","2024",1989,1985,"4",NA
-"703","Meziadin","Sockeye","Terminal Run","2024",1989,1984,"5",NA
-"704","Meziadin","Sockeye","Terminal Run","2024",1989,1983,"6",NA
-"705","Meziadin","Sockeye","Terminal Run","2024",1990,1987,"3",0
-"706","Meziadin","Sockeye","Terminal Run","2024",1990,1986,"4",62021.812442
-"707","Meziadin","Sockeye","Terminal Run","2024",1990,1985,"5",221972.802424
-"708","Meziadin","Sockeye","Terminal Run","2024",1990,1984,"6",42435.976934
-"709","Meziadin","Sockeye","Terminal Run","2024",1990,1987,"3",0
-"710","Meziadin","Sockeye","Terminal Run","2024",1990,1986,"4",62021.812442
-"711","Meziadin","Sockeye","Terminal Run","2024",1990,1985,"5",221972.802424
-"712","Meziadin","Sockeye","Terminal Run","2024",1990,1984,"6",42435.976934
-"713","Meziadin","Sockeye","Terminal Run","2024",1990,1987,"3",0
-"714","Meziadin","Sockeye","Terminal Run","2024",1990,1986,"4",62021.812442
-"715","Meziadin","Sockeye","Terminal Run","2024",1990,1985,"5",221972.802424
-"716","Meziadin","Sockeye","Terminal Run","2024",1990,1984,"6",42435.976934
-"717","Meziadin","Sockeye","Terminal Run","2024",1990,1987,"3",0
-"718","Meziadin","Sockeye","Terminal Run","2024",1990,1986,"4",62021.812442
-"719","Meziadin","Sockeye","Terminal Run","2024",1990,1985,"5",221972.802424
-"720","Meziadin","Sockeye","Terminal Run","2024",1990,1984,"6",42435.976934
-"721","Meziadin","Sockeye","Terminal Run","2024",1990,1987,"3",NA
-"722","Meziadin","Sockeye","Terminal Run","2024",1990,1986,"4",NA
-"723","Meziadin","Sockeye","Terminal Run","2024",1990,1985,"5",NA
-"724","Meziadin","Sockeye","Terminal Run","2024",1990,1984,"6",NA
-"725","Meziadin","Sockeye","Terminal Run","2024",1990,1987,"3",NA
-"726","Meziadin","Sockeye","Terminal Run","2024",1990,1986,"4",NA
-"727","Meziadin","Sockeye","Terminal Run","2024",1990,1985,"5",NA
-"728","Meziadin","Sockeye","Terminal Run","2024",1990,1984,"6",NA
-"729","Meziadin","Sockeye","Terminal Run","2024",1990,1987,"3",NA
-"730","Meziadin","Sockeye","Terminal Run","2024",1990,1986,"4",NA
-"731","Meziadin","Sockeye","Terminal Run","2024",1990,1985,"5",NA
-"732","Meziadin","Sockeye","Terminal Run","2024",1990,1984,"6",NA
-"733","Meziadin","Sockeye","Terminal Run","2024",1990,1987,"3",NA
-"734","Meziadin","Sockeye","Terminal Run","2024",1990,1986,"4",NA
-"735","Meziadin","Sockeye","Terminal Run","2024",1990,1985,"5",NA
-"736","Meziadin","Sockeye","Terminal Run","2024",1990,1984,"6",NA
-"737","Meziadin","Sockeye","Terminal Run","2024",1991,1988,"3",NA
-"738","Meziadin","Sockeye","Terminal Run","2024",1991,1987,"4",NA
-"739","Meziadin","Sockeye","Terminal Run","2024",1991,1986,"5",NA
-"740","Meziadin","Sockeye","Terminal Run","2024",1991,1985,"6",NA
-"741","Meziadin","Sockeye","Terminal Run","2024",1991,1988,"3",NA
-"742","Meziadin","Sockeye","Terminal Run","2024",1991,1987,"4",NA
-"743","Meziadin","Sockeye","Terminal Run","2024",1991,1986,"5",NA
-"744","Meziadin","Sockeye","Terminal Run","2024",1991,1985,"6",NA
-"745","Meziadin","Sockeye","Terminal Run","2024",1991,1988,"3",NA
-"746","Meziadin","Sockeye","Terminal Run","2024",1991,1987,"4",NA
-"747","Meziadin","Sockeye","Terminal Run","2024",1991,1986,"5",NA
-"748","Meziadin","Sockeye","Terminal Run","2024",1991,1985,"6",NA
-"749","Meziadin","Sockeye","Terminal Run","2024",1991,1988,"3",NA
-"750","Meziadin","Sockeye","Terminal Run","2024",1991,1987,"4",NA
-"751","Meziadin","Sockeye","Terminal Run","2024",1991,1986,"5",NA
-"752","Meziadin","Sockeye","Terminal Run","2024",1991,1985,"6",NA
-"753","Meziadin","Sockeye","Terminal Run","2024",1991,1988,"3",0
-"754","Meziadin","Sockeye","Terminal Run","2024",1991,1987,"4",378600.603538
-"755","Meziadin","Sockeye","Terminal Run","2024",1991,1986,"5",386831.051441
-"756","Meziadin","Sockeye","Terminal Run","2024",1991,1985,"6",57613.135321
-"757","Meziadin","Sockeye","Terminal Run","2024",1991,1988,"3",0
-"758","Meziadin","Sockeye","Terminal Run","2024",1991,1987,"4",378600.603538
-"759","Meziadin","Sockeye","Terminal Run","2024",1991,1986,"5",386831.051441
-"760","Meziadin","Sockeye","Terminal Run","2024",1991,1985,"6",57613.135321
-"761","Meziadin","Sockeye","Terminal Run","2024",1991,1988,"3",0
-"762","Meziadin","Sockeye","Terminal Run","2024",1991,1987,"4",378600.603538
-"763","Meziadin","Sockeye","Terminal Run","2024",1991,1986,"5",386831.051441
-"764","Meziadin","Sockeye","Terminal Run","2024",1991,1985,"6",57613.135321
-"765","Meziadin","Sockeye","Terminal Run","2024",1991,1988,"3",0
-"766","Meziadin","Sockeye","Terminal Run","2024",1991,1987,"4",378600.603538
-"767","Meziadin","Sockeye","Terminal Run","2024",1991,1986,"5",386831.051441
-"768","Meziadin","Sockeye","Terminal Run","2024",1991,1985,"6",57613.135321
-"769","Meziadin","Sockeye","Terminal Run","2024",1992,1989,"3",NA
-"770","Meziadin","Sockeye","Terminal Run","2024",1992,1988,"4",NA
-"771","Meziadin","Sockeye","Terminal Run","2024",1992,1987,"5",NA
-"772","Meziadin","Sockeye","Terminal Run","2024",1992,1986,"6",NA
-"773","Meziadin","Sockeye","Terminal Run","2024",1992,1989,"3",NA
-"774","Meziadin","Sockeye","Terminal Run","2024",1992,1988,"4",NA
-"775","Meziadin","Sockeye","Terminal Run","2024",1992,1987,"5",NA
-"776","Meziadin","Sockeye","Terminal Run","2024",1992,1986,"6",NA
-"777","Meziadin","Sockeye","Terminal Run","2024",1992,1989,"3",NA
-"778","Meziadin","Sockeye","Terminal Run","2024",1992,1988,"4",NA
-"779","Meziadin","Sockeye","Terminal Run","2024",1992,1987,"5",NA
-"780","Meziadin","Sockeye","Terminal Run","2024",1992,1986,"6",NA
-"781","Meziadin","Sockeye","Terminal Run","2024",1992,1989,"3",NA
-"782","Meziadin","Sockeye","Terminal Run","2024",1992,1988,"4",NA
-"783","Meziadin","Sockeye","Terminal Run","2024",1992,1987,"5",NA
-"784","Meziadin","Sockeye","Terminal Run","2024",1992,1986,"6",NA
-"785","Meziadin","Sockeye","Terminal Run","2024",1992,1989,"3",0
-"786","Meziadin","Sockeye","Terminal Run","2024",1992,1988,"4",812446.85984
-"787","Meziadin","Sockeye","Terminal Run","2024",1992,1987,"5",923235.068
-"788","Meziadin","Sockeye","Terminal Run","2024",1992,1986,"6",110788.20816
-"789","Meziadin","Sockeye","Terminal Run","2024",1992,1989,"3",0
-"790","Meziadin","Sockeye","Terminal Run","2024",1992,1988,"4",812446.85984
-"791","Meziadin","Sockeye","Terminal Run","2024",1992,1987,"5",923235.068
-"792","Meziadin","Sockeye","Terminal Run","2024",1992,1986,"6",110788.20816
-"793","Meziadin","Sockeye","Terminal Run","2024",1992,1989,"3",0
-"794","Meziadin","Sockeye","Terminal Run","2024",1992,1988,"4",812446.85984
-"795","Meziadin","Sockeye","Terminal Run","2024",1992,1987,"5",923235.068
-"796","Meziadin","Sockeye","Terminal Run","2024",1992,1986,"6",110788.20816
-"797","Meziadin","Sockeye","Terminal Run","2024",1992,1989,"3",0
-"798","Meziadin","Sockeye","Terminal Run","2024",1992,1988,"4",812446.85984
-"799","Meziadin","Sockeye","Terminal Run","2024",1992,1987,"5",923235.068
-"800","Meziadin","Sockeye","Terminal Run","2024",1992,1986,"6",110788.20816
-"801","Meziadin","Sockeye","Terminal Run","2024",1993,1990,"3",0
-"802","Meziadin","Sockeye","Terminal Run","2024",1993,1989,"4",550859.81181
-"803","Meziadin","Sockeye","Terminal Run","2024",1993,1988,"5",1001563.2942
-"804","Meziadin","Sockeye","Terminal Run","2024",1993,1987,"6",116849.05099
-"805","Meziadin","Sockeye","Terminal Run","2024",1993,1990,"3",0
-"806","Meziadin","Sockeye","Terminal Run","2024",1993,1989,"4",550859.81181
-"807","Meziadin","Sockeye","Terminal Run","2024",1993,1988,"5",1001563.2942
-"808","Meziadin","Sockeye","Terminal Run","2024",1993,1987,"6",116849.05099
-"809","Meziadin","Sockeye","Terminal Run","2024",1993,1990,"3",0
-"810","Meziadin","Sockeye","Terminal Run","2024",1993,1989,"4",550859.81181
-"811","Meziadin","Sockeye","Terminal Run","2024",1993,1988,"5",1001563.2942
-"812","Meziadin","Sockeye","Terminal Run","2024",1993,1987,"6",116849.05099
-"813","Meziadin","Sockeye","Terminal Run","2024",1993,1990,"3",0
-"814","Meziadin","Sockeye","Terminal Run","2024",1993,1989,"4",550859.81181
-"815","Meziadin","Sockeye","Terminal Run","2024",1993,1988,"5",1001563.2942
-"816","Meziadin","Sockeye","Terminal Run","2024",1993,1987,"6",116849.05099
-"817","Meziadin","Sockeye","Terminal Run","2024",1993,1990,"3",NA
-"818","Meziadin","Sockeye","Terminal Run","2024",1993,1989,"4",NA
-"819","Meziadin","Sockeye","Terminal Run","2024",1993,1988,"5",NA
-"820","Meziadin","Sockeye","Terminal Run","2024",1993,1987,"6",NA
-"821","Meziadin","Sockeye","Terminal Run","2024",1993,1990,"3",NA
-"822","Meziadin","Sockeye","Terminal Run","2024",1993,1989,"4",NA
-"823","Meziadin","Sockeye","Terminal Run","2024",1993,1988,"5",NA
-"824","Meziadin","Sockeye","Terminal Run","2024",1993,1987,"6",NA
-"825","Meziadin","Sockeye","Terminal Run","2024",1993,1990,"3",NA
-"826","Meziadin","Sockeye","Terminal Run","2024",1993,1989,"4",NA
-"827","Meziadin","Sockeye","Terminal Run","2024",1993,1988,"5",NA
-"828","Meziadin","Sockeye","Terminal Run","2024",1993,1987,"6",NA
-"829","Meziadin","Sockeye","Terminal Run","2024",1993,1990,"3",NA
-"830","Meziadin","Sockeye","Terminal Run","2024",1993,1989,"4",NA
-"831","Meziadin","Sockeye","Terminal Run","2024",1993,1988,"5",NA
-"832","Meziadin","Sockeye","Terminal Run","2024",1993,1987,"6",NA
-"833","Meziadin","Sockeye","Terminal Run","2024",1994,1991,"3",0
-"834","Meziadin","Sockeye","Terminal Run","2024",1994,1990,"4",61288.25703
-"835","Meziadin","Sockeye","Terminal Run","2024",1994,1989,"5",332707.68102
-"836","Meziadin","Sockeye","Terminal Run","2024",1994,1988,"6",43777.32645
-"837","Meziadin","Sockeye","Terminal Run","2024",1994,1991,"3",0
-"838","Meziadin","Sockeye","Terminal Run","2024",1994,1990,"4",61288.25703
-"839","Meziadin","Sockeye","Terminal Run","2024",1994,1989,"5",332707.68102
-"840","Meziadin","Sockeye","Terminal Run","2024",1994,1988,"6",43777.32645
-"841","Meziadin","Sockeye","Terminal Run","2024",1994,1991,"3",0
-"842","Meziadin","Sockeye","Terminal Run","2024",1994,1990,"4",61288.25703
-"843","Meziadin","Sockeye","Terminal Run","2024",1994,1989,"5",332707.68102
-"844","Meziadin","Sockeye","Terminal Run","2024",1994,1988,"6",43777.32645
-"845","Meziadin","Sockeye","Terminal Run","2024",1994,1991,"3",0
-"846","Meziadin","Sockeye","Terminal Run","2024",1994,1990,"4",61288.25703
-"847","Meziadin","Sockeye","Terminal Run","2024",1994,1989,"5",332707.68102
-"848","Meziadin","Sockeye","Terminal Run","2024",1994,1988,"6",43777.32645
-"849","Meziadin","Sockeye","Terminal Run","2024",1994,1991,"3",NA
-"850","Meziadin","Sockeye","Terminal Run","2024",1994,1990,"4",NA
-"851","Meziadin","Sockeye","Terminal Run","2024",1994,1989,"5",NA
-"852","Meziadin","Sockeye","Terminal Run","2024",1994,1988,"6",NA
-"853","Meziadin","Sockeye","Terminal Run","2024",1994,1991,"3",NA
-"854","Meziadin","Sockeye","Terminal Run","2024",1994,1990,"4",NA
-"855","Meziadin","Sockeye","Terminal Run","2024",1994,1989,"5",NA
-"856","Meziadin","Sockeye","Terminal Run","2024",1994,1988,"6",NA
-"857","Meziadin","Sockeye","Terminal Run","2024",1994,1991,"3",NA
-"858","Meziadin","Sockeye","Terminal Run","2024",1994,1990,"4",NA
-"859","Meziadin","Sockeye","Terminal Run","2024",1994,1989,"5",NA
-"860","Meziadin","Sockeye","Terminal Run","2024",1994,1988,"6",NA
-"861","Meziadin","Sockeye","Terminal Run","2024",1994,1991,"3",NA
-"862","Meziadin","Sockeye","Terminal Run","2024",1994,1990,"4",NA
-"863","Meziadin","Sockeye","Terminal Run","2024",1994,1989,"5",NA
-"864","Meziadin","Sockeye","Terminal Run","2024",1994,1988,"6",NA
-"865","Meziadin","Sockeye","Terminal Run","2024",1995,1992,"3",NA
-"866","Meziadin","Sockeye","Terminal Run","2024",1995,1991,"4",NA
-"867","Meziadin","Sockeye","Terminal Run","2024",1995,1990,"5",NA
-"868","Meziadin","Sockeye","Terminal Run","2024",1995,1989,"6",NA
-"869","Meziadin","Sockeye","Terminal Run","2024",1995,1992,"3",NA
-"870","Meziadin","Sockeye","Terminal Run","2024",1995,1991,"4",NA
-"871","Meziadin","Sockeye","Terminal Run","2024",1995,1990,"5",NA
-"872","Meziadin","Sockeye","Terminal Run","2024",1995,1989,"6",NA
-"873","Meziadin","Sockeye","Terminal Run","2024",1995,1992,"3",NA
-"874","Meziadin","Sockeye","Terminal Run","2024",1995,1991,"4",NA
-"875","Meziadin","Sockeye","Terminal Run","2024",1995,1990,"5",NA
-"876","Meziadin","Sockeye","Terminal Run","2024",1995,1989,"6",NA
-"877","Meziadin","Sockeye","Terminal Run","2024",1995,1992,"3",NA
-"878","Meziadin","Sockeye","Terminal Run","2024",1995,1991,"4",NA
-"879","Meziadin","Sockeye","Terminal Run","2024",1995,1990,"5",NA
-"880","Meziadin","Sockeye","Terminal Run","2024",1995,1989,"6",NA
-"881","Meziadin","Sockeye","Terminal Run","2024",1995,1992,"3",0
-"882","Meziadin","Sockeye","Terminal Run","2024",1995,1991,"4",456034.6328
-"883","Meziadin","Sockeye","Terminal Run","2024",1995,1990,"5",392189.784208
-"884","Meziadin","Sockeye","Terminal Run","2024",1995,1989,"6",63844.848592
-"885","Meziadin","Sockeye","Terminal Run","2024",1995,1992,"3",0
-"886","Meziadin","Sockeye","Terminal Run","2024",1995,1991,"4",456034.6328
-"887","Meziadin","Sockeye","Terminal Run","2024",1995,1990,"5",392189.784208
-"888","Meziadin","Sockeye","Terminal Run","2024",1995,1989,"6",63844.848592
-"889","Meziadin","Sockeye","Terminal Run","2024",1995,1992,"3",0
-"890","Meziadin","Sockeye","Terminal Run","2024",1995,1991,"4",456034.6328
-"891","Meziadin","Sockeye","Terminal Run","2024",1995,1990,"5",392189.784208
-"892","Meziadin","Sockeye","Terminal Run","2024",1995,1989,"6",63844.848592
-"893","Meziadin","Sockeye","Terminal Run","2024",1995,1992,"3",0
-"894","Meziadin","Sockeye","Terminal Run","2024",1995,1991,"4",456034.6328
-"895","Meziadin","Sockeye","Terminal Run","2024",1995,1990,"5",392189.784208
-"896","Meziadin","Sockeye","Terminal Run","2024",1995,1989,"6",63844.848592
-"897","Meziadin","Sockeye","Terminal Run","2024",1996,1993,"3",NA
-"898","Meziadin","Sockeye","Terminal Run","2024",1996,1992,"4",NA
-"899","Meziadin","Sockeye","Terminal Run","2024",1996,1991,"5",NA
-"900","Meziadin","Sockeye","Terminal Run","2024",1996,1990,"6",NA
-"901","Meziadin","Sockeye","Terminal Run","2024",1996,1993,"3",NA
-"902","Meziadin","Sockeye","Terminal Run","2024",1996,1992,"4",NA
-"903","Meziadin","Sockeye","Terminal Run","2024",1996,1991,"5",NA
-"904","Meziadin","Sockeye","Terminal Run","2024",1996,1990,"6",NA
-"905","Meziadin","Sockeye","Terminal Run","2024",1996,1993,"3",NA
-"906","Meziadin","Sockeye","Terminal Run","2024",1996,1992,"4",NA
-"907","Meziadin","Sockeye","Terminal Run","2024",1996,1991,"5",NA
-"908","Meziadin","Sockeye","Terminal Run","2024",1996,1990,"6",NA
-"909","Meziadin","Sockeye","Terminal Run","2024",1996,1993,"3",NA
-"910","Meziadin","Sockeye","Terminal Run","2024",1996,1992,"4",NA
-"911","Meziadin","Sockeye","Terminal Run","2024",1996,1991,"5",NA
-"912","Meziadin","Sockeye","Terminal Run","2024",1996,1990,"6",NA
-"913","Meziadin","Sockeye","Terminal Run","2024",1996,1993,"3",0
-"914","Meziadin","Sockeye","Terminal Run","2024",1996,1992,"4",63511.222635
-"915","Meziadin","Sockeye","Terminal Run","2024",1996,1991,"5",789353.767035
-"916","Meziadin","Sockeye","Terminal Run","2024",1996,1990,"6",54438.19083
-"917","Meziadin","Sockeye","Terminal Run","2024",1996,1993,"3",0
-"918","Meziadin","Sockeye","Terminal Run","2024",1996,1992,"4",63511.222635
-"919","Meziadin","Sockeye","Terminal Run","2024",1996,1991,"5",789353.767035
-"920","Meziadin","Sockeye","Terminal Run","2024",1996,1990,"6",54438.19083
-"921","Meziadin","Sockeye","Terminal Run","2024",1996,1993,"3",0
-"922","Meziadin","Sockeye","Terminal Run","2024",1996,1992,"4",63511.222635
-"923","Meziadin","Sockeye","Terminal Run","2024",1996,1991,"5",789353.767035
-"924","Meziadin","Sockeye","Terminal Run","2024",1996,1990,"6",54438.19083
-"925","Meziadin","Sockeye","Terminal Run","2024",1996,1993,"3",0
-"926","Meziadin","Sockeye","Terminal Run","2024",1996,1992,"4",63511.222635
-"927","Meziadin","Sockeye","Terminal Run","2024",1996,1991,"5",789353.767035
-"928","Meziadin","Sockeye","Terminal Run","2024",1996,1990,"6",54438.19083
-"929","Meziadin","Sockeye","Terminal Run","2024",1997,1994,"3",0
-"930","Meziadin","Sockeye","Terminal Run","2024",1997,1993,"4",183184.6554
-"931","Meziadin","Sockeye","Terminal Run","2024",1997,1992,"5",323626.22454
-"932","Meziadin","Sockeye","Terminal Run","2024",1997,1991,"6",97698.48288
-"933","Meziadin","Sockeye","Terminal Run","2024",1997,1994,"3",0
-"934","Meziadin","Sockeye","Terminal Run","2024",1997,1993,"4",183184.6554
-"935","Meziadin","Sockeye","Terminal Run","2024",1997,1992,"5",323626.22454
-"936","Meziadin","Sockeye","Terminal Run","2024",1997,1991,"6",97698.48288
-"937","Meziadin","Sockeye","Terminal Run","2024",1997,1994,"3",0
-"938","Meziadin","Sockeye","Terminal Run","2024",1997,1993,"4",183184.6554
-"939","Meziadin","Sockeye","Terminal Run","2024",1997,1992,"5",323626.22454
-"940","Meziadin","Sockeye","Terminal Run","2024",1997,1991,"6",97698.48288
-"941","Meziadin","Sockeye","Terminal Run","2024",1997,1994,"3",0
-"942","Meziadin","Sockeye","Terminal Run","2024",1997,1993,"4",183184.6554
-"943","Meziadin","Sockeye","Terminal Run","2024",1997,1992,"5",323626.22454
-"944","Meziadin","Sockeye","Terminal Run","2024",1997,1991,"6",97698.48288
-"945","Meziadin","Sockeye","Terminal Run","2024",1997,1994,"3",NA
-"946","Meziadin","Sockeye","Terminal Run","2024",1997,1993,"4",NA
-"947","Meziadin","Sockeye","Terminal Run","2024",1997,1992,"5",NA
-"948","Meziadin","Sockeye","Terminal Run","2024",1997,1991,"6",NA
-"949","Meziadin","Sockeye","Terminal Run","2024",1997,1994,"3",NA
-"950","Meziadin","Sockeye","Terminal Run","2024",1997,1993,"4",NA
-"951","Meziadin","Sockeye","Terminal Run","2024",1997,1992,"5",NA
-"952","Meziadin","Sockeye","Terminal Run","2024",1997,1991,"6",NA
-"953","Meziadin","Sockeye","Terminal Run","2024",1997,1994,"3",NA
-"954","Meziadin","Sockeye","Terminal Run","2024",1997,1993,"4",NA
-"955","Meziadin","Sockeye","Terminal Run","2024",1997,1992,"5",NA
-"956","Meziadin","Sockeye","Terminal Run","2024",1997,1991,"6",NA
-"957","Meziadin","Sockeye","Terminal Run","2024",1997,1994,"3",NA
-"958","Meziadin","Sockeye","Terminal Run","2024",1997,1993,"4",NA
-"959","Meziadin","Sockeye","Terminal Run","2024",1997,1992,"5",NA
-"960","Meziadin","Sockeye","Terminal Run","2024",1997,1991,"6",NA
-"961","Meziadin","Sockeye","Terminal Run","2024",1998,1995,"3",0
-"962","Meziadin","Sockeye","Terminal Run","2024",1998,1994,"4",103485.074704
-"963","Meziadin","Sockeye","Terminal Run","2024",1998,1993,"5",319862.958176
-"964","Meziadin","Sockeye","Terminal Run","2024",1998,1992,"6",42334.803288
-"965","Meziadin","Sockeye","Terminal Run","2024",1998,1995,"3",0
-"966","Meziadin","Sockeye","Terminal Run","2024",1998,1994,"4",103485.074704
-"967","Meziadin","Sockeye","Terminal Run","2024",1998,1993,"5",319862.958176
-"968","Meziadin","Sockeye","Terminal Run","2024",1998,1992,"6",42334.803288
-"969","Meziadin","Sockeye","Terminal Run","2024",1998,1995,"3",0
-"970","Meziadin","Sockeye","Terminal Run","2024",1998,1994,"4",103485.074704
-"971","Meziadin","Sockeye","Terminal Run","2024",1998,1993,"5",319862.958176
-"972","Meziadin","Sockeye","Terminal Run","2024",1998,1992,"6",42334.803288
-"973","Meziadin","Sockeye","Terminal Run","2024",1998,1995,"3",0
-"974","Meziadin","Sockeye","Terminal Run","2024",1998,1994,"4",103485.074704
-"975","Meziadin","Sockeye","Terminal Run","2024",1998,1993,"5",319862.958176
-"976","Meziadin","Sockeye","Terminal Run","2024",1998,1992,"6",42334.803288
-"977","Meziadin","Sockeye","Terminal Run","2024",1998,1995,"3",NA
-"978","Meziadin","Sockeye","Terminal Run","2024",1998,1994,"4",NA
-"979","Meziadin","Sockeye","Terminal Run","2024",1998,1993,"5",NA
-"980","Meziadin","Sockeye","Terminal Run","2024",1998,1992,"6",NA
-"981","Meziadin","Sockeye","Terminal Run","2024",1998,1995,"3",NA
-"982","Meziadin","Sockeye","Terminal Run","2024",1998,1994,"4",NA
-"983","Meziadin","Sockeye","Terminal Run","2024",1998,1993,"5",NA
-"984","Meziadin","Sockeye","Terminal Run","2024",1998,1992,"6",NA
-"985","Meziadin","Sockeye","Terminal Run","2024",1998,1995,"3",NA
-"986","Meziadin","Sockeye","Terminal Run","2024",1998,1994,"4",NA
-"987","Meziadin","Sockeye","Terminal Run","2024",1998,1993,"5",NA
-"988","Meziadin","Sockeye","Terminal Run","2024",1998,1992,"6",NA
-"989","Meziadin","Sockeye","Terminal Run","2024",1998,1995,"3",NA
-"990","Meziadin","Sockeye","Terminal Run","2024",1998,1994,"4",NA
-"991","Meziadin","Sockeye","Terminal Run","2024",1998,1993,"5",NA
-"992","Meziadin","Sockeye","Terminal Run","2024",1998,1992,"6",NA
-"993","Meziadin","Sockeye","Terminal Run","2024",1999,1996,"3",0
-"994","Meziadin","Sockeye","Terminal Run","2024",1999,1995,"4",238536.324309
-"995","Meziadin","Sockeye","Terminal Run","2024",1999,1994,"5",492462.088896
-"996","Meziadin","Sockeye","Terminal Run","2024",1999,1993,"6",46168.320834
-"997","Meziadin","Sockeye","Terminal Run","2024",1999,1996,"3",0
-"998","Meziadin","Sockeye","Terminal Run","2024",1999,1995,"4",238536.324309
-"999","Meziadin","Sockeye","Terminal Run","2024",1999,1994,"5",492462.088896
-"1000","Meziadin","Sockeye","Terminal Run","2024",1999,1993,"6",46168.320834
-"1001","Meziadin","Sockeye","Terminal Run","2024",1999,1996,"3",0
-"1002","Meziadin","Sockeye","Terminal Run","2024",1999,1995,"4",238536.324309
-"1003","Meziadin","Sockeye","Terminal Run","2024",1999,1994,"5",492462.088896
-"1004","Meziadin","Sockeye","Terminal Run","2024",1999,1993,"6",46168.320834
-"1005","Meziadin","Sockeye","Terminal Run","2024",1999,1996,"3",0
-"1006","Meziadin","Sockeye","Terminal Run","2024",1999,1995,"4",238536.324309
-"1007","Meziadin","Sockeye","Terminal Run","2024",1999,1994,"5",492462.088896
-"1008","Meziadin","Sockeye","Terminal Run","2024",1999,1993,"6",46168.320834
-"1009","Meziadin","Sockeye","Terminal Run","2024",1999,1996,"3",NA
-"1010","Meziadin","Sockeye","Terminal Run","2024",1999,1995,"4",NA
-"1011","Meziadin","Sockeye","Terminal Run","2024",1999,1994,"5",NA
-"1012","Meziadin","Sockeye","Terminal Run","2024",1999,1993,"6",NA
-"1013","Meziadin","Sockeye","Terminal Run","2024",1999,1996,"3",NA
-"1014","Meziadin","Sockeye","Terminal Run","2024",1999,1995,"4",NA
-"1015","Meziadin","Sockeye","Terminal Run","2024",1999,1994,"5",NA
-"1016","Meziadin","Sockeye","Terminal Run","2024",1999,1993,"6",NA
-"1017","Meziadin","Sockeye","Terminal Run","2024",1999,1996,"3",NA
-"1018","Meziadin","Sockeye","Terminal Run","2024",1999,1995,"4",NA
-"1019","Meziadin","Sockeye","Terminal Run","2024",1999,1994,"5",NA
-"1020","Meziadin","Sockeye","Terminal Run","2024",1999,1993,"6",NA
-"1021","Meziadin","Sockeye","Terminal Run","2024",1999,1996,"3",NA
-"1022","Meziadin","Sockeye","Terminal Run","2024",1999,1995,"4",NA
-"1023","Meziadin","Sockeye","Terminal Run","2024",1999,1994,"5",NA
-"1024","Meziadin","Sockeye","Terminal Run","2024",1999,1993,"6",NA
-"1025","Meziadin","Sockeye","Terminal Run","2024",2000,1997,"3",NA
-"1026","Meziadin","Sockeye","Terminal Run","2024",2000,1996,"4",NA
-"1027","Meziadin","Sockeye","Terminal Run","2024",2000,1995,"5",NA
-"1028","Meziadin","Sockeye","Terminal Run","2024",2000,1994,"6",NA
-"1029","Meziadin","Sockeye","Terminal Run","2024",2000,1997,"3",NA
-"1030","Meziadin","Sockeye","Terminal Run","2024",2000,1996,"4",NA
-"1031","Meziadin","Sockeye","Terminal Run","2024",2000,1995,"5",NA
-"1032","Meziadin","Sockeye","Terminal Run","2024",2000,1994,"6",NA
-"1033","Meziadin","Sockeye","Terminal Run","2024",2000,1997,"3",NA
-"1034","Meziadin","Sockeye","Terminal Run","2024",2000,1996,"4",NA
-"1035","Meziadin","Sockeye","Terminal Run","2024",2000,1995,"5",NA
-"1036","Meziadin","Sockeye","Terminal Run","2024",2000,1994,"6",NA
-"1037","Meziadin","Sockeye","Terminal Run","2024",2000,1997,"3",NA
-"1038","Meziadin","Sockeye","Terminal Run","2024",2000,1996,"4",NA
-"1039","Meziadin","Sockeye","Terminal Run","2024",2000,1995,"5",NA
-"1040","Meziadin","Sockeye","Terminal Run","2024",2000,1994,"6",NA
-"1041","Meziadin","Sockeye","Terminal Run","2024",2000,1997,"3",0
-"1042","Meziadin","Sockeye","Terminal Run","2024",2000,1996,"4",98947.658323
-"1043","Meziadin","Sockeye","Terminal Run","2024",2000,1995,"5",215103.60505
-"1044","Meziadin","Sockeye","Terminal Run","2024",2000,1994,"6",116155.946727
-"1045","Meziadin","Sockeye","Terminal Run","2024",2000,1997,"3",0
-"1046","Meziadin","Sockeye","Terminal Run","2024",2000,1996,"4",98947.658323
-"1047","Meziadin","Sockeye","Terminal Run","2024",2000,1995,"5",215103.60505
-"1048","Meziadin","Sockeye","Terminal Run","2024",2000,1994,"6",116155.946727
-"1049","Meziadin","Sockeye","Terminal Run","2024",2000,1997,"3",0
-"1050","Meziadin","Sockeye","Terminal Run","2024",2000,1996,"4",98947.658323
-"1051","Meziadin","Sockeye","Terminal Run","2024",2000,1995,"5",215103.60505
-"1052","Meziadin","Sockeye","Terminal Run","2024",2000,1994,"6",116155.946727
-"1053","Meziadin","Sockeye","Terminal Run","2024",2000,1997,"3",0
-"1054","Meziadin","Sockeye","Terminal Run","2024",2000,1996,"4",98947.658323
-"1055","Meziadin","Sockeye","Terminal Run","2024",2000,1995,"5",215103.60505
-"1056","Meziadin","Sockeye","Terminal Run","2024",2000,1994,"6",116155.946727
-"1057","Meziadin","Sockeye","Terminal Run","2024",2001,1998,"3",NA
-"1058","Meziadin","Sockeye","Terminal Run","2024",2001,1997,"4",NA
-"1059","Meziadin","Sockeye","Terminal Run","2024",2001,1996,"5",NA
-"1060","Meziadin","Sockeye","Terminal Run","2024",2001,1995,"6",NA
-"1061","Meziadin","Sockeye","Terminal Run","2024",2001,1998,"3",NA
-"1062","Meziadin","Sockeye","Terminal Run","2024",2001,1997,"4",NA
-"1063","Meziadin","Sockeye","Terminal Run","2024",2001,1996,"5",NA
-"1064","Meziadin","Sockeye","Terminal Run","2024",2001,1995,"6",NA
-"1065","Meziadin","Sockeye","Terminal Run","2024",2001,1998,"3",NA
-"1066","Meziadin","Sockeye","Terminal Run","2024",2001,1997,"4",NA
-"1067","Meziadin","Sockeye","Terminal Run","2024",2001,1996,"5",NA
-"1068","Meziadin","Sockeye","Terminal Run","2024",2001,1995,"6",NA
-"1069","Meziadin","Sockeye","Terminal Run","2024",2001,1998,"3",NA
-"1070","Meziadin","Sockeye","Terminal Run","2024",2001,1997,"4",NA
-"1071","Meziadin","Sockeye","Terminal Run","2024",2001,1996,"5",NA
-"1072","Meziadin","Sockeye","Terminal Run","2024",2001,1995,"6",NA
-"1073","Meziadin","Sockeye","Terminal Run","2024",2001,1998,"3",0
-"1074","Meziadin","Sockeye","Terminal Run","2024",2001,1997,"4",120134.16478
-"1075","Meziadin","Sockeye","Terminal Run","2024",2001,1996,"5",171620.2354
-"1076","Meziadin","Sockeye","Terminal Run","2024",2001,1995,"6",137296.18832
-"1077","Meziadin","Sockeye","Terminal Run","2024",2001,1998,"3",0
-"1078","Meziadin","Sockeye","Terminal Run","2024",2001,1997,"4",120134.16478
-"1079","Meziadin","Sockeye","Terminal Run","2024",2001,1996,"5",171620.2354
-"1080","Meziadin","Sockeye","Terminal Run","2024",2001,1995,"6",137296.18832
-"1081","Meziadin","Sockeye","Terminal Run","2024",2001,1998,"3",0
-"1082","Meziadin","Sockeye","Terminal Run","2024",2001,1997,"4",120134.16478
-"1083","Meziadin","Sockeye","Terminal Run","2024",2001,1996,"5",171620.2354
-"1084","Meziadin","Sockeye","Terminal Run","2024",2001,1995,"6",137296.18832
-"1085","Meziadin","Sockeye","Terminal Run","2024",2001,1998,"3",0
-"1086","Meziadin","Sockeye","Terminal Run","2024",2001,1997,"4",120134.16478
-"1087","Meziadin","Sockeye","Terminal Run","2024",2001,1996,"5",171620.2354
-"1088","Meziadin","Sockeye","Terminal Run","2024",2001,1995,"6",137296.18832
-"1089","Meziadin","Sockeye","Terminal Run","2024",2002,1999,"3",0
-"1090","Meziadin","Sockeye","Terminal Run","2024",2002,1998,"4",519032.7821
-"1091","Meziadin","Sockeye","Terminal Run","2024",2002,1997,"5",575449.38885
-"1092","Meziadin","Sockeye","Terminal Run","2024",2002,1996,"6",33849.96405
-"1093","Meziadin","Sockeye","Terminal Run","2024",2002,1999,"3",0
-"1094","Meziadin","Sockeye","Terminal Run","2024",2002,1998,"4",519032.7821
-"1095","Meziadin","Sockeye","Terminal Run","2024",2002,1997,"5",575449.38885
-"1096","Meziadin","Sockeye","Terminal Run","2024",2002,1996,"6",33849.96405
-"1097","Meziadin","Sockeye","Terminal Run","2024",2002,1999,"3",0
-"1098","Meziadin","Sockeye","Terminal Run","2024",2002,1998,"4",519032.7821
-"1099","Meziadin","Sockeye","Terminal Run","2024",2002,1997,"5",575449.38885
-"1100","Meziadin","Sockeye","Terminal Run","2024",2002,1996,"6",33849.96405
-"1101","Meziadin","Sockeye","Terminal Run","2024",2002,1999,"3",0
-"1102","Meziadin","Sockeye","Terminal Run","2024",2002,1998,"4",519032.7821
-"1103","Meziadin","Sockeye","Terminal Run","2024",2002,1997,"5",575449.38885
-"1104","Meziadin","Sockeye","Terminal Run","2024",2002,1996,"6",33849.96405
-"1105","Meziadin","Sockeye","Terminal Run","2024",2002,1999,"3",NA
-"1106","Meziadin","Sockeye","Terminal Run","2024",2002,1998,"4",NA
-"1107","Meziadin","Sockeye","Terminal Run","2024",2002,1997,"5",NA
-"1108","Meziadin","Sockeye","Terminal Run","2024",2002,1996,"6",NA
-"1109","Meziadin","Sockeye","Terminal Run","2024",2002,1999,"3",NA
-"1110","Meziadin","Sockeye","Terminal Run","2024",2002,1998,"4",NA
-"1111","Meziadin","Sockeye","Terminal Run","2024",2002,1997,"5",NA
-"1112","Meziadin","Sockeye","Terminal Run","2024",2002,1996,"6",NA
-"1113","Meziadin","Sockeye","Terminal Run","2024",2002,1999,"3",NA
-"1114","Meziadin","Sockeye","Terminal Run","2024",2002,1998,"4",NA
-"1115","Meziadin","Sockeye","Terminal Run","2024",2002,1997,"5",NA
-"1116","Meziadin","Sockeye","Terminal Run","2024",2002,1996,"6",NA
-"1117","Meziadin","Sockeye","Terminal Run","2024",2002,1999,"3",NA
-"1118","Meziadin","Sockeye","Terminal Run","2024",2002,1998,"4",NA
-"1119","Meziadin","Sockeye","Terminal Run","2024",2002,1997,"5",NA
-"1120","Meziadin","Sockeye","Terminal Run","2024",2002,1996,"6",NA
-"1121","Meziadin","Sockeye","Terminal Run","2024",2003,2000,"3",0
-"1122","Meziadin","Sockeye","Terminal Run","2024",2003,1999,"4",172532.182557
-"1123","Meziadin","Sockeye","Terminal Run","2024",2003,1998,"5",550459.820539
-"1124","Meziadin","Sockeye","Terminal Run","2024",2003,1997,"6",98589.818604
-"1125","Meziadin","Sockeye","Terminal Run","2024",2003,2000,"3",0
-"1126","Meziadin","Sockeye","Terminal Run","2024",2003,1999,"4",172532.182557
-"1127","Meziadin","Sockeye","Terminal Run","2024",2003,1998,"5",550459.820539
-"1128","Meziadin","Sockeye","Terminal Run","2024",2003,1997,"6",98589.818604
-"1129","Meziadin","Sockeye","Terminal Run","2024",2003,2000,"3",0
-"1130","Meziadin","Sockeye","Terminal Run","2024",2003,1999,"4",172532.182557
-"1131","Meziadin","Sockeye","Terminal Run","2024",2003,1998,"5",550459.820539
-"1132","Meziadin","Sockeye","Terminal Run","2024",2003,1997,"6",98589.818604
-"1133","Meziadin","Sockeye","Terminal Run","2024",2003,2000,"3",0
-"1134","Meziadin","Sockeye","Terminal Run","2024",2003,1999,"4",172532.182557
-"1135","Meziadin","Sockeye","Terminal Run","2024",2003,1998,"5",550459.820539
-"1136","Meziadin","Sockeye","Terminal Run","2024",2003,1997,"6",98589.818604
-"1137","Meziadin","Sockeye","Terminal Run","2024",2003,2000,"3",NA
-"1138","Meziadin","Sockeye","Terminal Run","2024",2003,1999,"4",NA
-"1139","Meziadin","Sockeye","Terminal Run","2024",2003,1998,"5",NA
-"1140","Meziadin","Sockeye","Terminal Run","2024",2003,1997,"6",NA
-"1141","Meziadin","Sockeye","Terminal Run","2024",2003,2000,"3",NA
-"1142","Meziadin","Sockeye","Terminal Run","2024",2003,1999,"4",NA
-"1143","Meziadin","Sockeye","Terminal Run","2024",2003,1998,"5",NA
-"1144","Meziadin","Sockeye","Terminal Run","2024",2003,1997,"6",NA
-"1145","Meziadin","Sockeye","Terminal Run","2024",2003,2000,"3",NA
-"1146","Meziadin","Sockeye","Terminal Run","2024",2003,1999,"4",NA
-"1147","Meziadin","Sockeye","Terminal Run","2024",2003,1998,"5",NA
-"1148","Meziadin","Sockeye","Terminal Run","2024",2003,1997,"6",NA
-"1149","Meziadin","Sockeye","Terminal Run","2024",2003,2000,"3",NA
-"1150","Meziadin","Sockeye","Terminal Run","2024",2003,1999,"4",NA
-"1151","Meziadin","Sockeye","Terminal Run","2024",2003,1998,"5",NA
-"1152","Meziadin","Sockeye","Terminal Run","2024",2003,1997,"6",NA
-"1153","Meziadin","Sockeye","Terminal Run","2024",2004,2001,"3",NA
-"1154","Meziadin","Sockeye","Terminal Run","2024",2004,2000,"4",NA
-"1155","Meziadin","Sockeye","Terminal Run","2024",2004,1999,"5",NA
-"1156","Meziadin","Sockeye","Terminal Run","2024",2004,1998,"6",NA
-"1157","Meziadin","Sockeye","Terminal Run","2024",2004,2001,"3",NA
-"1158","Meziadin","Sockeye","Terminal Run","2024",2004,2000,"4",NA
-"1159","Meziadin","Sockeye","Terminal Run","2024",2004,1999,"5",NA
-"1160","Meziadin","Sockeye","Terminal Run","2024",2004,1998,"6",NA
-"1161","Meziadin","Sockeye","Terminal Run","2024",2004,2001,"3",NA
-"1162","Meziadin","Sockeye","Terminal Run","2024",2004,2000,"4",NA
-"1163","Meziadin","Sockeye","Terminal Run","2024",2004,1999,"5",NA
-"1164","Meziadin","Sockeye","Terminal Run","2024",2004,1998,"6",NA
-"1165","Meziadin","Sockeye","Terminal Run","2024",2004,2001,"3",NA
-"1166","Meziadin","Sockeye","Terminal Run","2024",2004,2000,"4",NA
-"1167","Meziadin","Sockeye","Terminal Run","2024",2004,1999,"5",NA
-"1168","Meziadin","Sockeye","Terminal Run","2024",2004,1998,"6",NA
-"1169","Meziadin","Sockeye","Terminal Run","2024",2004,2001,"3",0
-"1170","Meziadin","Sockeye","Terminal Run","2024",2004,2000,"4",184609.941208
-"1171","Meziadin","Sockeye","Terminal Run","2024",2004,1999,"5",435152.004276
-"1172","Meziadin","Sockeye","Terminal Run","2024",2004,1998,"6",32966.06093
-"1173","Meziadin","Sockeye","Terminal Run","2024",2004,2001,"3",0
-"1174","Meziadin","Sockeye","Terminal Run","2024",2004,2000,"4",184609.941208
-"1175","Meziadin","Sockeye","Terminal Run","2024",2004,1999,"5",435152.004276
-"1176","Meziadin","Sockeye","Terminal Run","2024",2004,1998,"6",32966.06093
-"1177","Meziadin","Sockeye","Terminal Run","2024",2004,2001,"3",0
-"1178","Meziadin","Sockeye","Terminal Run","2024",2004,2000,"4",184609.941208
-"1179","Meziadin","Sockeye","Terminal Run","2024",2004,1999,"5",435152.004276
-"1180","Meziadin","Sockeye","Terminal Run","2024",2004,1998,"6",32966.06093
-"1181","Meziadin","Sockeye","Terminal Run","2024",2004,2001,"3",0
-"1182","Meziadin","Sockeye","Terminal Run","2024",2004,2000,"4",184609.941208
-"1183","Meziadin","Sockeye","Terminal Run","2024",2004,1999,"5",435152.004276
-"1184","Meziadin","Sockeye","Terminal Run","2024",2004,1998,"6",32966.06093
-"1185","Meziadin","Sockeye","Terminal Run","2024",2005,2002,"3",NA
-"1186","Meziadin","Sockeye","Terminal Run","2024",2005,2001,"4",NA
-"1187","Meziadin","Sockeye","Terminal Run","2024",2005,2000,"5",NA
-"1188","Meziadin","Sockeye","Terminal Run","2024",2005,1999,"6",NA
-"1189","Meziadin","Sockeye","Terminal Run","2024",2005,2002,"3",NA
-"1190","Meziadin","Sockeye","Terminal Run","2024",2005,2001,"4",NA
-"1191","Meziadin","Sockeye","Terminal Run","2024",2005,2000,"5",NA
-"1192","Meziadin","Sockeye","Terminal Run","2024",2005,1999,"6",NA
-"1193","Meziadin","Sockeye","Terminal Run","2024",2005,2002,"3",NA
-"1194","Meziadin","Sockeye","Terminal Run","2024",2005,2001,"4",NA
-"1195","Meziadin","Sockeye","Terminal Run","2024",2005,2000,"5",NA
-"1196","Meziadin","Sockeye","Terminal Run","2024",2005,1999,"6",NA
-"1197","Meziadin","Sockeye","Terminal Run","2024",2005,2002,"3",NA
-"1198","Meziadin","Sockeye","Terminal Run","2024",2005,2001,"4",NA
-"1199","Meziadin","Sockeye","Terminal Run","2024",2005,2000,"5",NA
-"1200","Meziadin","Sockeye","Terminal Run","2024",2005,1999,"6",NA
-"1201","Meziadin","Sockeye","Terminal Run","2024",2005,2002,"3",0
-"1202","Meziadin","Sockeye","Terminal Run","2024",2005,2001,"4",68675.406719
-"1203","Meziadin","Sockeye","Terminal Run","2024",2005,2000,"5",274701.626876
-"1204","Meziadin","Sockeye","Terminal Run","2024",2005,1999,"6",60595.947105
-"1205","Meziadin","Sockeye","Terminal Run","2024",2005,2002,"3",0
-"1206","Meziadin","Sockeye","Terminal Run","2024",2005,2001,"4",68675.406719
-"1207","Meziadin","Sockeye","Terminal Run","2024",2005,2000,"5",274701.626876
-"1208","Meziadin","Sockeye","Terminal Run","2024",2005,1999,"6",60595.947105
-"1209","Meziadin","Sockeye","Terminal Run","2024",2005,2002,"3",0
-"1210","Meziadin","Sockeye","Terminal Run","2024",2005,2001,"4",68675.406719
-"1211","Meziadin","Sockeye","Terminal Run","2024",2005,2000,"5",274701.626876
-"1212","Meziadin","Sockeye","Terminal Run","2024",2005,1999,"6",60595.947105
-"1213","Meziadin","Sockeye","Terminal Run","2024",2005,2002,"3",0
-"1214","Meziadin","Sockeye","Terminal Run","2024",2005,2001,"4",68675.406719
-"1215","Meziadin","Sockeye","Terminal Run","2024",2005,2000,"5",274701.626876
-"1216","Meziadin","Sockeye","Terminal Run","2024",2005,1999,"6",60595.947105
-"1217","Meziadin","Sockeye","Terminal Run","2024",2006,2003,"3",0
-"1218","Meziadin","Sockeye","Terminal Run","2024",2006,2002,"4",76414.11561
-"1219","Meziadin","Sockeye","Terminal Run","2024",2006,2001,"5",237732.80412
-"1220","Meziadin","Sockeye","Terminal Run","2024",2006,2000,"6",110375.94477
-"1221","Meziadin","Sockeye","Terminal Run","2024",2006,2003,"3",0
-"1222","Meziadin","Sockeye","Terminal Run","2024",2006,2002,"4",76414.11561
-"1223","Meziadin","Sockeye","Terminal Run","2024",2006,2001,"5",237732.80412
-"1224","Meziadin","Sockeye","Terminal Run","2024",2006,2000,"6",110375.94477
-"1225","Meziadin","Sockeye","Terminal Run","2024",2006,2003,"3",0
-"1226","Meziadin","Sockeye","Terminal Run","2024",2006,2002,"4",76414.11561
-"1227","Meziadin","Sockeye","Terminal Run","2024",2006,2001,"5",237732.80412
-"1228","Meziadin","Sockeye","Terminal Run","2024",2006,2000,"6",110375.94477
-"1229","Meziadin","Sockeye","Terminal Run","2024",2006,2003,"3",0
-"1230","Meziadin","Sockeye","Terminal Run","2024",2006,2002,"4",76414.11561
-"1231","Meziadin","Sockeye","Terminal Run","2024",2006,2001,"5",237732.80412
-"1232","Meziadin","Sockeye","Terminal Run","2024",2006,2000,"6",110375.94477
-"1233","Meziadin","Sockeye","Terminal Run","2024",2006,2003,"3",NA
-"1234","Meziadin","Sockeye","Terminal Run","2024",2006,2002,"4",NA
-"1235","Meziadin","Sockeye","Terminal Run","2024",2006,2001,"5",NA
-"1236","Meziadin","Sockeye","Terminal Run","2024",2006,2000,"6",NA
-"1237","Meziadin","Sockeye","Terminal Run","2024",2006,2003,"3",NA
-"1238","Meziadin","Sockeye","Terminal Run","2024",2006,2002,"4",NA
-"1239","Meziadin","Sockeye","Terminal Run","2024",2006,2001,"5",NA
-"1240","Meziadin","Sockeye","Terminal Run","2024",2006,2000,"6",NA
-"1241","Meziadin","Sockeye","Terminal Run","2024",2006,2003,"3",NA
-"1242","Meziadin","Sockeye","Terminal Run","2024",2006,2002,"4",NA
-"1243","Meziadin","Sockeye","Terminal Run","2024",2006,2001,"5",NA
-"1244","Meziadin","Sockeye","Terminal Run","2024",2006,2000,"6",NA
-"1245","Meziadin","Sockeye","Terminal Run","2024",2006,2003,"3",NA
-"1246","Meziadin","Sockeye","Terminal Run","2024",2006,2002,"4",NA
-"1247","Meziadin","Sockeye","Terminal Run","2024",2006,2001,"5",NA
-"1248","Meziadin","Sockeye","Terminal Run","2024",2006,2000,"6",NA
-"1249","Meziadin","Sockeye","Terminal Run","2024",2007,2004,"3",0
-"1250","Meziadin","Sockeye","Terminal Run","2024",2007,2003,"4",20538.375045
-"1251","Meziadin","Sockeye","Terminal Run","2024",2007,2002,"5",283429.575621
-"1252","Meziadin","Sockeye","Terminal Run","2024",2007,2001,"6",106799.550234
-"1253","Meziadin","Sockeye","Terminal Run","2024",2007,2004,"3",0
-"1254","Meziadin","Sockeye","Terminal Run","2024",2007,2003,"4",20538.375045
-"1255","Meziadin","Sockeye","Terminal Run","2024",2007,2002,"5",283429.575621
-"1256","Meziadin","Sockeye","Terminal Run","2024",2007,2001,"6",106799.550234
-"1257","Meziadin","Sockeye","Terminal Run","2024",2007,2004,"3",0
-"1258","Meziadin","Sockeye","Terminal Run","2024",2007,2003,"4",20538.375045
-"1259","Meziadin","Sockeye","Terminal Run","2024",2007,2002,"5",283429.575621
-"1260","Meziadin","Sockeye","Terminal Run","2024",2007,2001,"6",106799.550234
-"1261","Meziadin","Sockeye","Terminal Run","2024",2007,2004,"3",0
-"1262","Meziadin","Sockeye","Terminal Run","2024",2007,2003,"4",20538.375045
-"1263","Meziadin","Sockeye","Terminal Run","2024",2007,2002,"5",283429.575621
-"1264","Meziadin","Sockeye","Terminal Run","2024",2007,2001,"6",106799.550234
-"1265","Meziadin","Sockeye","Terminal Run","2024",2007,2004,"3",NA
-"1266","Meziadin","Sockeye","Terminal Run","2024",2007,2003,"4",NA
-"1267","Meziadin","Sockeye","Terminal Run","2024",2007,2002,"5",NA
-"1268","Meziadin","Sockeye","Terminal Run","2024",2007,2001,"6",NA
-"1269","Meziadin","Sockeye","Terminal Run","2024",2007,2004,"3",NA
-"1270","Meziadin","Sockeye","Terminal Run","2024",2007,2003,"4",NA
-"1271","Meziadin","Sockeye","Terminal Run","2024",2007,2002,"5",NA
-"1272","Meziadin","Sockeye","Terminal Run","2024",2007,2001,"6",NA
-"1273","Meziadin","Sockeye","Terminal Run","2024",2007,2004,"3",NA
-"1274","Meziadin","Sockeye","Terminal Run","2024",2007,2003,"4",NA
-"1275","Meziadin","Sockeye","Terminal Run","2024",2007,2002,"5",NA
-"1276","Meziadin","Sockeye","Terminal Run","2024",2007,2001,"6",NA
-"1277","Meziadin","Sockeye","Terminal Run","2024",2007,2004,"3",NA
-"1278","Meziadin","Sockeye","Terminal Run","2024",2007,2003,"4",NA
-"1279","Meziadin","Sockeye","Terminal Run","2024",2007,2002,"5",NA
-"1280","Meziadin","Sockeye","Terminal Run","2024",2007,2001,"6",NA
-"1281","Meziadin","Sockeye","Terminal Run","2024",2008,2005,"3",NA
-"1282","Meziadin","Sockeye","Terminal Run","2024",2008,2004,"4",NA
-"1283","Meziadin","Sockeye","Terminal Run","2024",2008,2003,"5",NA
-"1284","Meziadin","Sockeye","Terminal Run","2024",2008,2002,"6",NA
-"1285","Meziadin","Sockeye","Terminal Run","2024",2008,2005,"3",NA
-"1286","Meziadin","Sockeye","Terminal Run","2024",2008,2004,"4",NA
-"1287","Meziadin","Sockeye","Terminal Run","2024",2008,2003,"5",NA
-"1288","Meziadin","Sockeye","Terminal Run","2024",2008,2002,"6",NA
-"1289","Meziadin","Sockeye","Terminal Run","2024",2008,2005,"3",NA
-"1290","Meziadin","Sockeye","Terminal Run","2024",2008,2004,"4",NA
-"1291","Meziadin","Sockeye","Terminal Run","2024",2008,2003,"5",NA
-"1292","Meziadin","Sockeye","Terminal Run","2024",2008,2002,"6",NA
-"1293","Meziadin","Sockeye","Terminal Run","2024",2008,2005,"3",NA
-"1294","Meziadin","Sockeye","Terminal Run","2024",2008,2004,"4",NA
-"1295","Meziadin","Sockeye","Terminal Run","2024",2008,2003,"5",NA
-"1296","Meziadin","Sockeye","Terminal Run","2024",2008,2002,"6",NA
-"1297","Meziadin","Sockeye","Terminal Run","2024",2008,2005,"3",0
-"1298","Meziadin","Sockeye","Terminal Run","2024",2008,2004,"4",65501.950848
-"1299","Meziadin","Sockeye","Terminal Run","2024",2008,2003,"5",180130.364832
-"1300","Meziadin","Sockeye","Terminal Run","2024",2008,2002,"6",27292.47952
-"1301","Meziadin","Sockeye","Terminal Run","2024",2008,2005,"3",0
-"1302","Meziadin","Sockeye","Terminal Run","2024",2008,2004,"4",65501.950848
-"1303","Meziadin","Sockeye","Terminal Run","2024",2008,2003,"5",180130.364832
-"1304","Meziadin","Sockeye","Terminal Run","2024",2008,2002,"6",27292.47952
-"1305","Meziadin","Sockeye","Terminal Run","2024",2008,2005,"3",0
-"1306","Meziadin","Sockeye","Terminal Run","2024",2008,2004,"4",65501.950848
-"1307","Meziadin","Sockeye","Terminal Run","2024",2008,2003,"5",180130.364832
-"1308","Meziadin","Sockeye","Terminal Run","2024",2008,2002,"6",27292.47952
-"1309","Meziadin","Sockeye","Terminal Run","2024",2008,2005,"3",0
-"1310","Meziadin","Sockeye","Terminal Run","2024",2008,2004,"4",65501.950848
-"1311","Meziadin","Sockeye","Terminal Run","2024",2008,2003,"5",180130.364832
-"1312","Meziadin","Sockeye","Terminal Run","2024",2008,2002,"6",27292.47952
-"1313","Meziadin","Sockeye","Terminal Run","2024",2009,2006,"3",NA
-"1314","Meziadin","Sockeye","Terminal Run","2024",2009,2005,"4",NA
-"1315","Meziadin","Sockeye","Terminal Run","2024",2009,2004,"5",NA
-"1316","Meziadin","Sockeye","Terminal Run","2024",2009,2003,"6",NA
-"1317","Meziadin","Sockeye","Terminal Run","2024",2009,2006,"3",NA
-"1318","Meziadin","Sockeye","Terminal Run","2024",2009,2005,"4",NA
-"1319","Meziadin","Sockeye","Terminal Run","2024",2009,2004,"5",NA
-"1320","Meziadin","Sockeye","Terminal Run","2024",2009,2003,"6",NA
-"1321","Meziadin","Sockeye","Terminal Run","2024",2009,2006,"3",NA
-"1322","Meziadin","Sockeye","Terminal Run","2024",2009,2005,"4",NA
-"1323","Meziadin","Sockeye","Terminal Run","2024",2009,2004,"5",NA
-"1324","Meziadin","Sockeye","Terminal Run","2024",2009,2003,"6",NA
-"1325","Meziadin","Sockeye","Terminal Run","2024",2009,2006,"3",NA
-"1326","Meziadin","Sockeye","Terminal Run","2024",2009,2005,"4",NA
-"1327","Meziadin","Sockeye","Terminal Run","2024",2009,2004,"5",NA
-"1328","Meziadin","Sockeye","Terminal Run","2024",2009,2003,"6",NA
-"1329","Meziadin","Sockeye","Terminal Run","2024",2009,2006,"3",0
-"1330","Meziadin","Sockeye","Terminal Run","2024",2009,2005,"4",44553.977127
-"1331","Meziadin","Sockeye","Terminal Run","2024",2009,2004,"5",307827.478332
-"1332","Meziadin","Sockeye","Terminal Run","2024",2009,2003,"6",52654.700241
-"1333","Meziadin","Sockeye","Terminal Run","2024",2009,2006,"3",0
-"1334","Meziadin","Sockeye","Terminal Run","2024",2009,2005,"4",44553.977127
-"1335","Meziadin","Sockeye","Terminal Run","2024",2009,2004,"5",307827.478332
-"1336","Meziadin","Sockeye","Terminal Run","2024",2009,2003,"6",52654.700241
-"1337","Meziadin","Sockeye","Terminal Run","2024",2009,2006,"3",0
-"1338","Meziadin","Sockeye","Terminal Run","2024",2009,2005,"4",44553.977127
-"1339","Meziadin","Sockeye","Terminal Run","2024",2009,2004,"5",307827.478332
-"1340","Meziadin","Sockeye","Terminal Run","2024",2009,2003,"6",52654.700241
-"1341","Meziadin","Sockeye","Terminal Run","2024",2009,2006,"3",0
-"1342","Meziadin","Sockeye","Terminal Run","2024",2009,2005,"4",44553.977127
-"1343","Meziadin","Sockeye","Terminal Run","2024",2009,2004,"5",307827.478332
-"1344","Meziadin","Sockeye","Terminal Run","2024",2009,2003,"6",52654.700241
-"1345","Meziadin","Sockeye","Terminal Run","2024",2010,2007,"3",8759.61606
-"1346","Meziadin","Sockeye","Terminal Run","2024",2010,2006,"4",70076.92848
-"1347","Meziadin","Sockeye","Terminal Run","2024",2010,2005,"5",198551.29736
-"1348","Meziadin","Sockeye","Terminal Run","2024",2010,2004,"6",17519.23212
-"1349","Meziadin","Sockeye","Terminal Run","2024",2010,2007,"3",8759.61606
-"1350","Meziadin","Sockeye","Terminal Run","2024",2010,2006,"4",70076.92848
-"1351","Meziadin","Sockeye","Terminal Run","2024",2010,2005,"5",198551.29736
-"1352","Meziadin","Sockeye","Terminal Run","2024",2010,2004,"6",17519.23212
-"1353","Meziadin","Sockeye","Terminal Run","2024",2010,2007,"3",8759.61606
-"1354","Meziadin","Sockeye","Terminal Run","2024",2010,2006,"4",70076.92848
-"1355","Meziadin","Sockeye","Terminal Run","2024",2010,2005,"5",198551.29736
-"1356","Meziadin","Sockeye","Terminal Run","2024",2010,2004,"6",17519.23212
-"1357","Meziadin","Sockeye","Terminal Run","2024",2010,2007,"3",8759.61606
-"1358","Meziadin","Sockeye","Terminal Run","2024",2010,2006,"4",70076.92848
-"1359","Meziadin","Sockeye","Terminal Run","2024",2010,2005,"5",198551.29736
-"1360","Meziadin","Sockeye","Terminal Run","2024",2010,2004,"6",17519.23212
-"1361","Meziadin","Sockeye","Terminal Run","2024",2010,2007,"3",NA
-"1362","Meziadin","Sockeye","Terminal Run","2024",2010,2006,"4",NA
-"1363","Meziadin","Sockeye","Terminal Run","2024",2010,2005,"5",NA
-"1364","Meziadin","Sockeye","Terminal Run","2024",2010,2004,"6",NA
-"1365","Meziadin","Sockeye","Terminal Run","2024",2010,2007,"3",NA
-"1366","Meziadin","Sockeye","Terminal Run","2024",2010,2006,"4",NA
-"1367","Meziadin","Sockeye","Terminal Run","2024",2010,2005,"5",NA
-"1368","Meziadin","Sockeye","Terminal Run","2024",2010,2004,"6",NA
-"1369","Meziadin","Sockeye","Terminal Run","2024",2010,2007,"3",NA
-"1370","Meziadin","Sockeye","Terminal Run","2024",2010,2006,"4",NA
-"1371","Meziadin","Sockeye","Terminal Run","2024",2010,2005,"5",NA
-"1372","Meziadin","Sockeye","Terminal Run","2024",2010,2004,"6",NA
-"1373","Meziadin","Sockeye","Terminal Run","2024",2010,2007,"3",NA
-"1374","Meziadin","Sockeye","Terminal Run","2024",2010,2006,"4",NA
-"1375","Meziadin","Sockeye","Terminal Run","2024",2010,2005,"5",NA
-"1376","Meziadin","Sockeye","Terminal Run","2024",2010,2004,"6",NA
-"1377","Meziadin","Sockeye","Terminal Run","2024",2011,2008,"3",3265.780386
-"1378","Meziadin","Sockeye","Terminal Run","2024",2011,2007,"4",104504.972352
-"1379","Meziadin","Sockeye","Terminal Run","2024",2011,2006,"5",189415.262388
-"1380","Meziadin","Sockeye","Terminal Run","2024",2011,2005,"6",29392.023474
-"1381","Meziadin","Sockeye","Terminal Run","2024",2011,2008,"3",3265.780386
-"1382","Meziadin","Sockeye","Terminal Run","2024",2011,2007,"4",104504.972352
-"1383","Meziadin","Sockeye","Terminal Run","2024",2011,2006,"5",189415.262388
-"1384","Meziadin","Sockeye","Terminal Run","2024",2011,2005,"6",29392.023474
-"1385","Meziadin","Sockeye","Terminal Run","2024",2011,2008,"3",3265.780386
-"1386","Meziadin","Sockeye","Terminal Run","2024",2011,2007,"4",104504.972352
-"1387","Meziadin","Sockeye","Terminal Run","2024",2011,2006,"5",189415.262388
-"1388","Meziadin","Sockeye","Terminal Run","2024",2011,2005,"6",29392.023474
-"1389","Meziadin","Sockeye","Terminal Run","2024",2011,2008,"3",3265.780386
-"1390","Meziadin","Sockeye","Terminal Run","2024",2011,2007,"4",104504.972352
-"1391","Meziadin","Sockeye","Terminal Run","2024",2011,2006,"5",189415.262388
-"1392","Meziadin","Sockeye","Terminal Run","2024",2011,2005,"6",29392.023474
-"1393","Meziadin","Sockeye","Terminal Run","2024",2011,2008,"3",NA
-"1394","Meziadin","Sockeye","Terminal Run","2024",2011,2007,"4",NA
-"1395","Meziadin","Sockeye","Terminal Run","2024",2011,2006,"5",NA
-"1396","Meziadin","Sockeye","Terminal Run","2024",2011,2005,"6",NA
-"1397","Meziadin","Sockeye","Terminal Run","2024",2011,2008,"3",NA
-"1398","Meziadin","Sockeye","Terminal Run","2024",2011,2007,"4",NA
-"1399","Meziadin","Sockeye","Terminal Run","2024",2011,2006,"5",NA
-"1400","Meziadin","Sockeye","Terminal Run","2024",2011,2005,"6",NA
-"1401","Meziadin","Sockeye","Terminal Run","2024",2011,2008,"3",NA
-"1402","Meziadin","Sockeye","Terminal Run","2024",2011,2007,"4",NA
-"1403","Meziadin","Sockeye","Terminal Run","2024",2011,2006,"5",NA
-"1404","Meziadin","Sockeye","Terminal Run","2024",2011,2005,"6",NA
-"1405","Meziadin","Sockeye","Terminal Run","2024",2011,2008,"3",NA
-"1406","Meziadin","Sockeye","Terminal Run","2024",2011,2007,"4",NA
-"1407","Meziadin","Sockeye","Terminal Run","2024",2011,2006,"5",NA
-"1408","Meziadin","Sockeye","Terminal Run","2024",2011,2005,"6",NA
-"1409","Meziadin","Sockeye","Terminal Run","2024",2012,2009,"3",16092.1326
-"1410","Meziadin","Sockeye","Terminal Run","2024",2012,2008,"4",51494.82432
-"1411","Meziadin","Sockeye","Terminal Run","2024",2012,2007,"5",199542.44424
-"1412","Meziadin","Sockeye","Terminal Run","2024",2012,2006,"6",57931.67736
-"1413","Meziadin","Sockeye","Terminal Run","2024",2012,2009,"3",16092.1326
-"1414","Meziadin","Sockeye","Terminal Run","2024",2012,2008,"4",51494.82432
-"1415","Meziadin","Sockeye","Terminal Run","2024",2012,2007,"5",199542.44424
-"1416","Meziadin","Sockeye","Terminal Run","2024",2012,2006,"6",57931.67736
-"1417","Meziadin","Sockeye","Terminal Run","2024",2012,2009,"3",16092.1326
-"1418","Meziadin","Sockeye","Terminal Run","2024",2012,2008,"4",51494.82432
-"1419","Meziadin","Sockeye","Terminal Run","2024",2012,2007,"5",199542.44424
-"1420","Meziadin","Sockeye","Terminal Run","2024",2012,2006,"6",57931.67736
-"1421","Meziadin","Sockeye","Terminal Run","2024",2012,2009,"3",16092.1326
-"1422","Meziadin","Sockeye","Terminal Run","2024",2012,2008,"4",51494.82432
-"1423","Meziadin","Sockeye","Terminal Run","2024",2012,2007,"5",199542.44424
-"1424","Meziadin","Sockeye","Terminal Run","2024",2012,2006,"6",57931.67736
-"1425","Meziadin","Sockeye","Terminal Run","2024",2012,2009,"3",NA
-"1426","Meziadin","Sockeye","Terminal Run","2024",2012,2008,"4",NA
-"1427","Meziadin","Sockeye","Terminal Run","2024",2012,2007,"5",NA
-"1428","Meziadin","Sockeye","Terminal Run","2024",2012,2006,"6",NA
-"1429","Meziadin","Sockeye","Terminal Run","2024",2012,2009,"3",NA
-"1430","Meziadin","Sockeye","Terminal Run","2024",2012,2008,"4",NA
-"1431","Meziadin","Sockeye","Terminal Run","2024",2012,2007,"5",NA
-"1432","Meziadin","Sockeye","Terminal Run","2024",2012,2006,"6",NA
-"1433","Meziadin","Sockeye","Terminal Run","2024",2012,2009,"3",NA
-"1434","Meziadin","Sockeye","Terminal Run","2024",2012,2008,"4",NA
-"1435","Meziadin","Sockeye","Terminal Run","2024",2012,2007,"5",NA
-"1436","Meziadin","Sockeye","Terminal Run","2024",2012,2006,"6",NA
-"1437","Meziadin","Sockeye","Terminal Run","2024",2012,2009,"3",NA
-"1438","Meziadin","Sockeye","Terminal Run","2024",2012,2008,"4",NA
-"1439","Meziadin","Sockeye","Terminal Run","2024",2012,2007,"5",NA
-"1440","Meziadin","Sockeye","Terminal Run","2024",2012,2006,"6",NA
-"1441","Meziadin","Sockeye","Terminal Run","2024",2013,2010,"3",NA
-"1442","Meziadin","Sockeye","Terminal Run","2024",2013,2009,"4",NA
-"1443","Meziadin","Sockeye","Terminal Run","2024",2013,2008,"5",NA
-"1444","Meziadin","Sockeye","Terminal Run","2024",2013,2007,"6",NA
-"1445","Meziadin","Sockeye","Terminal Run","2024",2013,2010,"3",NA
-"1446","Meziadin","Sockeye","Terminal Run","2024",2013,2009,"4",NA
-"1447","Meziadin","Sockeye","Terminal Run","2024",2013,2008,"5",NA
-"1448","Meziadin","Sockeye","Terminal Run","2024",2013,2007,"6",NA
-"1449","Meziadin","Sockeye","Terminal Run","2024",2013,2010,"3",NA
-"1450","Meziadin","Sockeye","Terminal Run","2024",2013,2009,"4",NA
-"1451","Meziadin","Sockeye","Terminal Run","2024",2013,2008,"5",NA
-"1452","Meziadin","Sockeye","Terminal Run","2024",2013,2007,"6",NA
-"1453","Meziadin","Sockeye","Terminal Run","2024",2013,2010,"3",NA
-"1454","Meziadin","Sockeye","Terminal Run","2024",2013,2009,"4",NA
-"1455","Meziadin","Sockeye","Terminal Run","2024",2013,2008,"5",NA
-"1456","Meziadin","Sockeye","Terminal Run","2024",2013,2007,"6",NA
-"1457","Meziadin","Sockeye","Terminal Run","2024",2013,2010,"3",8032.431602
-"1458","Meziadin","Sockeye","Terminal Run","2024",2013,2009,"4",132535.121433
-"1459","Meziadin","Sockeye","Terminal Run","2024",2013,2008,"5",212859.437453
-"1460","Meziadin","Sockeye","Terminal Run","2024",2013,2007,"6",48194.589612
-"1461","Meziadin","Sockeye","Terminal Run","2024",2013,2010,"3",8032.431602
-"1462","Meziadin","Sockeye","Terminal Run","2024",2013,2009,"4",132535.121433
-"1463","Meziadin","Sockeye","Terminal Run","2024",2013,2008,"5",212859.437453
-"1464","Meziadin","Sockeye","Terminal Run","2024",2013,2007,"6",48194.589612
-"1465","Meziadin","Sockeye","Terminal Run","2024",2013,2010,"3",8032.431602
-"1466","Meziadin","Sockeye","Terminal Run","2024",2013,2009,"4",132535.121433
-"1467","Meziadin","Sockeye","Terminal Run","2024",2013,2008,"5",212859.437453
-"1468","Meziadin","Sockeye","Terminal Run","2024",2013,2007,"6",48194.589612
-"1469","Meziadin","Sockeye","Terminal Run","2024",2013,2010,"3",8032.431602
-"1470","Meziadin","Sockeye","Terminal Run","2024",2013,2009,"4",132535.121433
-"1471","Meziadin","Sockeye","Terminal Run","2024",2013,2008,"5",212859.437453
-"1472","Meziadin","Sockeye","Terminal Run","2024",2013,2007,"6",48194.589612
-"1473","Meziadin","Sockeye","Terminal Run","2024",2014,2011,"3",NA
-"1474","Meziadin","Sockeye","Terminal Run","2024",2014,2010,"4",NA
-"1475","Meziadin","Sockeye","Terminal Run","2024",2014,2009,"5",NA
-"1476","Meziadin","Sockeye","Terminal Run","2024",2014,2008,"6",NA
-"1477","Meziadin","Sockeye","Terminal Run","2024",2014,2011,"3",NA
-"1478","Meziadin","Sockeye","Terminal Run","2024",2014,2010,"4",NA
-"1479","Meziadin","Sockeye","Terminal Run","2024",2014,2009,"5",NA
-"1480","Meziadin","Sockeye","Terminal Run","2024",2014,2008,"6",NA
-"1481","Meziadin","Sockeye","Terminal Run","2024",2014,2011,"3",NA
-"1482","Meziadin","Sockeye","Terminal Run","2024",2014,2010,"4",NA
-"1483","Meziadin","Sockeye","Terminal Run","2024",2014,2009,"5",NA
-"1484","Meziadin","Sockeye","Terminal Run","2024",2014,2008,"6",NA
-"1485","Meziadin","Sockeye","Terminal Run","2024",2014,2011,"3",NA
-"1486","Meziadin","Sockeye","Terminal Run","2024",2014,2010,"4",NA
-"1487","Meziadin","Sockeye","Terminal Run","2024",2014,2009,"5",NA
-"1488","Meziadin","Sockeye","Terminal Run","2024",2014,2008,"6",NA
-"1489","Meziadin","Sockeye","Terminal Run","2024",2014,2011,"3",26160.299811
-"1490","Meziadin","Sockeye","Terminal Run","2024",2014,2010,"4",72667.499475
-"1491","Meziadin","Sockeye","Terminal Run","2024",2014,2009,"5",154055.098887
-"1492","Meziadin","Sockeye","Terminal Run","2024",2014,2008,"6",37787.099727
-"1493","Meziadin","Sockeye","Terminal Run","2024",2014,2011,"3",26160.299811
-"1494","Meziadin","Sockeye","Terminal Run","2024",2014,2010,"4",72667.499475
-"1495","Meziadin","Sockeye","Terminal Run","2024",2014,2009,"5",154055.098887
-"1496","Meziadin","Sockeye","Terminal Run","2024",2014,2008,"6",37787.099727
-"1497","Meziadin","Sockeye","Terminal Run","2024",2014,2011,"3",26160.299811
-"1498","Meziadin","Sockeye","Terminal Run","2024",2014,2010,"4",72667.499475
-"1499","Meziadin","Sockeye","Terminal Run","2024",2014,2009,"5",154055.098887
-"1500","Meziadin","Sockeye","Terminal Run","2024",2014,2008,"6",37787.099727
-"1501","Meziadin","Sockeye","Terminal Run","2024",2014,2011,"3",26160.299811
-"1502","Meziadin","Sockeye","Terminal Run","2024",2014,2010,"4",72667.499475
-"1503","Meziadin","Sockeye","Terminal Run","2024",2014,2009,"5",154055.098887
-"1504","Meziadin","Sockeye","Terminal Run","2024",2014,2008,"6",37787.099727
-"1505","Meziadin","Sockeye","Terminal Run","2024",2015,2012,"3",4244.260697
-"1506","Meziadin","Sockeye","Terminal Run","2024",2015,2011,"4",169770.42788
-"1507","Meziadin","Sockeye","Terminal Run","2024",2015,2010,"5",174014.688577
-"1508","Meziadin","Sockeye","Terminal Run","2024",2015,2009,"6",76396.692546
-"1509","Meziadin","Sockeye","Terminal Run","2024",2015,2012,"3",4244.260697
-"1510","Meziadin","Sockeye","Terminal Run","2024",2015,2011,"4",169770.42788
-"1511","Meziadin","Sockeye","Terminal Run","2024",2015,2010,"5",174014.688577
-"1512","Meziadin","Sockeye","Terminal Run","2024",2015,2009,"6",76396.692546
-"1513","Meziadin","Sockeye","Terminal Run","2024",2015,2012,"3",4244.260697
-"1514","Meziadin","Sockeye","Terminal Run","2024",2015,2011,"4",169770.42788
-"1515","Meziadin","Sockeye","Terminal Run","2024",2015,2010,"5",174014.688577
-"1516","Meziadin","Sockeye","Terminal Run","2024",2015,2009,"6",76396.692546
-"1517","Meziadin","Sockeye","Terminal Run","2024",2015,2012,"3",4244.260697
-"1518","Meziadin","Sockeye","Terminal Run","2024",2015,2011,"4",169770.42788
-"1519","Meziadin","Sockeye","Terminal Run","2024",2015,2010,"5",174014.688577
-"1520","Meziadin","Sockeye","Terminal Run","2024",2015,2009,"6",76396.692546
-"1521","Meziadin","Sockeye","Terminal Run","2024",2015,2012,"3",NA
-"1522","Meziadin","Sockeye","Terminal Run","2024",2015,2011,"4",NA
-"1523","Meziadin","Sockeye","Terminal Run","2024",2015,2010,"5",NA
-"1524","Meziadin","Sockeye","Terminal Run","2024",2015,2009,"6",NA
-"1525","Meziadin","Sockeye","Terminal Run","2024",2015,2012,"3",NA
-"1526","Meziadin","Sockeye","Terminal Run","2024",2015,2011,"4",NA
-"1527","Meziadin","Sockeye","Terminal Run","2024",2015,2010,"5",NA
-"1528","Meziadin","Sockeye","Terminal Run","2024",2015,2009,"6",NA
-"1529","Meziadin","Sockeye","Terminal Run","2024",2015,2012,"3",NA
-"1530","Meziadin","Sockeye","Terminal Run","2024",2015,2011,"4",NA
-"1531","Meziadin","Sockeye","Terminal Run","2024",2015,2010,"5",NA
-"1532","Meziadin","Sockeye","Terminal Run","2024",2015,2009,"6",NA
-"1533","Meziadin","Sockeye","Terminal Run","2024",2015,2012,"3",NA
-"1534","Meziadin","Sockeye","Terminal Run","2024",2015,2011,"4",NA
-"1535","Meziadin","Sockeye","Terminal Run","2024",2015,2010,"5",NA
-"1536","Meziadin","Sockeye","Terminal Run","2024",2015,2009,"6",NA
-"1537","Meziadin","Sockeye","Terminal Run","2024",2016,2013,"3",7070.740516
-"1538","Meziadin","Sockeye","Terminal Run","2024",2016,2012,"4",37121.387709
-"1539","Meziadin","Sockeye","Terminal Run","2024",2016,2011,"5",109596.477998
-"1540","Meziadin","Sockeye","Terminal Run","2024",2016,2010,"6",24747.591806
-"1541","Meziadin","Sockeye","Terminal Run","2024",2016,2013,"3",7070.740516
-"1542","Meziadin","Sockeye","Terminal Run","2024",2016,2012,"4",37121.387709
-"1543","Meziadin","Sockeye","Terminal Run","2024",2016,2011,"5",109596.477998
-"1544","Meziadin","Sockeye","Terminal Run","2024",2016,2010,"6",24747.591806
-"1545","Meziadin","Sockeye","Terminal Run","2024",2016,2013,"3",7070.740516
-"1546","Meziadin","Sockeye","Terminal Run","2024",2016,2012,"4",37121.387709
-"1547","Meziadin","Sockeye","Terminal Run","2024",2016,2011,"5",109596.477998
-"1548","Meziadin","Sockeye","Terminal Run","2024",2016,2010,"6",24747.591806
-"1549","Meziadin","Sockeye","Terminal Run","2024",2016,2013,"3",7070.740516
-"1550","Meziadin","Sockeye","Terminal Run","2024",2016,2012,"4",37121.387709
-"1551","Meziadin","Sockeye","Terminal Run","2024",2016,2011,"5",109596.477998
-"1552","Meziadin","Sockeye","Terminal Run","2024",2016,2010,"6",24747.591806
-"1553","Meziadin","Sockeye","Terminal Run","2024",2016,2013,"3",NA
-"1554","Meziadin","Sockeye","Terminal Run","2024",2016,2012,"4",NA
-"1555","Meziadin","Sockeye","Terminal Run","2024",2016,2011,"5",NA
-"1556","Meziadin","Sockeye","Terminal Run","2024",2016,2010,"6",NA
-"1557","Meziadin","Sockeye","Terminal Run","2024",2016,2013,"3",NA
-"1558","Meziadin","Sockeye","Terminal Run","2024",2016,2012,"4",NA
-"1559","Meziadin","Sockeye","Terminal Run","2024",2016,2011,"5",NA
-"1560","Meziadin","Sockeye","Terminal Run","2024",2016,2010,"6",NA
-"1561","Meziadin","Sockeye","Terminal Run","2024",2016,2013,"3",NA
-"1562","Meziadin","Sockeye","Terminal Run","2024",2016,2012,"4",NA
-"1563","Meziadin","Sockeye","Terminal Run","2024",2016,2011,"5",NA
-"1564","Meziadin","Sockeye","Terminal Run","2024",2016,2010,"6",NA
-"1565","Meziadin","Sockeye","Terminal Run","2024",2016,2013,"3",NA
-"1566","Meziadin","Sockeye","Terminal Run","2024",2016,2012,"4",NA
-"1567","Meziadin","Sockeye","Terminal Run","2024",2016,2011,"5",NA
-"1568","Meziadin","Sockeye","Terminal Run","2024",2016,2010,"6",NA
-"1569","Meziadin","Sockeye","Terminal Run","2024",2017,2014,"3",NA
-"1570","Meziadin","Sockeye","Terminal Run","2024",2017,2013,"4",NA
-"1571","Meziadin","Sockeye","Terminal Run","2024",2017,2012,"5",NA
-"1572","Meziadin","Sockeye","Terminal Run","2024",2017,2011,"6",NA
-"1573","Meziadin","Sockeye","Terminal Run","2024",2017,2014,"3",NA
-"1574","Meziadin","Sockeye","Terminal Run","2024",2017,2013,"4",NA
-"1575","Meziadin","Sockeye","Terminal Run","2024",2017,2012,"5",NA
-"1576","Meziadin","Sockeye","Terminal Run","2024",2017,2011,"6",NA
-"1577","Meziadin","Sockeye","Terminal Run","2024",2017,2014,"3",NA
-"1578","Meziadin","Sockeye","Terminal Run","2024",2017,2013,"4",NA
-"1579","Meziadin","Sockeye","Terminal Run","2024",2017,2012,"5",NA
-"1580","Meziadin","Sockeye","Terminal Run","2024",2017,2011,"6",NA
-"1581","Meziadin","Sockeye","Terminal Run","2024",2017,2014,"3",NA
-"1582","Meziadin","Sockeye","Terminal Run","2024",2017,2013,"4",NA
-"1583","Meziadin","Sockeye","Terminal Run","2024",2017,2012,"5",NA
-"1584","Meziadin","Sockeye","Terminal Run","2024",2017,2011,"6",NA
-"1585","Meziadin","Sockeye","Terminal Run","2024",2017,2014,"3",13042.446739
-"1586","Meziadin","Sockeye","Terminal Run","2024",2017,2013,"4",48443.373602
-"1587","Meziadin","Sockeye","Terminal Run","2024",2017,2012,"5",87570.713819
-"1588","Meziadin","Sockeye","Terminal Run","2024",2017,2011,"6",37264.13354
-"1589","Meziadin","Sockeye","Terminal Run","2024",2017,2014,"3",13042.446739
-"1590","Meziadin","Sockeye","Terminal Run","2024",2017,2013,"4",48443.373602
-"1591","Meziadin","Sockeye","Terminal Run","2024",2017,2012,"5",87570.713819
-"1592","Meziadin","Sockeye","Terminal Run","2024",2017,2011,"6",37264.13354
-"1593","Meziadin","Sockeye","Terminal Run","2024",2017,2014,"3",13042.446739
-"1594","Meziadin","Sockeye","Terminal Run","2024",2017,2013,"4",48443.373602
-"1595","Meziadin","Sockeye","Terminal Run","2024",2017,2012,"5",87570.713819
-"1596","Meziadin","Sockeye","Terminal Run","2024",2017,2011,"6",37264.13354
-"1597","Meziadin","Sockeye","Terminal Run","2024",2017,2014,"3",13042.446739
-"1598","Meziadin","Sockeye","Terminal Run","2024",2017,2013,"4",48443.373602
-"1599","Meziadin","Sockeye","Terminal Run","2024",2017,2012,"5",87570.713819
-"1600","Meziadin","Sockeye","Terminal Run","2024",2017,2011,"6",37264.13354
-"1601","Meziadin","Sockeye","Terminal Run","2024",2018,2015,"3",NA
-"1602","Meziadin","Sockeye","Terminal Run","2024",2018,2014,"4",NA
-"1603","Meziadin","Sockeye","Terminal Run","2024",2018,2013,"5",NA
-"1604","Meziadin","Sockeye","Terminal Run","2024",2018,2012,"6",NA
-"1605","Meziadin","Sockeye","Terminal Run","2024",2018,2015,"3",NA
-"1606","Meziadin","Sockeye","Terminal Run","2024",2018,2014,"4",NA
-"1607","Meziadin","Sockeye","Terminal Run","2024",2018,2013,"5",NA
-"1608","Meziadin","Sockeye","Terminal Run","2024",2018,2012,"6",NA
-"1609","Meziadin","Sockeye","Terminal Run","2024",2018,2015,"3",NA
-"1610","Meziadin","Sockeye","Terminal Run","2024",2018,2014,"4",NA
-"1611","Meziadin","Sockeye","Terminal Run","2024",2018,2013,"5",NA
-"1612","Meziadin","Sockeye","Terminal Run","2024",2018,2012,"6",NA
-"1613","Meziadin","Sockeye","Terminal Run","2024",2018,2015,"3",NA
-"1614","Meziadin","Sockeye","Terminal Run","2024",2018,2014,"4",NA
-"1615","Meziadin","Sockeye","Terminal Run","2024",2018,2013,"5",NA
-"1616","Meziadin","Sockeye","Terminal Run","2024",2018,2012,"6",NA
-"1617","Meziadin","Sockeye","Terminal Run","2024",2018,2015,"3",NA
-"1618","Meziadin","Sockeye","Terminal Run","2024",2018,2014,"4",NA
-"1619","Meziadin","Sockeye","Terminal Run","2024",2018,2013,"5",NA
-"1620","Meziadin","Sockeye","Terminal Run","2024",2018,2012,"6",NA
-"1621","Meziadin","Sockeye","Terminal Run","2024",2018,2015,"3",NA
-"1622","Meziadin","Sockeye","Terminal Run","2024",2018,2014,"4",NA
-"1623","Meziadin","Sockeye","Terminal Run","2024",2018,2013,"5",NA
-"1624","Meziadin","Sockeye","Terminal Run","2024",2018,2012,"6",NA
-"1625","Meziadin","Sockeye","Terminal Run","2024",2018,2015,"3",NA
-"1626","Meziadin","Sockeye","Terminal Run","2024",2018,2014,"4",NA
-"1627","Meziadin","Sockeye","Terminal Run","2024",2018,2013,"5",NA
-"1628","Meziadin","Sockeye","Terminal Run","2024",2018,2012,"6",NA
-"1629","Meziadin","Sockeye","Terminal Run","2024",2018,2015,"3",NA
-"1630","Meziadin","Sockeye","Terminal Run","2024",2018,2014,"4",NA
-"1631","Meziadin","Sockeye","Terminal Run","2024",2018,2013,"5",NA
-"1632","Meziadin","Sockeye","Terminal Run","2024",2018,2012,"6",NA
-"1633","Meziadin","Sockeye","Terminal Run","2024",2019,2016,"3",NA
-"1634","Meziadin","Sockeye","Terminal Run","2024",2019,2015,"4",NA
-"1635","Meziadin","Sockeye","Terminal Run","2024",2019,2014,"5",NA
-"1636","Meziadin","Sockeye","Terminal Run","2024",2019,2013,"6",NA
-"1637","Meziadin","Sockeye","Terminal Run","2024",2019,2016,"3",NA
-"1638","Meziadin","Sockeye","Terminal Run","2024",2019,2015,"4",NA
-"1639","Meziadin","Sockeye","Terminal Run","2024",2019,2014,"5",NA
-"1640","Meziadin","Sockeye","Terminal Run","2024",2019,2013,"6",NA
-"1641","Meziadin","Sockeye","Terminal Run","2024",2019,2016,"3",NA
-"1642","Meziadin","Sockeye","Terminal Run","2024",2019,2015,"4",NA
-"1643","Meziadin","Sockeye","Terminal Run","2024",2019,2014,"5",NA
-"1644","Meziadin","Sockeye","Terminal Run","2024",2019,2013,"6",NA
-"1645","Meziadin","Sockeye","Terminal Run","2024",2019,2016,"3",NA
-"1646","Meziadin","Sockeye","Terminal Run","2024",2019,2015,"4",NA
-"1647","Meziadin","Sockeye","Terminal Run","2024",2019,2014,"5",NA
-"1648","Meziadin","Sockeye","Terminal Run","2024",2019,2013,"6",NA
-"1649","Meziadin","Sockeye","Terminal Run","2024",2019,2016,"3",NA
-"1650","Meziadin","Sockeye","Terminal Run","2024",2019,2015,"4",NA
-"1651","Meziadin","Sockeye","Terminal Run","2024",2019,2014,"5",NA
-"1652","Meziadin","Sockeye","Terminal Run","2024",2019,2013,"6",NA
-"1653","Meziadin","Sockeye","Terminal Run","2024",2019,2016,"3",NA
-"1654","Meziadin","Sockeye","Terminal Run","2024",2019,2015,"4",NA
-"1655","Meziadin","Sockeye","Terminal Run","2024",2019,2014,"5",NA
-"1656","Meziadin","Sockeye","Terminal Run","2024",2019,2013,"6",NA
-"1657","Meziadin","Sockeye","Terminal Run","2024",2019,2016,"3",NA
-"1658","Meziadin","Sockeye","Terminal Run","2024",2019,2015,"4",NA
-"1659","Meziadin","Sockeye","Terminal Run","2024",2019,2014,"5",NA
-"1660","Meziadin","Sockeye","Terminal Run","2024",2019,2013,"6",NA
-"1661","Meziadin","Sockeye","Terminal Run","2024",2019,2016,"3",NA
-"1662","Meziadin","Sockeye","Terminal Run","2024",2019,2015,"4",NA
-"1663","Meziadin","Sockeye","Terminal Run","2024",2019,2014,"5",NA
-"1664","Meziadin","Sockeye","Terminal Run","2024",2019,2013,"6",NA
-"1665","Meziadin","Sockeye","Terminal Run","2024",2020,2017,"3",NA
-"1666","Meziadin","Sockeye","Terminal Run","2024",2020,2016,"4",NA
-"1667","Meziadin","Sockeye","Terminal Run","2024",2020,2015,"5",NA
-"1668","Meziadin","Sockeye","Terminal Run","2024",2020,2014,"6",NA
-"1669","Meziadin","Sockeye","Terminal Run","2024",2020,2017,"3",NA
-"1670","Meziadin","Sockeye","Terminal Run","2024",2020,2016,"4",NA
-"1671","Meziadin","Sockeye","Terminal Run","2024",2020,2015,"5",NA
-"1672","Meziadin","Sockeye","Terminal Run","2024",2020,2014,"6",NA
-"1673","Meziadin","Sockeye","Terminal Run","2024",2020,2017,"3",NA
-"1674","Meziadin","Sockeye","Terminal Run","2024",2020,2016,"4",NA
-"1675","Meziadin","Sockeye","Terminal Run","2024",2020,2015,"5",NA
-"1676","Meziadin","Sockeye","Terminal Run","2024",2020,2014,"6",NA
-"1677","Meziadin","Sockeye","Terminal Run","2024",2020,2017,"3",NA
-"1678","Meziadin","Sockeye","Terminal Run","2024",2020,2016,"4",NA
-"1679","Meziadin","Sockeye","Terminal Run","2024",2020,2015,"5",NA
-"1680","Meziadin","Sockeye","Terminal Run","2024",2020,2014,"6",NA
-"1681","Meziadin","Sockeye","Terminal Run","2024",2020,2017,"3",NA
-"1682","Meziadin","Sockeye","Terminal Run","2024",2020,2016,"4",NA
-"1683","Meziadin","Sockeye","Terminal Run","2024",2020,2015,"5",NA
-"1684","Meziadin","Sockeye","Terminal Run","2024",2020,2014,"6",NA
-"1685","Meziadin","Sockeye","Terminal Run","2024",2020,2017,"3",NA
-"1686","Meziadin","Sockeye","Terminal Run","2024",2020,2016,"4",NA
-"1687","Meziadin","Sockeye","Terminal Run","2024",2020,2015,"5",NA
-"1688","Meziadin","Sockeye","Terminal Run","2024",2020,2014,"6",NA
-"1689","Meziadin","Sockeye","Terminal Run","2024",2020,2017,"3",NA
-"1690","Meziadin","Sockeye","Terminal Run","2024",2020,2016,"4",NA
-"1691","Meziadin","Sockeye","Terminal Run","2024",2020,2015,"5",NA
-"1692","Meziadin","Sockeye","Terminal Run","2024",2020,2014,"6",NA
-"1693","Meziadin","Sockeye","Terminal Run","2024",2020,2017,"3",NA
-"1694","Meziadin","Sockeye","Terminal Run","2024",2020,2016,"4",NA
-"1695","Meziadin","Sockeye","Terminal Run","2024",2020,2015,"5",NA
-"1696","Meziadin","Sockeye","Terminal Run","2024",2020,2014,"6",NA
-"1697","Meziadin","Sockeye","Terminal Run","2024",2021,2018,"3",NA
-"1698","Meziadin","Sockeye","Terminal Run","2024",2021,2017,"4",NA
-"1699","Meziadin","Sockeye","Terminal Run","2024",2021,2016,"5",NA
-"1700","Meziadin","Sockeye","Terminal Run","2024",2021,2015,"6",NA
-"1701","Meziadin","Sockeye","Terminal Run","2024",2021,2018,"3",NA
-"1702","Meziadin","Sockeye","Terminal Run","2024",2021,2017,"4",NA
-"1703","Meziadin","Sockeye","Terminal Run","2024",2021,2016,"5",NA
-"1704","Meziadin","Sockeye","Terminal Run","2024",2021,2015,"6",NA
-"1705","Meziadin","Sockeye","Terminal Run","2024",2021,2018,"3",NA
-"1706","Meziadin","Sockeye","Terminal Run","2024",2021,2017,"4",NA
-"1707","Meziadin","Sockeye","Terminal Run","2024",2021,2016,"5",NA
-"1708","Meziadin","Sockeye","Terminal Run","2024",2021,2015,"6",NA
-"1709","Meziadin","Sockeye","Terminal Run","2024",2021,2018,"3",NA
-"1710","Meziadin","Sockeye","Terminal Run","2024",2021,2017,"4",NA
-"1711","Meziadin","Sockeye","Terminal Run","2024",2021,2016,"5",NA
-"1712","Meziadin","Sockeye","Terminal Run","2024",2021,2015,"6",NA
-"1713","Meziadin","Sockeye","Terminal Run","2024",2021,2018,"3",NA
-"1714","Meziadin","Sockeye","Terminal Run","2024",2021,2017,"4",NA
-"1715","Meziadin","Sockeye","Terminal Run","2024",2021,2016,"5",NA
-"1716","Meziadin","Sockeye","Terminal Run","2024",2021,2015,"6",NA
-"1717","Meziadin","Sockeye","Terminal Run","2024",2021,2018,"3",NA
-"1718","Meziadin","Sockeye","Terminal Run","2024",2021,2017,"4",NA
-"1719","Meziadin","Sockeye","Terminal Run","2024",2021,2016,"5",NA
-"1720","Meziadin","Sockeye","Terminal Run","2024",2021,2015,"6",NA
-"1721","Meziadin","Sockeye","Terminal Run","2024",2021,2018,"3",NA
-"1722","Meziadin","Sockeye","Terminal Run","2024",2021,2017,"4",NA
-"1723","Meziadin","Sockeye","Terminal Run","2024",2021,2016,"5",NA
-"1724","Meziadin","Sockeye","Terminal Run","2024",2021,2015,"6",NA
-"1725","Meziadin","Sockeye","Terminal Run","2024",2021,2018,"3",NA
-"1726","Meziadin","Sockeye","Terminal Run","2024",2021,2017,"4",NA
-"1727","Meziadin","Sockeye","Terminal Run","2024",2021,2016,"5",NA
-"1728","Meziadin","Sockeye","Terminal Run","2024",2021,2015,"6",NA
-"1729","Meziadin","Sockeye","Terminal Run","2024",2022,2019,"3",NA
-"1730","Meziadin","Sockeye","Terminal Run","2024",2022,2018,"4",NA
-"1731","Meziadin","Sockeye","Terminal Run","2024",2022,2017,"5",NA
-"1732","Meziadin","Sockeye","Terminal Run","2024",2022,2016,"6",NA
-"1733","Meziadin","Sockeye","Terminal Run","2024",2022,2019,"3",NA
-"1734","Meziadin","Sockeye","Terminal Run","2024",2022,2018,"4",NA
-"1735","Meziadin","Sockeye","Terminal Run","2024",2022,2017,"5",NA
-"1736","Meziadin","Sockeye","Terminal Run","2024",2022,2016,"6",NA
-"1737","Meziadin","Sockeye","Terminal Run","2024",2022,2019,"3",NA
-"1738","Meziadin","Sockeye","Terminal Run","2024",2022,2018,"4",NA
-"1739","Meziadin","Sockeye","Terminal Run","2024",2022,2017,"5",NA
-"1740","Meziadin","Sockeye","Terminal Run","2024",2022,2016,"6",NA
-"1741","Meziadin","Sockeye","Terminal Run","2024",2022,2019,"3",NA
-"1742","Meziadin","Sockeye","Terminal Run","2024",2022,2018,"4",NA
-"1743","Meziadin","Sockeye","Terminal Run","2024",2022,2017,"5",NA
-"1744","Meziadin","Sockeye","Terminal Run","2024",2022,2016,"6",NA
-"1745","Meziadin","Sockeye","Terminal Run","2024",2022,2019,"3",NA
-"1746","Meziadin","Sockeye","Terminal Run","2024",2022,2018,"4",NA
-"1747","Meziadin","Sockeye","Terminal Run","2024",2022,2017,"5",NA
-"1748","Meziadin","Sockeye","Terminal Run","2024",2022,2016,"6",NA
-"1749","Meziadin","Sockeye","Terminal Run","2024",2022,2019,"3",NA
-"1750","Meziadin","Sockeye","Terminal Run","2024",2022,2018,"4",NA
-"1751","Meziadin","Sockeye","Terminal Run","2024",2022,2017,"5",NA
-"1752","Meziadin","Sockeye","Terminal Run","2024",2022,2016,"6",NA
-"1753","Meziadin","Sockeye","Terminal Run","2024",2022,2019,"3",NA
-"1754","Meziadin","Sockeye","Terminal Run","2024",2022,2018,"4",NA
-"1755","Meziadin","Sockeye","Terminal Run","2024",2022,2017,"5",NA
-"1756","Meziadin","Sockeye","Terminal Run","2024",2022,2016,"6",NA
-"1757","Meziadin","Sockeye","Terminal Run","2024",2022,2019,"3",NA
-"1758","Meziadin","Sockeye","Terminal Run","2024",2022,2018,"4",NA
-"1759","Meziadin","Sockeye","Terminal Run","2024",2022,2017,"5",NA
-"1760","Meziadin","Sockeye","Terminal Run","2024",2022,2016,"6",NA
-"1761","Meziadin","Sockeye","Terminal Run","2024",2023,2020,"3",NA
-"1762","Meziadin","Sockeye","Terminal Run","2024",2023,2019,"4",NA
-"1763","Meziadin","Sockeye","Terminal Run","2024",2023,2018,"5",NA
-"1764","Meziadin","Sockeye","Terminal Run","2024",2023,2017,"6",NA
-"1765","Meziadin","Sockeye","Terminal Run","2024",2023,2020,"3",NA
-"1766","Meziadin","Sockeye","Terminal Run","2024",2023,2019,"4",NA
-"1767","Meziadin","Sockeye","Terminal Run","2024",2023,2018,"5",NA
-"1768","Meziadin","Sockeye","Terminal Run","2024",2023,2017,"6",NA
-"1769","Meziadin","Sockeye","Terminal Run","2024",2023,2020,"3",NA
-"1770","Meziadin","Sockeye","Terminal Run","2024",2023,2019,"4",NA
-"1771","Meziadin","Sockeye","Terminal Run","2024",2023,2018,"5",NA
-"1772","Meziadin","Sockeye","Terminal Run","2024",2023,2017,"6",NA
-"1773","Meziadin","Sockeye","Terminal Run","2024",2023,2020,"3",NA
-"1774","Meziadin","Sockeye","Terminal Run","2024",2023,2019,"4",NA
-"1775","Meziadin","Sockeye","Terminal Run","2024",2023,2018,"5",NA
-"1776","Meziadin","Sockeye","Terminal Run","2024",2023,2017,"6",NA
+"Stock_Name","Stock_Species","Stock_Abundance","Forecasting_Year","Run_Year","Brood_Year","Age_Class","Average_Terminal_Run"
+"Meziadin","Sockeye","Terminal Run","2024",1954,1951,"3",0
+"","","","",1954,1950,"4",0
+"","","","",1954,1949,"5",0
+"","","","",1954,1948,"6",0
+"","","","",1955,1952,"3",0
+"","","","",1955,1951,"4",0
+"","","","",1955,1950,"5",0
+"","","","",1955,1949,"6",0
+"","","","",1956,1953,"3",0
+"","","","",1956,1952,"4",0
+"","","","",1956,1951,"5",0
+"","","","",1956,1950,"6",0
+"","","","",1957,1954,"3",0
+"","","","",1957,1953,"4",0
+"","","","",1957,1952,"5",0
+"","","","",1957,1951,"6",0
+"","","","",1958,1955,"3",0
+"","","","",1958,1954,"4",0
+"","","","",1958,1953,"5",0
+"","","","",1958,1952,"6",0
+"","","","",1959,1956,"3",0
+"","","","",1959,1955,"4",0
+"","","","",1959,1954,"5",0
+"","","","",1959,1953,"6",0
+"","","","",1960,1957,"3",0
+"","","","",1960,1956,"4",0
+"","","","",1960,1955,"5",0
+"","","","",1960,1954,"6",0
+"","","","",1961,1958,"3",0
+"","","","",1961,1957,"4",0
+"","","","",1961,1956,"5",0
+"","","","",1961,1955,"6",0
+"","","","",1962,1959,"3",0
+"","","","",1962,1958,"4",0
+"","","","",1962,1957,"5",0
+"","","","",1962,1956,"6",0
+"","","","",1963,1960,"3",0
+"","","","",1963,1959,"4",0
+"","","","",1963,1958,"5",0
+"","","","",1963,1957,"6",0
+"","","","",1964,1961,"3",0
+"","","","",1964,1960,"4",0
+"","","","",1964,1959,"5",0
+"","","","",1964,1958,"6",0
+"","","","",1965,1962,"3",0
+"","","","",1965,1961,"4",0
+"","","","",1965,1960,"5",0
+"","","","",1965,1959,"6",0
+"","","","",1966,1963,"3",0
+"","","","",1966,1962,"4",0
+"","","","",1966,1961,"5",0
+"","","","",1966,1960,"6",0
+"","","","",1967,1964,"3",0
+"","","","",1967,1963,"4",0
+"","","","",1967,1962,"5",0
+"","","","",1967,1961,"6",0
+"","","","",1968,1965,"3",0
+"","","","",1968,1964,"4",0
+"","","","",1968,1963,"5",0
+"","","","",1968,1962,"6",0
+"","","","",1969,1966,"3",0
+"","","","",1969,1965,"4",0
+"","","","",1969,1964,"5",0
+"","","","",1969,1963,"6",0
+"","","","",1970,1967,"3",0
+"","","","",1970,1966,"4",0
+"","","","",1970,1965,"5",0
+"","","","",1970,1964,"6",0
+"","","","",1971,1968,"3",0
+"","","","",1971,1967,"4",0
+"","","","",1971,1966,"5",0
+"","","","",1971,1965,"6",0
+"","","","",1972,1969,"3",0
+"","","","",1972,1968,"4",0
+"","","","",1972,1967,"5",0
+"","","","",1972,1966,"6",0
+"","","","",1973,1970,"3",0
+"","","","",1973,1969,"4",0
+"","","","",1973,1968,"5",0
+"","","","",1973,1967,"6",0
+"","","","",1974,1971,"3",0
+"","","","",1974,1970,"4",0
+"","","","",1974,1969,"5",0
+"","","","",1974,1968,"6",0
+"","","","",1975,1972,"3",0
+"","","","",1975,1971,"4",0
+"","","","",1975,1970,"5",0
+"","","","",1975,1969,"6",0
+"","","","",1976,1973,"3",0
+"","","","",1976,1972,"4",0
+"","","","",1976,1971,"5",0
+"","","","",1976,1970,"6",0
+"","","","",1977,1974,"3",0
+"","","","",1977,1973,"4",0
+"","","","",1977,1972,"5",0
+"","","","",1977,1971,"6",0
+"","","","",1978,1975,"3",0
+"","","","",1978,1974,"4",0
+"","","","",1978,1973,"5",0
+"","","","",1978,1972,"6",0
+"","","","",1979,1976,"3",0
+"","","","",1979,1975,"4",0
+"","","","",1979,1974,"5",0
+"","","","",1979,1973,"6",0
+"","","","",1980,1977,"3",0
+"","","","",1980,1976,"4",0
+"","","","",1980,1975,"5",0
+"","","","",1980,1974,"6",0
+"","","","",1981,1978,"3",0
+"","","","",1981,1977,"4",0
+"","","","",1981,1976,"5",0
+"","","","",1981,1975,"6",0
+"","","","",1982,1979,"3",0
+"","","","",1982,1978,"4",0
+"","","","",1982,1977,"5",0
+"","","","",1982,1976,"6",0
+"","","","",1982,1979,"3",0
+"","","","",1982,1978,"4",54605.180816
+"","","","",1982,1977,"5",573354.398568
+"","","","",1982,1976,"6",54605.180816
+"","","","",1983,1980,"3",0
+"","","","",1983,1979,"4",0
+"","","","",1983,1978,"5",0
+"","","","",1983,1977,"6",0
+"","","","",1983,1980,"3",5614.64657694392
+"","","","",1983,1979,"4",127532.681888944
+"","","","",1983,1978,"5",318965.386324104
+"","","","",1983,1977,"6",55700.8568743493
+"","","","",1984,1981,"3",0
+"","","","",1984,1980,"4",35213.327541
+"","","","",1984,1979,"5",289531.804226
+"","","","",1984,1978,"6",66514.063133
+"","","","",1984,1981,"3",0
+"","","","",1984,1980,"4",0
+"","","","",1984,1979,"5",0
+"","","","",1984,1978,"6",0
+"","","","",1985,1982,"3",0
+"","","","",1985,1981,"4",203035.46928
+"","","","",1985,1980,"5",323587.779165
+"","","","",1985,1979,"6",114207.45147
+"","","","",1985,1982,"3",0
+"","","","",1985,1981,"4",0
+"","","","",1985,1980,"5",0
+"","","","",1985,1979,"6",0
+"","","","",1986,1983,"3",0
+"","","","",1986,1982,"4",38449.451062
+"","","","",1986,1981,"5",213219.683162
+"","","","",1986,1980,"6",97871.329976
+"","","","",1986,1983,"3",0
+"","","","",1986,1982,"4",0
+"","","","",1986,1981,"5",0
+"","","","",1986,1980,"6",0
+"","","","",1987,1984,"3",0
+"","","","",1987,1983,"4",0
+"","","","",1987,1982,"5",0
+"","","","",1987,1981,"6",0
+"","","","",1987,1984,"3",0
+"","","","",1987,1983,"4",59072.257455
+"","","","",1987,1982,"5",291423.136778
+"","","","",1987,1981,"6",43319.655467
+"","","","",1988,1985,"3",0
+"","","","",1988,1984,"4",0
+"","","","",1988,1983,"5",0
+"","","","",1988,1982,"6",0
+"","","","",1988,1985,"3",0
+"","","","",1988,1984,"4",41886.021827
+"","","","",1988,1983,"5",264204.137678
+"","","","",1988,1982,"6",16110.008395
+"","","","",1989,1986,"3",0
+"","","","",1989,1985,"4",36221.689692
+"","","","",1989,1984,"5",86529.592042
+"","","","",1989,1983,"6",78480.327666
+"","","","",1989,1986,"3",0
+"","","","",1989,1985,"4",0
+"","","","",1989,1984,"5",0
+"","","","",1989,1983,"6",0
+"","","","",1990,1987,"3",0
+"","","","",1990,1986,"4",62021.812442
+"","","","",1990,1985,"5",221972.802424
+"","","","",1990,1984,"6",42435.976934
+"","","","",1990,1987,"3",0
+"","","","",1990,1986,"4",0
+"","","","",1990,1985,"5",0
+"","","","",1990,1984,"6",0
+"","","","",1991,1988,"3",0
+"","","","",1991,1987,"4",0
+"","","","",1991,1986,"5",0
+"","","","",1991,1985,"6",0
+"","","","",1991,1988,"3",0
+"","","","",1991,1987,"4",378600.603538
+"","","","",1991,1986,"5",386831.051441
+"","","","",1991,1985,"6",57613.135321
+"","","","",1992,1989,"3",0
+"","","","",1992,1988,"4",0
+"","","","",1992,1987,"5",0
+"","","","",1992,1986,"6",0
+"","","","",1992,1989,"3",0
+"","","","",1992,1988,"4",812446.85984
+"","","","",1992,1987,"5",923235.068
+"","","","",1992,1986,"6",110788.20816
+"","","","",1993,1990,"3",0
+"","","","",1993,1989,"4",550859.81181
+"","","","",1993,1988,"5",1001563.2942
+"","","","",1993,1987,"6",116849.05099
+"","","","",1993,1990,"3",0
+"","","","",1993,1989,"4",0
+"","","","",1993,1988,"5",0
+"","","","",1993,1987,"6",0
+"","","","",1994,1991,"3",0
+"","","","",1994,1990,"4",61288.25703
+"","","","",1994,1989,"5",332707.68102
+"","","","",1994,1988,"6",43777.32645
+"","","","",1994,1991,"3",0
+"","","","",1994,1990,"4",0
+"","","","",1994,1989,"5",0
+"","","","",1994,1988,"6",0
+"","","","",1995,1992,"3",0
+"","","","",1995,1991,"4",0
+"","","","",1995,1990,"5",0
+"","","","",1995,1989,"6",0
+"","","","",1995,1992,"3",0
+"","","","",1995,1991,"4",456034.6328
+"","","","",1995,1990,"5",392189.784208
+"","","","",1995,1989,"6",63844.848592
+"","","","",1996,1993,"3",0
+"","","","",1996,1992,"4",0
+"","","","",1996,1991,"5",0
+"","","","",1996,1990,"6",0
+"","","","",1996,1993,"3",0
+"","","","",1996,1992,"4",63511.222635
+"","","","",1996,1991,"5",789353.767035
+"","","","",1996,1990,"6",54438.19083
+"","","","",1997,1994,"3",0
+"","","","",1997,1993,"4",183184.6554
+"","","","",1997,1992,"5",323626.22454
+"","","","",1997,1991,"6",97698.48288
+"","","","",1997,1994,"3",0
+"","","","",1997,1993,"4",0
+"","","","",1997,1992,"5",0
+"","","","",1997,1991,"6",0
+"","","","",1998,1995,"3",0
+"","","","",1998,1994,"4",103485.074704
+"","","","",1998,1993,"5",319862.958176
+"","","","",1998,1992,"6",42334.803288
+"","","","",1998,1995,"3",0
+"","","","",1998,1994,"4",0
+"","","","",1998,1993,"5",0
+"","","","",1998,1992,"6",0
+"","","","",1999,1996,"3",0
+"","","","",1999,1995,"4",238536.324309
+"","","","",1999,1994,"5",492462.088896
+"","","","",1999,1993,"6",46168.320834
+"","","","",1999,1996,"3",0
+"","","","",1999,1995,"4",0
+"","","","",1999,1994,"5",0
+"","","","",1999,1993,"6",0
+"","","","",2000,1997,"3",0
+"","","","",2000,1996,"4",0
+"","","","",2000,1995,"5",0
+"","","","",2000,1994,"6",0
+"","","","",2000,1997,"3",0
+"","","","",2000,1996,"4",98947.658323
+"","","","",2000,1995,"5",215103.60505
+"","","","",2000,1994,"6",116155.946727
+"","","","",2001,1998,"3",0
+"","","","",2001,1997,"4",0
+"","","","",2001,1996,"5",0
+"","","","",2001,1995,"6",0
+"","","","",2001,1998,"3",0
+"","","","",2001,1997,"4",120134.16478
+"","","","",2001,1996,"5",171620.2354
+"","","","",2001,1995,"6",137296.18832
+"","","","",2002,1999,"3",0
+"","","","",2002,1998,"4",519032.7821
+"","","","",2002,1997,"5",575449.38885
+"","","","",2002,1996,"6",33849.96405
+"","","","",2002,1999,"3",0
+"","","","",2002,1998,"4",0
+"","","","",2002,1997,"5",0
+"","","","",2002,1996,"6",0
+"","","","",2003,2000,"3",0
+"","","","",2003,1999,"4",172532.182557
+"","","","",2003,1998,"5",550459.820539
+"","","","",2003,1997,"6",98589.818604
+"","","","",2003,2000,"3",0
+"","","","",2003,1999,"4",0
+"","","","",2003,1998,"5",0
+"","","","",2003,1997,"6",0
+"","","","",2004,2001,"3",0
+"","","","",2004,2000,"4",0
+"","","","",2004,1999,"5",0
+"","","","",2004,1998,"6",0
+"","","","",2004,2001,"3",0
+"","","","",2004,2000,"4",184609.941208
+"","","","",2004,1999,"5",435152.004276
+"","","","",2004,1998,"6",32966.06093
+"","","","",2005,2002,"3",0
+"","","","",2005,2001,"4",0
+"","","","",2005,2000,"5",0
+"","","","",2005,1999,"6",0
+"","","","",2005,2002,"3",0
+"","","","",2005,2001,"4",68675.406719
+"","","","",2005,2000,"5",274701.626876
+"","","","",2005,1999,"6",60595.947105
+"","","","",2006,2003,"3",0
+"","","","",2006,2002,"4",76414.11561
+"","","","",2006,2001,"5",237732.80412
+"","","","",2006,2000,"6",110375.94477
+"","","","",2006,2003,"3",0
+"","","","",2006,2002,"4",0
+"","","","",2006,2001,"5",0
+"","","","",2006,2000,"6",0
+"","","","",2007,2004,"3",0
+"","","","",2007,2003,"4",20538.375045
+"","","","",2007,2002,"5",283429.575621
+"","","","",2007,2001,"6",106799.550234
+"","","","",2007,2004,"3",0
+"","","","",2007,2003,"4",0
+"","","","",2007,2002,"5",0
+"","","","",2007,2001,"6",0
+"","","","",2008,2005,"3",0
+"","","","",2008,2004,"4",0
+"","","","",2008,2003,"5",0
+"","","","",2008,2002,"6",0
+"","","","",2008,2005,"3",0
+"","","","",2008,2004,"4",65501.950848
+"","","","",2008,2003,"5",180130.364832
+"","","","",2008,2002,"6",27292.47952
+"","","","",2009,2006,"3",0
+"","","","",2009,2005,"4",0
+"","","","",2009,2004,"5",0
+"","","","",2009,2003,"6",0
+"","","","",2009,2006,"3",0
+"","","","",2009,2005,"4",44553.977127
+"","","","",2009,2004,"5",307827.478332
+"","","","",2009,2003,"6",52654.700241
+"","","","",2010,2007,"3",8759.61606
+"","","","",2010,2006,"4",70076.92848
+"","","","",2010,2005,"5",198551.29736
+"","","","",2010,2004,"6",17519.23212
+"","","","",2010,2007,"3",0
+"","","","",2010,2006,"4",0
+"","","","",2010,2005,"5",0
+"","","","",2010,2004,"6",0
+"","","","",2011,2008,"3",3265.780386
+"","","","",2011,2007,"4",104504.972352
+"","","","",2011,2006,"5",189415.262388
+"","","","",2011,2005,"6",29392.023474
+"","","","",2011,2008,"3",0
+"","","","",2011,2007,"4",0
+"","","","",2011,2006,"5",0
+"","","","",2011,2005,"6",0
+"","","","",2012,2009,"3",16092.1326
+"","","","",2012,2008,"4",51494.82432
+"","","","",2012,2007,"5",199542.44424
+"","","","",2012,2006,"6",57931.67736
+"","","","",2012,2009,"3",0
+"","","","",2012,2008,"4",0
+"","","","",2012,2007,"5",0
+"","","","",2012,2006,"6",0
+"","","","",2013,2010,"3",0
+"","","","",2013,2009,"4",0
+"","","","",2013,2008,"5",0
+"","","","",2013,2007,"6",0
+"","","","",2013,2010,"3",8032.431602
+"","","","",2013,2009,"4",132535.121433
+"","","","",2013,2008,"5",212859.437453
+"","","","",2013,2007,"6",48194.589612
+"","","","",2014,2011,"3",0
+"","","","",2014,2010,"4",0
+"","","","",2014,2009,"5",0
+"","","","",2014,2008,"6",0
+"","","","",2014,2011,"3",26160.299811
+"","","","",2014,2010,"4",72667.499475
+"","","","",2014,2009,"5",154055.098887
+"","","","",2014,2008,"6",37787.099727
+"","","","",2015,2012,"3",4244.260697
+"","","","",2015,2011,"4",169770.42788
+"","","","",2015,2010,"5",174014.688577
+"","","","",2015,2009,"6",76396.692546
+"","","","",2015,2012,"3",0
+"","","","",2015,2011,"4",0
+"","","","",2015,2010,"5",0
+"","","","",2015,2009,"6",0
+"","","","",2016,2013,"3",7070.740516
+"","","","",2016,2012,"4",37121.387709
+"","","","",2016,2011,"5",109596.477998
+"","","","",2016,2010,"6",24747.591806
+"","","","",2016,2013,"3",0
+"","","","",2016,2012,"4",0
+"","","","",2016,2011,"5",0
+"","","","",2016,2010,"6",0
+"","","","",2017,2014,"3",0
+"","","","",2017,2013,"4",0
+"","","","",2017,2012,"5",0
+"","","","",2017,2011,"6",0
+"","","","",2017,2014,"3",13042.446739
+"","","","",2017,2013,"4",48443.373602
+"","","","",2017,2012,"5",87570.713819
+"","","","",2017,2011,"6",37264.13354
+"","","","",2018,2015,"3",0
+"","","","",2018,2014,"4",0
+"","","","",2018,2013,"5",0
+"","","","",2018,2012,"6",0
+"","","","",2018,2015,"3",0
+"","","","",2018,2014,"4",0
+"","","","",2018,2013,"5",0
+"","","","",2018,2012,"6",0
+"","","","",2019,2016,"3",0
+"","","","",2019,2015,"4",0
+"","","","",2019,2014,"5",0
+"","","","",2019,2013,"6",0
+"","","","",2019,2016,"3",0
+"","","","",2019,2015,"4",0
+"","","","",2019,2014,"5",0
+"","","","",2019,2013,"6",0
+"","","","",2020,2017,"3",0
+"","","","",2020,2016,"4",0
+"","","","",2020,2015,"5",0
+"","","","",2020,2014,"6",0
+"","","","",2020,2017,"3",0
+"","","","",2020,2016,"4",0
+"","","","",2020,2015,"5",0
+"","","","",2020,2014,"6",0
+"","","","",2021,2018,"3",0
+"","","","",2021,2017,"4",0
+"","","","",2021,2016,"5",0
+"","","","",2021,2015,"6",0
+"","","","",2021,2018,"3",0
+"","","","",2021,2017,"4",0
+"","","","",2021,2016,"5",0
+"","","","",2021,2015,"6",0
+"","","","",2022,2019,"3",0
+"","","","",2022,2018,"4",0
+"","","","",2022,2017,"5",0
+"","","","",2022,2016,"6",0
+"","","","",2022,2019,"3",0
+"","","","",2022,2018,"4",0
+"","","","",2022,2017,"5",0
+"","","","",2022,2016,"6",0
+"","","","",2023,2020,"3",0
+"","","","",2023,2019,"4",0
+"","","","",2023,2018,"5",0
+"","","","",2023,2017,"6",0

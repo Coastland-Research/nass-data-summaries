@@ -33,13 +33,13 @@ all_mezdata <- merge(TR_TE_wide, mez_age, by = "runyear", all = TRUE) %>%
 
 # format for plotting
 all_mezdata_long <- all_mezdata %>%
-  pivot_longer(cols = run_age3_esc:run_age6_esc, names_to = "esc_ageclass", values_to = "esc_count") %>%
+  #pivot_longer(cols = run_age3_esc:run_age6_esc, names_to = "esc_ageclass", values_to = "esc_count") %>%
   pivot_longer(cols = "3":"6", names_to = "tr_ageclass", values_to = "tr_count")
 # Look at a plot of escapement by age by year
-ggplot(all_mezdata_long, aes(x = runyear, y = esc_count, fill = esc_ageclass)) +
-  geom_col() +
-  xlab("Year") +
-  ylab("Sockeye Escapement by year and age class")
+#ggplot(all_mezdata_long, aes(x = runyear, y = esc_count, fill = esc_ageclass)) +
+#  geom_col() +
+#  xlab("Year") +
+#  ylab("Sockeye Escapement by year and age class")
 # And with total run:
 ggplot(all_mezdata_long, aes(x = runyear, y = tr_count, fill = tr_ageclass)) +
   geom_col() +
@@ -50,7 +50,7 @@ ggplot(all_mezdata_long, aes(x = runyear, y = tr_count, fill = tr_ageclass)) +
 # add columns for stock, species etc
 
 mez_forecastr <- all_mezdata_long %>%
-  subset(select = -c(p.age3, p.age4, p.age5, p.age6, Total, esc_ageclass, esc_count, 
+  subset(select = -c(p.age3, p.age4, p.age5, p.age6, Total, 
                      Meziadin_Escapement, `Meziadin_Total Return`)) %>%
   rename(Run_Year = runyear, Age_Class = tr_ageclass, Average_Terminal_Run = tr_count) %>%
   mutate(Brood_Year = Run_Year - as.numeric(Age_Class),
@@ -59,6 +59,17 @@ mez_forecastr <- all_mezdata_long %>%
          Stock_Abundance = "Terminal Run",
          Forecasting_Year = "2024") %>%
   select(Stock_Name, Stock_Species, Stock_Abundance, Forecasting_Year, Run_Year, Brood_Year,
-         Age_Class, Average_Terminal_Run)
+         Age_Class, Average_Terminal_Run) %>%
+  mutate(Average_Terminal_Run = ifelse(is.na(Average_Terminal_Run), 0, Average_Terminal_Run))
 
-write.csv(mez_forecastr, "~/coastland/nass-data-summaries/data/mez_forecastr.csv")
+
+# remove values from columns 1-4, except for the first row
+mez_forecastr <- mez_forecastr %>%
+  mutate(
+    Stock_Name = ifelse(row_number() == 1, Stock_Name, ""),
+    Stock_Species = ifelse(row_number() == 1, Stock_Species, ""),
+    Stock_Abundance = ifelse(row_number() == 1, Stock_Abundance, ""),
+    Forecasting_Year = ifelse(row_number() == 1, Forecasting_Year, "")
+  )
+
+write.csv(mez_forecastr, "~/coastland/nass-data-summaries/data/mez_forecastr.csv", row.names = FALSE)
