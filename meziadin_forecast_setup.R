@@ -4,6 +4,8 @@ library(tidyverse)
 
 # Read in Meziadin/Nass TE/TR data:
 mez_nass_TR_TE <- read_csv("data/nass vs mez TR TE new.csv") %>%
+  filter(type == "Total Return") %>%
+  drop_na("Meziadin") %>%
   rename(runyear = year)
 
 #Wide format to have total run and escapement as columns
@@ -15,14 +17,10 @@ mez_age <- read_csv("data/Mez scale data - Andy.csv") %>%
   rename(runyear = Year)
 
 # Merge the two dataframes 
-all_mezdata <- merge(TR_TE_wide, mez_age, by = "runyear", all = TRUE) %>%
+all_mezdata <- merge(TR_TE_wide, mez_age, by = "runyear") %>%
   # filter to only Meziadin data, remove uninformative columns
-  subset(select = -c(`Nass_Escapement`, `Nass_Total Return`, RunAge7, AgeComp, mez.p, non.mez)) %>%
-  # add sockeye escapement for each age class (total * percent age) 
-  mutate(run_age3_esc = RunAge3*Meziadin_Escapement,
-         run_age4_esc = RunAge4*Meziadin_Escapement,
-         run_age5_esc = RunAge5*Meziadin_Escapement,
-         run_age6_esc = RunAge6*Meziadin_Escapement) %>%
+  subset(select = -c(`Nass_Total Return`, RunAge7, AgeComp, mez.p, non.mez)) %>%
+  # add sockeye escapement for each age class (total * percent age)
   # add sockeye total return number for each age class
   mutate("3" = RunAge3*`Meziadin_Total Return`,
          "4" = RunAge4*`Meziadin_Total Return`,
@@ -33,7 +31,6 @@ all_mezdata <- merge(TR_TE_wide, mez_age, by = "runyear", all = TRUE) %>%
 
 # format for plotting
 all_mezdata_long <- all_mezdata %>%
-  #pivot_longer(cols = run_age3_esc:run_age6_esc, names_to = "esc_ageclass", values_to = "esc_count") %>%
   pivot_longer(cols = "3":"6", names_to = "tr_ageclass", values_to = "tr_count")
 # Look at a plot of escapement by age by year
 #ggplot(all_mezdata_long, aes(x = runyear, y = esc_count, fill = esc_ageclass)) +
@@ -51,8 +48,9 @@ ggplot(all_mezdata_long, aes(x = runyear, y = tr_count, fill = tr_ageclass)) +
 
 mez_forecastr <- all_mezdata_long %>%
   subset(select = -c(p.age3, p.age4, p.age5, p.age6, Total, 
-                     Meziadin_Escapement, `Meziadin_Total Return`)) %>%
+                     `Meziadin_Total Return`)) %>%
   rename(Run_Year = runyear, Age_Class = tr_ageclass, Average_Terminal_Run = tr_count) %>%
+  #filter(Age_Class != "3") %>% # remove age class 3 (for now..) because lots of zeros for this age class
   mutate(Brood_Year = Run_Year - as.numeric(Age_Class),
          Stock_Name = "Meziadin",
          Stock_Species = "Sockeye",

@@ -44,7 +44,9 @@ ggplot(salmon, aes(x = `CU Name`, y = Fish/100000, fill = Proportion)) +
 }
 
 ## 3. Escapement Goals
+
 simple plot of escapement goal and min (minimum?) goal for each species
+
 ```{r}
 #| message: false
 #| echo: false

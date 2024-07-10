@@ -1,0 +1,88 @@
+---
+title: "Forecasting Meziadin Sockeye Returns"
+format: pdf
+---
+
+# Summary - Meziadin Sockeye Run
+
+The Meziadin River is a major tributary to the Nass River in northwestern British Columbia, an important area home to five species of Pacific salmon. Sockeye salmon returning to the Meziadin system comprise a significant proportion of the total Nass sockeye run. Since the creation of the Meziadin Fishway in 1966, it has been found that 70-80% of Nass sockeye return to the Meziadin system via Meziadin River. Meziadin sockeye are a highly valued and culturally significant food source for Gitanyow and Nisga'a First Nations, and also harvested by Alaskan commercial fisheries during their ocean migration. Predicting the sockeye returning to the Meziadin is important for understanding the conservation status of this population. We are working to create a Meziadin-specific return forecast for sockeye salmon.
+
+```{r}
+#| include: false
+#| 
+library(tidyverse)
+
+# Read in Meziadin/Nass TE/TR data:
+mez_nass_TR_TE <- read_csv("data/nass vs mez TR TE new.csv") %>%
+  filter(type == "Total Return") %>%
+  drop_na("Meziadin") %>%
+  rename(runyear = year)
+#Wide format to have total run and escapement as columns
+TR_TE_wide <- pivot_wider(mez_nass_TR_TE, names_from = type, values_from = c(Meziadin, Nass))
+# Read in Meziadin by age data:
+mez_age <- read_csv("data/Mez scale data - Andy.csv") %>%
+  rename(runyear = Year)
+# Merge the two dataframes 
+all_mezdata <- merge(TR_TE_wide, mez_age, by = "runyear") %>%
+  # filter to only Meziadin data, remove uninformative columns
+  subset(select = -c(`Nass_Total Return`, RunAge7, AgeComp, mez.p, non.mez)) %>%
+  # add sockeye escapement for each age class (total * percent age)
+  # add sockeye total return number for each age class
+  mutate("3" = RunAge3*`Meziadin_Total Return`,
+         "4" = RunAge4*`Meziadin_Total Return`,
+         "5" = RunAge5*`Meziadin_Total Return`,
+         "6" = RunAge6*`Meziadin_Total Return`) %>%
+  # clarify column name for percentages
+  rename(p.age3 = RunAge3, p.age4 = RunAge4, p.age5 = RunAge5, p.age6 = RunAge6)
+# format for plotting
+all_mezdata_long <- all_mezdata %>%
+  pivot_longer(cols = "3":"6", names_to = "tr_ageclass", values_to = "tr_count")
+```
+
+## Total return of Meziadin sockeye by age class, 1982-2017
+
+```{r}
+#| echo: false
+all_mezdata_long %>%
+  rename(`Age Class` = tr_ageclass) %>%
+  ggplot(aes(x = runyear, y = tr_count, fill = `Age Class`)) +
+  geom_col() +
+  xlab("Year") +
+  ylab("Sockeye Total Run by year and age class")
+```
+
+# Using ForecastR to predict Sockeye Returns
+
+We are using *ForecastR*, an R package and Shiny app, to predict total returns of sockeye salmon from the Meziadin system based on previous years' data on Meziadin total return and escapement. The Meziadin total return data is a subset of the Nass total return, including escapement plus the salmon harvested in fisheries which do not make it back to spawning grounds. The sockeye total run numbers for each year are categorized by age, with sockeye separated into age classes 3, 4, 5, and 6.
+
+ForecastR uses forecasting models to predict salmon terminal run and escapement, based on data entered by the user. This data can be age-specific and include environmental or biological covariates. Multiple forecasting models can be explored, compared, and ranked using the app. Here we have started forecasting Meziadin sockeye total return using ages with no covariates, and intend to add relevant environmental and/or biological covariates to make these predictive models more informative in the future. Plots shown are using the exponential smoothing model, which assigns exponentially decreasing weights to past observations (i.e. more recent data points are more important for forecasting), and captures seasonal variation.
+
+## Observed vs fitted return numbers using Exponential Smoothing model for Age Class 3
+
+Data for age-3 sockeye is sparse as the total run for this age class is zero for most years between 1982 and 2017.
+
+![Age 3 sockeye forecasted returns](age3_es.png)\
+
+## Plot of observed vs fitted return numbers using Exponential Smoothing model for Age Class 4
+
+![Age 4 sockeye forecasted returns](age4_es.png)
+
+## Observed vs fitted return numbers using Exponential Smoothing model for Age Class 5
+
+![Age 5 sockeye forecasted returns](age5_es.png)
+
+## Observed vs fitted return numbers using Exponential Smoothing model for Age Class 6
+
+![Age 6 sockeye forecasted returns](age6_es.png)
+
+## Forecast plot showing the distribution of forecasted return estimates by age
+
+![Variation in forecast abundance by age class](forecastplot.png)
+
+# References
+
+Nisga'a Lisims Government. 2023. 2023 Nass River Salmon Stock Assessment Update - Friday, 14 July. Public update from the Nisga'a Lisims Government Fisheries and Wildlife Department.
+
+Pacific Salmon Foundation. 2016. The Nass Area: Cumulative Pressures on Salmon Habitat (summary report cards), Vancouver, BC.
+
+Vélez-Espino, L.A., Parken, C.K., Clemons, E.R., Peterson, R., Ryding, K., Folkes, M., and Pestal, G. 2019. ForecastR: tools to automate procedures for forecasting of salmonid terminal run and escapement. Final Report submitted to the Southern Boundary Restoration and Enhancement Fund, Pacific Salmon Commission, Vancouver BC. 117 p.

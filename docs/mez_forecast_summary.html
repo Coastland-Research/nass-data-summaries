@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>nass-data-summaries - Nass Data Summary</title>
+<title>nass-data-summaries - Forecasting Annual Meziadin Sockeye Returns</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -115,15 +81,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">1. Background</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">2. Summary</a></li>
-  <li><a href="#escapement-goals" id="toc-escapement-goals" class="nav-link" data-scroll-target="#escapement-goals">3. Escapement Goals</a></li>
-  <li><a href="#sockeye-salmon" id="toc-sockeye-salmon" class="nav-link" data-scroll-target="#sockeye-salmon">4. Sockeye Salmon</a></li>
-  <li><a href="#chinook-salmon" id="toc-chinook-salmon" class="nav-link" data-scroll-target="#chinook-salmon">5. Chinook Salmon</a></li>
-  <li><a href="#coho-salmon" id="toc-coho-salmon" class="nav-link" data-scroll-target="#coho-salmon">Coho Salmon</a></li>
-  <li><a href="#pink-salmon" id="toc-pink-salmon" class="nav-link" data-scroll-target="#pink-salmon">Pink Salmon</a></li>
-  <li><a href="#chum-salmon" id="toc-chum-salmon" class="nav-link" data-scroll-target="#chum-salmon">Chum Salmon</a></li>
-  <li><a href="#steelhead-trout" id="toc-steelhead-trout" class="nav-link" data-scroll-target="#steelhead-trout">Steelhead Trout</a></li>
+  <li><a href="#summary---meziadin-sockeye-run" id="toc-summary---meziadin-sockeye-run" class="nav-link active" data-scroll-target="#summary---meziadin-sockeye-run">Summary - Meziadin Sockeye Run</a>
+  <ul class="collapse">
+  <li><a href="#plot-showing-the-total-return-of-meziadin-sockeye-by-age-class-1982-2017" id="toc-plot-showing-the-total-return-of-meziadin-sockeye-by-age-class-1982-2017" class="nav-link" data-scroll-target="#plot-showing-the-total-return-of-meziadin-sockeye-by-age-class-1982-2017">Plot showing the total return of Meziadin sockeye by age class, 1982-2017</a></li>
+  </ul></li>
+  <li><a href="#using-forecastr-to-predict-sockeye-returns" id="toc-using-forecastr-to-predict-sockeye-returns" class="nav-link" data-scroll-target="#using-forecastr-to-predict-sockeye-returns">Using ForecastR to predict Sockeye Returns</a>
+  <ul class="collapse">
+  <li><a href="#plot-of-observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-3" id="toc-plot-of-observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-3" class="nav-link" data-scroll-target="#plot-of-observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-3">Plot of observed vs fitted return numbers using Exponential Smoothing model for Age Class 3</a></li>
+  <li><a href="#plot-of-observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-5" id="toc-plot-of-observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-5" class="nav-link" data-scroll-target="#plot-of-observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-5">Plot of observed vs fitted return numbers using Exponential Smoothing model for Age Class 5</a></li>
+  </ul></li>
+  <li><a href="#plot-of-observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-6" id="toc-plot-of-observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-6" class="nav-link" data-scroll-target="#plot-of-observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-6">Plot of observed vs fitted return numbers using Exponential Smoothing model for Age Class 6</a></li>
+  <li><a href="#forecast-plot-showing-the-distribution-of-forecasted-total-return-estimates-by-age" id="toc-forecast-plot-showing-the-distribution-of-forecasted-total-return-estimates-by-age" class="nav-link" data-scroll-target="#forecast-plot-showing-the-distribution-of-forecasted-total-return-estimates-by-age">Forecast plot showing the distribution of forecasted total return estimates by age</a></li>
   </ul>
 </nav>
 </nav>
@@ -136,7 +104,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Nass Data Summary</h1>
+<h1 class="title">Forecasting Annual Meziadin Sockeye Returns</h1>
 </div>
 
 
@@ -153,113 +121,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">1. Background</h2>
-<p>introduction to Nass watershed and salmon</p>
-</section>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">2. Summary</h2>
-<p>example - modified some code from Joe’s Shiny app to make a plot of harvests and escapement by year and CU - this is not very useful to look at, better if broken down by species and smaller timeframes</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>salmon <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"salmon.rds"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>exploitation <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"exploitation.rds"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Exploitation plot    </span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(exploitation, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Fish<span class="sc">/</span><span class="dv">100000</span>, <span class="at">fill =</span> Proportion)) <span class="sc">+</span> </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">"stack"</span>) <span class="sc">+</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"gray78"</span>, <span class="st">"gray46"</span>)) <span class="sc">+</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"x100,000 Salmon"</span>, <span class="at">title =</span> <span class="st">"Area 3 Exploitation by Year"</span>)<span class="sc">+</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span><span class="st">`</span><span class="at">Species Name</span><span class="st">`</span>) <span class="sc">+</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust=</span><span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="nass-data-summaries_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Salmon data plot</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(salmon, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">CU Name</span><span class="st">`</span>, <span class="at">y =</span> Fish<span class="sc">/</span><span class="dv">100000</span>, <span class="at">fill =</span> Proportion)) <span class="sc">+</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">#theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"x100,000 Salmon"</span>, <span class="at">x =</span> <span class="st">"Conservation Unit"</span>, <span class="at">title =</span> <span class="st">"Breakdown by CU"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="nass-data-summaries_files/figure-html/unnamed-chunk-2-2.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>}</p>
-</section>
-<section id="escapement-goals" class="level2">
-<h2 class="anchored" data-anchor-id="escapement-goals">3. Escapement Goals</h2>
-<p>simple plot of escapement goal and min (minimum?) goal for each species</p>
+<section id="summary---meziadin-sockeye-run" class="level1">
+<h1>Summary - Meziadin Sockeye Run</h1>
+<p>The Meziadin River is a major tributary to the Nass River in northwestern British Columbia. Sockeye salmon returning to Meziadin system comprise a significant proportion of the total Nass sockeye run. Since the creation of the Meziadin Fishway in 1966, it has been found that 70-80% of Nass sockeye return to the Meziadin system via Meziadin River.</p>
+<section id="plot-showing-the-total-return-of-meziadin-sockeye-by-age-class-1982-2017" class="level2">
+<h2 class="anchored" data-anchor-id="plot-showing-the-total-return-of-meziadin-sockeye-by-age-class-1982-2017">Plot showing the total return of Meziadin sockeye by age class, 1982-2017</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="nass-data-summaries_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="mez_forecast_summary_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="sockeye-salmon" class="level2">
-<h2 class="anchored" data-anchor-id="sockeye-salmon">4. Sockeye Salmon</h2>
-<ol type="a">
-<li><p>Area 3</p></li>
-<li><p>Conservation Units</p></li>
-<li><p>Streams</p></li>
-<li><p>Exploitation Rates</p></li>
-</ol>
 </section>
-<section id="chinook-salmon" class="level2">
-<h2 class="anchored" data-anchor-id="chinook-salmon">5. Chinook Salmon</h2>
-<ol type="a">
-<li><p>Area 3</p></li>
-<li><p>Conservation Units</p></li>
-<li><p>Streams</p></li>
-<li><p>Exploitation Rates</p></li>
-</ol>
+<section id="using-forecastr-to-predict-sockeye-returns" class="level1">
+<h1>Using ForecastR to predict Sockeye Returns</h1>
+<p>We are using <em>ForecastR</em>, an R package and Shiny app, to predict total returns of sockeye salmon from the Meziadin system based on previous years’ data on Meziadin total return and escapement. The Meziadin total return data is a subset of the Nass total return, including escapement plus the salmon harvested in fisheries. The sockeye total run numbers for each year are categorized by age, with sockeye separated into age classes 3, 4, 5, and 6.</p>
+<section id="plot-of-observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-3" class="level2">
+<h2 class="anchored" data-anchor-id="plot-of-observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-3">Plot of observed vs fitted return numbers using Exponential Smoothing model for Age Class 3</h2>
+<p>Data for age-3 sockeye is sparse as the total run for this age class is zero for most years between 1982 and 2017.</p>
+<p><img src="age3_es.png" class="img-fluid" alt="age3"> ## Plot of observed vs fitted return numbers using Exponential Smoothing model for Age Class 4</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="age4_es.png" class="img-fluid figure-img"></p>
+<figcaption>age4</figcaption>
+</figure>
+</div>
 </section>
-<section id="coho-salmon" class="level2">
-<h2 class="anchored" data-anchor-id="coho-salmon">Coho Salmon</h2>
-<ol type="a">
-<li><p>Area 3</p></li>
-<li><p>Conservation Units</p></li>
-<li><p>Streams</p></li>
-<li><p>Exploitation Rates</p></li>
-</ol>
+<section id="plot-of-observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-5" class="level2">
+<h2 class="anchored" data-anchor-id="plot-of-observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-5">Plot of observed vs fitted return numbers using Exponential Smoothing model for Age Class 5</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="age5_es.png" class="img-fluid figure-img"></p>
+<figcaption>age5</figcaption>
+</figure>
+</div>
 </section>
-<section id="pink-salmon" class="level2">
-<h2 class="anchored" data-anchor-id="pink-salmon">Pink Salmon</h2>
-<ol type="a">
-<li><p>Area 3</p></li>
-<li><p>Conservation Units</p></li>
-<li><p>Streams</p></li>
-<li><p>Exploitation Rates</p></li>
-</ol>
 </section>
-<section id="chum-salmon" class="level2">
-<h2 class="anchored" data-anchor-id="chum-salmon">Chum Salmon</h2>
-<ol type="a">
-<li><p>Area 3</p></li>
-<li><p>Conservation Units</p></li>
-<li><p>Streams</p></li>
-<li><p>Exploitation Rates</p></li>
-</ol>
+<section id="plot-of-observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-6" class="level1">
+<h1>Plot of observed vs fitted return numbers using Exponential Smoothing model for Age Class 6</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="age6_es.png" class="img-fluid figure-img"></p>
+<figcaption>age6</figcaption>
+</figure>
+</div>
 </section>
-<section id="steelhead-trout" class="level2">
-<h2 class="anchored" data-anchor-id="steelhead-trout">Steelhead Trout</h2>
-<ol type="a">
-<li><p>Area 3</p></li>
-<li><p>Conservation Units</p></li>
-<li><p>Streams</p></li>
-<li><p>Exploitation Rates</p></li>
-</ol>
+<section id="forecast-plot-showing-the-distribution-of-forecasted-total-return-estimates-by-age" class="level1">
+<h1>Forecast plot showing the distribution of forecasted total return estimates by age</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="forecastplot.png" class="img-fluid figure-img"></p>
+<figcaption>forecastplot</figcaption>
+</figure>
+</div>
 
 
 </section>
