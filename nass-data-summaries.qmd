@@ -7,6 +7,9 @@ title: "Nass Data Summary"
 
 library(tidyverse)
 library(reshape2)
+library(ggpubr)
+library(readxl)
+library(data.table)
 ```
 
 ## 1. Background
@@ -50,6 +53,7 @@ simple plot of escapement goal and min (minimum?) goal for each species
 ```{r}
 #| message: false
 #| echo: false
+#| warning: false
 
 esc_goals <- read_csv("data/nass salmon escapement goals.csv", show_col_types = FALSE)
 
@@ -63,6 +67,46 @@ ggplot(esc_reshaped, aes(x = species, y = value, fill=variable)) +
 ```
 
 ## 4. Sockeye Salmon
+```{r load and format data, include=FALSE}
+nass_mez <- fread("data/nass vs mez TR TE new.csv")
+nass <- read_excel("data/nass data 240313.xlsx",sheet="meziadin and nass te and tr")
+allyears<-fread("data/nass combined stat area data 240313.csv")
+
+esc.plots <- allyears %>%
+  filter(`Species Name`=="Sockeye")%>%
+  pivot_longer(c(`Total Harvest`, `Escapement`), names_to = "Proportion", values_to = "Fish")%>%
+  mutate(Type=ifelse(Year==2024,"Forecasted\nTRTC",Proportion))
+
+```
+
+```{r sockeye esc plot}
+#| warning: false
+#| message: false
+
+pe<-ggplot(esc.plots, aes(x = Year, y = Fish, fill = factor(Type,levels=c("Total Harvest","Escapement","Forecasted\nTRTC"))))+
+  geom_col(color="black",width = 1)+
+  scale_fill_manual(values=c("grey90","grey40","blue"))+
+  guides(fill=guide_legend(title=""))+
+  xlim(c(1980,2025))+
+  theme_bw()+
+  labs(y="Number of Sockeye Salmon")
+
+er.plots<-allyears %>%
+  filter(`Species Name`== "Sockeye",Year<=2023)%>%
+  pivot_longer(c(`SEAK ER`, `CDN ER`,`Total ER`), names_to = "Area", values_to = "ER")
+
+per<-ggplot(er.plots, aes(x = Year, y = ER,color=Area)) +
+  geom_point()+geom_line()+
+  scale_color_manual(values=c("red","blue","black"))+
+  guides(color=guide_legend(title=NULL))+
+  theme_bw()+
+  labs(y="Exploitation Rate")+
+  ylim(0,1)+
+  xlim(1980,2025)
+
+ggarrange(pe,per,ncol=1,align="v")
+
+```
 
 a.  Area 3
 
@@ -73,6 +117,40 @@ c.  Streams
 d.  Exploitation Rates
 
 ## 5. Chinook Salmon
+```{r chinook esc plot}
+#| warning: false
+#| message: false
+
+esc.plots <- allyears %>%
+  filter(`Species Name`== "Chinook")%>%
+  pivot_longer(c(`Total Harvest`, `Escapement`), names_to = "Proportion", values_to = "Fish")%>%
+  mutate(Type=ifelse(Year==2024,"Forecasted\nTRTC",Proportion))
+
+pe<-ggplot(esc.plots, aes(x = Year, y = Fish, fill = factor(Type,levels=c("Total Harvest","Escapement","Forecasted\nTRTC"))))+
+  geom_col(color="black",width = 1)+
+  scale_fill_manual(values=c("grey90","grey40","blue"))+
+  guides(fill=guide_legend(title=""))+
+  xlim(c(1980,2025))+
+  theme_bw()+
+  labs(y="Number of Chinook Salmon")
+
+er.plots<-allyears %>%
+  filter(`Species Name`== "Chinook",Year<2024)%>%
+  pivot_longer(c(`SEAK ER`, `CDN ER`,`Total ER`), names_to = "Area", values_to = "ER")
+
+per<-ggplot(er.plots, aes(x = Year, y = ER,color=Area)) +
+  geom_point()+geom_line()+
+  scale_color_manual(values=c("red","blue","black"))+
+  guides(color=guide_legend(title=NULL))+
+  theme_bw()+
+  labs(y="Exploitation Rate")+
+  ylim(0,1)+
+  xlim(1980,2025)
+
+ggarrange(pe,per,ncol=1,align="v")
+
+```
+
 
 a.  Area 3
 
@@ -83,6 +161,40 @@ c.  Streams
 d.  Exploitation Rates
 
 ## Coho Salmon
+```{r coho esc plot}
+#| warning: false
+#| message: false
+#| 
+esc.plots <- allyears %>%
+  filter(`Species Name`== "Coho")%>%
+  pivot_longer(c(`Total Harvest`, `Escapement`), names_to = "Proportion", values_to = "Fish")%>%
+  mutate(Type=ifelse(Year==2024,"Forecasted\nTRTC",Proportion))
+
+pe<-ggplot(esc.plots, aes(x = Year, y = Fish, fill = factor(Type,levels=c("Total Harvest","Escapement","Forecasted\nTRTC"))))+
+  geom_col(color="black",width = 1)+
+  scale_fill_manual(values=c("grey90","grey40","blue"))+
+  guides(fill=guide_legend(title=""))+
+  xlim(c(1980,2025))+
+  theme_bw()+
+  labs(y="Number of Coho Salmon")
+
+er.plots<-allyears %>%
+  filter(`Species Name`== "Coho",Year<2024)%>%
+  pivot_longer(c(`SEAK ER`, `CDN ER`,`Total ER`), names_to = "Area", values_to = "ER")
+
+per<-ggplot(er.plots, aes(x = Year, y = ER,color=Area)) +
+  geom_point()+geom_line()+
+  scale_color_manual(values=c("red","blue","black"))+
+  guides(color=guide_legend(title=NULL))+
+  theme_bw()+
+  labs(y="Exploitation Rate")+
+  ylim(0,1)+
+  xlim(1980,2025)
+
+ggarrange(pe,per,ncol=1,align="v")
+
+
+```
 
 a.  Area 3
 
@@ -92,7 +204,40 @@ c.  Streams
 
 d.  Exploitation Rates
 
-## Pink Salmon
+## Pink Salmon (even years)
+```{r pink even esc plot}
+#| warning: false
+#| message: false
+
+esc.plots <- allyears %>%
+  filter(`Species Name`=="Pink (even years)")%>%
+  pivot_longer(c(`Total Harvest`, `Escapement`), names_to = "Proportion", values_to = "Fish")%>%
+  mutate(Type=ifelse(Year==2024,"Forecasted\nTRTC",Proportion))
+
+pe<-ggplot(esc.plots, aes(x = Year, y = Fish, fill = factor(Type,levels=c("Total Harvest","Escapement","Forecasted\nTRTC"))))+
+  geom_col(color="black",width = 1)+
+  scale_fill_manual(values=c("grey90","grey20","blue"))+
+  guides(fill=guide_legend(title=""))+
+  xlim(c(1960,2025))+
+  theme_bw()+
+  labs(y="Number of Pink Salmon")
+
+er.plots<-allyears %>%
+  filter(`Species Name`== "Pink (even years)",Year<2024)%>%
+  pivot_longer(c(`SEAK ER`, `CDN ER`,`Total ER`), names_to = "Area", values_to = "ER")
+
+per<-ggplot(er.plots, aes(x = Year, y = ER,color=Area)) +
+  geom_point()+geom_line()+
+  scale_color_manual(values=c("red","blue","black"))+
+  guides(color=guide_legend(title=NULL))+
+  theme_bw()+
+  labs(y="Exploitation Rate")+
+  ylim(0,1)+
+  xlim(1960,2025)
+
+ggarrange(pe,per,ncol=1,align="v")
+
+```
 
 a.  Area 3
 
@@ -103,6 +248,39 @@ c.  Streams
 d.  Exploitation Rates
 
 ## Chum Salmon
+```{r chum esc plot}
+#| warning: false
+#| message: false
+
+esc.plots <- allyears %>%
+  filter(`Species Name`=="Chum")%>%
+  pivot_longer(c(`Total Harvest`, `Escapement`), names_to = "Proportion", values_to = "Fish")%>%
+  mutate(Type=ifelse(Year==2024,"Forecasted\nTRTC",Proportion))
+
+pe<-ggplot(esc.plots, aes(x = Year, y = Fish, fill = factor(Type,levels=c("Total Harvest","Escapement","Forecasted\nTRTC"))))+
+  geom_col(color="black",width = 1)+
+  scale_fill_manual(values=c("grey90","grey40","blue"))+
+  guides(fill=guide_legend(title=""))+
+  xlim(c(1950,2025))+
+  theme_bw()+
+  labs(y="Number of Chum Salmon")
+
+er.plots<-allyears %>%
+  filter(`Species Name`=="Chum",Year<2024)%>%
+  pivot_longer(c(`SEAK ER`, `CDN ER`,`Total ER`), names_to = "Area", values_to = "ER")
+
+per<-ggplot(er.plots, aes(x = Year, y = ER,color=Area)) +
+  geom_point()+geom_line()+
+  scale_color_manual(values=c("red","blue","black"))+
+  guides(color=guide_legend(title=NULL))+
+  theme_bw()+
+  labs(y="Exploitation Rate")+
+  ylim(0,1)+
+  xlim(1950,2025)
+
+ggarrange(pe,per,ncol=1,align="v")
+
+```
 
 a.  Area 3
 
@@ -113,7 +291,29 @@ c.  Streams
 d.  Exploitation Rates
 
 ## Steelhead Trout
+```{r load steelhead data, include=FALSE}
+nisgaash <- read_csv("data/nisgaa-tech-table-data.csv")%>%
+  filter(Species == "Steelhead")%>%
+  select(Year,TRTC, TR)%>%
+  mutate(`SEAK Harvest`=TR-TRTC)%>%
+  pivot_longer(c(`TRTC`,`SEAK Harvest`),names_to="type",values_to="fish")
 
+```
+
+```{r steelhead esc plot}
+#| message: false
+#| warning: false
+sh<-ggplot(nisgaash, aes(x = Year, y = fish,fill=ifelse(Year==2023,"Forecasted\nTRTC",type))) +
+  geom_col(color="black")+
+  scale_fill_manual(values=c("blue","grey90","grey40"))+
+  guides(fill=guide_legend(title=NULL))+
+  theme_bw()+
+  labs(y="Number of Steelhead")+
+  xlim(1990,2025)
+
+sh
+
+```
 a.  Area 3
 
 b.  Conservation Units
