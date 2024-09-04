@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -121,7 +87,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#sockeye-salmon" id="toc-sockeye-salmon" class="nav-link" data-scroll-target="#sockeye-salmon">4. Sockeye Salmon</a></li>
   <li><a href="#chinook-salmon" id="toc-chinook-salmon" class="nav-link" data-scroll-target="#chinook-salmon">5. Chinook Salmon</a></li>
   <li><a href="#coho-salmon" id="toc-coho-salmon" class="nav-link" data-scroll-target="#coho-salmon">Coho Salmon</a></li>
-  <li><a href="#pink-salmon" id="toc-pink-salmon" class="nav-link" data-scroll-target="#pink-salmon">Pink Salmon</a></li>
+  <li><a href="#pink-salmon-even-years" id="toc-pink-salmon-even-years" class="nav-link" data-scroll-target="#pink-salmon-even-years">Pink Salmon (even years)</a></li>
   <li><a href="#chum-salmon" id="toc-chum-salmon" class="nav-link" data-scroll-target="#chum-salmon">Chum Salmon</a></li>
   <li><a href="#steelhead-trout" id="toc-steelhead-trout" class="nav-link" data-scroll-target="#steelhead-trout">Steelhead Trout</a></li>
   </ul>
@@ -159,18 +125,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">2. Summary</h2>
-<p>example - modified some code from Joe’s Shiny app to make a plot of harvests and escapement by year and CU - this is not very useful to look at, better if broken down by species and smaller timeframes</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>salmon <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"salmon.rds"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>exploitation <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"exploitation.rds"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Exploitation plot    </span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(exploitation, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Fish<span class="sc">/</span><span class="dv">100000</span>, <span class="at">fill =</span> Proportion)) <span class="sc">+</span> </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">"stack"</span>) <span class="sc">+</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"gray78"</span>, <span class="st">"gray46"</span>)) <span class="sc">+</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"x100,000 Salmon"</span>, <span class="at">title =</span> <span class="st">"Area 3 Exploitation by Year"</span>)<span class="sc">+</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span><span class="st">`</span><span class="at">Species Name</span><span class="st">`</span>) <span class="sc">+</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust=</span><span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -178,12 +133,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Salmon data plot</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(salmon, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">CU Name</span><span class="st">`</span>, <span class="at">y =</span> Fish<span class="sc">/</span><span class="dv">100000</span>, <span class="at">fill =</span> Proportion)) <span class="sc">+</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">#theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"x100,000 Salmon"</span>, <span class="at">x =</span> <span class="st">"Conservation Unit"</span>, <span class="at">title =</span> <span class="st">"Breakdown by CU"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -192,7 +141,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>}</p>
 </section>
 <section id="escapement-goals" class="level2">
 <h2 class="anchored" data-anchor-id="escapement-goals">3. Escapement Goals</h2>
@@ -210,7 +158,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="sockeye-salmon" class="level2">
 <h2 class="anchored" data-anchor-id="sockeye-salmon">4. Sockeye Salmon</h2>
 <ol type="a">
-<li><p>Area 3</p></li>
+<li>Area 3</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="nass-data-summaries_files/figure-html/sockeye esc plot-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="2" type="a">
 <li><p>Conservation Units</p></li>
 <li><p>Streams</p></li>
 <li><p>Exploitation Rates</p></li>
@@ -219,7 +178,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="chinook-salmon" class="level2">
 <h2 class="anchored" data-anchor-id="chinook-salmon">5. Chinook Salmon</h2>
 <ol type="a">
-<li><p>Area 3</p></li>
+<li>Area 3</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="nass-data-summaries_files/figure-html/chinook esc plot-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="2" type="a">
 <li><p>Conservation Units</p></li>
 <li><p>Streams</p></li>
 <li><p>Exploitation Rates</p></li>
@@ -228,16 +198,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="coho-salmon" class="level2">
 <h2 class="anchored" data-anchor-id="coho-salmon">Coho Salmon</h2>
 <ol type="a">
-<li><p>Area 3</p></li>
+<li>Area 3</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="nass-data-summaries_files/figure-html/coho esc plot-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="2" type="a">
 <li><p>Conservation Units</p></li>
 <li><p>Streams</p></li>
 <li><p>Exploitation Rates</p></li>
 </ol>
 </section>
-<section id="pink-salmon" class="level2">
-<h2 class="anchored" data-anchor-id="pink-salmon">Pink Salmon</h2>
+<section id="pink-salmon-even-years" class="level2">
+<h2 class="anchored" data-anchor-id="pink-salmon-even-years">Pink Salmon (even years)</h2>
 <ol type="a">
-<li><p>Area 3</p></li>
+<li>Area 3</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="nass-data-summaries_files/figure-html/pink even esc plot-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="2" type="a">
 <li><p>Conservation Units</p></li>
 <li><p>Streams</p></li>
 <li><p>Exploitation Rates</p></li>
@@ -246,7 +238,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="chum-salmon" class="level2">
 <h2 class="anchored" data-anchor-id="chum-salmon">Chum Salmon</h2>
 <ol type="a">
-<li><p>Area 3</p></li>
+<li>Area 3</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="nass-data-summaries_files/figure-html/chum esc plot-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="2" type="a">
 <li><p>Conservation Units</p></li>
 <li><p>Streams</p></li>
 <li><p>Exploitation Rates</p></li>
@@ -255,7 +258,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="steelhead-trout" class="level2">
 <h2 class="anchored" data-anchor-id="steelhead-trout">Steelhead Trout</h2>
 <ol type="a">
-<li><p>Area 3</p></li>
+<li>Area 3</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="nass-data-summaries_files/figure-html/steelhead esc plot-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="2" type="a">
 <li><p>Conservation Units</p></li>
 <li><p>Streams</p></li>
 <li><p>Exploitation Rates</p></li>

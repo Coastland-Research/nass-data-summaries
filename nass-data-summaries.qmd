@@ -18,11 +18,10 @@ introduction to Nass watershed and salmon
 
 ## 2. Summary
 
-example - modified some code from Joe's Shiny app to make a plot of harvests and escapement by year and CU - this is not very useful to look at, better if broken down by species and smaller timeframes
-
 ```{r}
 #| warning: false
 #| message: false
+#| echo: false
 
 salmon <- readRDS("salmon.rds")
 exploitation <- readRDS("exploitation.rds")
@@ -44,11 +43,9 @@ ggplot(salmon, aes(x = `CU Name`, y = Fish/100000, fill = Proportion)) +
 
 ```
 
-}
-
 ## 3. Escapement Goals
 
-simple plot of escapement goal and min (minimum?) goal for each species
+simple plot of escapement goal and minimum goal for each species
 
 ```{r}
 #| message: false
@@ -67,7 +64,14 @@ ggplot(esc_reshaped, aes(x = species, y = value, fill=variable)) +
 ```
 
 ## 4. Sockeye Salmon
-```{r load and format data, include=FALSE}
+
+a.  Area 3
+```{r load and format data}
+#| include: false
+#| message: false
+#| echo: false
+#| warning: false
+
 nass_mez <- fread("data/nass vs mez TR TE new.csv")
 nass <- read_excel("data/nass data 240313.xlsx",sheet="meziadin and nass te and tr")
 allyears<-fread("data/nass combined stat area data 240313.csv")
@@ -82,6 +86,7 @@ esc.plots <- allyears %>%
 ```{r sockeye esc plot}
 #| warning: false
 #| message: false
+#| echo: false
 
 pe<-ggplot(esc.plots, aes(x = Year, y = Fish, fill = factor(Type,levels=c("Total Harvest","Escapement","Forecasted\nTRTC"))))+
   geom_col(color="black",width = 1)+
@@ -108,18 +113,27 @@ ggarrange(pe,per,ncol=1,align="v")
 
 ```
 
-a.  Area 3
-
 b.  Conservation Units
+```{r load CU data}
+#| include: false
+#| message: false
+#| warning: false
+
+CUs <- fread("data/NUSEDS escapement by CU 20220902.csv") %>%
+  pivot_longer(`2021`:`1950`, names_to = "Year", values_to = "Escapement")
+
+```
 
 c.  Streams
 
 d.  Exploitation Rates
 
 ## 5. Chinook Salmon
+a.  Area 3
 ```{r chinook esc plot}
-#| warning: false
 #| message: false
+#| echo: false
+#| warning: false
 
 esc.plots <- allyears %>%
   filter(`Species Name`== "Chinook")%>%
@@ -151,9 +165,6 @@ ggarrange(pe,per,ncol=1,align="v")
 
 ```
 
-
-a.  Area 3
-
 b.  Conservation Units
 
 c.  Streams
@@ -161,10 +172,12 @@ c.  Streams
 d.  Exploitation Rates
 
 ## Coho Salmon
+a.  Area 3
 ```{r coho esc plot}
-#| warning: false
 #| message: false
-#| 
+#| echo: false
+#| warning: false
+
 esc.plots <- allyears %>%
   filter(`Species Name`== "Coho")%>%
   pivot_longer(c(`Total Harvest`, `Escapement`), names_to = "Proportion", values_to = "Fish")%>%
@@ -195,9 +208,6 @@ ggarrange(pe,per,ncol=1,align="v")
 
 
 ```
-
-a.  Area 3
-
 b.  Conservation Units
 
 c.  Streams
@@ -205,9 +215,11 @@ c.  Streams
 d.  Exploitation Rates
 
 ## Pink Salmon (even years)
+a.  Area 3
 ```{r pink even esc plot}
-#| warning: false
 #| message: false
+#| echo: false
+#| warning: false
 
 esc.plots <- allyears %>%
   filter(`Species Name`=="Pink (even years)")%>%
@@ -239,8 +251,6 @@ ggarrange(pe,per,ncol=1,align="v")
 
 ```
 
-a.  Area 3
-
 b.  Conservation Units
 
 c.  Streams
@@ -248,9 +258,11 @@ c.  Streams
 d.  Exploitation Rates
 
 ## Chum Salmon
+a.  Area 3
 ```{r chum esc plot}
-#| warning: false
 #| message: false
+#| echo: false
+#| warning: false
 
 esc.plots <- allyears %>%
   filter(`Species Name`=="Chum")%>%
@@ -282,8 +294,6 @@ ggarrange(pe,per,ncol=1,align="v")
 
 ```
 
-a.  Area 3
-
 b.  Conservation Units
 
 c.  Streams
@@ -291,7 +301,10 @@ c.  Streams
 d.  Exploitation Rates
 
 ## Steelhead Trout
-```{r load steelhead data, include=FALSE}
+a.  Area 3
+```{r load steelhead data}
+#| include: false
+
 nisgaash <- read_csv("data/nisgaa-tech-table-data.csv")%>%
   filter(Species == "Steelhead")%>%
   select(Year,TRTC, TR)%>%
@@ -302,7 +315,9 @@ nisgaash <- read_csv("data/nisgaa-tech-table-data.csv")%>%
 
 ```{r steelhead esc plot}
 #| message: false
+#| echo: false
 #| warning: false
+
 sh<-ggplot(nisgaash, aes(x = Year, y = fish,fill=ifelse(Year==2023,"Forecasted\nTRTC",type))) +
   geom_col(color="black")+
   scale_fill_manual(values=c("blue","grey90","grey40"))+
@@ -314,7 +329,6 @@ sh<-ggplot(nisgaash, aes(x = Year, y = fish,fill=ifelse(Year==2023,"Forecasted\n
 sh
 
 ```
-a.  Area 3
 
 b.  Conservation Units
 

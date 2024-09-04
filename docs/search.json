@@ -4,7 +4,7 @@
     "href": "nass-data-summaries.html#summary",
     "title": "Nass Data Summary",
     "section": "2. Summary",
-    "text": "2. Summary\nexample - modified some code from Joe’s Shiny app to make a plot of harvests and escapement by year and CU - this is not very useful to look at, better if broken down by species and smaller timeframes\n\nsalmon &lt;- readRDS(\"salmon.rds\")\nexploitation &lt;- readRDS(\"exploitation.rds\")\n\n# Exploitation plot    \nggplot(exploitation, aes(x = Year, y = Fish/100000, fill = Proportion)) + \n  geom_col(position = \"stack\") +\n  scale_fill_manual(values = c(\"gray78\", \"gray46\")) +\n  labs(x = \"Year\", y = \"x100,000 Salmon\", title = \"Area 3 Exploitation by Year\")+\n  facet_wrap(~`Species Name`) +\n  theme(axis.text.x = element_text(angle = 45, hjust=1))\n\n\n\n\n\n\n\n# Salmon data plot\n\nggplot(salmon, aes(x = `CU Name`, y = Fish/100000, fill = Proportion)) +\n  geom_col() +\n  #theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +\n  labs(y = \"x100,000 Salmon\", x = \"Conservation Unit\", title = \"Breakdown by CU\")\n\n\n\n\n\n\n\n\n}"
+    "text": "2. Summary"
   },
   {
     "objectID": "nass-data-summaries.html#escapement-goals",
@@ -18,21 +18,21 @@
     "href": "nass-data-summaries.html#sockeye-salmon",
     "title": "Nass Data Summary",
     "section": "4. Sockeye Salmon",
-    "text": "4. Sockeye Salmon\n\nArea 3\nConservation Units\nStreams\nExploitation Rates"
+    "text": "4. Sockeye Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nConservation Units\nStreams\nExploitation Rates"
   },
   {
     "objectID": "nass-data-summaries.html#chinook-salmon",
     "href": "nass-data-summaries.html#chinook-salmon",
     "title": "Nass Data Summary",
     "section": "5. Chinook Salmon",
-    "text": "5. Chinook Salmon\n\nArea 3\nConservation Units\nStreams\nExploitation Rates"
+    "text": "5. Chinook Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nConservation Units\nStreams\nExploitation Rates"
   },
   {
     "objectID": "nass-data-summaries.html#coho-salmon",
     "href": "nass-data-summaries.html#coho-salmon",
     "title": "Nass Data Summary",
     "section": "Coho Salmon",
-    "text": "Coho Salmon\n\nArea 3\nConservation Units\nStreams\nExploitation Rates"
+    "text": "Coho Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nConservation Units\nStreams\nExploitation Rates"
   },
   {
     "objectID": "nass-data-summaries.html#pink-salmon",
@@ -46,21 +46,21 @@
     "href": "nass-data-summaries.html#chum-salmon",
     "title": "Nass Data Summary",
     "section": "Chum Salmon",
-    "text": "Chum Salmon\n\nArea 3\nConservation Units\nStreams\nExploitation Rates"
+    "text": "Chum Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nConservation Units\nStreams\nExploitation Rates"
   },
   {
     "objectID": "nass-data-summaries.html#steelhead-trout",
     "href": "nass-data-summaries.html#steelhead-trout",
     "title": "Nass Data Summary",
     "section": "Steelhead Trout",
-    "text": "Steelhead Trout\n\nArea 3\nConservation Units\nStreams\nExploitation Rates"
+    "text": "Steelhead Trout\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nConservation Units\nStreams\nExploitation Rates"
   },
   {
     "objectID": "mez_forecast_summary.html",
     "href": "mez_forecast_summary.html",
-    "title": "Forecasting Annual Meziadin Sockeye Returns",
+    "title": "Forecasting Meziadin Sockeye Returns",
     "section": "",
-    "text": "The Meziadin River is a major tributary to the Nass River in northwestern British Columbia. Sockeye salmon returning to Meziadin system comprise a significant proportion of the total Nass sockeye run. Since the creation of the Meziadin Fishway in 1966, it has been found that 70-80% of Nass sockeye return to the Meziadin system via Meziadin River."
+    "text": "The Meziadin River is a major tributary to the Nass River in northwestern British Columbia, an important area home to five species of Pacific salmon. Sockeye salmon returning to the Meziadin system comprise a significant proportion of the total Nass sockeye run. Since the creation of the Meziadin Fishway in 1966, it has been found that 70-80% of Nass sockeye return to the Meziadin system via Meziadin River. Meziadin sockeye are a highly valued and culturally significant food source for Gitanyow and Nisga’a First Nations, and also harvested by Alaskan commercial fisheries during their ocean migration. Predicting the sockeye returning to the Meziadin is important for understanding the conservation status of this population. We are working to create a Meziadin-specific return forecast for sockeye salmon."
   },
   {
     "objectID": "mez_forecast_summary.html#summary---meziadin-sockeye-run",
@@ -103,5 +103,47 @@
     "title": "Forecasting Annual Meziadin Sockeye Returns",
     "section": "Plot of observed vs fitted return numbers using Exponential Smoothing model for Age Class 5",
     "text": "Plot of observed vs fitted return numbers using Exponential Smoothing model for Age Class 5\n\n\n\nage5"
+  },
+  {
+    "objectID": "nass-data-summaries.html#pink-salmon-even-years",
+    "href": "nass-data-summaries.html#pink-salmon-even-years",
+    "title": "Nass Data Summary",
+    "section": "Pink Salmon (even years)",
+    "text": "Pink Salmon (even years)\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nConservation Units\nStreams\nExploitation Rates"
+  },
+  {
+    "objectID": "mez_forecast_summary.html#observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-3",
+    "href": "mez_forecast_summary.html#observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-3",
+    "title": "Forecasting Meziadin Sockeye Returns",
+    "section": "Observed vs fitted return numbers using Exponential Smoothing model for Age Class 3",
+    "text": "Observed vs fitted return numbers using Exponential Smoothing model for Age Class 3\nData for age-3 sockeye is sparse as the total run for this age class is zero for most years between 1982 and 2017."
+  },
+  {
+    "objectID": "mez_forecast_summary.html#plot-of-observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-4",
+    "href": "mez_forecast_summary.html#plot-of-observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-4",
+    "title": "Forecasting Meziadin Sockeye Returns",
+    "section": "Plot of observed vs fitted return numbers using Exponential Smoothing model for Age Class 4",
+    "text": "Plot of observed vs fitted return numbers using Exponential Smoothing model for Age Class 4\n\n\n\nAge 4 sockeye forecasted returns"
+  },
+  {
+    "objectID": "mez_forecast_summary.html#observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-5",
+    "href": "mez_forecast_summary.html#observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-5",
+    "title": "Forecasting Meziadin Sockeye Returns",
+    "section": "Observed vs fitted return numbers using Exponential Smoothing model for Age Class 5",
+    "text": "Observed vs fitted return numbers using Exponential Smoothing model for Age Class 5\n\n\n\nAge 5 sockeye forecasted returns"
+  },
+  {
+    "objectID": "mez_forecast_summary.html#observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-6",
+    "href": "mez_forecast_summary.html#observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-6",
+    "title": "Forecasting Meziadin Sockeye Returns",
+    "section": "Observed vs fitted return numbers using Exponential Smoothing model for Age Class 6",
+    "text": "Observed vs fitted return numbers using Exponential Smoothing model for Age Class 6\n\n\n\nAge 6 sockeye forecasted returns"
+  },
+  {
+    "objectID": "mez_forecast_summary.html#forecast-plot-showing-the-distribution-of-forecasted-return-estimates-by-age",
+    "href": "mez_forecast_summary.html#forecast-plot-showing-the-distribution-of-forecasted-return-estimates-by-age",
+    "title": "Forecasting Meziadin Sockeye Returns",
+    "section": "Forecast plot showing the distribution of forecasted return estimates by age",
+    "text": "Forecast plot showing the distribution of forecasted return estimates by age\n\n\n\nVariation in forecast abundance by age class"
   }
 ]
