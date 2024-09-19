@@ -1,6 +1,12 @@
 ---
 title: "Nass Data Summary"
+subtitle: "September 19, 2024"
+format: html
+editor: visual
+editor_options: 
+  chunk_output_type: console
 ---
+
 
 ```{r}
 #| include: false
@@ -120,7 +126,21 @@ b.  Conservation Units
 #| warning: false
 
 CUs <- fread("data/NUSEDS escapement by CU 20220902.csv") %>%
-  pivot_longer(`2021`:`1950`, names_to = "Year", values_to = "Escapement")
+  pivot_longer(`2021`:`1950`, names_to = "Year", values_to = "Escapement") %>%
+  mutate(Year = as.numeric(Year))
+
+(pe <- CUs %>%
+  filter(SPECIES=="Sockeye")%>%
+  ggplot(aes(x = CU_INDEX, y = Escapement))+
+  geom_col()+
+  #scale_fill_manual(values=c("grey90","grey40","blue"))+
+  #guides(fill=guide_legend(title=""))+
+  #xlim(c(1980,2025))+
+  theme_bw()+
+  labs(y="Number of Sockeye Salmon", x = "Conservation Unit"))
+ # facet_wrap(~CU_NAME)
+
+# colour by CU name?
 
 ```
 
