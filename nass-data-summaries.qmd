@@ -16,6 +16,7 @@ library(reshape2)
 library(ggpubr)
 library(readxl)
 library(data.table)
+library(gridExtra)
 ```
 
 ## 1. Background
@@ -35,17 +36,17 @@ exploitation <- readRDS("exploitation.rds")
 # Exploitation plot    
 ggplot(exploitation, aes(x = Year, y = Fish/100000, fill = Proportion)) + 
   geom_col(position = "stack") +
-  scale_fill_manual(values = c("gray78", "gray46")) +
+  #scale_fill_manual(values = c("gray78", "gray46")) +
   labs(x = "Year", y = "x100,000 Salmon", title = "Area 3 Exploitation by Year")+
   facet_wrap(~`Species Name`) +
   theme(axis.text.x = element_text(angle = 45, hjust=1))
 
 # Salmon data plot
 
-ggplot(salmon, aes(x = `CU Name`, y = Fish/100000, fill = Proportion)) +
-  geom_col() +
-  #theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
-  labs(y = "x100,000 Salmon", x = "Conservation Unit", title = "Breakdown by CU")
+#ggplot(salmon, aes(x = `CU Name`, y = Fish/100000, fill = Proportion)) +
+#  geom_col() +
+#  #theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+#  labs(y = "x100,000 Salmon", x = "Conservation Unit", title = "Breakdown by CU")
 
 ```
 
@@ -129,24 +130,30 @@ CUs <- fread("data/NUSEDS escapement by CU 20220902.csv") %>%
   pivot_longer(`2021`:`1950`, names_to = "Year", values_to = "Escapement") %>%
   mutate(Year = as.numeric(Year))
 
-# scaling issue - major differences in number of salmon by CU
-# try plotting one CU at a time
+
 area3 <- CUs %>%
   filter(AREA == "3B" | AREA == "3A") %>%
   filter(SPECIES=="Sockeye")
+```
+
+```{r plot escapement by year for each CU}
+#| warning: false
+#| message: false
+#| echo: false
+#| layout-ncol: 2
 
 for (i in 1:length(unique(area3$CU_NAME))){
   CU <- unique(area3$CU_NAME)[i]
   filtered_data <- area3 %>% filter(CU_NAME == CU)
   pl <- ggplot(filtered_data, aes(x = Year, y = Escapement))+
-    geom_col()+
+    geom_col(color = "black", fill = "grey90")+
     xlim(c(1980,2025))+
     theme_bw()+
     labs(y="Number of Sockeye Salmon", x = "Year",
-         title = paste("Annual Sockeye Escapement for CU:", CU))
+         title = paste("Annual Sockeye Escapement for", CU, "Conservation Unit"))
   print(pl)
-  }
-  
+}
+
 ```
 
 c.  Streams
