@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -103,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Nass Data Summary</h1>
-<p class="subtitle lead">September 19, 2024</p>
+<p class="subtitle lead">September 25, 2024</p>
 </div>
 
 
@@ -122,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">1. Background</h2>
-<p>introduction to Nass watershed and salmon</p>
+<p>introduction to Nass watershed and salmon…</p>
 </section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">2. Summary</h2>
@@ -138,7 +172,6 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="escapement-goals" class="level2">
 <h2 class="anchored" data-anchor-id="escapement-goals">3. Escapement Goals</h2>
-<p>simple plot of escapement goal and minimum goal for each species</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -164,7 +197,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <ol start="2" type="a">
-<li>Conservation Units</li>
+<li>Escapement by Conservation Unit and Stream</li>
 </ol>
 <div>
 
@@ -172,9 +205,6 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell quarto-layout-panel" data-layout-ncol="2">
 
 </div>
-<ol start="3" type="a">
-<li>Streams</li>
-</ol>
 <div>
 
 </div>
@@ -228,6 +258,15 @@ ul.task-list li input[type="checkbox"] {
 <ol start="4" type="a">
 <li>Exploitation Rates</li>
 </ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="nass-data-summaries_files/figure-html/sockeye er plot-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="chinook-salmon" class="level2">
 <h2 class="anchored" data-anchor-id="chinook-salmon">5. Chinook Salmon</h2>
@@ -244,7 +283,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <ol start="2" type="a">
-<li>Conservation Units</li>
+<li>Escapement by Conservation Unit and Stream</li>
 </ol>
 <div>
 
@@ -252,9 +291,6 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell quarto-layout-panel" data-layout-ncol="2">
 
 </div>
-<ol start="3" type="a">
-<li>Streams</li>
-</ol>
 <div>
 
 </div>
@@ -273,6 +309,15 @@ ul.task-list li input[type="checkbox"] {
 <ol start="4" type="a">
 <li>Exploitation Rates</li>
 </ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="nass-data-summaries_files/figure-html/chinook er plot-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="coho-salmon" class="level2">
 <h2 class="anchored" data-anchor-id="coho-salmon">Coho Salmon</h2>
@@ -289,7 +334,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <ol start="2" type="a">
-<li>Conservation Units</li>
+<li>Escapement by Conservation Unit and Stream</li>
 </ol>
 <div>
 
@@ -297,9 +342,6 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell quarto-layout-panel" data-layout-ncol="2">
 
 </div>
-<ol start="3" type="a">
-<li>Streams</li>
-</ol>
 <div>
 
 </div>
@@ -328,6 +370,15 @@ ul.task-list li input[type="checkbox"] {
 <ol start="4" type="a">
 <li>Exploitation Rates</li>
 </ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="nass-data-summaries_files/figure-html/coho er plot-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="pink-salmon-even-years" class="level2">
 <h2 class="anchored" data-anchor-id="pink-salmon-even-years">Pink Salmon (even years)</h2>
@@ -344,7 +395,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <ol start="2" type="a">
-<li>Conservation Units</li>
+<li>Escapement by Conservation Unit and Stream</li>
 </ol>
 <div>
 
@@ -352,9 +403,6 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell quarto-layout-panel" data-layout-ncol="1">
 
 </div>
-<ol start="3" type="a">
-<li>Streams</li>
-</ol>
 <div>
 
 </div>
@@ -378,6 +426,15 @@ ul.task-list li input[type="checkbox"] {
 <ol start="4" type="a">
 <li>Exploitation Rates</li>
 </ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="nass-data-summaries_files/figure-html/pink er plot-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="chum-salmon" class="level2">
 <h2 class="anchored" data-anchor-id="chum-salmon">Chum Salmon</h2>
@@ -394,7 +451,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <ol start="2" type="a">
-<li>Conservation Units</li>
+<li>Escapement by Conservation Unit and Stream</li>
 </ol>
 <div>
 
@@ -402,9 +459,6 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell quarto-layout-panel" data-layout-ncol="2">
 
 </div>
-<ol start="3" type="a">
-<li>Streams</li>
-</ol>
 <div>
 
 </div>
@@ -433,6 +487,15 @@ ul.task-list li input[type="checkbox"] {
 <ol start="4" type="a">
 <li>Exploitation Rates</li>
 </ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="nass-data-summaries_files/figure-html/chum er plot-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="steelhead-trout" class="level2">
 <h2 class="anchored" data-anchor-id="steelhead-trout">Steelhead Trout</h2>
@@ -453,6 +516,27 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Streams</p></li>
 <li><p>Exploitation Rates</p></li>
 </ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># nisgaash &lt;- read_csv("data/nisgaa-tech-table-data.csv")</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># nisgaash &lt;- nisgaash %&gt;%</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   filter(Species == "Steelhead") %&gt;%</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   mutate(CDN_ER = CDN_Harvest/TR,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#          ALL_ER = ALL_Harvest/TR) %&gt;%</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   pivot_longer(c(CDN_ER, ALL_ER), names_to = "ER_type", values_to = "ER")</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># per&lt;-ggplot(nisgaash, aes(x = Year, y = ER,color = ER_type)) +</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#   geom_point()+geom_line()+</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">#   scale_color_manual(values=c("red","black"))+</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">#   guides(color=guide_legend(title=NULL))+</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">#   theme_bw()+</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">#   labs(y="Exploitation Rate")+</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">#   ggtitle("Steelhead Exploitation Rates (1980-2023)")+</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">#   ylim(0,1)+</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">#   xlim(1980,2025)</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># per</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section>

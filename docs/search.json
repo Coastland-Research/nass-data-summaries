@@ -11,28 +11,28 @@
     "href": "nass-data-summaries.html#escapement-goals",
     "title": "Nass Data Summary",
     "section": "3. Escapement Goals",
-    "text": "3. Escapement Goals\nsimple plot of escapement goal and minimum goal for each species"
+    "text": "3. Escapement Goals"
   },
   {
     "objectID": "nass-data-summaries.html#sockeye-salmon",
     "href": "nass-data-summaries.html#sockeye-salmon",
     "title": "Nass Data Summary",
     "section": "4. Sockeye Salmon",
-    "text": "4. Sockeye Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nConservation Units\n\n\n\n\n\n\n\n\nStreams\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates"
+    "text": "4. Sockeye Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nEscapement by Conservation Unit and Stream\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates"
   },
   {
     "objectID": "nass-data-summaries.html#chinook-salmon",
     "href": "nass-data-summaries.html#chinook-salmon",
     "title": "Nass Data Summary",
     "section": "5. Chinook Salmon",
-    "text": "5. Chinook Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nConservation Units\n\n\n\n\n\n\n\n\nStreams\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates"
+    "text": "5. Chinook Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nEscapement by Conservation Unit and Stream\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates"
   },
   {
     "objectID": "nass-data-summaries.html#coho-salmon",
     "href": "nass-data-summaries.html#coho-salmon",
     "title": "Nass Data Summary",
     "section": "Coho Salmon",
-    "text": "Coho Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nConservation Units\n\n\n\n\n\n\n\n\nStreams\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates"
+    "text": "Coho Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nEscapement by Conservation Unit and Stream\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates"
   },
   {
     "objectID": "nass-data-summaries.html#pink-salmon",
@@ -46,14 +46,14 @@
     "href": "nass-data-summaries.html#chum-salmon",
     "title": "Nass Data Summary",
     "section": "Chum Salmon",
-    "text": "Chum Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nConservation Units\n\n\n\n\n\n\n\n\nStreams\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates"
+    "text": "Chum Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nEscapement by Conservation Unit and Stream\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates"
   },
   {
     "objectID": "nass-data-summaries.html#steelhead-trout",
     "href": "nass-data-summaries.html#steelhead-trout",
     "title": "Nass Data Summary",
     "section": "Steelhead Trout",
-    "text": "Steelhead Trout\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nConservation Units\nStreams\nExploitation Rates"
+    "text": "Steelhead Trout\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nConservation Units\nStreams\nExploitation Rates\n\n\n# nisgaash &lt;- read_csv(\"data/nisgaa-tech-table-data.csv\")\n# \n# nisgaash &lt;- nisgaash %&gt;%\n#   filter(Species == \"Steelhead\") %&gt;%\n#   mutate(CDN_ER = CDN_Harvest/TR,\n#          ALL_ER = ALL_Harvest/TR) %&gt;%\n#   pivot_longer(c(CDN_ER, ALL_ER), names_to = \"ER_type\", values_to = \"ER\")\n# \n# per&lt;-ggplot(nisgaash, aes(x = Year, y = ER,color = ER_type)) +\n#   geom_point()+geom_line()+\n#   scale_color_manual(values=c(\"red\",\"black\"))+\n#   guides(color=guide_legend(title=NULL))+\n#   theme_bw()+\n#   labs(y=\"Exploitation Rate\")+\n#   ggtitle(\"Steelhead Exploitation Rates (1980-2023)\")+\n#   ylim(0,1)+\n#   xlim(1980,2025)\n# \n# per"
   },
   {
     "objectID": "mez_forecast_summary.html",
@@ -81,14 +81,14 @@
     "href": "nass-data-summaries.html",
     "title": "Nass Data Summary",
     "section": "",
-    "text": "introduction to Nass watershed and salmon"
+    "text": "introduction to Nass watershed and salmon…"
   },
   {
     "objectID": "nass-data-summaries.html#background",
     "href": "nass-data-summaries.html#background",
     "title": "Nass Data Summary",
     "section": "",
-    "text": "introduction to Nass watershed and salmon"
+    "text": "introduction to Nass watershed and salmon…"
   },
   {
     "objectID": "mez_forecast_summary.html#plot-of-observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-3",
@@ -109,7 +109,7 @@
     "href": "nass-data-summaries.html#pink-salmon-even-years",
     "title": "Nass Data Summary",
     "section": "Pink Salmon (even years)",
-    "text": "Pink Salmon (even years)\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nConservation Units\n\n\n\n\n\n\n\n\nStreams\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates"
+    "text": "Pink Salmon (even years)\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nEscapement by Conservation Unit and Stream\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates"
   },
   {
     "objectID": "mez_forecast_summary.html#observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-3",
