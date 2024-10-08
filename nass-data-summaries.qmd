@@ -22,7 +22,6 @@ library(RColorBrewer)
 
 ## 1. Background
 
-introduction to Nass watershed and salmon...
 
 ## 2. Summary
 
@@ -644,6 +643,9 @@ c.  Streams
 d.  Exploitation Rates
 
 ```{r steelhead er plot}
+#| message: false
+#| echo: false
+#| warning: false
 # nisgaash <- read_csv("data/nisgaa-tech-table-data.csv")
 # 
 # nisgaash <- nisgaash %>%

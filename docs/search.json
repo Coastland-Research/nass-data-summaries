@@ -53,7 +53,7 @@
     "href": "nass-data-summaries.html#steelhead-trout",
     "title": "Nass Data Summary",
     "section": "Steelhead Trout",
-    "text": "Steelhead Trout\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nConservation Units\nStreams\nExploitation Rates\n\n\n# nisgaash &lt;- read_csv(\"data/nisgaa-tech-table-data.csv\")\n# \n# nisgaash &lt;- nisgaash %&gt;%\n#   filter(Species == \"Steelhead\") %&gt;%\n#   mutate(CDN_ER = CDN_Harvest/TR,\n#          ALL_ER = ALL_Harvest/TR) %&gt;%\n#   pivot_longer(c(CDN_ER, ALL_ER), names_to = \"ER_type\", values_to = \"ER\")\n# \n# per&lt;-ggplot(nisgaash, aes(x = Year, y = ER,color = ER_type)) +\n#   geom_point()+geom_line()+\n#   scale_color_manual(values=c(\"red\",\"black\"))+\n#   guides(color=guide_legend(title=NULL))+\n#   theme_bw()+\n#   labs(y=\"Exploitation Rate\")+\n#   ggtitle(\"Steelhead Exploitation Rates (1980-2023)\")+\n#   ylim(0,1)+\n#   xlim(1980,2025)\n# \n# per"
+    "text": "Steelhead Trout\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nConservation Units\nStreams\nExploitation Rates"
   },
   {
     "objectID": "mez_forecast_summary.html",
