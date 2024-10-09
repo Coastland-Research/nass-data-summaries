@@ -20,10 +20,10 @@ library(gridExtra)
 library(RColorBrewer)
 ```
 
-## 1. Background
+## Background
 
 
-## 2. Summary
+## Summary
 
 ```{r}
 #| warning: false
@@ -36,21 +36,16 @@ exploitation <- readRDS("exploitation.rds")
 # Exploitation plot    
 ggplot(exploitation, aes(x = Year, y = Fish/100000, fill = Proportion)) + 
   geom_col(position = "stack") +
-  #scale_fill_manual(values = c("gray78", "gray46")) +
+  scale_fill_brewer(palette = "Dark2")+
   labs(x = "Year", y = "x100,000 Salmon", title = "Area 3 Exploitation by Year")+
   facet_wrap(~`Species Name`) +
-  theme(axis.text.x = element_text(angle = 45, hjust=1))
+  theme(axis.text.x = element_text(angle = 45, hjust=1))+
+  theme_minimal()
 
-# Salmon data plot
-
-#ggplot(salmon, aes(x = `CU Name`, y = Fish/100000, fill = Proportion)) +
-#  geom_col() +
-#  #theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
-#  labs(y = "x100,000 Salmon", x = "Conservation Unit", title = "Breakdown by CU")
 
 ```
 
-## 3. Escapement Goals
+## Escapement Goals
 
 ```{r}
 #| message: false
@@ -63,12 +58,14 @@ esc_reshaped <- melt(esc_goals, id.vars = 'species')
 
 ggplot(esc_reshaped, aes(x = species, y = value, fill=variable)) +
   geom_col(position='dodge') +
+  scale_fill_brewer(palette = "Dark2")+
   ylab("Goal number") +
-  xlab("Species")
+  xlab("Species")+
+  theme_minimal()
 
 ```
 
-## 4. Sockeye Salmon
+## Sockeye Salmon
 
 a.  Area 3
 ```{r load and format data}
@@ -104,7 +101,7 @@ pe<-ggplot(esc.plots, aes(x = Year, y = Fish, fill = factor(Type,levels=c("Total
 pe
 ```
 
-b.  Escapement by Conservation Unit and Stream
+b.  Escapement by Conservation Unit
 ```{r load CU data}
 #| include: false
 #| message: false
@@ -126,20 +123,20 @@ area3 <- CUs %>%
 #| echo: false
 #| layout-ncol: 2
 
-# for (i in 1:length(unique(area3$CU_NAME))){
-#   CU <- unique(area3$CU_NAME)[i]
-#   filtered_data <- area3 %>% filter(CU_NAME == CU)
-#   pl <- ggplot(filtered_data, aes(x = Year, y = Escapement))+
-#     geom_col(fill = "grey60")+
-#     xlim(c(1980,2025))+
-#     theme_bw()+
-#     labs(y="Number of Sockeye Salmon", x = "Year",
-#          title = paste("Annual Sockeye Escapement for", CU, "Conservation Unit"))
-#   print(pl)
-# }
+for (i in 1:length(unique(area3$CU_NAME))){
+  CU <- unique(area3$CU_NAME)[i]
+  filtered_data <- area3 %>% filter(CU_NAME == CU)
+  pl <- ggplot(filtered_data, aes(x = Year, y = Escapement))+
+    geom_col(fill = "grey60")+
+    xlim(c(1980,2025))+
+    theme_bw()+
+    labs(y="Number of Sockeye Salmon", x = "Year",
+         title = paste("Annual Sockeye Escapement for", CU, "Conservation Unit"))
+  print(pl)
+}
 
 ```
-
+c.  Escapement by CU and Stream
 ```{r plot annual escapement by CU and stream}
 #| warning: false
 #| message: false
@@ -147,20 +144,23 @@ area3 <- CUs %>%
 #| layout-ncol: 1
 
 nb.cols <- 20
-mycolors <- colorRampPalette(brewer.pal(8, "Paired"))(nb.cols)
+mycolors <- colorRampPalette(brewer.pal(8, "Dark2"))(nb.cols)
 
 area3$WATERBODY  <- with(area3, reorder(WATERBODY, Escapement))
 
 for (i in 1:length(unique(area3$CU_NAME))){
   CU <- unique(area3$CU_NAME)[i]
   filtered_data <- area3 %>% filter(CU_NAME == CU)
-  pl <- ggplot(filtered_data, aes(x = Year, y = Escapement, fill = filtered_data$WATERBODY))+
-    geom_col(color = "black")+
-    scale_fill_manual(values = mycolors) +
+  pl <- ggplot(filtered_data, aes(x = Year, y = filtered_data$WATERBODY, size = Escapement, color = filtered_data$WATERBODY))+
+    geom_point() +
+    #geom_col(color = "black")+
+    scale_color_manual(values = mycolors) +
     xlim(c(1980,2025))+
     theme_bw()+
-    labs(y="Number of Sockeye Salmon", x = "Year",
-         title = paste("Annual Sockeye Escapement for",CU, "CU, by Stream"), fill = "Stream name")
+    guides(color="none")+
+    labs(y = NULL, x = "Year",
+         title = paste("Annual Sockeye Escapement for",CU, "CU, by Stream"), fill = "Stream name")+
+    theme(plot.title = element_text(size=10))
   print(pl)
 }
 
@@ -188,7 +188,7 @@ per<-ggplot(er.plots, aes(x = Year, y = ER,color=Area)) +
 per
 ```
 
-## 5. Chinook Salmon
+## Chinook Salmon
 a.  Area 3
 ```{r chinook esc plot}
 #| message: false
@@ -212,7 +212,7 @@ pe
 
 ```
 
-b.  Escapement by Conservation Unit and Stream
+b.  Escapement by Conservation Unit
 ```{r load CU data chinook}
 #| include: false
 #| message: false
@@ -234,20 +234,20 @@ area3 <- CUs %>%
 #| echo: false
 #| layout-ncol: 2
 
-# for (i in 1:length(unique(area3$CU_NAME))){
-#   CU <- unique(area3$CU_NAME)[i]
-#   filtered_data <- area3 %>% filter(CU_NAME == CU)
-#   pl <- ggplot(filtered_data, aes(x = Year, y = Escapement))+
-#     geom_col(color = "black", fill = "grey90")+
-#     xlim(c(1980,2025))+
-#     theme_bw()+
-#     labs(y="Number of Chinook", x = "Year",
-#          title = paste("Annual Chinook Escapement for", CU, "Conservation Unit"))
-#   print(pl)
-# }
+for (i in 1:length(unique(area3$CU_NAME))){
+  CU <- unique(area3$CU_NAME)[i]
+  filtered_data <- area3 %>% filter(CU_NAME == CU)
+  pl <- ggplot(filtered_data, aes(x = Year, y = Escapement))+
+    geom_col(color = "black", fill = "grey90")+
+    xlim(c(1980,2025))+
+    theme_bw()+
+    labs(y="Number of Chinook", x = "Year",
+         title = paste("Annual Chinook Escapement for", CU, "Conservation Unit"))
+  print(pl)
+}
 
 ```
-
+c.  Escapement by CU and Stream
 ```{r plot chinook annual escapement by CU and stream}
 #| warning: false
 #| message: false
@@ -255,18 +255,33 @@ area3 <- CUs %>%
 #| layout-ncol: 1
 
 nb.cols <- 20
-mycolors <- colorRampPalette(brewer.pal(8, "Paired"))(nb.cols)
+mycolors <- colorRampPalette(brewer.pal(8, "Dark2"))(nb.cols)
+
+# for (i in 1:length(unique(area3$CU_NAME))){
+#   CU <- unique(area3$CU_NAME)[i]
+#   filtered_data <- area3 %>% filter(CU_NAME == CU)
+#   pl <- ggplot(filtered_data, aes(x = Year, y = Escapement, fill = filtered_data$WATERBODY))+
+#     geom_col(color = "black")+
+#     scale_fill_manual(values = mycolors) +
+#     xlim(c(1980,2025))+
+#     theme_bw()+
+#     labs(y="Number of Chinook Salmon", x = "Year",
+#          title = paste("Annual Chinook Escapement for",CU, "CU, by Stream"), fill = "Stream name")
+#   print(pl)
+# }
 
 for (i in 1:length(unique(area3$CU_NAME))){
   CU <- unique(area3$CU_NAME)[i]
   filtered_data <- area3 %>% filter(CU_NAME == CU)
-  pl <- ggplot(filtered_data, aes(x = Year, y = Escapement, fill = filtered_data$WATERBODY))+
-    geom_col(color = "black")+
-    scale_fill_manual(values = mycolors) +
+  pl <- ggplot(filtered_data, aes(x = Year, y = filtered_data$WATERBODY, size = Escapement, color = filtered_data$WATERBODY))+
+    geom_point() +
+    scale_color_manual(values = mycolors) +
     xlim(c(1980,2025))+
     theme_bw()+
-    labs(y="Number of Chinook Salmon", x = "Year",
-         title = paste("Annual Chinook Escapement for",CU, "CU, by Stream"), fill = "Stream name")
+    guides(color="none")+
+    labs(y=NULL, x = "Year",
+         title = paste("Annual Chinook Escapement for",CU, "CU, by Stream"), fill = "Stream name")+
+    theme(plot.title = element_text(size=10))
   print(pl)
 }
 
@@ -315,9 +330,8 @@ pe<-ggplot(esc.plots, aes(x = Year, y = Fish, fill = factor(Type,levels=c("Total
 
 pe
 
-
 ```
-b.  Escapement by Conservation Unit and Stream
+b.  Escapement by Conservation Unit
 ```{r load CU data coho}
 #| include: false
 #| message: false
@@ -339,40 +353,56 @@ area3 <- CUs %>%
 #| echo: false
 #| layout-ncol: 2
 
-# for (i in 1:length(unique(area3$CU_NAME))){
-#   CU <- unique(area3$CU_NAME)[i]
-#   filtered_data <- area3 %>% filter(CU_NAME == CU)
-#   pl <- ggplot(filtered_data, aes(x = Year, y = Escapement))+
-#     geom_col(color = "black", fill = "grey90")+
-#     xlim(c(1980,2025))+
-#     theme_bw()+
-#     labs(y="Number of Coho", x = "Year",
-#          title = paste("Annual Coho Escapement for", CU, "Conservation Unit"))
-#   print(pl)
-# }
+for (i in 1:length(unique(area3$CU_NAME))){
+  CU <- unique(area3$CU_NAME)[i]
+  filtered_data <- area3 %>% filter(CU_NAME == CU)
+  pl <- ggplot(filtered_data, aes(x = Year, y = Escapement))+
+    geom_col(color = "black", fill = "grey90")+
+    xlim(c(1980,2025))+
+    theme_bw()+
+    labs(y="Number of Coho", x = "Year",
+         title = paste("Annual Coho Escapement for", CU, "Conservation Unit"))
+  print(pl)
+}
 
 ```
-
+c.  Escapement by CU and Stream
 ```{r plot coho annual escapement by CU and stream}
 #| warning: false
 #| message: false
 #| echo: false
 #| layout-ncol: 1
 
+nb.cols <- 33
+mycolors <- colorRampPalette(brewer.pal(8, "Dark2"))(nb.cols)
+
+# for (i in 1:length(unique(area3$CU_NAME))){
+#   CU <- unique(area3$CU_NAME)[i]
+#   filtered_data <- area3 %>% filter(CU_NAME == CU)
+#   pl <- ggplot(filtered_data, aes(x = Year, y = Escapement, fill = filtered_data$WATERBODY))+
+#     geom_col(color = "black")+
+#     scale_fill_brewer(palette = "Dark2") +
+#     xlim(c(1980,2025))+
+#     theme_bw()+
+#     labs(y="Number of Coho Salmon", x = "Year",
+#          title = paste("Annual Coho Escapement for",CU, "CU, by Stream"), fill = "Stream name")
+#   print(pl)
+# }
 
 for (i in 1:length(unique(area3$CU_NAME))){
   CU <- unique(area3$CU_NAME)[i]
   filtered_data <- area3 %>% filter(CU_NAME == CU)
-  pl <- ggplot(filtered_data, aes(x = Year, y = Escapement, fill = filtered_data$WATERBODY))+
-    geom_col(color = "black")+
-    scale_fill_brewer(palette = "Paired") +
+  pl <- ggplot(filtered_data, aes(x = Year, y = filtered_data$WATERBODY, size = Escapement, color = filtered_data$WATERBODY))+
+    geom_point() +
+    scale_color_manual(values = mycolors) +
     xlim(c(1980,2025))+
     theme_bw()+
-    labs(y="Number of Coho Salmon", x = "Year",
-         title = paste("Annual Coho Escapement for",CU, "CU, by Stream"), fill = "Stream name")
+    guides(color="none")+
+    labs(y=NULL, x = "Year",
+         title = paste("Annual Coho Escapement for",CU, "CU, by Stream"), fill = "Stream name")+
+    theme(plot.title = element_text(size=10))
   print(pl)
 }
-
 ```
 d.  Exploitation Rates
 ```{r coho er plot}
@@ -420,7 +450,7 @@ pe
 
 ```
 
-b.  Escapement by Conservation Unit and Stream
+b.  Escapement by Conservation Unit
 ```{r load CU data pink}
 #| include: false
 #| message: false
@@ -443,40 +473,57 @@ area3 <- CUs %>%
 #| echo: false
 #| layout-ncol: 1
 
-# for (i in 1:length(unique(area3$CU_NAME))){
-#   CU <- unique(area3$CU_NAME)[i]
-#   filtered_data <- area3 %>% filter(CU_NAME == CU)
-#   pl <- ggplot(filtered_data, aes(x = Year, y = Escapement))+
-#     geom_col(fill = "grey60")+
-#     xlim(c(1980,2025))+
-#     theme_bw()+
-#     labs(y="Number of Pink Salmon", x = "Year",
-#          title = paste("Annual Pink Salmon Escapement for", CU, "Conservation Unit"))
-#   print(pl)
-# }
+for (i in 1:length(unique(area3$CU_NAME))){
+  CU <- unique(area3$CU_NAME)[i]
+  filtered_data <- area3 %>% filter(CU_NAME == CU)
+  pl <- ggplot(filtered_data, aes(x = Year, y = Escapement))+
+    geom_col(fill = "grey60")+
+    xlim(c(1980,2025))+
+    theme_bw()+
+    labs(y="Number of Pink Salmon", x = "Year",
+         title = paste("Annual Pink Salmon Escapement for", CU, "Conservation Unit"))
+  print(pl)
+}
 
 ```
-
+c.  Escapement by CU and Stream
 ```{r plot pink annual escapement by CU and stream}
 #| warning: false
 #| message: false
 #| echo: false
 #| layout-ncol: 1
 
+nb.cols <- 71
+mycolors <- colorRampPalette(brewer.pal(8, "Dark2"))(nb.cols)
+
+# for (i in 1:length(unique(area3$CU_NAME))){
+#   CU <- unique(area3$CU_NAME)[i]
+#   filtered_data <- area3 %>% filter(CU_NAME == CU)
+#   pl <- ggplot(filtered_data, aes(x = Year, y = Escapement, fill = filtered_data$WATERBODY))+
+#     geom_col(color = "black")+
+#     scale_fill_brewer(palette = "Dark2") +
+#     xlim(c(1980,2025))+
+#     theme_bw()+
+#     labs(y="Number of Pink Salmon", x = "Year",
+#          title = paste("Annual Pink Escapement for",CU, "CU, by Stream"), fill = "Stream name")
+#   print(pl)
+# }
 
 for (i in 1:length(unique(area3$CU_NAME))){
   CU <- unique(area3$CU_NAME)[i]
   filtered_data <- area3 %>% filter(CU_NAME == CU)
-  pl <- ggplot(filtered_data, aes(x = Year, y = Escapement, fill = filtered_data$WATERBODY))+
-    geom_col(color = "black")+
-    scale_fill_brewer(palette = "Paired") +
+  pl <- ggplot(filtered_data, aes(x = Year, y = filtered_data$WATERBODY, size = Escapement, color = filtered_data$WATERBODY))+
+    geom_point() +
+    scale_color_manual(values = mycolors) +
     xlim(c(1980,2025))+
     theme_bw()+
-    labs(y="Number of Pink Salmon", x = "Year",
-         title = paste("Annual Pink Escapement for",CU, "CU, by Stream"), fill = "Stream name")
+    guides(color="none")+
+    labs(y=NULL, x = "Year",
+         title = paste("Annual Pink Escapement for",CU, "CU, by Stream"), fill = "Stream name")+
+    theme(plot.title = element_text(size=10),
+          axis.text.y = element_text(size=5))
   print(pl)
 }
-
 ```
 d.  Exploitation Rates
 ```{r pink er plot}
@@ -525,7 +572,7 @@ pe
 
 ```
 
-b.  Escapement by Conservation Unit and Stream
+b.  Escapement by Conservation Unit
 ```{r load CU data chum}
 #| include: false
 #| message: false
@@ -534,7 +581,6 @@ b.  Escapement by Conservation Unit and Stream
 CUs <- fread("data/NUSEDS escapement by CU 20220902.csv") %>%
   pivot_longer(`2021`:`1950`, names_to = "Year", values_to = "Escapement") %>%
   mutate(Year = as.numeric(Year))
-
 
 area3 <- CUs %>%
   filter(AREA == "3B" | AREA == "3A") %>%
@@ -547,20 +593,20 @@ area3 <- CUs %>%
 #| echo: false
 #| layout-ncol: 2
 
-# for (i in 1:length(unique(area3$CU_NAME))){
-#   CU <- unique(area3$CU_NAME)[i]
-#   filtered_data <- area3 %>% filter(CU_NAME == CU)
-#   pl <- ggplot(filtered_data, aes(x = Year, y = Escapement))+
-#     geom_col(fill = "grey60")+
-#     xlim(c(1980,2025))+
-#     theme_bw()+
-#     labs(y="Number of Chum Salmon", x = "Year",
-#          title = paste("Annual Chum Escapement for", CU, "Conservation Unit"))
-#   print(pl)
-# }
+for (i in 1:length(unique(area3$CU_NAME))){
+  CU <- unique(area3$CU_NAME)[i]
+  filtered_data <- area3 %>% filter(CU_NAME == CU)
+  pl <- ggplot(filtered_data, aes(x = Year, y = Escapement))+
+    geom_col(fill = "grey60")+
+    xlim(c(1980,2025))+
+    theme_bw()+
+    labs(y="Number of Chum Salmon", x = "Year",
+         title = paste("Annual Chum Escapement for", CU, "Conservation Unit"))
+  print(pl)
+}
 
 ```
-
+c.  Escapement by CU and Stream
 ```{r plot chum annual escapement by CU and stream}
 #| warning: false
 #| message: false
@@ -568,21 +614,35 @@ area3 <- CUs %>%
 #| layout-ncol: 1
 
 nb.cols <- 20
-mycolors <- colorRampPalette(brewer.pal(8, "Paired"))(nb.cols)
+mycolors <- colorRampPalette(brewer.pal(8, "Dark2"))(nb.cols)
+
+# for (i in 1:length(unique(area3$CU_NAME))){
+#   CU <- unique(area3$CU_NAME)[i]
+#   filtered_data <- area3 %>% filter(CU_NAME == CU)
+#   pl <- ggplot(filtered_data, aes(x = Year, y = Escapement, fill = filtered_data$WATERBODY))+
+#     geom_col(color = "black")+
+#     scale_fill_manual(values = mycolors) +
+#     xlim(c(1980,2025))+
+#     theme_bw()+
+#     labs(y="Number of Chum Salmon", x = "Year",
+#          title = paste("Annual Chum Escapement for",CU, "CU, by Stream"), fill = "Stream name")
+#   print(pl)
+# }
 
 for (i in 1:length(unique(area3$CU_NAME))){
   CU <- unique(area3$CU_NAME)[i]
   filtered_data <- area3 %>% filter(CU_NAME == CU)
-  pl <- ggplot(filtered_data, aes(x = Year, y = Escapement, fill = filtered_data$WATERBODY))+
-    geom_col(color = "black")+
-    scale_fill_manual(values = mycolors) +
+  pl <- ggplot(filtered_data, aes(x = Year, y = filtered_data$WATERBODY, size = Escapement, color = filtered_data$WATERBODY))+
+    geom_point() +
+    scale_color_manual(values = mycolors) +
     xlim(c(1980,2025))+
     theme_bw()+
-    labs(y="Number of Chum Salmon", x = "Year",
-         title = paste("Annual Chum Escapement for",CU, "CU, by Stream"), fill = "Stream name")
+    guides(color="none")+
+    labs(y=NULL, x = "Year",
+         title = paste("Annual Chum Escapement for",CU, "CU, by Stream"), fill = "Stream name")+
+    theme(plot.title = element_text(size=10))
   print(pl)
 }
-
 ```
 d.  Exploitation Rates
 ```{r chum er plot}
