@@ -5,7 +5,9 @@ format: pdf
 
 # Summary - Meziadin Sockeye Run
 
-The Meziadin River is a major tributary to the Nass River in northwestern British Columbia, an important area home to five species of Pacific salmon. Sockeye salmon returning to the Meziadin system comprise a significant proportion of the total Nass sockeye run. Since the creation of the Meziadin Fishway in 1966, it has been found that 70-80% of Nass sockeye return to the Meziadin system via Meziadin River. Meziadin sockeye are a highly valued and culturally significant food source for Gitanyow and Nisga'a First Nations, and also harvested by Alaskan commercial fisheries during their ocean migration. Predicting the sockeye returning to the Meziadin is important for understanding the conservation status of this population. We are working to create a Meziadin-specific return forecast for sockeye salmon.
+The Meziadin River is a major tributary to the Nass River in northwestern British Columbia, an important area home to five species of Pacific salmon. Sockeye salmon returning to the Meziadin system comprise a significant proportion of the total Nass sockeye run. Since the creation of the Meziadin Fishway in 1966, it has been found that 70-80% of Nass sockeye return to the Meziadin system via the Meziadin River. Meziadin sockeye are a highly valued and culturally significant food source for Gitanyow and Nisga'a First Nations, and also harvested in Alaskan commercial fisheries during their ocean migration.
+
+Predicting the sockeye returning to the Meziadin is important for understanding the conservation status of this population. We are working to create a Meziadin-specific return forecast for sockeye salmon using the ForecastR tool.
 
 ```{r}
 #| include: false
