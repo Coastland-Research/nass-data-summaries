@@ -84,12 +84,25 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   <li><a href="#escapement-goals" id="toc-escapement-goals" class="nav-link" data-scroll-target="#escapement-goals">Escapement Goals</a></li>
-  <li><a href="#sockeye-salmon" id="toc-sockeye-salmon" class="nav-link" data-scroll-target="#sockeye-salmon">Sockeye Salmon</a></li>
+  <li><a href="#sockeye-salmon" id="toc-sockeye-salmon" class="nav-link" data-scroll-target="#sockeye-salmon">Sockeye Salmon</a>
+  <ul class="collapse">
+  <li><a href="#meziadin-sockeye" id="toc-meziadin-sockeye" class="nav-link" data-scroll-target="#meziadin-sockeye">Meziadin Sockeye</a></li>
+  </ul></li>
+  <li><a href="#total-return-of-meziadin-sockeye-by-age-class-1982-2023" id="toc-total-return-of-meziadin-sockeye-by-age-class-1982-2023" class="nav-link" data-scroll-target="#total-return-of-meziadin-sockeye-by-age-class-1982-2023">Total return of Meziadin sockeye by age class, 1982-2023</a></li>
+  <li><a href="#using-forecastr-to-predict-sockeye-returns" id="toc-using-forecastr-to-predict-sockeye-returns" class="nav-link" data-scroll-target="#using-forecastr-to-predict-sockeye-returns">Using ForecastR to predict Sockeye Returns</a>
+  <ul class="collapse">
+  <li><a href="#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-3" id="toc-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-3" class="nav-link" data-scroll-target="#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-3">Observed vs fitted return numbers using Naive model for Age Class 3</a></li>
+  <li><a href="#plot-of-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-4" id="toc-plot-of-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-4" class="nav-link" data-scroll-target="#plot-of-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-4">Plot of observed vs fitted return numbers using Naive model for Age Class 4</a></li>
+  <li><a href="#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-5" id="toc-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-5" class="nav-link" data-scroll-target="#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-5">Observed vs fitted return numbers using Naive model for Age Class 5</a></li>
+  <li><a href="#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-6" id="toc-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-6" class="nav-link" data-scroll-target="#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-6">Observed vs fitted return numbers using Naive model for Age Class 6</a></li>
+  <li><a href="#forecast-plot-showing-the-distribution-of-forecasted-return-estimates-by-age" id="toc-forecast-plot-showing-the-distribution-of-forecasted-return-estimates-by-age" class="nav-link" data-scroll-target="#forecast-plot-showing-the-distribution-of-forecasted-return-estimates-by-age">Forecast plot showing the distribution of forecasted return estimates by age</a></li>
   <li><a href="#chinook-salmon" id="toc-chinook-salmon" class="nav-link" data-scroll-target="#chinook-salmon">Chinook Salmon</a></li>
   <li><a href="#coho-salmon" id="toc-coho-salmon" class="nav-link" data-scroll-target="#coho-salmon">Coho Salmon</a></li>
   <li><a href="#pink-salmon-even-years" id="toc-pink-salmon-even-years" class="nav-link" data-scroll-target="#pink-salmon-even-years">Pink Salmon (even years)</a></li>
   <li><a href="#chum-salmon" id="toc-chum-salmon" class="nav-link" data-scroll-target="#chum-salmon">Chum Salmon</a></li>
   <li><a href="#steelhead-trout" id="toc-steelhead-trout" class="nav-link" data-scroll-target="#steelhead-trout">Steelhead Trout</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
 </nav>
@@ -103,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Nass Data Summary</h1>
-<p class="subtitle lead">September 25, 2024</p>
+<p class="subtitle lead">November 22, 2024</p>
 </div>
 
 
@@ -122,6 +135,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>This resource document shows information on salmon escapement and harvest (Canadian and total exploitation) in the Nass watershed. We display escapement for Area 3 (Nass) overall, escapement by Conservation Unit and stream, and exploitation rates for each salmon species. TRTC for steelhead trout in the Nass watershed is also presented. We are also working to forecast sockeye returns for the Meziadin system specifically, and show preliminary results from forecast models here.</p>
 </section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
@@ -146,6 +160,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>Map showing the Nass watershed extent (figure taken from Peter Hall’s CSAS paper on Skeena / Nass ) <img src="nass-map.jpg" class="img-fluid" alt="Nass watershed map"></p>
 </section>
 <section id="sockeye-salmon" class="level2">
 <h2 class="anchored" data-anchor-id="sockeye-salmon">Sockeye Salmon</h2>
@@ -270,6 +285,69 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </div>
+</div>
+<section id="meziadin-sockeye" class="level3">
+<h3 class="anchored" data-anchor-id="meziadin-sockeye">Meziadin Sockeye</h3>
+<p>The Meziadin River is a major tributary to the Nass River in northwestern British Columbia, an important area home to five species of Pacific salmon. Sockeye salmon returning to the Meziadin system comprise a significant proportion of the total Nass sockeye run. Since the creation of the Meziadin Fishway in 1966, it has been found that 70-80% of Nass sockeye return to the Meziadin system via the Meziadin River. Meziadin sockeye are a highly valued and culturally significant food source for Gitanyow and Nisga’a First Nations, and also harvested in Alaskan commercial fisheries during their ocean migration.</p>
+<p>Predicting the sockeye returning to the Meziadin is important for understanding the conservation status of this population. We are working to create a Meziadin-specific return forecast for sockeye salmon using the ForecastR tool.</p>
+</section>
+</section>
+<section id="total-return-of-meziadin-sockeye-by-age-class-1982-2023" class="level2">
+<h2 class="anchored" data-anchor-id="total-return-of-meziadin-sockeye-by-age-class-1982-2023">Total return of Meziadin sockeye by age class, 1982-2023</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="nass-data-summaries_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="using-forecastr-to-predict-sockeye-returns" class="level1">
+<h1>Using ForecastR to predict Sockeye Returns</h1>
+<p>We are using <em>ForecastR</em>, an R package and Shiny app, to predict total returns of sockeye salmon from the Meziadin system based on previous years’ data on Meziadin total return and escapement. The Meziadin total return data is a subset of the Nass total return, including escapement plus the salmon harvested in fisheries which do not make it back to spawning grounds. The sockeye total run numbers for each year are categorized by age, with sockeye separated into age classes 3, 4, 5, and 6.</p>
+<p>ForecastR uses forecasting models to predict salmon terminal run and escapement, based on data entered by the user. This data can be age-specific and include environmental or biological covariates. Multiple forecasting models can be explored, compared, and ranked using the app. Here we have started forecasting Meziadin sockeye total return using ages with no covariates, and intend to add relevant environmental and/or biological covariates to make these predictive models more informative in the future. Plots shown are using the exponential smoothing model, which assigns exponentially decreasing weights to past observations (i.e.&nbsp;more recent data points are more important for forecasting), and captures seasonal variation.</p>
+<section id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-3" class="level2">
+<h2 class="anchored" data-anchor-id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-3">Observed vs fitted return numbers using Naive model for Age Class 3</h2>
+<p>Data for age-3 sockeye is sparse as the total run for this age class is zero for most years between 1982 and 2017.</p>
+<p><img src="age3_naive.png" class="img-fluid" alt="Age 3 sockeye forecasted returns"><br>
+</p>
+</section>
+<section id="plot-of-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-4" class="level2">
+<h2 class="anchored" data-anchor-id="plot-of-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-4">Plot of observed vs fitted return numbers using Naive model for Age Class 4</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="age4_naive.png" class="img-fluid figure-img"></p>
+<figcaption>Age 4 sockeye forecasted returns</figcaption>
+</figure>
+</div>
+</section>
+<section id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-5" class="level2">
+<h2 class="anchored" data-anchor-id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-5">Observed vs fitted return numbers using Naive model for Age Class 5</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="age5_naive.png" class="img-fluid figure-img"></p>
+<figcaption>Age 5 sockeye forecasted returns</figcaption>
+</figure>
+</div>
+</section>
+<section id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-6" class="level2">
+<h2 class="anchored" data-anchor-id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-6">Observed vs fitted return numbers using Naive model for Age Class 6</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="age6_naive.png" class="img-fluid figure-img"></p>
+<figcaption>Age 6 sockeye forecasted returns</figcaption>
+</figure>
+</div>
+</section>
+<section id="forecast-plot-showing-the-distribution-of-forecasted-return-estimates-by-age" class="level2">
+<h2 class="anchored" data-anchor-id="forecast-plot-showing-the-distribution-of-forecasted-return-estimates-by-age">Forecast plot showing the distribution of forecasted return estimates by age</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="forecastplot.png" class="img-fluid figure-img"></p>
+<figcaption>Variation in forecast abundance by age class</figcaption>
+</figure>
 </div>
 </section>
 <section id="chinook-salmon" class="level2">
@@ -583,6 +661,13 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Streams</p></li>
 <li><p>Exploitation Rates</p></li>
 </ol>
+</section>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<p>Nisga’a Lisims Government. 2023. 2023 Nass River Salmon Stock Assessment Update - Friday, 14 July. Public update from the Nisga’a Lisims Government Fisheries and Wildlife Department.</p>
+<p>Pacific Salmon Foundation. 2016. The Nass Area: Cumulative Pressures on Salmon Habitat (summary report cards), Vancouver, BC.</p>
+<p>Vélez-Espino, L.A., Parken, C.K., Clemons, E.R., Peterson, R., Ryding, K., Folkes, M., and Pestal, G. 2019. ForecastR: tools to automate procedures for forecasting of salmonid terminal run and escapement. Final Report submitted to the Southern Boundary Restoration and Enhancement Fund, Pacific Salmon Commission, Vancouver BC. 117 p.</p>
 
 
 </section>

@@ -1,7 +1,10 @@
 ---
 title: "Forecasting Meziadin Sockeye Returns"
 subtitle: "November 22, 2024"
-format: pdf
+format: html
+editor: visual
+editor_options: 
+  chunk_output_type: console
 ---
 
 # Summary - Meziadin Sockeye Run

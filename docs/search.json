@@ -11,14 +11,14 @@
     "href": "nass-data-summaries.html#escapement-goals",
     "title": "Nass Data Summary",
     "section": "Escapement Goals",
-    "text": "Escapement Goals"
+    "text": "Escapement Goals\n\n\n\n\n\n\n\n\n\nMap showing the Nass watershed extent (figure taken from Peter Hall’s CSAS paper on Skeena / Nass )"
   },
   {
     "objectID": "nass-data-summaries.html#sockeye-salmon",
     "href": "nass-data-summaries.html#sockeye-salmon",
     "title": "Nass Data Summary",
     "section": "Sockeye Salmon",
-    "text": "Sockeye Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nEscapement by Conservation Unit\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEscapement by CU and Stream\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates"
+    "text": "Sockeye Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nEscapement by Conservation Unit\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEscapement by CU and Stream\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates\n\n\n\n\n\n\n\n\n\n\n\nMeziadin Sockeye\nThe Meziadin River is a major tributary to the Nass River in northwestern British Columbia, an important area home to five species of Pacific salmon. Sockeye salmon returning to the Meziadin system comprise a significant proportion of the total Nass sockeye run. Since the creation of the Meziadin Fishway in 1966, it has been found that 70-80% of Nass sockeye return to the Meziadin system via the Meziadin River. Meziadin sockeye are a highly valued and culturally significant food source for Gitanyow and Nisga’a First Nations, and also harvested in Alaskan commercial fisheries during their ocean migration.\nPredicting the sockeye returning to the Meziadin is important for understanding the conservation status of this population. We are working to create a Meziadin-specific return forecast for sockeye salmon using the ForecastR tool."
   },
   {
     "objectID": "nass-data-summaries.html#chinook-salmon",
@@ -60,7 +60,7 @@
     "href": "mez_forecast_summary.html",
     "title": "Forecasting Meziadin Sockeye Returns",
     "section": "",
-    "text": "The Meziadin River is a major tributary to the Nass River in northwestern British Columbia, an important area home to five species of Pacific salmon. Sockeye salmon returning to the Meziadin system comprise a significant proportion of the total Nass sockeye run. Since the creation of the Meziadin Fishway in 1966, it has been found that 70-80% of Nass sockeye return to the Meziadin system via Meziadin River. Meziadin sockeye are a highly valued and culturally significant food source for Gitanyow and Nisga’a First Nations, and also harvested by Alaskan commercial fisheries during their ocean migration. Predicting the sockeye returning to the Meziadin is important for understanding the conservation status of this population. We are working to create a Meziadin-specific return forecast for sockeye salmon."
+    "text": "The Meziadin River is a major tributary to the Nass River in northwestern British Columbia, an important area home to five species of Pacific salmon. Sockeye salmon returning to the Meziadin system comprise a significant proportion of the total Nass sockeye run. Since the creation of the Meziadin Fishway in 1966, it has been found that 70-80% of Nass sockeye return to the Meziadin system via the Meziadin River. Meziadin sockeye are a highly valued and culturally significant food source for Gitanyow and Nisga’a First Nations, and also harvested in Alaskan commercial fisheries during their ocean migration.\nPredicting the sockeye returning to the Meziadin is important for understanding the conservation status of this population. We are working to create a Meziadin-specific return forecast for sockeye salmon using the ForecastR tool."
   },
   {
     "objectID": "mez_forecast_summary.html#summary---meziadin-sockeye-run",
@@ -81,14 +81,14 @@
     "href": "nass-data-summaries.html",
     "title": "Nass Data Summary",
     "section": "",
-    "text": "introduction to Nass watershed and salmon…"
+    "text": "This resource document shows information on salmon escapement and harvest (Canadian and total exploitation) in the Nass watershed. We display escapement for Area 3 (Nass) overall, escapement by Conservation Unit and stream, and exploitation rates for each salmon species. TRTC for steelhead trout in the Nass watershed is also presented. We are also working to forecast sockeye returns for the Meziadin system specifically, and show preliminary results from forecast models here."
   },
   {
     "objectID": "nass-data-summaries.html#background",
     "href": "nass-data-summaries.html#background",
     "title": "Nass Data Summary",
     "section": "",
-    "text": "introduction to Nass watershed and salmon…"
+    "text": "This resource document shows information on salmon escapement and harvest (Canadian and total exploitation) in the Nass watershed. We display escapement for Area 3 (Nass) overall, escapement by Conservation Unit and stream, and exploitation rates for each salmon species. TRTC for steelhead trout in the Nass watershed is also presented. We are also working to forecast sockeye returns for the Meziadin system specifically, and show preliminary results from forecast models here."
   },
   {
     "objectID": "mez_forecast_summary.html#plot-of-observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-3",
@@ -143,6 +143,76 @@
     "objectID": "mez_forecast_summary.html#forecast-plot-showing-the-distribution-of-forecasted-return-estimates-by-age",
     "href": "mez_forecast_summary.html#forecast-plot-showing-the-distribution-of-forecasted-return-estimates-by-age",
     "title": "Forecasting Meziadin Sockeye Returns",
+    "section": "Forecast plot showing the distribution of forecasted return estimates by age",
+    "text": "Forecast plot showing the distribution of forecasted return estimates by age\n\n\n\nVariation in forecast abundance by age class"
+  },
+  {
+    "objectID": "mez_forecast_summary.html#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-3",
+    "href": "mez_forecast_summary.html#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-3",
+    "title": "Forecasting Meziadin Sockeye Returns",
+    "section": "Observed vs fitted return numbers using Naive model for Age Class 3",
+    "text": "Observed vs fitted return numbers using Naive model for Age Class 3\nData for age-3 sockeye is sparse as the total run for this age class is zero for most years between 1982 and 2017."
+  },
+  {
+    "objectID": "mez_forecast_summary.html#plot-of-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-4",
+    "href": "mez_forecast_summary.html#plot-of-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-4",
+    "title": "Forecasting Meziadin Sockeye Returns",
+    "section": "Plot of observed vs fitted return numbers using Naive model for Age Class 4",
+    "text": "Plot of observed vs fitted return numbers using Naive model for Age Class 4\n\n\n\nAge 4 sockeye forecasted returns"
+  },
+  {
+    "objectID": "mez_forecast_summary.html#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-5",
+    "href": "mez_forecast_summary.html#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-5",
+    "title": "Forecasting Meziadin Sockeye Returns",
+    "section": "Observed vs fitted return numbers using Naive model for Age Class 5",
+    "text": "Observed vs fitted return numbers using Naive model for Age Class 5\n\n\n\nAge 5 sockeye forecasted returns"
+  },
+  {
+    "objectID": "mez_forecast_summary.html#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-6",
+    "href": "mez_forecast_summary.html#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-6",
+    "title": "Forecasting Meziadin Sockeye Returns",
+    "section": "Observed vs fitted return numbers using Naive model for Age Class 6",
+    "text": "Observed vs fitted return numbers using Naive model for Age Class 6\n\n\n\nAge 6 sockeye forecasted returns"
+  },
+  {
+    "objectID": "nass-data-summaries.html#total-return-of-meziadin-sockeye-by-age-class-1982-2023",
+    "href": "nass-data-summaries.html#total-return-of-meziadin-sockeye-by-age-class-1982-2023",
+    "title": "Nass Data Summary",
+    "section": "Total return of Meziadin sockeye by age class, 1982-2023",
+    "text": "Total return of Meziadin sockeye by age class, 1982-2023"
+  },
+  {
+    "objectID": "nass-data-summaries.html#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-3",
+    "href": "nass-data-summaries.html#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-3",
+    "title": "Nass Data Summary",
+    "section": "Observed vs fitted return numbers using Naive model for Age Class 3",
+    "text": "Observed vs fitted return numbers using Naive model for Age Class 3\nData for age-3 sockeye is sparse as the total run for this age class is zero for most years between 1982 and 2017."
+  },
+  {
+    "objectID": "nass-data-summaries.html#plot-of-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-4",
+    "href": "nass-data-summaries.html#plot-of-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-4",
+    "title": "Nass Data Summary",
+    "section": "Plot of observed vs fitted return numbers using Naive model for Age Class 4",
+    "text": "Plot of observed vs fitted return numbers using Naive model for Age Class 4\n\n\n\nAge 4 sockeye forecasted returns"
+  },
+  {
+    "objectID": "nass-data-summaries.html#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-5",
+    "href": "nass-data-summaries.html#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-5",
+    "title": "Nass Data Summary",
+    "section": "Observed vs fitted return numbers using Naive model for Age Class 5",
+    "text": "Observed vs fitted return numbers using Naive model for Age Class 5\n\n\n\nAge 5 sockeye forecasted returns"
+  },
+  {
+    "objectID": "nass-data-summaries.html#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-6",
+    "href": "nass-data-summaries.html#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-6",
+    "title": "Nass Data Summary",
+    "section": "Observed vs fitted return numbers using Naive model for Age Class 6",
+    "text": "Observed vs fitted return numbers using Naive model for Age Class 6\n\n\n\nAge 6 sockeye forecasted returns"
+  },
+  {
+    "objectID": "nass-data-summaries.html#forecast-plot-showing-the-distribution-of-forecasted-return-estimates-by-age",
+    "href": "nass-data-summaries.html#forecast-plot-showing-the-distribution-of-forecasted-return-estimates-by-age",
+    "title": "Nass Data Summary",
     "section": "Forecast plot showing the distribution of forecasted return estimates by age",
     "text": "Forecast plot showing the distribution of forecasted return estimates by age\n\n\n\nVariation in forecast abundance by age class"
   }
