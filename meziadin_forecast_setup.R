@@ -8,9 +8,11 @@ mez_nass_TR_TE <- read_csv("data/nass vs mez TR TE new.csv") %>%
   drop_na("Meziadin") %>%
   rename(runyear = year)
 
-# data to 2023:
-#filter to include just the missing years (2018-2023)
+# Wide format to have total run and escapement as columns
+TR_TE_wide <- pivot_wider(mez_nass_TR_TE, names_from = type, values_from = c(Meziadin, Nass)) %>%
+  subset(select = -c(`Nass_Total Return`, mez.p, non.mez))
 
+# Read new data (to 2023)
 datanew <- read.csv("data/TRTC-Results--Nass-Sockeye_kke.csv") %>%
   filter(CU_Name == "Meziadin") %>%
   subset(select = -c(CU, SpeciesId, T_Idx_E, ExpFactor1, ExpFactor2, AdjSum, ObsE,
@@ -19,48 +21,43 @@ datanew <- read.csv("data/TRTC-Results--Nass-Sockeye_kke.csv") %>%
                      Total.ER, CU_Name)) %>%
   filter(Year %in% c("2018", "2019", "2020", "2021", "2022", "2023")) %>%
   rename(runyear = Year, `Meziadin_Total Return` = Total.Run)%>%
-  mutate(`Meziadin_Total Return` = as.numeric(gsub(",","",`Meziadin_Total Return`))) %>%
-  mutate(p.age3 = 0.046,
-         p.age4 = 0.29,
-         p.age5 = 0.512,
-         p.age6 = 0.154,
-         Total = sum(p.age3, p.age4, p.age5, p.age6), 
-         "3" = p.age3*`Meziadin_Total Return`,
-         "4" = p.age4*`Meziadin_Total Return`,
-         "5" = p.age5*`Meziadin_Total Return`,
-         "6" = p.age6*`Meziadin_Total Return`)
+  mutate(`Meziadin_Total Return` = as.numeric(gsub(",","",`Meziadin_Total Return`)))
 
-#Wide format to have total run and escapement as columns
-TR_TE_wide <- pivot_wider(mez_nass_TR_TE, names_from = type, values_from = c(Meziadin, Nass))
+# Merge old and new data (without ages):
+all_mezdata <- bind_rows(TR_TE_wide, datanew)
 
 # Read in Meziadin by age data:
 mez_age <- read_csv("data/Mez scale data - Andy.csv") %>%
   rename(runyear = Year)
+# new data to 2022
+mez_age_2 <- read_csv("data/Mez ages for Andy.csv") %>%
+  filter(Year %in% c("2020", "2021", "2022")) %>%
+  rename(runyear = Year) %>%
+  #add row for 2023 with age percentages using the mean from the last 5y (2018-2022)
+  add_row(runyear = 2023, AgeComp = "MeziadinAnnual", RunAge3 = 0.1288244, RunAge4 = 0.4137336, RunAge5 = 0.3906876, RunAge6 = 0.06675444,
+          RunAge7 = 0, Total = 1.00)
+
+mez_age <- rbind(mez_age, mez_age_2)
 
 # Merge the two dataframes 
-all_mezdata <- merge(TR_TE_wide, mez_age, by = "runyear") %>%
-  # filter to only Meziadin data, remove uninformative columns
-  subset(select = -c(`Nass_Total Return`, RunAge7, AgeComp, mez.p, non.mez)) %>%
+all_mezdata <- merge(all_mezdata, mez_age, by = "runyear") %>%
+  subset(select = -c(RunAge7, AgeComp)) %>%
   # add sockeye escapement for each age class (total * percent age)
   # add sockeye total return number for each age class
   mutate("3" = RunAge3*`Meziadin_Total Return`,
          "4" = RunAge4*`Meziadin_Total Return`,
          "5" = RunAge5*`Meziadin_Total Return`,
          "6" = RunAge6*`Meziadin_Total Return`) %>%
-  # clarify column name for percentages
+  # column name for percentages
   rename(p.age3 = RunAge3, p.age4 = RunAge4, p.age5 = RunAge5, p.age6 = RunAge6)
 
-# Merge old and new data
-all_mezdata <- bind_rows(all_mezdata, datanew)
-
-# format for plotting
+# Format for plotting
 all_mezdata_long <- all_mezdata %>%
   pivot_longer(cols = "3":"6", names_to = "tr_ageclass", values_to = "tr_count") %>%
   rename(`Age Class` = tr_ageclass)
 
 prop_ages <- all_mezdata %>%
   pivot_longer(cols = "p.age3":"p.age6", names_to = "Age class", values_to = "proportion_age")
-
 
 # Plot total run by year with age classes:
 ggplot(all_mezdata_long, aes(x = runyear, y = tr_count, fill = `Age Class`)) +
@@ -78,18 +75,6 @@ ggplot(prop_ages, aes(x = runyear, y = proportion_age, fill = `Age class`))+
   scale_x_continuous(breaks = round(seq(min(prop_ages$runyear), max(prop_ages$runyear), 
                                         by = 2),1)) +
   theme(axis.text.x = element_text(angle = 60, vjust = 0.5))
-
-
-# getting mean ages for 2018-2023.
-# 1. filter older data to last 5 years (2013 - 2018).
-# 2. Calculate mean of each age class over last 5 years
-# 3. In dataset (data_new, above), add cols with each mean proportion, and estimated return of each age class
-# by multiplying proportion by total run.
-
-# mean_ages <- all_mezdata_long %>%
-#   filter(runyear %in% c("2013", "2014", "2015", "2016", "2017")) %>%
-#   mutate(mean_age3 = mean(p.age3), mean_age4 = mean(p.age4), mean_age5 = mean(p.age5),
-#          mean_age6 = mean(p.age6))
 
 
 # FORMATTING FOR FORECASTR ------------------------------------------------
