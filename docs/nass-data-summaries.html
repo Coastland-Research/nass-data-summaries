@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>nass-data-summaries - Nass Data Summary</title>
+<title>Nass Data Summary – nass-data-summaries</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,33 +82,25 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data Sources</a></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   <li><a href="#escapement-goals" id="toc-escapement-goals" class="nav-link" data-scroll-target="#escapement-goals">Escapement Goals</a></li>
   <li><a href="#sockeye-salmon" id="toc-sockeye-salmon" class="nav-link" data-scroll-target="#sockeye-salmon">Sockeye Salmon</a>
   <ul class="collapse">
   <li><a href="#meziadin-sockeye" id="toc-meziadin-sockeye" class="nav-link" data-scroll-target="#meziadin-sockeye">Meziadin Sockeye</a></li>
   </ul></li>
-  <li><a href="#total-return-of-meziadin-sockeye-by-age-class-1982-2023" id="toc-total-return-of-meziadin-sockeye-by-age-class-1982-2023" class="nav-link" data-scroll-target="#total-return-of-meziadin-sockeye-by-age-class-1982-2023">Total return of Meziadin sockeye by age class, 1982-2023</a></li>
-  <li><a href="#using-forecastr-to-predict-sockeye-returns" id="toc-using-forecastr-to-predict-sockeye-returns" class="nav-link" data-scroll-target="#using-forecastr-to-predict-sockeye-returns">Using ForecastR to predict Sockeye Returns</a>
-  <ul class="collapse">
-  <li><a href="#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-3" id="toc-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-3" class="nav-link" data-scroll-target="#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-3">Observed vs fitted return numbers using Naive model for Age Class 3</a></li>
-  <li><a href="#plot-of-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-4" id="toc-plot-of-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-4" class="nav-link" data-scroll-target="#plot-of-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-4">Plot of observed vs fitted return numbers using Naive model for Age Class 4</a></li>
-  <li><a href="#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-5" id="toc-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-5" class="nav-link" data-scroll-target="#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-5">Observed vs fitted return numbers using Naive model for Age Class 5</a></li>
-  <li><a href="#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-6" id="toc-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-6" class="nav-link" data-scroll-target="#observed-vs-fitted-return-numbers-using-naive-model-for-age-class-6">Observed vs fitted return numbers using Naive model for Age Class 6</a></li>
-  <li><a href="#forecast-plot-showing-the-distribution-of-forecasted-return-estimates-by-age" id="toc-forecast-plot-showing-the-distribution-of-forecasted-return-estimates-by-age" class="nav-link" data-scroll-target="#forecast-plot-showing-the-distribution-of-forecasted-return-estimates-by-age">Forecast plot showing the distribution of forecasted return estimates by age</a></li>
   <li><a href="#chinook-salmon" id="toc-chinook-salmon" class="nav-link" data-scroll-target="#chinook-salmon">Chinook Salmon</a></li>
   <li><a href="#coho-salmon" id="toc-coho-salmon" class="nav-link" data-scroll-target="#coho-salmon">Coho Salmon</a></li>
   <li><a href="#pink-salmon-even-years" id="toc-pink-salmon-even-years" class="nav-link" data-scroll-target="#pink-salmon-even-years">Pink Salmon (even years)</a></li>
   <li><a href="#chum-salmon" id="toc-chum-salmon" class="nav-link" data-scroll-target="#chum-salmon">Chum Salmon</a></li>
   <li><a href="#steelhead-trout" id="toc-steelhead-trout" class="nav-link" data-scroll-target="#steelhead-trout">Steelhead Trout</a></li>
-  </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -137,6 +129,17 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="background">Background</h2>
 <p>This resource document shows information on salmon escapement and harvest (Canadian and total exploitation) in the Nass watershed. We display escapement for Area 3 (Nass) overall, escapement by Conservation Unit and stream, and exploitation rates for each salmon species. TRTC for steelhead trout in the Nass watershed is also presented. We are also working to forecast sockeye returns for the Meziadin system specifically, and show preliminary results from forecast models here.</p>
 </section>
+<section id="data-sources" class="level2">
+<h2 class="anchored" data-anchor-id="data-sources">Data Sources</h2>
+<p>Data comes from the following sources</p>
+<ul>
+<li>Summary section - includes total ER, Cdn harvest, total run (salmon.rds and exploitation.rds) ?</li>
+<li>Escapement goals section - (nass salmon escapement goals.csv) ? For each species:</li>
+<li>Area 3 total harvest, total escapement, and forecasted TRTC (nass vs mez TR TE new.csv and nass data 240313.xlsx and nass combined stat area data 240313.csv)</li>
+<li>Escapement by CU and stream (NUSEDS escapement by CU 20220902.csv) - this comes from NUSEDS database (from DFO)</li>
+<li>Exploitation rates (nass combined stat area data 240313.csv)</li>
+</ul>
+</section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
 <div class="cell">
@@ -160,13 +163,18 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>Map showing the Nass watershed extent (figure taken from Peter Hall’s CSAS paper on Skeena / Nass ) <img src="nass-map.jpg" class="img-fluid" alt="Nass watershed map"></p>
+<p>Map showing the Nass watershed extent (figure taken from Peter Hall’s CSAS paper on Skeena / Nass )</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="nass-map.png" class="img-fluid figure-img" width="400"></p>
+<figcaption>Map</figcaption>
+</figure>
+</div>
 </section>
 <section id="sockeye-salmon" class="level2">
 <h2 class="anchored" data-anchor-id="sockeye-salmon">Sockeye Salmon</h2>
-<ol type="a">
-<li>Area 3</li>
-</ol>
+<section id="area-3" class="level4">
+<h4 class="anchored" data-anchor-id="area-3">Area 3</h4>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -176,9 +184,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<ol start="2" type="a">
-<li>Escapement by Conservation Unit</li>
-</ol>
+</section>
+<section id="annual-sockeye-escapement-by-conservation-unit" class="level4">
+<h4 class="anchored" data-anchor-id="annual-sockeye-escapement-by-conservation-unit">Annual Sockeye Escapement by Conservation Unit</h4>
 <div>
 
 </div>
@@ -221,62 +229,54 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<ol start="3" type="a">
-<li>Escapement by CU and Stream</li>
-</ol>
+</section>
+<section id="annual-sockeye-escapement-by-cu-and-stream" class="level4">
+<h4 class="anchored" data-anchor-id="annual-sockeye-escapement-by-cu-and-stream">Annual Sockeye Escapement by CU and Stream</h4>
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-ncol="1">
+<div class="cell quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot annual escapement by CU and stream-1.png" class="img-fluid" width="672"></p>
 </div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot annual escapement by CU and stream-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot annual escapement by CU and stream-3.png" class="img-fluid" width="672"></p>
 </div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot annual escapement by CU and stream-4.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot annual escapement by CU and stream-5.png" class="img-fluid" width="672"></p>
 </div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot annual escapement by CU and stream-6.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot annual escapement by CU and stream-7.png" class="img-fluid" width="672"></p>
 </div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot annual escapement by CU and stream-8.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot annual escapement by CU and stream-9.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </div>
-<ol start="4" type="a">
-<li>Exploitation Rates</li>
-</ol>
+</section>
+<section id="exploitation-rates" class="level4">
+<h4 class="anchored" data-anchor-id="exploitation-rates">Exploitation Rates</h4>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -286,14 +286,13 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+</section>
 <section id="meziadin-sockeye" class="level3">
 <h3 class="anchored" data-anchor-id="meziadin-sockeye">Meziadin Sockeye</h3>
 <p>The Meziadin River is a major tributary to the Nass River in northwestern British Columbia, an important area home to five species of Pacific salmon. Sockeye salmon returning to the Meziadin system comprise a significant proportion of the total Nass sockeye run. Since the creation of the Meziadin Fishway in 1966, it has been found that 70-80% of Nass sockeye return to the Meziadin system via the Meziadin River. Meziadin sockeye are a highly valued and culturally significant food source for Gitanyow and Nisga’a First Nations, and also harvested in Alaskan commercial fisheries during their ocean migration.</p>
 <p>Predicting the sockeye returning to the Meziadin is important for understanding the conservation status of this population. We are working to create a Meziadin-specific return forecast for sockeye salmon using the ForecastR tool.</p>
-</section>
-</section>
-<section id="total-return-of-meziadin-sockeye-by-age-class-1982-2023" class="level2">
-<h2 class="anchored" data-anchor-id="total-return-of-meziadin-sockeye-by-age-class-1982-2023">Total return of Meziadin sockeye by age class, 1982-2023</h2>
+<section id="total-return-of-meziadin-sockeye-by-age-class-1982-2023" class="level4">
+<h4 class="anchored" data-anchor-id="total-return-of-meziadin-sockeye-by-age-class-1982-2023">Total return of Meziadin sockeye by age class, 1982-2023</h4>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -304,18 +303,19 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="using-forecastr-to-predict-sockeye-returns" class="level1">
-<h1>Using ForecastR to predict Sockeye Returns</h1>
+<section id="using-forecastr-to-predict-sockeye-returns" class="level4">
+<h4 class="anchored" data-anchor-id="using-forecastr-to-predict-sockeye-returns">Using ForecastR to predict Sockeye Returns</h4>
 <p>We are using <em>ForecastR</em>, an R package and Shiny app, to predict total returns of sockeye salmon from the Meziadin system based on previous years’ data on Meziadin total return and escapement. The Meziadin total return data is a subset of the Nass total return, including escapement plus the salmon harvested in fisheries which do not make it back to spawning grounds. The sockeye total run numbers for each year are categorized by age, with sockeye separated into age classes 3, 4, 5, and 6.</p>
 <p>ForecastR uses forecasting models to predict salmon terminal run and escapement, based on data entered by the user. This data can be age-specific and include environmental or biological covariates. Multiple forecasting models can be explored, compared, and ranked using the app. Here we have started forecasting Meziadin sockeye total return using ages with no covariates, and intend to add relevant environmental and/or biological covariates to make these predictive models more informative in the future. Plots shown are using the exponential smoothing model, which assigns exponentially decreasing weights to past observations (i.e.&nbsp;more recent data points are more important for forecasting), and captures seasonal variation.</p>
-<section id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-3" class="level2">
-<h2 class="anchored" data-anchor-id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-3">Observed vs fitted return numbers using Naive model for Age Class 3</h2>
+</section>
+<section id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-3" class="level4">
+<h4 class="anchored" data-anchor-id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-3">Observed vs fitted return numbers using Naive model for Age Class 3</h4>
 <p>Data for age-3 sockeye is sparse as the total run for this age class is zero for most years between 1982 and 2017.</p>
 <p><img src="age3_naive.png" class="img-fluid" alt="Age 3 sockeye forecasted returns"><br>
 </p>
 </section>
-<section id="plot-of-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-4" class="level2">
-<h2 class="anchored" data-anchor-id="plot-of-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-4">Plot of observed vs fitted return numbers using Naive model for Age Class 4</h2>
+<section id="plot-of-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-4" class="level4">
+<h4 class="anchored" data-anchor-id="plot-of-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-4">Plot of observed vs fitted return numbers using Naive model for Age Class 4</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="age4_naive.png" class="img-fluid figure-img"></p>
@@ -323,8 +323,8 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </section>
-<section id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-5" class="level2">
-<h2 class="anchored" data-anchor-id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-5">Observed vs fitted return numbers using Naive model for Age Class 5</h2>
+<section id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-5" class="level4">
+<h4 class="anchored" data-anchor-id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-5">Observed vs fitted return numbers using Naive model for Age Class 5</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="age5_naive.png" class="img-fluid figure-img"></p>
@@ -332,8 +332,8 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </section>
-<section id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-6" class="level2">
-<h2 class="anchored" data-anchor-id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-6">Observed vs fitted return numbers using Naive model for Age Class 6</h2>
+<section id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-6" class="level4">
+<h4 class="anchored" data-anchor-id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-6">Observed vs fitted return numbers using Naive model for Age Class 6</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="age6_naive.png" class="img-fluid figure-img"></p>
@@ -341,8 +341,8 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </section>
-<section id="forecast-plot-showing-the-distribution-of-forecasted-return-estimates-by-age" class="level2">
-<h2 class="anchored" data-anchor-id="forecast-plot-showing-the-distribution-of-forecasted-return-estimates-by-age">Forecast plot showing the distribution of forecasted return estimates by age</h2>
+<section id="forecast-plot-showing-the-distribution-of-forecasted-return-estimates-by-age" class="level4">
+<h4 class="anchored" data-anchor-id="forecast-plot-showing-the-distribution-of-forecasted-return-estimates-by-age">Forecast plot showing the distribution of forecasted return estimates by age</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="forecastplot.png" class="img-fluid figure-img"></p>
@@ -350,11 +350,12 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </section>
+</section>
+</section>
 <section id="chinook-salmon" class="level2">
 <h2 class="anchored" data-anchor-id="chinook-salmon">Chinook Salmon</h2>
-<ol type="a">
-<li>Area 3</li>
-</ol>
+<section id="area-3-1" class="level4">
+<h4 class="anchored" data-anchor-id="area-3-1">Area 3</h4>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -364,9 +365,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<ol start="2" type="a">
-<li>Escapement by Conservation Unit</li>
-</ol>
+</section>
+<section id="annual-chinook-escapement-by-conservation-unit" class="level4">
+<h4 class="anchored" data-anchor-id="annual-chinook-escapement-by-conservation-unit">Annual Chinook Escapement by Conservation Unit</h4>
 <div>
 
 </div>
@@ -380,27 +381,25 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<ol start="3" type="a">
-<li>Escapement by CU and Stream</li>
-</ol>
+</section>
+<section id="annual-chinook-escapement-by-cu-and-stream" class="level4">
+<h4 class="anchored" data-anchor-id="annual-chinook-escapement-by-cu-and-stream">Annual Chinook Escapement by CU and Stream</h4>
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-ncol="1">
+<div class="cell quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot chinook annual escapement by CU and stream-1.png" class="img-fluid" width="672"></p>
 </div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot chinook annual escapement by CU and stream-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </div>
-<ol start="4" type="a">
-<li>Exploitation Rates</li>
-</ol>
+</section>
+<section id="exploitation-rates-1" class="level4">
+<h4 class="anchored" data-anchor-id="exploitation-rates-1">Exploitation Rates</h4>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -411,11 +410,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
+</section>
 <section id="coho-salmon" class="level2">
 <h2 class="anchored" data-anchor-id="coho-salmon">Coho Salmon</h2>
-<ol type="a">
-<li>Area 3</li>
-</ol>
+<section id="area-3-2" class="level4">
+<h4 class="anchored" data-anchor-id="area-3-2">Area 3</h4>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -425,9 +424,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<ol start="2" type="a">
-<li>Escapement by Conservation Unit</li>
-</ol>
+</section>
+<section id="annual-coho-escapement-by-conservation-unit" class="level4">
+<h4 class="anchored" data-anchor-id="annual-coho-escapement-by-conservation-unit">Annual Coho Escapement by Conservation Unit</h4>
 <div>
 
 </div>
@@ -449,37 +448,33 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<ol start="3" type="a">
-<li>Escapement by CU and Stream</li>
-</ol>
+</section>
+<section id="annual-coho-escapement-by-cu-and-stream" class="level4">
+<h4 class="anchored" data-anchor-id="annual-coho-escapement-by-cu-and-stream">Annual Coho Escapement by CU and Stream</h4>
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-ncol="1">
+<div class="cell quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot coho annual escapement by CU and stream-1.png" class="img-fluid" width="672"></p>
 </div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot coho annual escapement by CU and stream-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot coho annual escapement by CU and stream-3.png" class="img-fluid" width="672"></p>
 </div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot coho annual escapement by CU and stream-4.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </div>
-<ol start="4" type="a">
-<li>Exploitation Rates</li>
-</ol>
+</section>
+<section id="exploitation-rates-2" class="level4">
+<h4 class="anchored" data-anchor-id="exploitation-rates-2">Exploitation Rates</h4>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -490,11 +485,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
+</section>
 <section id="pink-salmon-even-years" class="level2">
 <h2 class="anchored" data-anchor-id="pink-salmon-even-years">Pink Salmon (even years)</h2>
-<ol type="a">
-<li>Area 3</li>
-</ol>
+<section id="area-3-3" class="level4">
+<h4 class="anchored" data-anchor-id="area-3-3">Area 3</h4>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -504,32 +499,30 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<ol start="2" type="a">
-<li>Escapement by Conservation Unit</li>
-</ol>
+</section>
+<section id="even-year-pink-escapement-by-conservation-unit" class="level4">
+<h4 class="anchored" data-anchor-id="even-year-pink-escapement-by-conservation-unit">Even-Year Pink Escapement by Conservation Unit</h4>
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-ncol="1">
+<div class="cell quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot annual escapement by CU pink-1.png" class="img-fluid" width="672"></p>
 </div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot annual escapement by CU pink-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot annual escapement by CU pink-3.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </div>
-<ol start="3" type="a">
-<li>Escapement by CU and Stream</li>
-</ol>
+</section>
+<section id="even-year-pink-escapement-by-cu-and-stream" class="level4">
+<h4 class="anchored" data-anchor-id="even-year-pink-escapement-by-cu-and-stream">Even-Year Pink Escapement by CU and Stream</h4>
 <div>
 
 </div>
@@ -550,9 +543,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<ol start="4" type="a">
-<li>Exploitation Rates</li>
-</ol>
+</section>
+<section id="exploitation-rates-3" class="level4">
+<h4 class="anchored" data-anchor-id="exploitation-rates-3">Exploitation Rates</h4>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -563,11 +556,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
+</section>
 <section id="chum-salmon" class="level2">
 <h2 class="anchored" data-anchor-id="chum-salmon">Chum Salmon</h2>
-<ol type="a">
-<li>Area 3</li>
-</ol>
+<section id="area-3-4" class="level4">
+<h4 class="anchored" data-anchor-id="area-3-4">Area 3</h4>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -577,9 +570,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<ol start="2" type="a">
-<li>Escapement by Conservation Unit</li>
-</ol>
+</section>
+<section id="annual-chum-escapement-by-conservation-unit" class="level4">
+<h4 class="anchored" data-anchor-id="annual-chum-escapement-by-conservation-unit">Annual Chum Escapement by Conservation Unit</h4>
 <div>
 
 </div>
@@ -601,37 +594,33 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<ol start="3" type="a">
-<li>Escapement by CU and Stream</li>
-</ol>
+</section>
+<section id="annual-chum-escapement-by-cu-and-stream" class="level4">
+<h4 class="anchored" data-anchor-id="annual-chum-escapement-by-cu-and-stream">Annual Chum Escapement by CU and Stream</h4>
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-ncol="1">
+<div class="cell quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot chum annual escapement by CU and stream-1.png" class="img-fluid" width="672"></p>
 </div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot chum annual escapement by CU and stream-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot chum annual escapement by CU and stream-3.png" class="img-fluid" width="672"></p>
 </div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="nass-data-summaries_files/figure-html/plot chum annual escapement by CU and stream-4.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </div>
-<ol start="4" type="a">
-<li>Exploitation Rates</li>
-</ol>
+</section>
+<section id="exploitation-rates-4" class="level4">
+<h4 class="anchored" data-anchor-id="exploitation-rates-4">Exploitation Rates</h4>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -642,11 +631,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
+</section>
 <section id="steelhead-trout" class="level2">
 <h2 class="anchored" data-anchor-id="steelhead-trout">Steelhead Trout</h2>
-<ol type="a">
-<li>Area 3</li>
-</ol>
+<section id="area-3-5" class="level4">
+<h4 class="anchored" data-anchor-id="area-3-5">Area 3</h4>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -656,11 +645,15 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<ol start="2" type="a">
-<li><p>Conservation Units</p></li>
-<li><p>Streams</p></li>
-<li><p>Exploitation Rates</p></li>
-</ol>
+</section>
+<section id="conservation-units" class="level4">
+<h4 class="anchored" data-anchor-id="conservation-units">Conservation Units</h4>
+</section>
+<section id="streams" class="level4">
+<h4 class="anchored" data-anchor-id="streams">Streams</h4>
+</section>
+<section id="exploitation-rates-5" class="level4">
+<h4 class="anchored" data-anchor-id="exploitation-rates-5">Exploitation Rates</h4>
 </section>
 </section>
 <section id="references" class="level1">
@@ -708,18 +701,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -751,7 +733,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -759,7 +763,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

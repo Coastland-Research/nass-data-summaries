@@ -11,28 +11,28 @@
     "href": "nass-data-summaries.html#escapement-goals",
     "title": "Nass Data Summary",
     "section": "Escapement Goals",
-    "text": "Escapement Goals\n\n\n\n\n\n\n\n\n\nMap showing the Nass watershed extent (figure taken from Peter Hall’s CSAS paper on Skeena / Nass )"
+    "text": "Escapement Goals\n\n\n\n\n\n\n\n\n\nMap showing the Nass watershed extent (figure taken from Peter Hall’s CSAS paper on Skeena / Nass )\n\n\n\nMap"
   },
   {
     "objectID": "nass-data-summaries.html#sockeye-salmon",
     "href": "nass-data-summaries.html#sockeye-salmon",
     "title": "Nass Data Summary",
     "section": "Sockeye Salmon",
-    "text": "Sockeye Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nEscapement by Conservation Unit\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEscapement by CU and Stream\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates\n\n\n\n\n\n\n\n\n\n\n\nMeziadin Sockeye\nThe Meziadin River is a major tributary to the Nass River in northwestern British Columbia, an important area home to five species of Pacific salmon. Sockeye salmon returning to the Meziadin system comprise a significant proportion of the total Nass sockeye run. Since the creation of the Meziadin Fishway in 1966, it has been found that 70-80% of Nass sockeye return to the Meziadin system via the Meziadin River. Meziadin sockeye are a highly valued and culturally significant food source for Gitanyow and Nisga’a First Nations, and also harvested in Alaskan commercial fisheries during their ocean migration.\nPredicting the sockeye returning to the Meziadin is important for understanding the conservation status of this population. We are working to create a Meziadin-specific return forecast for sockeye salmon using the ForecastR tool."
+    "text": "Sockeye Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nAnnual Sockeye Escapement by Conservation Unit\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnnual Sockeye Escapement by CU and Stream\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates\n\n\n\n\n\n\n\n\n\n\n\nMeziadin Sockeye\nThe Meziadin River is a major tributary to the Nass River in northwestern British Columbia, an important area home to five species of Pacific salmon. Sockeye salmon returning to the Meziadin system comprise a significant proportion of the total Nass sockeye run. Since the creation of the Meziadin Fishway in 1966, it has been found that 70-80% of Nass sockeye return to the Meziadin system via the Meziadin River. Meziadin sockeye are a highly valued and culturally significant food source for Gitanyow and Nisga’a First Nations, and also harvested in Alaskan commercial fisheries during their ocean migration.\nPredicting the sockeye returning to the Meziadin is important for understanding the conservation status of this population. We are working to create a Meziadin-specific return forecast for sockeye salmon using the ForecastR tool.\n\nTotal return of Meziadin sockeye by age class, 1982-2023\n\n\n\n\n\n\n\n\n\n\n\nUsing ForecastR to predict Sockeye Returns\nWe are using ForecastR, an R package and Shiny app, to predict total returns of sockeye salmon from the Meziadin system based on previous years’ data on Meziadin total return and escapement. The Meziadin total return data is a subset of the Nass total return, including escapement plus the salmon harvested in fisheries which do not make it back to spawning grounds. The sockeye total run numbers for each year are categorized by age, with sockeye separated into age classes 3, 4, 5, and 6.\nForecastR uses forecasting models to predict salmon terminal run and escapement, based on data entered by the user. This data can be age-specific and include environmental or biological covariates. Multiple forecasting models can be explored, compared, and ranked using the app. Here we have started forecasting Meziadin sockeye total return using ages with no covariates, and intend to add relevant environmental and/or biological covariates to make these predictive models more informative in the future. Plots shown are using the exponential smoothing model, which assigns exponentially decreasing weights to past observations (i.e. more recent data points are more important for forecasting), and captures seasonal variation.\n\n\nObserved vs fitted return numbers using Naive model for Age Class 3\nData for age-3 sockeye is sparse as the total run for this age class is zero for most years between 1982 and 2017.\n\n\n\n\nPlot of observed vs fitted return numbers using Naive model for Age Class 4\n\n\n\nAge 4 sockeye forecasted returns\n\n\n\n\nObserved vs fitted return numbers using Naive model for Age Class 5\n\n\n\nAge 5 sockeye forecasted returns\n\n\n\n\nObserved vs fitted return numbers using Naive model for Age Class 6\n\n\n\nAge 6 sockeye forecasted returns\n\n\n\n\nForecast plot showing the distribution of forecasted return estimates by age\n\n\n\nVariation in forecast abundance by age class"
   },
   {
     "objectID": "nass-data-summaries.html#chinook-salmon",
     "href": "nass-data-summaries.html#chinook-salmon",
     "title": "Nass Data Summary",
     "section": "Chinook Salmon",
-    "text": "Chinook Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nEscapement by Conservation Unit\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEscapement by CU and Stream\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates"
+    "text": "Chinook Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nAnnual Chinook Escapement by Conservation Unit\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnnual Chinook Escapement by CU and Stream\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates"
   },
   {
     "objectID": "nass-data-summaries.html#coho-salmon",
     "href": "nass-data-summaries.html#coho-salmon",
     "title": "Nass Data Summary",
     "section": "Coho Salmon",
-    "text": "Coho Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nEscapement by Conservation Unit\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEscapement by CU and Stream\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates"
+    "text": "Coho Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nAnnual Coho Escapement by Conservation Unit\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnnual Coho Escapement by CU and Stream\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates"
   },
   {
     "objectID": "nass-data-summaries.html#pink-salmon",
@@ -46,14 +46,14 @@
     "href": "nass-data-summaries.html#chum-salmon",
     "title": "Nass Data Summary",
     "section": "Chum Salmon",
-    "text": "Chum Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nEscapement by Conservation Unit\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEscapement by CU and Stream\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates"
+    "text": "Chum Salmon\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nAnnual Chum Escapement by Conservation Unit\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnnual Chum Escapement by CU and Stream\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates"
   },
   {
     "objectID": "nass-data-summaries.html#steelhead-trout",
     "href": "nass-data-summaries.html#steelhead-trout",
     "title": "Nass Data Summary",
     "section": "Steelhead Trout",
-    "text": "Steelhead Trout\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nConservation Units\nStreams\nExploitation Rates"
+    "text": "Steelhead Trout\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nConservation Units\n\n\nStreams\n\n\nExploitation Rates"
   },
   {
     "objectID": "mez_forecast_summary.html",
@@ -109,7 +109,7 @@
     "href": "nass-data-summaries.html#pink-salmon-even-years",
     "title": "Nass Data Summary",
     "section": "Pink Salmon (even years)",
-    "text": "Pink Salmon (even years)\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nEscapement by Conservation Unit\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEscapement by CU and Stream\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates"
+    "text": "Pink Salmon (even years)\n\nArea 3\n\n\n\n\n\n\n\n\n\n\n\nEven-Year Pink Escapement by Conservation Unit\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEven-Year Pink Escapement by CU and Stream\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploitation Rates"
   },
   {
     "objectID": "mez_forecast_summary.html#observed-vs-fitted-return-numbers-using-exponential-smoothing-model-for-age-class-3",
@@ -215,5 +215,12 @@
     "title": "Nass Data Summary",
     "section": "Forecast plot showing the distribution of forecasted return estimates by age",
     "text": "Forecast plot showing the distribution of forecasted return estimates by age\n\n\n\nVariation in forecast abundance by age class"
+  },
+  {
+    "objectID": "nass-data-summaries.html#data-sources",
+    "href": "nass-data-summaries.html#data-sources",
+    "title": "Nass Data Summary",
+    "section": "Data Sources",
+    "text": "Data Sources\nData comes from the following sources\n\nSummary section - includes total ER, Cdn harvest, total run (salmon.rds and exploitation.rds) ?\nEscapement goals section - (nass salmon escapement goals.csv) ? For each species:\nArea 3 total harvest, total escapement, and forecasted TRTC (nass vs mez TR TE new.csv and nass data 240313.xlsx and nass combined stat area data 240313.csv)\nEscapement by CU and stream (NUSEDS escapement by CU 20220902.csv) - this comes from NUSEDS database (from DFO)\nExploitation rates (nass combined stat area data 240313.csv)"
   }
 ]

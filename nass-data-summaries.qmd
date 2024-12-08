@@ -1,7 +1,13 @@
 ---
 title: "Nass Data Summary"
 subtitle: "November 22, 2024"
-format: html
+format:
+  html: 
+    grid:
+      sidebar-width: 200px
+      body-width: 1050px
+      margin-width: 50px
+      gutter-width: 1.5em
 editor: visual
 editor_options: 
   chunk_output_type: console
@@ -20,8 +26,20 @@ library(gridExtra)
 library(RColorBrewer)
 ```
 
+
 ## Background
 This resource document shows information on salmon escapement and harvest (Canadian and total exploitation) in the Nass watershed. We display escapement for Area 3 (Nass) overall, escapement by Conservation Unit and stream, and exploitation rates for each salmon species. TRTC for steelhead trout in the Nass watershed is also presented. We are also working to forecast sockeye returns for the Meziadin system specifically, and show preliminary results from forecast models here.
+
+## Data Sources
+Data comes from the following sources
+
+ - Summary section - includes total ER, Cdn harvest, total run (salmon.rds and exploitation.rds) ?
+ - Escapement goals section - (nass salmon escapement goals.csv) ?
+For each species: 
+ - Area 3 total harvest, total escapement, and forecasted TRTC (nass vs mez TR TE new.csv and nass data 240313.xlsx and nass combined stat area data 240313.csv) 
+ - Escapement by CU and stream (NUSEDS escapement by CU 20220902.csv) - this comes from NUSEDS database (from DFO)
+ - Exploitation rates (nass combined stat area data 240313.csv)
+
 
 ## Summary
 
@@ -29,6 +47,8 @@ This resource document shows information on salmon escapement and harvest (Canad
 #| warning: false
 #| message: false
 #| echo: false
+#| fig-width: 7
+#| fig-height: 4.5
 
 salmon <- readRDS("salmon.rds")
 exploitation <- readRDS("exploitation.rds")
@@ -40,7 +60,8 @@ ggplot(exploitation, aes(x = Year, y = Fish/100000, fill = Proportion)) +
   labs(x = "Year", y = "x100,000 Salmon", title = "Area 3 Exploitation by Year")+
   facet_wrap(~`Species Name`) +
   theme(axis.text.x = element_text(angle = 45, hjust=1))+
-  theme_minimal()
+  theme_minimal() 
+
 
 
 ```
@@ -51,6 +72,8 @@ ggplot(exploitation, aes(x = Year, y = Fish/100000, fill = Proportion)) +
 #| message: false
 #| echo: false
 #| warning: false
+#| fig-width: 7
+#| fig-height: 4.5
 
 esc_goals <- read_csv("data/nass salmon escapement goals.csv", show_col_types = FALSE)
 
@@ -66,11 +89,12 @@ ggplot(esc_reshaped, aes(x = species, y = value, fill=variable)) +
 ```
 
 Map showing the Nass watershed extent (figure taken from Peter Hall's CSAS paper on Skeena / Nass )
-![Nass watershed map](nass-map.jpg)
+
+![Map](nass-map.png){width=400}
 
 ## Sockeye Salmon
 
-a.  Area 3
+#### Area 3
 ```{r load and format data}
 #| include: false
 #| message: false
@@ -104,7 +128,7 @@ pe<-ggplot(esc.plots, aes(x = Year, y = Fish, fill = factor(Type,levels=c("Total
 pe
 ```
 
-b.  Escapement by Conservation Unit
+####  Annual Sockeye Escapement by Conservation Unit
 ```{r load CU data}
 #| include: false
 #| message: false
@@ -134,17 +158,17 @@ for (i in 1:length(unique(area3$CU_NAME))){
     xlim(c(1980,2025))+
     theme_bw()+
     labs(y="Number of Sockeye Salmon", x = "Year",
-         title = paste("Annual Sockeye Escapement for", CU, "Conservation Unit"))
+         title = paste(CU))
   print(pl)
 }
 
 ```
-c.  Escapement by CU and Stream
+####  Annual Sockeye Escapement by CU and Stream
 ```{r plot annual escapement by CU and stream}
 #| warning: false
 #| message: false
 #| echo: false
-#| layout-ncol: 1
+#| layout-ncol: 2
 
 nb.cols <- 20
 mycolors <- colorRampPalette(brewer.pal(8, "Dark2"))(nb.cols)
@@ -162,13 +186,14 @@ for (i in 1:length(unique(area3$CU_NAME))){
     theme_bw()+
     guides(color="none")+
     labs(y = NULL, x = "Year",
-         title = paste("Annual Sockeye Escapement for",CU, "CU, by Stream"), fill = "Stream name")+
-    theme(plot.title = element_text(size=10))
+         title = paste(CU), fill = "Stream name")+
+    theme(plot.title = element_text(size=10))+
+    theme(axis.text.y = element_text(angle = 30, vjust = 0.5, hjust=1))
   print(pl)
 }
 
 ```
-d.  Exploitation Rates
+####  Exploitation Rates
 ```{r sockeye er plot}
 #| warning: false
 #| message: false
@@ -260,7 +285,7 @@ all_mezdata_long <- all_mezdata %>%
 
 ```
 
-## Total return of Meziadin sockeye by age class, 1982-2023
+#### Total return of Meziadin sockeye by age class, 1982-2023
 
 ```{r}
 #| echo: false
@@ -275,36 +300,36 @@ all_mezdata_long %>%
   theme(axis.text.x = element_text(angle = 60, vjust = 0.5))
 ```
 
-# Using ForecastR to predict Sockeye Returns
+#### Using ForecastR to predict Sockeye Returns
 
 We are using *ForecastR*, an R package and Shiny app, to predict total returns of sockeye salmon from the Meziadin system based on previous years' data on Meziadin total return and escapement. The Meziadin total return data is a subset of the Nass total return, including escapement plus the salmon harvested in fisheries which do not make it back to spawning grounds. The sockeye total run numbers for each year are categorized by age, with sockeye separated into age classes 3, 4, 5, and 6.
 
 ForecastR uses forecasting models to predict salmon terminal run and escapement, based on data entered by the user. This data can be age-specific and include environmental or biological covariates. Multiple forecasting models can be explored, compared, and ranked using the app. Here we have started forecasting Meziadin sockeye total return using ages with no covariates, and intend to add relevant environmental and/or biological covariates to make these predictive models more informative in the future. Plots shown are using the exponential smoothing model, which assigns exponentially decreasing weights to past observations (i.e. more recent data points are more important for forecasting), and captures seasonal variation.
 
-## Observed vs fitted return numbers using Naive model for Age Class 3
+#### Observed vs fitted return numbers using Naive model for Age Class 3
 
 Data for age-3 sockeye is sparse as the total run for this age class is zero for most years between 1982 and 2017.
 
 ![Age 3 sockeye forecasted returns](age3_naive.png)\
 
-## Plot of observed vs fitted return numbers using Naive model for Age Class 4
+#### Plot of observed vs fitted return numbers using Naive model for Age Class 4
 
 ![Age 4 sockeye forecasted returns](age4_naive.png)
 
-## Observed vs fitted return numbers using Naive model for Age Class 5
+#### Observed vs fitted return numbers using Naive model for Age Class 5
 
 ![Age 5 sockeye forecasted returns](age5_naive.png)
 
-## Observed vs fitted return numbers using Naive model for Age Class 6
+#### Observed vs fitted return numbers using Naive model for Age Class 6
 
 ![Age 6 sockeye forecasted returns](age6_naive.png)
 
-## Forecast plot showing the distribution of forecasted return estimates by age
+#### Forecast plot showing the distribution of forecasted return estimates by age
 
 ![Variation in forecast abundance by age class](forecastplot.png)
 
 ## Chinook Salmon
-a.  Area 3
+#### Area 3
 ```{r chinook esc plot}
 #| message: false
 #| echo: false
@@ -327,7 +352,7 @@ pe
 
 ```
 
-b.  Escapement by Conservation Unit
+####  Annual Chinook Escapement by Conservation Unit
 ```{r load CU data chinook}
 #| include: false
 #| message: false
@@ -357,33 +382,20 @@ for (i in 1:length(unique(area3$CU_NAME))){
     xlim(c(1980,2025))+
     theme_bw()+
     labs(y="Number of Chinook", x = "Year",
-         title = paste("Annual Chinook Escapement for", CU, "Conservation Unit"))
+         title = paste(CU))
   print(pl)
 }
 
 ```
-c.  Escapement by CU and Stream
+####  Annual Chinook Escapement by CU and Stream
 ```{r plot chinook annual escapement by CU and stream}
 #| warning: false
 #| message: false
 #| echo: false
-#| layout-ncol: 1
+#| layout-ncol: 2
 
 nb.cols <- 20
 mycolors <- colorRampPalette(brewer.pal(8, "Dark2"))(nb.cols)
-
-# for (i in 1:length(unique(area3$CU_NAME))){
-#   CU <- unique(area3$CU_NAME)[i]
-#   filtered_data <- area3 %>% filter(CU_NAME == CU)
-#   pl <- ggplot(filtered_data, aes(x = Year, y = Escapement, fill = filtered_data$WATERBODY))+
-#     geom_col(color = "black")+
-#     scale_fill_manual(values = mycolors) +
-#     xlim(c(1980,2025))+
-#     theme_bw()+
-#     labs(y="Number of Chinook Salmon", x = "Year",
-#          title = paste("Annual Chinook Escapement for",CU, "CU, by Stream"), fill = "Stream name")
-#   print(pl)
-# }
 
 for (i in 1:length(unique(area3$CU_NAME))){
   CU <- unique(area3$CU_NAME)[i]
@@ -395,13 +407,15 @@ for (i in 1:length(unique(area3$CU_NAME))){
     theme_bw()+
     guides(color="none")+
     labs(y=NULL, x = "Year",
-         title = paste("Annual Chinook Escapement for",CU, "CU, by Stream"), fill = "Stream name")+
-    theme(plot.title = element_text(size=10))
+         title = paste(CU), fill = "Stream name")+
+    theme(plot.title = element_text(size=10))+
+        theme(axis.text.y = element_text(angle = 30, vjust = 0.5, hjust=1))
+
   print(pl)
 }
 
 ```
-d.  Exploitation Rates
+####  Exploitation Rates
 ```{r chinook er plot}
 #| warning: false
 #| message: false
@@ -424,7 +438,7 @@ per<-ggplot(er.plots, aes(x = Year, y = ER,color=Area)) +
 per
 ```
 ## Coho Salmon
-a.  Area 3
+####  Area 3
 ```{r coho esc plot}
 #| message: false
 #| echo: false
@@ -446,7 +460,7 @@ pe<-ggplot(esc.plots, aes(x = Year, y = Fish, fill = factor(Type,levels=c("Total
 pe
 
 ```
-b.  Escapement by Conservation Unit
+####  Annual Coho Escapement by Conservation Unit
 ```{r load CU data coho}
 #| include: false
 #| message: false
@@ -476,33 +490,20 @@ for (i in 1:length(unique(area3$CU_NAME))){
     xlim(c(1980,2025))+
     theme_bw()+
     labs(y="Number of Coho", x = "Year",
-         title = paste("Annual Coho Escapement for", CU, "Conservation Unit"))
+         title = paste(CU))
   print(pl)
 }
 
 ```
-c.  Escapement by CU and Stream
+####  Annual Coho Escapement by CU and Stream
 ```{r plot coho annual escapement by CU and stream}
 #| warning: false
 #| message: false
 #| echo: false
-#| layout-ncol: 1
+#| layout-ncol: 2
 
 nb.cols <- 33
 mycolors <- colorRampPalette(brewer.pal(8, "Dark2"))(nb.cols)
-
-# for (i in 1:length(unique(area3$CU_NAME))){
-#   CU <- unique(area3$CU_NAME)[i]
-#   filtered_data <- area3 %>% filter(CU_NAME == CU)
-#   pl <- ggplot(filtered_data, aes(x = Year, y = Escapement, fill = filtered_data$WATERBODY))+
-#     geom_col(color = "black")+
-#     scale_fill_brewer(palette = "Dark2") +
-#     xlim(c(1980,2025))+
-#     theme_bw()+
-#     labs(y="Number of Coho Salmon", x = "Year",
-#          title = paste("Annual Coho Escapement for",CU, "CU, by Stream"), fill = "Stream name")
-#   print(pl)
-# }
 
 for (i in 1:length(unique(area3$CU_NAME))){
   CU <- unique(area3$CU_NAME)[i]
@@ -514,12 +515,14 @@ for (i in 1:length(unique(area3$CU_NAME))){
     theme_bw()+
     guides(color="none")+
     labs(y=NULL, x = "Year",
-         title = paste("Annual Coho Escapement for",CU, "CU, by Stream"), fill = "Stream name")+
-    theme(plot.title = element_text(size=10))
+         title = paste(CU), fill = "Stream name")+
+    theme(plot.title = element_text(size=10)) +
+        theme(axis.text.y = element_text(angle = 30, vjust = 0.5, hjust=1))
+
   print(pl)
 }
 ```
-d.  Exploitation Rates
+####  Exploitation Rates
 ```{r coho er plot}
 #| warning: false
 #| message: false
@@ -542,7 +545,7 @@ per<-ggplot(er.plots, aes(x = Year, y = ER,color=Area)) +
 per
 ```
 ## Pink Salmon (even years)
-a.  Area 3
+####  Area 3
 ```{r pink even esc plot}
 #| message: false
 #| echo: false
@@ -565,7 +568,7 @@ pe
 
 ```
 
-b.  Escapement by Conservation Unit
+####  Even-Year Pink Escapement by Conservation Unit
 ```{r load CU data pink}
 #| include: false
 #| message: false
@@ -586,7 +589,7 @@ area3 <- CUs %>%
 #| warning: false
 #| message: false
 #| echo: false
-#| layout-ncol: 1
+#| layout-ncol: 2
 
 for (i in 1:length(unique(area3$CU_NAME))){
   CU <- unique(area3$CU_NAME)[i]
@@ -596,12 +599,12 @@ for (i in 1:length(unique(area3$CU_NAME))){
     xlim(c(1980,2025))+
     theme_bw()+
     labs(y="Number of Pink Salmon", x = "Year",
-         title = paste("Annual Pink Salmon Escapement for", CU, "Conservation Unit"))
+         title = paste(CU))
   print(pl)
 }
 
 ```
-c.  Escapement by CU and Stream
+####  Even-Year Pink Escapement by CU and Stream
 ```{r plot pink annual escapement by CU and stream}
 #| warning: false
 #| message: false
@@ -611,18 +614,6 @@ c.  Escapement by CU and Stream
 nb.cols <- 71
 mycolors <- colorRampPalette(brewer.pal(8, "Dark2"))(nb.cols)
 
-# for (i in 1:length(unique(area3$CU_NAME))){
-#   CU <- unique(area3$CU_NAME)[i]
-#   filtered_data <- area3 %>% filter(CU_NAME == CU)
-#   pl <- ggplot(filtered_data, aes(x = Year, y = Escapement, fill = filtered_data$WATERBODY))+
-#     geom_col(color = "black")+
-#     scale_fill_brewer(palette = "Dark2") +
-#     xlim(c(1980,2025))+
-#     theme_bw()+
-#     labs(y="Number of Pink Salmon", x = "Year",
-#          title = paste("Annual Pink Escapement for",CU, "CU, by Stream"), fill = "Stream name")
-#   print(pl)
-# }
 
 for (i in 1:length(unique(area3$CU_NAME))){
   CU <- unique(area3$CU_NAME)[i]
@@ -634,13 +625,15 @@ for (i in 1:length(unique(area3$CU_NAME))){
     theme_bw()+
     guides(color="none")+
     labs(y=NULL, x = "Year",
-         title = paste("Annual Pink Escapement for",CU, "CU, by Stream"), fill = "Stream name")+
+         title = paste(CU), fill = "Stream name")+
     theme(plot.title = element_text(size=10),
-          axis.text.y = element_text(size=5))
+          axis.text.y = element_text(size=5)) +
+        theme(axis.text.y = element_text(angle = 30, vjust = 0.5, hjust=1))
+
   print(pl)
 }
 ```
-d.  Exploitation Rates
+####  Exploitation Rates
 ```{r pink er plot}
 #| warning: false
 #| message: false
@@ -664,7 +657,7 @@ per
 ```
 
 ## Chum Salmon
-a.  Area 3
+####  Area 3
 ```{r chum esc plot}
 #| message: false
 #| echo: false
@@ -687,7 +680,7 @@ pe
 
 ```
 
-b.  Escapement by Conservation Unit
+####  Annual Chum Escapement by Conservation Unit
 ```{r load CU data chum}
 #| include: false
 #| message: false
@@ -716,33 +709,20 @@ for (i in 1:length(unique(area3$CU_NAME))){
     xlim(c(1980,2025))+
     theme_bw()+
     labs(y="Number of Chum Salmon", x = "Year",
-         title = paste("Annual Chum Escapement for", CU, "Conservation Unit"))
+         title = paste(CU))
   print(pl)
 }
 
 ```
-c.  Escapement by CU and Stream
+####  Annual Chum Escapement by CU and Stream
 ```{r plot chum annual escapement by CU and stream}
 #| warning: false
 #| message: false
 #| echo: false
-#| layout-ncol: 1
+#| layout-ncol: 2
 
 nb.cols <- 20
 mycolors <- colorRampPalette(brewer.pal(8, "Dark2"))(nb.cols)
-
-# for (i in 1:length(unique(area3$CU_NAME))){
-#   CU <- unique(area3$CU_NAME)[i]
-#   filtered_data <- area3 %>% filter(CU_NAME == CU)
-#   pl <- ggplot(filtered_data, aes(x = Year, y = Escapement, fill = filtered_data$WATERBODY))+
-#     geom_col(color = "black")+
-#     scale_fill_manual(values = mycolors) +
-#     xlim(c(1980,2025))+
-#     theme_bw()+
-#     labs(y="Number of Chum Salmon", x = "Year",
-#          title = paste("Annual Chum Escapement for",CU, "CU, by Stream"), fill = "Stream name")
-#   print(pl)
-# }
 
 for (i in 1:length(unique(area3$CU_NAME))){
   CU <- unique(area3$CU_NAME)[i]
@@ -754,12 +734,14 @@ for (i in 1:length(unique(area3$CU_NAME))){
     theme_bw()+
     guides(color="none")+
     labs(y=NULL, x = "Year",
-         title = paste("Annual Chum Escapement for",CU, "CU, by Stream"), fill = "Stream name")+
-    theme(plot.title = element_text(size=10))
+         title = paste(CU), fill = "Stream name")+
+    theme(plot.title = element_text(size=10)) +
+        theme(axis.text.y = element_text(angle = 30, vjust = 0.5, hjust=1))
+
   print(pl)
 }
 ```
-d.  Exploitation Rates
+####  Exploitation Rates
 ```{r chum er plot}
 #| warning: false
 #| message: false
@@ -782,7 +764,7 @@ per<-ggplot(er.plots, aes(x = Year, y = ER,color=Area)) +
 per
 ```
 ## Steelhead Trout
-a.  Area 3
+####  Area 3
 ```{r load steelhead data}
 #| include: false
 
@@ -811,11 +793,11 @@ sh
 
 ```
 
-b.  Conservation Units
+####  Conservation Units
 
-c.  Streams
+####  Streams
 
-d.  Exploitation Rates
+####  Exploitation Rates
 
 ```{r steelhead er plot}
 #| message: false
