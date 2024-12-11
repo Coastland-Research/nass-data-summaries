@@ -105,6 +105,7 @@ mez_forecastr <- mez_forecastr %>%
     Stock_Species = ifelse(row_number() == 1, Stock_Species, ""),
     Stock_Abundance = ifelse(row_number() == 1, Stock_Abundance, ""),
     Forecasting_Year = ifelse(row_number() == 1, Forecasting_Year, "")
-  )
+  ) %>%
+  mutate(Average_Terminal_Run = replace(Average_Terminal_Run, Average_Terminal_Run==0, 1))
 
 write.csv(mez_forecastr, "~/coastland/nass-data-summaries/data/mez_forecastr.csv", row.names = FALSE)

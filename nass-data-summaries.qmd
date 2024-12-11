@@ -31,14 +31,6 @@ library(RColorBrewer)
 This resource document shows information on salmon escapement and harvest (Canadian and total exploitation) in the Nass watershed. We display escapement for Area 3 (Nass) overall, escapement by Conservation Unit and stream, and exploitation rates for each salmon species. TRTC for steelhead trout in the Nass watershed is also presented. We are also working to forecast sockeye returns for the Meziadin system specifically, and show preliminary results from forecast models here.
 
 ## Data Sources
-Data comes from the following sources
-
- - Summary section - includes total ER, Cdn harvest, total run (salmon.rds and exploitation.rds) ?
- - Escapement goals section - (nass salmon escapement goals.csv) ?
-For each species: 
- - Area 3 total harvest, total escapement, and forecasted TRTC (nass vs mez TR TE new.csv and nass data 240313.xlsx and nass combined stat area data 240313.csv) 
- - Escapement by CU and stream (NUSEDS escapement by CU 20220902.csv) - this comes from NUSEDS database (from DFO)
- - Exploitation rates (nass combined stat area data 240313.csv)
 
 
 ## Summary
@@ -233,9 +225,11 @@ mez_nass_TR_TE <- read_csv("data/nass vs mez TR TE new.csv") %>%
   drop_na("Meziadin") %>%
   rename(runyear = year)
 
-# data to 2023:
-#filter to include just the missing years (2018-2023)
+# Wide format to have total run and escapement as columns
+TR_TE_wide <- pivot_wider(mez_nass_TR_TE, names_from = type, values_from = c(Meziadin, Nass)) %>%
+  subset(select = -c(`Nass_Total Return`, mez.p, non.mez))
 
+# Read new data (to 2023)
 datanew <- read.csv("data/TRTC-Results--Nass-Sockeye_kke.csv") %>%
   filter(CU_Name == "Meziadin") %>%
   subset(select = -c(CU, SpeciesId, T_Idx_E, ExpFactor1, ExpFactor2, AdjSum, ObsE,
@@ -244,41 +238,37 @@ datanew <- read.csv("data/TRTC-Results--Nass-Sockeye_kke.csv") %>%
                      Total.ER, CU_Name)) %>%
   filter(Year %in% c("2018", "2019", "2020", "2021", "2022", "2023")) %>%
   rename(runyear = Year, `Meziadin_Total Return` = Total.Run)%>%
-  mutate(`Meziadin_Total Return` = as.numeric(gsub(",","",`Meziadin_Total Return`))) %>%
-  mutate(p.age3 = 0.046,
-         p.age4 = 0.29,
-         p.age5 = 0.512,
-         p.age6 = 0.154,
-         Total = sum(p.age3, p.age4, p.age5, p.age6), 
-         "3" = p.age3*`Meziadin_Total Return`,
-         "4" = p.age4*`Meziadin_Total Return`,
-         "5" = p.age5*`Meziadin_Total Return`,
-         "6" = p.age6*`Meziadin_Total Return`)
+  mutate(`Meziadin_Total Return` = as.numeric(gsub(",","",`Meziadin_Total Return`)))
 
-#Wide format to have total run and escapement as columns
-TR_TE_wide <- pivot_wider(mez_nass_TR_TE, names_from = type, values_from = c(Meziadin, Nass))
+# Merge old and new data (without ages):
+all_mezdata <- bind_rows(TR_TE_wide, datanew)
 
 # Read in Meziadin by age data:
 mez_age <- read_csv("data/Mez scale data - Andy.csv") %>%
   rename(runyear = Year)
+# new data to 2022
+mez_age_2 <- read_csv("data/Mez ages for Andy.csv") %>%
+  filter(Year %in% c("2020", "2021", "2022")) %>%
+  rename(runyear = Year) %>%
+  #add row for 2023 with age percentages using the mean from the last 5y (2018-2022)
+  add_row(runyear = 2023, AgeComp = "MeziadinAnnual", RunAge3 = 0.1288244, RunAge4 = 0.4137336, RunAge5 = 0.3906876, RunAge6 = 0.06675444,
+          RunAge7 = 0, Total = 1.00)
+
+mez_age <- rbind(mez_age, mez_age_2)
 
 # Merge the two dataframes 
-all_mezdata <- merge(TR_TE_wide, mez_age, by = "runyear") %>%
-  # filter to only Meziadin data, remove uninformative columns
-  subset(select = -c(`Nass_Total Return`, RunAge7, AgeComp, mez.p, non.mez)) %>%
+all_mezdata <- merge(all_mezdata, mez_age, by = "runyear") %>%
+  subset(select = -c(RunAge7, AgeComp)) %>%
   # add sockeye escapement for each age class (total * percent age)
   # add sockeye total return number for each age class
   mutate("3" = RunAge3*`Meziadin_Total Return`,
          "4" = RunAge4*`Meziadin_Total Return`,
          "5" = RunAge5*`Meziadin_Total Return`,
          "6" = RunAge6*`Meziadin_Total Return`) %>%
-  # clarify column name for percentages
+  # column name for percentages
   rename(p.age3 = RunAge3, p.age4 = RunAge4, p.age5 = RunAge5, p.age6 = RunAge6)
 
-# Merge old and new data
-all_mezdata <- bind_rows(all_mezdata, datanew)
-
-# format for plotting
+# Format for plotting
 all_mezdata_long <- all_mezdata %>%
   pivot_longer(cols = "3":"6", names_to = "tr_ageclass", values_to = "tr_count") %>%
   rename(`Age Class` = tr_ageclass)
@@ -304,7 +294,7 @@ all_mezdata_long %>%
 
 We are using *ForecastR*, an R package and Shiny app, to predict total returns of sockeye salmon from the Meziadin system based on previous years' data on Meziadin total return and escapement. The Meziadin total return data is a subset of the Nass total return, including escapement plus the salmon harvested in fisheries which do not make it back to spawning grounds. The sockeye total run numbers for each year are categorized by age, with sockeye separated into age classes 3, 4, 5, and 6.
 
-ForecastR uses forecasting models to predict salmon terminal run and escapement, based on data entered by the user. This data can be age-specific and include environmental or biological covariates. Multiple forecasting models can be explored, compared, and ranked using the app. Here we have started forecasting Meziadin sockeye total return using ages with no covariates, and intend to add relevant environmental and/or biological covariates to make these predictive models more informative in the future. Plots shown are using the exponential smoothing model, which assigns exponentially decreasing weights to past observations (i.e. more recent data points are more important for forecasting), and captures seasonal variation.
+ForecastR uses forecasting models to predict salmon terminal run and escapement, based on data entered by the user. This data can be age-specific and include environmental or biological covariates. Multiple forecasting models can be explored, compared, and ranked using the app. Here we have started forecasting Meziadin sockeye total return using ages with no covariates, and intend to add relevant environmental and/or biological covariates to make these predictive models more informative in the future. Plots shown are using the naive model, which was found to be the best fit for ages classes .... assigns exponentially decreasing weights to past observations (i.e. more recent data points are more important for forecasting), and captures seasonal variation.
 
 #### Observed vs fitted return numbers using Naive model for Age Class 3
 
