@@ -24,8 +24,11 @@ datanew <- read.csv("data/TRTC-Results--Nass-Sockeye_kke.csv") %>%
   mutate(`Meziadin_Total Return` = as.numeric(gsub(",","",`Meziadin_Total Return`)))
 
 # ADD 2024 DATA TO NEW DATA:
+# Meziadin total return is the escapement (fishwheel count) plus harvest before the fishwheel
+# (about 49%). So fishwheel + (fishwheel*.49)
 runyear <- c(2024)
-mez_return <- c(375358)
+mez_return <- c(735996.1) 
+# calculated as Esc / (1-ER) using Meziadin fishwheel count for Esc and 0.49 for ER 
 data24 <- data.frame(runyear, mez_return) %>%
   rename(`Meziadin_Total Return` = mez_return)
 
@@ -34,6 +37,7 @@ datanew <- bind_rows(datanew, data24)
 # Merge old and new data (without ages):
 all_mezdata <- bind_rows(TR_TE_wide, datanew)
 
+# Plot Meziadin total returns by year (no age breakdown)
 ggplot(all_mezdata, aes(x = runyear, y = `Meziadin_Total Return`)) +
   geom_col(fill = "seagreen")+
   theme_minimal()+
@@ -45,13 +49,16 @@ ggplot(all_mezdata, aes(x = runyear, y = `Meziadin_Total Return`)) +
 # Read in Meziadin by age data:
 mez_age <- read_csv("data/Mez scale data - Andy.csv") %>%
   rename(runyear = Year)
+
 # new data to 2022
 mez_age_2 <- read_csv("data/Mez ages for Andy.csv") %>%
   filter(Year %in% c("2020", "2021", "2022")) %>%
   rename(runyear = Year) %>%
-  #add row for 2023 with age percentages using the mean from the last 5y (2018-2022)
+  #add row for 2023 and 2024 with age percentages using the mean from the last 5y (2018-2022, and 2019-2023)
   add_row(runyear = 2023, AgeComp = "MeziadinAnnual", RunAge3 = 0.1288244, RunAge4 = 0.4137336, RunAge5 = 0.3906876, RunAge6 = 0.06675444,
-          RunAge7 = 0, Total = 1.00)
+          RunAge7 = 0, Total = 1.00) %>%
+  add_row(runyear = 2024, AgeComp = "MeziadinAnnual", RunAge3 = 0.1345893, RunAge4 = 0.4084802, RunAge5 = 0.3928252, RunAge6 = 0.06410532,
+           RunAge7 = 0, Total = 1.00)
 
 mez_age <- rbind(mez_age, mez_age_2)
 
