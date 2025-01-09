@@ -23,8 +23,24 @@ datanew <- read.csv("data/TRTC-Results--Nass-Sockeye_kke.csv") %>%
   rename(runyear = Year, `Meziadin_Total Return` = Total.Run)%>%
   mutate(`Meziadin_Total Return` = as.numeric(gsub(",","",`Meziadin_Total Return`)))
 
+# ADD 2024 DATA TO NEW DATA:
+runyear <- c(2024)
+mez_return <- c(375358)
+data24 <- data.frame(runyear, mez_return) %>%
+  rename(`Meziadin_Total Return` = mez_return)
+
+datanew <- bind_rows(datanew, data24)
+
 # Merge old and new data (without ages):
 all_mezdata <- bind_rows(TR_TE_wide, datanew)
+
+ggplot(all_mezdata, aes(x = runyear, y = `Meziadin_Total Return`)) +
+  geom_col(fill = "seagreen")+
+  theme_minimal()+
+  labs(x = "Run Year", y = "Total Return to Meziadin")+
+  scale_x_continuous(breaks = round(seq(min(all_mezdata$runyear), max(all_mezdata$runyear), 
+                                        by = 2),1))+
+  theme(axis.text.x = element_text(angle = 60, vjust = 0.5))
 
 # Read in Meziadin by age data:
 mez_age <- read_csv("data/Mez scale data - Andy.csv") %>%
@@ -40,7 +56,7 @@ mez_age_2 <- read_csv("data/Mez ages for Andy.csv") %>%
 mez_age <- rbind(mez_age, mez_age_2)
 
 # Merge the two dataframes 
-all_mezdata <- merge(all_mezdata, mez_age, by = "runyear") %>%
+age_mezdata <- merge(all_mezdata, mez_age, by = "runyear") %>%
   subset(select = -c(RunAge7, AgeComp)) %>%
   # add sockeye escapement for each age class (total * percent age)
   # add sockeye total return number for each age class
@@ -52,19 +68,22 @@ all_mezdata <- merge(all_mezdata, mez_age, by = "runyear") %>%
   rename(p.age3 = RunAge3, p.age4 = RunAge4, p.age5 = RunAge5, p.age6 = RunAge6)
 
 # Format for plotting
-all_mezdata_long <- all_mezdata %>%
+age_mezdata_long <- age_mezdata %>%
   pivot_longer(cols = "3":"6", names_to = "tr_ageclass", values_to = "tr_count") %>%
   rename(`Age Class` = tr_ageclass)
 
-prop_ages <- all_mezdata %>%
+prop_ages <- age_mezdata %>%
   pivot_longer(cols = "p.age3":"p.age6", names_to = "Age class", values_to = "proportion_age")
 
 # Plot total run by year with age classes:
-ggplot(all_mezdata_long, aes(x = runyear, y = tr_count, fill = `Age Class`)) +
+ggplot(age_mezdata_long, aes(x = runyear, y = tr_count, fill = `Age Class`)) +
   geom_col() +
   xlab("Year") +
   ylab("Sockeye Total Run by year and age class") +
-  theme_minimal()
+  theme_minimal()+
+  scale_x_continuous(breaks = round(seq(min(prop_ages$runyear), max(prop_ages$runyear), 
+                                        by = 2),1)) +
+  theme(axis.text.x = element_text(angle = 60, vjust = 0.5))
 
 # Proportion of age classes by year
 ggplot(prop_ages, aes(x = runyear, y = proportion_age, fill = `Age class`))+
@@ -83,7 +102,7 @@ ggplot(prop_ages, aes(x = runyear, y = proportion_age, fill = `Age class`))+
 # Format identical to ForecastR example - removing escapement and just include total return data,
 # add columns for stock, species etc
 
-mez_forecastr <- all_mezdata_long %>%
+mez_forecastr <- age_mezdata_long %>%
   subset(select = -c(p.age3, p.age4, p.age5, p.age6, Total, 
                      `Meziadin_Total Return`)) %>%
   rename(Run_Year = runyear, Age_Class = `Age Class`, Average_Terminal_Run = tr_count) %>%
@@ -92,7 +111,7 @@ mez_forecastr <- all_mezdata_long %>%
          Stock_Name = "Meziadin",
          Stock_Species = "Sockeye",
          Stock_Abundance = "Terminal Run",
-         Forecasting_Year = "2024") %>%
+         Forecasting_Year = "2025") %>%
   select(Stock_Name, Stock_Species, Stock_Abundance, Forecasting_Year, Run_Year, Brood_Year,
          Age_Class, Average_Terminal_Run) %>%
   mutate(Average_Terminal_Run = ifelse(is.na(Average_Terminal_Run), 0, Average_Terminal_Run))
