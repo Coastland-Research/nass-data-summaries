@@ -2,6 +2,7 @@
 # for Meziadin-specific sockeye run forecast using ForecastR
 library(tidyverse)
 library(scales)
+library(gridExtra)
 
 # Read in Meziadin/Nass TE/TR data:
 mez_nass_TR_TE <- read_csv("data/nass vs mez TR TE new.csv") %>%
@@ -64,7 +65,7 @@ ggplot(all_mezdata, aes(x = runyear, y = `Meziadin_Total Return`)) +
 # Plot by adding aes with line for predicted return, error bars for p25 and p75
 
 ###
-ggplot(predictions, aes(x = runyear)) +
+sibreg <- ggplot(predictions, aes(x = runyear)) +
   geom_col(aes(y = `Meziadin_Total Return`, fill = "Actual Return"), color = "seagreen") +
   geom_point(aes(y = predicted.return, color = "Predicted Return (+/- 25% and 75% prob.)")) +
   geom_errorbar(
@@ -105,7 +106,7 @@ predictions_naive <- full_join(all_mezdata, predictions_naive, by="runyear") %>%
 
 ### Add a line showing the pre-season forecasts
 
-ggplot(predictions_naive, aes(x = runyear)) +
+naive <- ggplot(predictions_naive, aes(x = runyear)) +
   geom_col(aes(y = `Meziadin_Total Return`, fill = "Actual Return"), color = "seagreen") +
   geom_point(aes(y = predicted.return, color = "Predicted Return (+/- 25% and 75% prob.)")) +
   geom_errorbar(
@@ -134,7 +135,7 @@ ggplot(predictions_naive, aes(x = runyear)) +
     legend.position = "top" 
   )
 
-
+grid.arrange(sibreg, naive, nrow = 2)
 # Read in Meziadin age data -----------------------------------------------
 
 mez_age <- read_csv("data/Mez scale data - Andy.csv") %>%
