@@ -1,6 +1,7 @@
 # Code to process (1) Meziadin sockeye run by age data and (2) escapement and total return data
 # for Meziadin-specific sockeye run forecast using ForecastR
 library(tidyverse)
+library(scales)
 
 # Read in Meziadin/Nass TE/TR data:
 mez_nass_TR_TE <- read_csv("data/nass vs mez TR TE new.csv") %>%
@@ -63,18 +64,36 @@ ggplot(all_mezdata, aes(x = runyear, y = `Meziadin_Total Return`)) +
 # bind with total return data - name something like ("predicted return")
 # Plot by adding aes with line for predicted return, error bars for p25 and p75
 
-ggplot(predictions, aes(x = runyear, y = `Meziadin_Total Return`)) +
-  geom_col(fill = "seagreen") +
-  geom_point(aes(x = runyear, y = predicted.return)) +
+###
+ggplot(predictions, aes(x = runyear)) +
+  geom_col(aes(y = `Meziadin_Total Return`, fill = "Actual Return"), color = "seagreen") +
+  geom_point(aes(y = predicted.return, color = "Predicted Return")) +
   geom_errorbar(
-    aes(x = runyear, ymin = p25, ymax = p75),
-    data = predictions, inherit.aes = FALSE) +
-  theme_minimal()+
-  labs(x = "Run Year", y = "Total Return to Meziadin")+
-  scale_x_continuous(breaks = round(seq(min(predictions$runyear), max(predictions$runyear), 
-                                        by = 1),1))+
-  theme(axis.text.x = element_text(angle = 60, vjust = 0.5))
+    aes(ymin = p25, ymax = p75, color = "Predicted Return"),
+    width = 0.2
+  ) +
+  theme_minimal() +
+  labs(
+    x = "Run Year",
+    y = "Total Return to Meziadin"
+  ) +
+  scale_x_continuous(breaks = round(seq(min(predictions$runyear), max(predictions$runyear), by = 1), 1)) +
+  scale_y_continuous(labels = scales::label_comma()) +
+  scale_fill_manual(
+    values = c("Actual Return" = "seagreen"),
+    name = NULL  # Remove "fill" label
+  ) +
+  scale_color_manual(
+    values = c("Predicted Return" = "black"),
+    name = NULL  # Remove "colour" label
+  ) +
+  theme(
+    axis.text.x = element_text(angle = 60, vjust = 0.5),
+    axis.text.y = element_text(angle = 60),
+    legend.position = "top"  # Move legend to the top
+  )
 
+###
 
 # Read in Meziadin age data -----------------------------------------------
 
