@@ -46,7 +46,6 @@ predictions <- full_join(all_mezdata, predictions, by="runyear") %>%
   mutate(predicted.return = as.numeric(predicted.return),
          p25 = as.numeric(p25),
          p75 = as.numeric(p75)) 
-
 # Plot Meziadin total returns by year (no age breakdown)
 ggplot(all_mezdata, aes(x = runyear, y = `Meziadin_Total Return`)) +
   geom_col(fill = "seagreen")+
@@ -87,6 +86,7 @@ ggplot(predictions, aes(x = runyear)) +
     values = c("Predicted Return (+/- 25% and 75% prob.)" = "black"),
     name = NULL  # Remove "colour" label
   ) +
+  ggtitle("Sibling Regression Model") +
   theme(
     axis.text.x = element_text(angle = 60, vjust = 0.5),
     axis.text.y = element_text(angle = 60),
@@ -94,6 +94,46 @@ ggplot(predictions, aes(x = runyear)) +
   )
 
 ###
+# NAIVE MODEL:
+predictions_naive <- read.csv("data/mez_predictions_naive.csv")
+
+predictions_naive <- full_join(all_mezdata, predictions_naive, by="runyear") %>%
+  filter(!is.na(predicted.return)) %>%
+  mutate(predicted.return = as.numeric(predicted.return),
+         p25 = as.numeric(p25),
+         p75 = as.numeric(p75)) 
+
+### Add a line showing the pre-season forecasts
+
+ggplot(predictions_naive, aes(x = runyear)) +
+  geom_col(aes(y = `Meziadin_Total Return`, fill = "Actual Return"), color = "seagreen") +
+  geom_point(aes(y = predicted.return, color = "Predicted Return (+/- 25% and 75% prob.)")) +
+  geom_errorbar(
+    aes(ymin = p25, ymax = p75, color = "Predicted Return (+/- 25% and 75% prob.)"),
+    width = 0.2
+  ) +
+  theme_minimal() +
+  labs(
+    x = "Run Year",
+    y = "Total Return to Meziadin"
+  ) +
+  scale_x_continuous(breaks = round(seq(min(predictions$runyear), max(predictions$runyear), by = 1), 1)) +
+  scale_y_continuous(labels = scales::label_comma()) +
+  scale_fill_manual(
+    values = c("Actual Return" = "seagreen"),
+    name = NULL  # Remove "fill" label
+  ) +
+  scale_color_manual(
+    values = c("Predicted Return (+/- 25% and 75% prob.)" = "black"),
+    name = NULL  # Remove "colour" label
+  ) +
+  ggtitle("Naive Model") +
+  theme(
+    axis.text.x = element_text(angle = 60, vjust = 0.5),
+    axis.text.y = element_text(angle = 60),
+    legend.position = "top" 
+  )
+
 
 # Read in Meziadin age data -----------------------------------------------
 
