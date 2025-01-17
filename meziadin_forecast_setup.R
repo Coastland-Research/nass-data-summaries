@@ -37,6 +37,13 @@ datanew <- bind_rows(datanew, data24)
 # Merge old and new data (without ages):
 all_mezdata <- bind_rows(TR_TE_wide, datanew)
 
+# Read in predicted returns
+predictions <- read.csv("data/mez_predictions.csv")
+
+predictions <- left_join(all_mezdata, predictions, by="runyear") %>%
+  filter(!is.na(predicted.return)) %>%
+  mutate(predicted.return = as.numeric(predicted.return))
+
 # Plot Meziadin total returns by year (no age breakdown)
 ggplot(all_mezdata, aes(x = runyear, y = `Meziadin_Total Return`)) +
   geom_col(fill = "seagreen")+
@@ -45,6 +52,23 @@ ggplot(all_mezdata, aes(x = runyear, y = `Meziadin_Total Return`)) +
   scale_x_continuous(breaks = round(seq(min(all_mezdata$runyear), max(all_mezdata$runyear), 
                                         by = 2),1))+
   theme(axis.text.x = element_text(angle = 60, vjust = 0.5))
+
+### How can I add a line showing the pre-season forecasts
+# Create a csv file for each year by changing forecast year and re-saving.
+# Run each csv through forecastR
+#Save point forecast value using sibling reg 
+# create a data frame of the forecasts
+# bind with total return data - name something like ("predicted return")
+#Plot by adding aes with line for predicted return
+ggplot(predictions, aes(x = runyear, y = `Meziadin_Total Return`)) +
+  geom_col(fill = "seagreen") +
+  geom_point(aes(x = runyear, y = predicted.return)) +
+  theme_minimal()+
+  labs(x = "Run Year", y = "Total Return to Meziadin")+
+  scale_x_continuous(breaks = round(seq(min(all_mezdata$runyear), max(all_mezdata$runyear), 
+                                        by = 2),1))+
+  theme(axis.text.x = element_text(angle = 60, vjust = 0.5))
+# add 25% and 75% percentiles as error bars...
 
 # Read in Meziadin by age data:
 mez_age <- read_csv("data/Mez scale data - Andy.csv") %>%
@@ -135,3 +159,33 @@ mez_forecastr <- mez_forecastr %>%
   mutate(Average_Terminal_Run = replace(Average_Terminal_Run, Average_Terminal_Run==0, 1))
 
 write.csv(mez_forecastr, "~/coastland/nass-data-summaries/data/mez_forecastr.csv", row.names = FALSE)
+
+
+# 2024 run prediction -----------------------------------------------------
+# File for 2024 forecasting year (to compare forecast with actual 2024 run):
+
+# mez_24 <- age_mezdata_long %>%
+#   subset(select = -c(p.age3, p.age4, p.age5, p.age6, Total, 
+#                      `Meziadin_Total Return`)) %>%
+#   rename(Run_Year = runyear, Age_Class = `Age Class`, Average_Terminal_Run = tr_count) %>%
+#   filter(Run_Year != "2024") %>% 
+#   mutate(Brood_Year = Run_Year - as.numeric(Age_Class),
+#          Stock_Name = "Meziadin",
+#          Stock_Species = "Sockeye",
+#          Stock_Abundance = "Terminal Run",
+#          Forecasting_Year = "2024") %>%
+#   select(Stock_Name, Stock_Species, Stock_Abundance, Forecasting_Year, Run_Year, Brood_Year,
+#          Age_Class, Average_Terminal_Run) %>%
+#   mutate(Average_Terminal_Run = ifelse(is.na(Average_Terminal_Run), 0, Average_Terminal_Run))
+# 
+# mez_24 <- mez_24 %>%
+#   mutate(
+#     Stock_Name = ifelse(row_number() == 1, Stock_Name, ""),
+#     Stock_Species = ifelse(row_number() == 1, Stock_Species, ""),
+#     Stock_Abundance = ifelse(row_number() == 1, Stock_Abundance, ""),
+#     Forecasting_Year = ifelse(row_number() == 1, Forecasting_Year, "")
+#   ) %>%
+#   mutate(Average_Terminal_Run = replace(Average_Terminal_Run, Average_Terminal_Run==0, 1))
+# 
+# # write csv
+# write.csv(mez_24, "~/coastland/nass-data-summaries/data/mez_24.csv", row.names = FALSE)
