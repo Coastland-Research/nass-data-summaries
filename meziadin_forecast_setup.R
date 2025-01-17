@@ -67,9 +67,9 @@ ggplot(all_mezdata, aes(x = runyear, y = `Meziadin_Total Return`)) +
 ###
 ggplot(predictions, aes(x = runyear)) +
   geom_col(aes(y = `Meziadin_Total Return`, fill = "Actual Return"), color = "seagreen") +
-  geom_point(aes(y = predicted.return, color = "Predicted Return")) +
+  geom_point(aes(y = predicted.return, color = "Predicted Return (+/- 25% and 75% prob.)")) +
   geom_errorbar(
-    aes(ymin = p25, ymax = p75, color = "Predicted Return"),
+    aes(ymin = p25, ymax = p75, color = "Predicted Return (+/- 25% and 75% prob.)"),
     width = 0.2
   ) +
   theme_minimal() +
@@ -84,7 +84,7 @@ ggplot(predictions, aes(x = runyear)) +
     name = NULL  # Remove "fill" label
   ) +
   scale_color_manual(
-    values = c("Predicted Return" = "black"),
+    values = c("Predicted Return (+/- 25% and 75% prob.)" = "black"),
     name = NULL  # Remove "colour" label
   ) +
   theme(
