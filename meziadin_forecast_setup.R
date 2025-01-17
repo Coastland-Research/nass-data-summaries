@@ -40,9 +40,11 @@ all_mezdata <- bind_rows(TR_TE_wide, datanew)
 # Read in predicted returns
 predictions <- read.csv("data/mez_predictions.csv")
 
-predictions <- left_join(all_mezdata, predictions, by="runyear") %>%
+predictions <- full_join(all_mezdata, predictions, by="runyear") %>%
   filter(!is.na(predicted.return)) %>%
-  mutate(predicted.return = as.numeric(predicted.return))
+  mutate(predicted.return = as.numeric(predicted.return),
+         p25 = as.numeric(p25),
+         p75 = as.numeric(p75)) 
 
 # Plot Meziadin total returns by year (no age breakdown)
 ggplot(all_mezdata, aes(x = runyear, y = `Meziadin_Total Return`)) +
@@ -53,24 +55,29 @@ ggplot(all_mezdata, aes(x = runyear, y = `Meziadin_Total Return`)) +
                                         by = 2),1))+
   theme(axis.text.x = element_text(angle = 60, vjust = 0.5))
 
-### How can I add a line showing the pre-season forecasts
+### Add a line showing the pre-season forecasts
 # Create a csv file for each year by changing forecast year and re-saving.
 # Run each csv through forecastR
-#Save point forecast value using sibling reg 
+# Save sibling reg  point forecast, p25 and p75
 # create a data frame of the forecasts
 # bind with total return data - name something like ("predicted return")
-#Plot by adding aes with line for predicted return
+# Plot by adding aes with line for predicted return, error bars for p25 and p75
+
 ggplot(predictions, aes(x = runyear, y = `Meziadin_Total Return`)) +
   geom_col(fill = "seagreen") +
   geom_point(aes(x = runyear, y = predicted.return)) +
+  geom_errorbar(
+    aes(x = runyear, ymin = p25, ymax = p75),
+    data = predictions, inherit.aes = FALSE) +
   theme_minimal()+
   labs(x = "Run Year", y = "Total Return to Meziadin")+
-  scale_x_continuous(breaks = round(seq(min(all_mezdata$runyear), max(all_mezdata$runyear), 
-                                        by = 2),1))+
+  scale_x_continuous(breaks = round(seq(min(predictions$runyear), max(predictions$runyear), 
+                                        by = 1),1))+
   theme(axis.text.x = element_text(angle = 60, vjust = 0.5))
-# add 25% and 75% percentiles as error bars...
 
-# Read in Meziadin by age data:
+
+# Read in Meziadin age data -----------------------------------------------
+
 mez_age <- read_csv("data/Mez scale data - Andy.csv") %>%
   rename(runyear = Year)
 
