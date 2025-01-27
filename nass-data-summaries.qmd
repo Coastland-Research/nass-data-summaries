@@ -35,6 +35,7 @@ This resource document shows information on salmon escapement and harvest (Canad
 
 ## Summary
 
+
 ```{r}
 #| warning: false
 #| message: false
@@ -53,8 +54,6 @@ ggplot(exploitation, aes(x = Year, y = Fish/100000, fill = Proportion)) +
   facet_wrap(~`Species Name`) +
   theme(axis.text.x = element_text(angle = 45, hjust=1))+
   theme_minimal() 
-
-
 
 ```
 
@@ -85,6 +84,57 @@ Map showing the Nass watershed extent (figure taken from Peter Hall's CSAS paper
 ![Map](nass-map.png){width=400}
 
 ## Sockeye Salmon
+
+```{r}
+#| warning: false
+#| message: false
+#| echo: false
+
+# Read in Meziadin/Nass TE/TR data ----------------------------------------
+
+mez_nass_TR_TE <- read_csv("data/nass vs mez TR TE new.csv") %>%
+  filter(type == "Total Return") %>%
+  drop_na("Nass") %>%
+  rename(runyear = year)
+
+nass_TR_TE <- pivot_wider(mez_nass_TR_TE, names_from = type, values_from = c(Meziadin, Nass)) %>%
+  subset(select = -c(`Meziadin_Total Return`, mez.p, non.mez))
+
+# 2018-2023 data. Need to add returns from all streams for each year to get total Nass return
+datanew <- read.csv("data/TRTC-Results--Nass-Sockeye_kke.csv") %>%
+  subset(select = -c(CU, SpeciesId, T_Idx_E, ExpFactor1, ExpFactor2, AdjSum, ObsE,
+                      ExpFactor3, TE, CDN.Harvest, CDN.ER, Q1, Q2, Q3, ER.Indicator,
+                      ER.Indicator.Lookup, ER.Source, StatArea, TRTC, Total.Harvest,
+                      Total.ER)) %>%
+  filter(Year %in% c("2018", "2019", "2020", "2021", "2022", "2023")) %>%
+  mutate(Total.Run = as.numeric(gsub(",","", Total.Run))) %>%
+  group_by(Year) %>%
+  summarise(`Nass_Total Return` = sum(Total.Run, na.rm = TRUE)) %>%
+  rename(runyear = Year)
+
+# 2024 data from DFO 2024 post-season review
+runyear <- c(2024)
+nass_return <- c(614751) 
+# run size estimate to Gitwinksihlkw fishwheels
+data24 <- data.frame(runyear, nass_return) %>%
+  rename(`Nass_Total Return` = nass_return)
+
+datanew <- bind_rows(datanew, data24)
+
+# Combine old and new datasets
+nass_TR <- bind_rows(nass_TR_TE, datanew)
+
+# Plot Nass total returns by year (no age breakdown)
+ggplot(nass_TR, aes(x = runyear, y = `Nass_Total Return`)) +
+  geom_col(fill = "seagreen")+
+  theme_minimal()+
+  labs(x = "Run Year", y = "Total Return to Nass")+
+  scale_x_continuous(breaks = round(seq(min(nass_TR$runyear), max(nass_TR$runyear), 
+                                        by = 2),1))+
+  theme(axis.text.x = element_text(angle = 60, vjust = 0.5))+
+  ggtitle("Nass Total Sockeye Return by Year")
+
+```
 
 #### Area 3
 ```{r load and format data}
@@ -240,24 +290,36 @@ datanew <- read.csv("data/TRTC-Results--Nass-Sockeye_kke.csv") %>%
   rename(runyear = Year, `Meziadin_Total Return` = Total.Run)%>%
   mutate(`Meziadin_Total Return` = as.numeric(gsub(",","",`Meziadin_Total Return`)))
 
-# Merge old and new data (without ages):
+# ADD 2024 DATA TO NEW DATA:
+# Meziadin total return is the escapement (fishwheel count) plus harvest before the fishwheel
+# (about 49%). So fishwheel + (fishwheel*.49)
+runyear <- c(2024)
+mez_return <- c(735996.1) 
+# calculated as Esc / (1-ER) using Meziadin fishwheel count for Esc and 0.49 for ER 
+data24 <- data.frame(runyear, mez_return) %>%
+  rename(`Meziadin_Total Return` = mez_return)
+
+datanew <- bind_rows(datanew, data24)
 all_mezdata <- bind_rows(TR_TE_wide, datanew)
 
-# Read in Meziadin by age data:
+
 mez_age <- read_csv("data/Mez scale data - Andy.csv") %>%
   rename(runyear = Year)
+
 # new data to 2022
 mez_age_2 <- read_csv("data/Mez ages for Andy.csv") %>%
   filter(Year %in% c("2020", "2021", "2022")) %>%
   rename(runyear = Year) %>%
-  #add row for 2023 with age percentages using the mean from the last 5y (2018-2022)
+  #add row for 2023 and 2024 with age percentages using the mean from the last 5y (2018-2022, and 2019-2023)
   add_row(runyear = 2023, AgeComp = "MeziadinAnnual", RunAge3 = 0.1288244, RunAge4 = 0.4137336, RunAge5 = 0.3906876, RunAge6 = 0.06675444,
-          RunAge7 = 0, Total = 1.00)
+          RunAge7 = 0, Total = 1.00) %>%
+  add_row(runyear = 2024, AgeComp = "MeziadinAnnual", RunAge3 = 0.1345893, RunAge4 = 0.4084802, RunAge5 = 0.3928252, RunAge6 = 0.06410532,
+           RunAge7 = 0, Total = 1.00)
 
 mez_age <- rbind(mez_age, mez_age_2)
 
 # Merge the two dataframes 
-all_mezdata <- merge(all_mezdata, mez_age, by = "runyear") %>%
+age_mezdata <- merge(all_mezdata, mez_age, by = "runyear") %>%
   subset(select = -c(RunAge7, AgeComp)) %>%
   # add sockeye escapement for each age class (total * percent age)
   # add sockeye total return number for each age class
@@ -269,23 +331,24 @@ all_mezdata <- merge(all_mezdata, mez_age, by = "runyear") %>%
   rename(p.age3 = RunAge3, p.age4 = RunAge4, p.age5 = RunAge5, p.age6 = RunAge6)
 
 # Format for plotting
-all_mezdata_long <- all_mezdata %>%
+age_mezdata_long <- age_mezdata %>%
   pivot_longer(cols = "3":"6", names_to = "tr_ageclass", values_to = "tr_count") %>%
   rename(`Age Class` = tr_ageclass)
 
+
 ```
 
-#### Total return of Meziadin sockeye by age class, 1982-2023
+#### Total return of Meziadin sockeye by age class, 1982-2024
 
 ```{r}
 #| echo: false
-all_mezdata_long %>%
+age_mezdata_long %>%
   ggplot(aes(x = runyear, y = tr_count, fill = `Age Class`)) +
   geom_col() +
   theme_minimal() +
   xlab("Year") +
   ylab("Sockeye Total Run by year and age class") +
-  scale_x_continuous(breaks = round(seq(min(all_mezdata_long$runyear), max(all_mezdata_long$runyear), 
+  scale_x_continuous(breaks = round(seq(min(age_mezdata_long$runyear), max(age_mezdata_long$runyear), 
                                         by = 5),1)) +
   theme(axis.text.x = element_text(angle = 60, vjust = 0.5))
 ```
@@ -296,27 +359,160 @@ We are using *ForecastR*, an R package and Shiny app, to predict total returns o
 
 ForecastR uses forecasting models to predict salmon terminal run and escapement, based on data entered by the user. This data can be age-specific and include environmental or biological covariates. Multiple forecasting models can be explored, compared, and ranked using the app. Here we have started forecasting Meziadin sockeye total return using ages with no covariates, and intend to add relevant environmental and/or biological covariates to make these predictive models more informative in the future. Plots shown are using the naive model, which was found to be the best fit for ages classes .... assigns exponentially decreasing weights to past observations (i.e. more recent data points are more important for forecasting), and captures seasonal variation.
 
+#### Total Return vs Predicted Return by year using Sibling Regression Model
+```{r}
+#| warning: false
+#| message: false
+#| echo: false
+ 
+# Read in Meziadin/Nass TE/TR data:
+mez_nass_TR_TE <- read_csv("data/nass vs mez TR TE new.csv") %>%
+  filter(type == "Total Return") %>%
+  drop_na("Meziadin") %>%
+  rename(runyear = year)
+
+# Wide format to have total run and escapement as columns
+TR_TE_wide <- pivot_wider(mez_nass_TR_TE, names_from = type, values_from = c(Meziadin, Nass)) %>%
+  subset(select = -c(`Nass_Total Return`, mez.p, non.mez))
+
+# Read new data (to 2023)
+datanew <- read.csv("data/TRTC-Results--Nass-Sockeye_kke.csv") %>%
+  filter(CU_Name == "Meziadin") %>%
+  subset(select = -c(CU, SpeciesId, T_Idx_E, ExpFactor1, ExpFactor2, AdjSum, ObsE,
+                     ExpFactor3, TE, CDN.Harvest, CDN.ER, Q1, Q2, Q3, ER.Indicator,
+                     ER.Indicator.Lookup, ER.Source, StatArea, TRTC, Total.Harvest,
+                     Total.ER, CU_Name)) %>%
+  filter(Year %in% c("2018", "2019", "2020", "2021", "2022", "2023")) %>%
+  rename(runyear = Year, `Meziadin_Total Return` = Total.Run)%>%
+  mutate(`Meziadin_Total Return` = as.numeric(gsub(",","",`Meziadin_Total Return`)))
+
+# ADD 2024 DATA TO NEW DATA:
+# Meziadin total return is the escapement (fishwheel count) plus harvest before the fishwheel
+# (about 49%). So fishwheel + (fishwheel*.49)
+runyear <- c(2024)
+mez_return <- c(735996.1) 
+# calculated as Esc / (1-ER) using Meziadin fishwheel count for Esc and 0.49 for ER 
+data24 <- data.frame(runyear, mez_return) %>%
+  rename(`Meziadin_Total Return` = mez_return)
+
+datanew <- bind_rows(datanew, data24)
+
+# Merge old and new data (without ages):
+all_mezdata <- bind_rows(TR_TE_wide, datanew)
+
+# Read in predicted returns
+predictions <- read.csv("data/mez_predictions.csv")
+
+predictions <- full_join(all_mezdata, predictions, by="runyear") %>%
+  filter(!is.na(predicted.return)) %>%
+  mutate(predicted.return = as.numeric(predicted.return),
+         p25 = as.numeric(p25),
+         p75 = as.numeric(p75)) 
+
+###
+sibreg <- ggplot(predictions, aes(x = runyear)) +
+  geom_col(aes(y = `Meziadin_Total Return`, fill = "Actual Return"), color = "seagreen") +
+  geom_point(aes(y = predicted.return, color = "Predicted Return (+/- 25% and 75% prob.)")) +
+  geom_errorbar(
+    aes(ymin = p25, ymax = p75, color = "Predicted Return (+/- 25% and 75% prob.)"),
+    width = 0.2
+  ) +
+  theme_minimal() +
+  labs(
+    x = "Run Year",
+    y = "Total Return to Meziadin"
+  ) +
+  scale_x_continuous(breaks = round(seq(min(predictions$runyear), max(predictions$runyear), by = 1), 1)) +
+  scale_y_continuous(labels = scales::label_comma()) +
+  scale_fill_manual(
+    values = c("Actual Return" = "seagreen"),
+    name = NULL  # Remove "fill" label
+  ) +
+  scale_color_manual(
+    values = c("Predicted Return (+/- 25% and 75% prob.)" = "black"),
+    name = NULL  # Remove "colour" label
+  ) +
+  ggtitle("Sibling Regression Model") +
+  theme(
+    axis.text.x = element_text(angle = 60, vjust = 0.5),
+    axis.text.y = element_text(angle = 60),
+    legend.position = "top"  # Move legend to the top
+  )
+print(sibreg)
+
+```
+
+
+#### Total Return vs Predicted Return by year using Naive Model
+```{r}
+#| warning: false
+#| message: false
+#| echo: false
+predictions_naive <- read.csv("data/mez_predictions_naive.csv")
+
+predictions_naive <- full_join(all_mezdata, predictions_naive, by="runyear") %>%
+  filter(!is.na(predicted.return)) %>%
+  mutate(predicted.return = as.numeric(predicted.return),
+         p25 = as.numeric(p25),
+         p75 = as.numeric(p75)) 
+
+
+naive <- ggplot(predictions_naive, aes(x = runyear)) +
+  geom_col(aes(y = `Meziadin_Total Return`, fill = "Actual Return"), color = "seagreen") +
+  geom_point(aes(y = predicted.return, color = "Predicted Return (+/- 25% and 75% prob.)")) +
+  geom_errorbar(
+    aes(ymin = p25, ymax = p75, color = "Predicted Return (+/- 25% and 75% prob.)"),
+    width = 0.2
+  ) +
+  theme_minimal() +
+  labs(
+    x = "Run Year",
+    y = "Total Return to Meziadin"
+  ) +
+  scale_x_continuous(breaks = round(seq(min(predictions$runyear), max(predictions$runyear), by = 1), 1)) +
+  scale_y_continuous(labels = scales::label_comma()) +
+  scale_fill_manual(
+    values = c("Actual Return" = "seagreen"),
+    name = NULL  # Remove "fill" label
+  ) +
+  scale_color_manual(
+    values = c("Predicted Return (+/- 25% and 75% prob.)" = "black"),
+    name = NULL  # Remove "colour" label
+  ) +
+  ggtitle("Naive Model") +
+  theme(
+    axis.text.x = element_text(angle = 60, vjust = 0.5),
+    axis.text.y = element_text(angle = 60),
+    legend.position = "top" 
+  )
+
+
+print(naive)
+```
+
+
 #### Observed vs fitted return numbers using Naive model for Age Class 3
 
-Data for age-3 sockeye is sparse as the total run for this age class is zero for most years between 1982 and 2017.
+Age 3 sockeye must be predicted using the naive model (forecast based on avg of the 5 previous years) because there is no younger age class to relate it to in a sibling regression.
 
-![Age 3 sockeye forecasted returns](age3_naive.png)\
+![Age 3 sockeye forecasted returns](age3.png)
 
-#### Plot of observed vs fitted return numbers using Naive model for Age Class 4
+#### Plot of observed vs fitted return numbers using sibling regression model for Age Class 4
 
-![Age 4 sockeye forecasted returns](age4_naive.png)
+![Age 4 sockeye forecasted returns](age4.png)
 
-#### Observed vs fitted return numbers using Naive model for Age Class 5
+#### Observed vs fitted return numbers using sibling regression model for Age Class 5
 
-![Age 5 sockeye forecasted returns](age5_naive.png)
+![Age 5 sockeye forecasted returns](age5.png)
 
-#### Observed vs fitted return numbers using Naive model for Age Class 6
+#### Observed vs fitted return numbers using sibling regression model for Age Class 6
 
-![Age 6 sockeye forecasted returns](age6_naive.png)
+![Age 6 sockeye forecasted returns](age6.png)
 
 #### Forecast plot showing the distribution of forecasted return estimates by age
 
 ![Variation in forecast abundance by age class](forecastplot.png)
+
 
 ## Chinook Salmon
 #### Area 3

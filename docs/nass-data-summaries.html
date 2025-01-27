@@ -165,6 +165,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="sockeye-salmon" class="level2">
 <h2 class="anchored" data-anchor-id="sockeye-salmon">Sockeye Salmon</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="nass-data-summaries_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 <section id="area-3" class="level4">
 <h4 class="anchored" data-anchor-id="area-3">Area 3</h4>
 <div class="cell">
@@ -283,13 +292,13 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="meziadin-sockeye">Meziadin Sockeye</h3>
 <p>The Meziadin River is a major tributary to the Nass River in northwestern British Columbia, an important area home to five species of Pacific salmon. Sockeye salmon returning to the Meziadin system comprise a significant proportion of the total Nass sockeye run. Since the creation of the Meziadin Fishway in 1966, it has been found that 70-80% of Nass sockeye return to the Meziadin system via the Meziadin River. Meziadin sockeye are a highly valued and culturally significant food source for Gitanyow and Nisga’a First Nations, and also harvested in Alaskan commercial fisheries during their ocean migration.</p>
 <p>Predicting the sockeye returning to the Meziadin is important for understanding the conservation status of this population. We are working to create a Meziadin-specific return forecast for sockeye salmon using the ForecastR tool.</p>
-<section id="total-return-of-meziadin-sockeye-by-age-class-1982-2023" class="level4">
-<h4 class="anchored" data-anchor-id="total-return-of-meziadin-sockeye-by-age-class-1982-2023">Total return of Meziadin sockeye by age class, 1982-2023</h4>
+<section id="total-return-of-meziadin-sockeye-by-age-class-1982-2024" class="level4">
+<h4 class="anchored" data-anchor-id="total-return-of-meziadin-sockeye-by-age-class-1982-2024">Total return of Meziadin sockeye by age class, 1982-2024</h4>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="nass-data-summaries_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="nass-data-summaries_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -300,35 +309,63 @@ ul.task-list li input[type="checkbox"] {
 <p>We are using <em>ForecastR</em>, an R package and Shiny app, to predict total returns of sockeye salmon from the Meziadin system based on previous years’ data on Meziadin total return and escapement. The Meziadin total return data is a subset of the Nass total return, including escapement plus the salmon harvested in fisheries which do not make it back to spawning grounds. The sockeye total run numbers for each year are categorized by age, with sockeye separated into age classes 3, 4, 5, and 6.</p>
 <p>ForecastR uses forecasting models to predict salmon terminal run and escapement, based on data entered by the user. This data can be age-specific and include environmental or biological covariates. Multiple forecasting models can be explored, compared, and ranked using the app. Here we have started forecasting Meziadin sockeye total return using ages with no covariates, and intend to add relevant environmental and/or biological covariates to make these predictive models more informative in the future. Plots shown are using the naive model, which was found to be the best fit for ages classes …. assigns exponentially decreasing weights to past observations (i.e.&nbsp;more recent data points are more important for forecasting), and captures seasonal variation.</p>
 </section>
+<section id="total-return-vs-predicted-return-by-year-using-sibling-regression-model" class="level4">
+<h4 class="anchored" data-anchor-id="total-return-vs-predicted-return-by-year-using-sibling-regression-model">Total Return vs Predicted Return by year using Sibling Regression Model</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="nass-data-summaries_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="total-return-vs-predicted-return-by-year-using-naive-model" class="level4">
+<h4 class="anchored" data-anchor-id="total-return-vs-predicted-return-by-year-using-naive-model">Total Return vs Predicted Return by year using Naive Model</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="nass-data-summaries_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-3" class="level4">
 <h4 class="anchored" data-anchor-id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-3">Observed vs fitted return numbers using Naive model for Age Class 3</h4>
-<p>Data for age-3 sockeye is sparse as the total run for this age class is zero for most years between 1982 and 2017.</p>
-<p><img src="age3_naive.png" class="img-fluid" alt="Age 3 sockeye forecasted returns"><br>
-</p>
-</section>
-<section id="plot-of-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-4" class="level4">
-<h4 class="anchored" data-anchor-id="plot-of-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-4">Plot of observed vs fitted return numbers using Naive model for Age Class 4</h4>
+<p>Age 3 sockeye must be predicted using the naive model (forecast based on avg of the 5 previous years) because there is no younger age class to relate it to in a sibling regression.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="age4_naive.png" class="img-fluid figure-img"></p>
+<p><img src="age3.png" class="img-fluid figure-img"></p>
+<figcaption>Age 3 sockeye forecasted returns</figcaption>
+</figure>
+</div>
+</section>
+<section id="plot-of-observed-vs-fitted-return-numbers-using-sibling-regression-model-for-age-class-4" class="level4">
+<h4 class="anchored" data-anchor-id="plot-of-observed-vs-fitted-return-numbers-using-sibling-regression-model-for-age-class-4">Plot of observed vs fitted return numbers using sibling regression model for Age Class 4</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="age4.png" class="img-fluid figure-img"></p>
 <figcaption>Age 4 sockeye forecasted returns</figcaption>
 </figure>
 </div>
 </section>
-<section id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-5" class="level4">
-<h4 class="anchored" data-anchor-id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-5">Observed vs fitted return numbers using Naive model for Age Class 5</h4>
+<section id="observed-vs-fitted-return-numbers-using-sibling-regression-model-for-age-class-5" class="level4">
+<h4 class="anchored" data-anchor-id="observed-vs-fitted-return-numbers-using-sibling-regression-model-for-age-class-5">Observed vs fitted return numbers using sibling regression model for Age Class 5</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="age5_naive.png" class="img-fluid figure-img"></p>
+<p><img src="age5.png" class="img-fluid figure-img"></p>
 <figcaption>Age 5 sockeye forecasted returns</figcaption>
 </figure>
 </div>
 </section>
-<section id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-6" class="level4">
-<h4 class="anchored" data-anchor-id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-6">Observed vs fitted return numbers using Naive model for Age Class 6</h4>
+<section id="observed-vs-fitted-return-numbers-using-sibling-regression-model-for-age-class-6" class="level4">
+<h4 class="anchored" data-anchor-id="observed-vs-fitted-return-numbers-using-sibling-regression-model-for-age-class-6">Observed vs fitted return numbers using sibling regression model for Age Class 6</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="age6_naive.png" class="img-fluid figure-img"></p>
+<p><img src="age6.png" class="img-fluid figure-img"></p>
 <figcaption>Age 6 sockeye forecasted returns</figcaption>
 </figure>
 </div>

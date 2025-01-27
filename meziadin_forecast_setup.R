@@ -4,7 +4,9 @@ library(tidyverse)
 library(scales)
 library(gridExtra)
 
-# Read in Meziadin/Nass TE/TR data:
+
+# Read in Meziadin/Nass TE/TR data ----------------------------------------
+
 mez_nass_TR_TE <- read_csv("data/nass vs mez TR TE new.csv") %>%
   filter(type == "Total Return") %>%
   drop_na("Meziadin") %>%
@@ -14,7 +16,9 @@ mez_nass_TR_TE <- read_csv("data/nass vs mez TR TE new.csv") %>%
 TR_TE_wide <- pivot_wider(mez_nass_TR_TE, names_from = type, values_from = c(Meziadin, Nass)) %>%
   subset(select = -c(`Nass_Total Return`, mez.p, non.mez))
 
-# Read new data (to 2023)
+
+# Read new data (to 2023) -------------------------------------------------
+
 datanew <- read.csv("data/TRTC-Results--Nass-Sockeye_kke.csv") %>%
   filter(CU_Name == "Meziadin") %>%
   subset(select = -c(CU, SpeciesId, T_Idx_E, ExpFactor1, ExpFactor2, AdjSum, ObsE,
@@ -25,7 +29,9 @@ datanew <- read.csv("data/TRTC-Results--Nass-Sockeye_kke.csv") %>%
   rename(runyear = Year, `Meziadin_Total Return` = Total.Run)%>%
   mutate(`Meziadin_Total Return` = as.numeric(gsub(",","",`Meziadin_Total Return`)))
 
-# ADD 2024 DATA TO NEW DATA:
+
+# ADD 2024 DATA -----------------------------------------------------------
+
 # Meziadin total return is the escapement (fishwheel count) plus harvest before the fishwheel
 # (about 49%). So fishwheel + (fishwheel*.49)
 runyear <- c(2024)
@@ -39,7 +45,9 @@ datanew <- bind_rows(datanew, data24)
 # Merge old and new data (without ages):
 all_mezdata <- bind_rows(TR_TE_wide, datanew)
 
-# Read in predicted returns
+
+# Returns vs Predicted - read in forecastR predictions data -------------------------
+
 predictions <- read.csv("data/mez_predictions.csv")
 
 predictions <- full_join(all_mezdata, predictions, by="runyear") %>%
@@ -47,6 +55,7 @@ predictions <- full_join(all_mezdata, predictions, by="runyear") %>%
   mutate(predicted.return = as.numeric(predicted.return),
          p25 = as.numeric(p25),
          p75 = as.numeric(p75)) 
+
 # Plot Meziadin total returns by year (no age breakdown)
 ggplot(all_mezdata, aes(x = runyear, y = `Meziadin_Total Return`)) +
   geom_col(fill = "seagreen")+
@@ -136,6 +145,7 @@ naive <- ggplot(predictions_naive, aes(x = runyear)) +
   )
 
 grid.arrange(sibreg, naive, nrow = 2)
+
 # Read in Meziadin age data -----------------------------------------------
 
 mez_age <- read_csv("data/Mez scale data - Andy.csv") %>%
@@ -151,9 +161,16 @@ mez_age_2 <- read_csv("data/Mez ages for Andy.csv") %>%
   add_row(runyear = 2024, AgeComp = "MeziadinAnnual", RunAge3 = 0.1345893, RunAge4 = 0.4084802, RunAge5 = 0.3928252, RunAge6 = 0.06410532,
            RunAge7 = 0, Total = 1.00)
 
-mez_age <- rbind(mez_age, mez_age_2)
+`%nin%` <- Negate(`%in%`)
 
-# Merge the two dataframes 
+mez_age <- rbind(mez_age, mez_age_2) %>%
+  filter(runyear %nin% c(2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023))
+# Read in age comp data using jack proportions from Mez fishway:
+mez_new.p <- read_csv("data/mez_new.p.csv")
+mez_age <- rbind(mez_age, mez_new.p)
+
+# Merge TR data and age data ----------------------------------------------
+
 age_mezdata <- merge(all_mezdata, mez_age, by = "runyear") %>%
   subset(select = -c(RunAge7, AgeComp)) %>%
   # add sockeye escapement for each age class (total * percent age)
@@ -173,7 +190,9 @@ age_mezdata_long <- age_mezdata %>%
 prop_ages <- age_mezdata %>%
   pivot_longer(cols = "p.age3":"p.age6", names_to = "Age class", values_to = "proportion_age")
 
-# Plot total run by year with age classes:
+
+# Plot total run by year with age classes ---------------------------------
+
 ggplot(age_mezdata_long, aes(x = runyear, y = tr_count, fill = `Age Class`)) +
   geom_col() +
   xlab("Year") +
@@ -183,7 +202,9 @@ ggplot(age_mezdata_long, aes(x = runyear, y = tr_count, fill = `Age Class`)) +
                                         by = 2),1)) +
   theme(axis.text.x = element_text(angle = 60, vjust = 0.5))
 
-# Proportion of age classes by year
+
+# Proportion of age classes by year ---------------------------------------
+
 ggplot(prop_ages, aes(x = runyear, y = proportion_age, fill = `Age class`))+
   geom_col() +
   theme_minimal() +
@@ -195,10 +216,6 @@ ggplot(prop_ages, aes(x = runyear, y = proportion_age, fill = `Age class`))+
 
 
 # FORMATTING FOR FORECASTR ------------------------------------------------
-
-
-# Format identical to ForecastR example - removing escapement and just include total return data,
-# add columns for stock, species etc
 
 mez_forecastr <- age_mezdata_long %>%
   subset(select = -c(p.age3, p.age4, p.age5, p.age6, Total, 
@@ -214,7 +231,6 @@ mez_forecastr <- age_mezdata_long %>%
          Age_Class, Average_Terminal_Run) %>%
   mutate(Average_Terminal_Run = ifelse(is.na(Average_Terminal_Run), 0, Average_Terminal_Run))
 
-
 # remove values from columns 1-4, except for the first row
 mez_forecastr <- mez_forecastr %>%
   mutate(
@@ -226,7 +242,6 @@ mez_forecastr <- mez_forecastr %>%
   mutate(Average_Terminal_Run = replace(Average_Terminal_Run, Average_Terminal_Run==0, 1))
 
 write.csv(mez_forecastr, "~/coastland/nass-data-summaries/data/mez_forecastr.csv", row.names = FALSE)
-
 
 # 2024 run prediction -----------------------------------------------------
 # File for 2024 forecasting year (to compare forecast with actual 2024 run):
