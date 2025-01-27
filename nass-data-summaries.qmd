@@ -495,23 +495,23 @@ print(naive)
 
 Age 3 sockeye must be predicted using the naive model (forecast based on avg of the 5 previous years) because there is no younger age class to relate it to in a sibling regression.
 
-![Age 3 sockeye forecasted returns](age3.png)
+![Age 3 sockeye forecasted returns](age3n.png)
 
-#### Plot of observed vs fitted return numbers using sibling regression model for Age Class 4
+#### Plot of observed vs fitted return numbers using naive model for Age Class 4
 
-![Age 4 sockeye forecasted returns](age4.png)
+![Age 4 sockeye forecasted returns](age4n.png)
 
-#### Observed vs fitted return numbers using sibling regression model for Age Class 5
+#### Observed vs fitted return numbers using naive model for Age Class 5
 
-![Age 5 sockeye forecasted returns](age5.png)
+![Age 5 sockeye forecasted returns](age5n.png)
 
-#### Observed vs fitted return numbers using sibling regression model for Age Class 6
+#### Observed vs fitted return numbers using naive model for Age Class 6
 
-![Age 6 sockeye forecasted returns](age6.png)
+![Age 6 sockeye forecasted returns](age6n.png)
 
 #### Forecast plot showing the distribution of forecasted return estimates by age
 
-![Variation in forecast abundance by age class](forecastplot.png)
+![Variation in forecast abundance by age class](forecastn.png)
 
 
 ## Chinook Salmon
@@ -842,6 +842,115 @@ per<-ggplot(er.plots, aes(x = Year, y = ER,color=Area)) +
 per
 ```
 
+## Pink Salmon (odd years)
+####  Area 3
+```{r pink odd esc plot}
+#| message: false
+#| echo: false
+#| warning: false
+
+esc.plots <- allyears %>%
+  filter(`Species Name`=="Pink (odd years)")%>%
+  pivot_longer(c(`Total Harvest`, `Escapement`), names_to = "Proportion", values_to = "Fish")%>%
+  mutate(Type=ifelse(Year==2024,"Forecasted\nTRTC",Proportion))
+
+pe<-ggplot(esc.plots, aes(x = Year, y = Fish, fill = factor(Type,levels=c("Total Harvest","Escapement","Forecasted\nTRTC"))))+
+  geom_col(color="black",width = 1)+
+  scale_fill_manual(values=c("grey90","grey20","blue"))+
+  guides(fill=guide_legend(title=""))+
+  xlim(c(1960,2025))+
+  theme_bw()+
+  labs(y="Number of Pink Salmon")
+
+pe
+
+```
+
+####  Odd-Year Pink Escapement by Conservation Unit
+```{r load CU data pink odd}
+#| include: false
+#| message: false
+#| warning: false
+
+CUs <- fread("data/NUSEDS escapement by CU 20220902.csv") %>%
+  pivot_longer(`2021`:`1950`, names_to = "Year", values_to = "Escapement") %>%
+  mutate(Year = as.numeric(Year))
+
+area3 <- CUs %>%
+  filter(AREA == "3B" | AREA == "3A") %>%
+  filter(SPECIES=="Pink") %>%
+  filter(!is.na(Escapement))
+```
+
+```{r plot annual escapement by CU pink odd}
+#| warning: false
+#| message: false
+#| echo: false
+#| layout-ncol: 2
+
+for (i in 1:length(unique(area3$CU_NAME))){
+  CU <- unique(area3$CU_NAME)[i]
+  filtered_data <- area3 %>% filter(CU_NAME == CU)
+  pl <- ggplot(filtered_data, aes(x = Year, y = Escapement))+
+    geom_col(fill = "grey60")+
+    xlim(c(1980,2025))+
+    theme_bw()+
+    labs(y="Number of Pink Salmon", x = "Year",
+         title = paste(CU))
+  print(pl)
+}
+
+```
+####  Odd-Year Pink Escapement by CU and Stream
+```{r plot pink odd annual escapement by CU and stream}
+#| warning: false
+#| message: false
+#| echo: false
+#| layout-ncol: 1
+
+nb.cols <- 71
+mycolors <- colorRampPalette(brewer.pal(8, "Dark2"))(nb.cols)
+
+for (i in 1:length(unique(area3$CU_NAME))){
+  CU <- unique(area3$CU_NAME)[i]
+  filtered_data <- area3 %>% filter(CU_NAME == CU)
+  pl <- ggplot(filtered_data, aes(x = Year, y = filtered_data$WATERBODY, size = Escapement, color = filtered_data$WATERBODY))+
+    geom_point() +
+    scale_color_manual(values = mycolors) +
+    xlim(c(1980,2025))+
+    theme_bw()+
+    guides(color="none")+
+    labs(y=NULL, x = "Year",
+         title = paste(CU), fill = "Stream name")+
+    theme(plot.title = element_text(size=10),
+          axis.text.y = element_text(size=5)) +
+        theme(axis.text.y = element_text(angle = 30, vjust = 0.5, hjust=1))
+
+  print(pl)
+}
+```
+####  Exploitation Rates
+```{r pink odd er plot}
+#| warning: false
+#| message: false
+#| echo: false
+
+er.plots<-allyears %>%
+  filter(`Species Name`== "Pink (odd years)",Year<2025)%>%
+  pivot_longer(c(`SEAK ER`, `CDN ER`,`Total ER`), names_to = "Area", values_to = "ER")
+
+per<-ggplot(er.plots, aes(x = Year, y = ER,color=Area)) +
+  geom_point()+geom_line()+
+  scale_color_manual(values=c("red","blue","black"))+
+  guides(color=guide_legend(title=NULL))+
+  theme_bw()+
+  labs(y="Exploitation Rate")+
+  ggtitle("Pink Salmon (odd-year) Exploitation Rates (1960-2025)")+
+  ylim(0,1)+
+  xlim(1960,2025)
+
+per
+```
 ## Chum Salmon
 ####  Area 3
 ```{r chum esc plot}
