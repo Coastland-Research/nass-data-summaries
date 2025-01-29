@@ -513,7 +513,6 @@ Age 3 sockeye must be predicted using the naive model (forecast based on avg of 
 
 ![Variation in forecast abundance by age class](forecastn.png)
 
-
 ## Chinook Salmon
 #### Area 3
 ```{r chinook esc plot}

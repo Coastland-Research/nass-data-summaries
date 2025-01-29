@@ -148,26 +148,28 @@ grid.arrange(sibreg, naive, nrow = 2)
 
 # Read in Meziadin age data -----------------------------------------------
 
-mez_age <- read_csv("data/Mez scale data - Andy.csv") %>%
-  rename(runyear = Year)
+# mez_age <- read_csv("data/Mez scale data - Andy.csv") %>%
+#   rename(runyear = Year)
 
-# new data to 2022
-mez_age_2 <- read_csv("data/Mez ages for Andy.csv") %>%
-  filter(Year %in% c("2020", "2021", "2022")) %>%
-  rename(runyear = Year) %>%
-  #add row for 2023 and 2024 with age percentages using the mean from the last 5y (2018-2022, and 2019-2023)
-  add_row(runyear = 2023, AgeComp = "MeziadinAnnual", RunAge3 = 0.1288244, RunAge4 = 0.4137336, RunAge5 = 0.3906876, RunAge6 = 0.06675444,
-          RunAge7 = 0, Total = 1.00) %>%
-  add_row(runyear = 2024, AgeComp = "MeziadinAnnual", RunAge3 = 0.1345893, RunAge4 = 0.4084802, RunAge5 = 0.3928252, RunAge6 = 0.06410532,
-           RunAge7 = 0, Total = 1.00)
+mez_age <- read_csv("data/mez_fishwheel.p.csv")
 
-`%nin%` <- Negate(`%in%`)
-
-mez_age <- rbind(mez_age, mez_age_2) %>%
-  filter(runyear %nin% c(2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023))
-# Read in age comp data using jack proportions from Mez fishway:
-mez_new.p <- read_csv("data/mez_new.p.csv")
-mez_age <- rbind(mez_age, mez_new.p)
+# # new data to 2022
+# mez_age_2 <- read_csv("data/Mez ages for Andy.csv") %>%
+#   filter(Year %in% c("2020", "2021", "2022")) %>%
+#   rename(runyear = Year) %>%
+#   #add row for 2023 and 2024 with age percentages using the mean from the last 5y (2018-2022, and 2019-2023)
+#   add_row(runyear = 2023, AgeComp = "MeziadinAnnual", RunAge3 = 0.1288244, RunAge4 = 0.4137336, RunAge5 = 0.3906876, RunAge6 = 0.06675444,
+#           RunAge7 = 0, Total = 1.00) %>%
+#   add_row(runyear = 2024, AgeComp = "MeziadinAnnual", RunAge3 = 0.1345893, RunAge4 = 0.4084802, RunAge5 = 0.3928252, RunAge6 = 0.06410532,
+#            RunAge7 = 0, Total = 1.00)
+# 
+# `%nin%` <- Negate(`%in%`)
+# 
+# mez_age <- rbind(mez_age, mez_age_2) %>%
+#   filter(runyear %nin% c(2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023))
+# # Read in age comp data using jack proportions from Mez fishway:
+# mez_new.p <- read_csv("data/mez_new.p.csv")
+# mez_age <- rbind(mez_age, mez_new.p)
 
 # Merge TR data and age data ----------------------------------------------
 

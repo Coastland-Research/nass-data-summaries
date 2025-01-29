@@ -92,7 +92,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#chinook-salmon" id="toc-chinook-salmon" class="nav-link" data-scroll-target="#chinook-salmon">Chinook Salmon</a></li>
   <li><a href="#coho-salmon" id="toc-coho-salmon" class="nav-link" data-scroll-target="#coho-salmon">Coho Salmon</a></li>
   <li><a href="#pink-salmon-even-years" id="toc-pink-salmon-even-years" class="nav-link" data-scroll-target="#pink-salmon-even-years">Pink Salmon (even years)</a></li>
-  <li><a href="#pink-salmon-odd-years" id="toc-pink-salmon-odd-years" class="nav-link" data-scroll-target="#pink-salmon-odd-years">Pink Salmon (odd years)</a></li>
   <li><a href="#chum-salmon" id="toc-chum-salmon" class="nav-link" data-scroll-target="#chum-salmon">Chum Salmon</a></li>
   <li><a href="#steelhead-trout" id="toc-steelhead-trout" class="nav-link" data-scroll-target="#steelhead-trout">Steelhead Trout</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
@@ -166,15 +165,6 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="sockeye-salmon" class="level2">
 <h2 class="anchored" data-anchor-id="sockeye-salmon">Sockeye Salmon</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="nass-data-summaries_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
 <section id="area-3" class="level4">
 <h4 class="anchored" data-anchor-id="area-3">Area 3</h4>
 <div class="cell">
@@ -299,7 +289,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="nass-data-summaries_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="nass-data-summaries_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -316,7 +306,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="nass-data-summaries_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="nass-data-summaries_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -328,7 +318,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="nass-data-summaries_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="nass-data-summaries_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -336,37 +326,33 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-3" class="level4">
 <h4 class="anchored" data-anchor-id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-3">Observed vs fitted return numbers using Naive model for Age Class 3</h4>
-<p>Age 3 sockeye must be predicted using the naive model (forecast based on avg of the 5 previous years) because there is no younger age class to relate it to in a sibling regression.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="age3n.png" class="img-fluid figure-img"></p>
-<figcaption>Age 3 sockeye forecasted returns</figcaption>
-</figure>
-</div>
+<p>Data for age-3 sockeye is sparse as the total run for this age class is zero for most years between 1982 and 2017.</p>
+<p><img src="age3_naive.png" class="img-fluid" alt="Age 3 sockeye forecasted returns"><br>
+</p>
 </section>
 <section id="plot-of-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-4" class="level4">
-<h4 class="anchored" data-anchor-id="plot-of-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-4">Plot of observed vs fitted return numbers using naive model for Age Class 4</h4>
+<h4 class="anchored" data-anchor-id="plot-of-observed-vs-fitted-return-numbers-using-naive-model-for-age-class-4">Plot of observed vs fitted return numbers using Naive model for Age Class 4</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="age4n.png" class="img-fluid figure-img"></p>
+<p><img src="age4_naive.png" class="img-fluid figure-img"></p>
 <figcaption>Age 4 sockeye forecasted returns</figcaption>
 </figure>
 </div>
 </section>
 <section id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-5" class="level4">
-<h4 class="anchored" data-anchor-id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-5">Observed vs fitted return numbers using naive model for Age Class 5</h4>
+<h4 class="anchored" data-anchor-id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-5">Observed vs fitted return numbers using Naive model for Age Class 5</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="age5n.png" class="img-fluid figure-img"></p>
+<p><img src="age5_naive.png" class="img-fluid figure-img"></p>
 <figcaption>Age 5 sockeye forecasted returns</figcaption>
 </figure>
 </div>
 </section>
 <section id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-6" class="level4">
-<h4 class="anchored" data-anchor-id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-6">Observed vs fitted return numbers using naive model for Age Class 6</h4>
+<h4 class="anchored" data-anchor-id="observed-vs-fitted-return-numbers-using-naive-model-for-age-class-6">Observed vs fitted return numbers using Naive model for Age Class 6</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="age6n.png" class="img-fluid figure-img"></p>
+<p><img src="age6_naive.png" class="img-fluid figure-img"></p>
 <figcaption>Age 6 sockeye forecasted returns</figcaption>
 </figure>
 </div>
@@ -375,7 +361,7 @@ ul.task-list li input[type="checkbox"] {
 <h4 class="anchored" data-anchor-id="forecast-plot-showing-the-distribution-of-forecasted-return-estimates-by-age">Forecast plot showing the distribution of forecasted return estimates by age</h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="forecastn.png" class="img-fluid figure-img"></p>
+<p><img src="forecastplot.png" class="img-fluid figure-img"></p>
 <figcaption>Variation in forecast abundance by age class</figcaption>
 </figure>
 </div>
@@ -587,81 +573,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </section>
 </section>
-<section id="pink-salmon-odd-years" class="level2">
-<h2 class="anchored" data-anchor-id="pink-salmon-odd-years">Pink Salmon (odd years)</h2>
-<section id="area-3-4" class="level4">
-<h4 class="anchored" data-anchor-id="area-3-4">Area 3</h4>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="nass-data-summaries_files/figure-html/pink odd esc plot-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="odd-year-pink-escapement-by-conservation-unit" class="level4">
-<h4 class="anchored" data-anchor-id="odd-year-pink-escapement-by-conservation-unit">Odd-Year Pink Escapement by Conservation Unit</h4>
-<div>
-
-</div>
-<div class="cell quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="nass-data-summaries_files/figure-html/plot annual escapement by CU pink odd-1.png" class="img-fluid" width="672"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="nass-data-summaries_files/figure-html/plot annual escapement by CU pink odd-2.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="nass-data-summaries_files/figure-html/plot annual escapement by CU pink odd-3.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</div>
-</section>
-<section id="odd-year-pink-escapement-by-cu-and-stream" class="level4">
-<h4 class="anchored" data-anchor-id="odd-year-pink-escapement-by-cu-and-stream">Odd-Year Pink Escapement by CU and Stream</h4>
-<div>
-
-</div>
-<div class="cell quarto-layout-panel" data-layout-ncol="1">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img src="nass-data-summaries_files/figure-html/plot pink odd annual escapement by CU and stream-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img src="nass-data-summaries_files/figure-html/plot pink odd annual escapement by CU and stream-2.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img src="nass-data-summaries_files/figure-html/plot pink odd annual escapement by CU and stream-3.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</div>
-</section>
-<section id="exploitation-rates-4" class="level4">
-<h4 class="anchored" data-anchor-id="exploitation-rates-4">Exploitation Rates</h4>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="nass-data-summaries_files/figure-html/pink odd er plot-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-</section>
 <section id="chum-salmon" class="level2">
 <h2 class="anchored" data-anchor-id="chum-salmon">Chum Salmon</h2>
-<section id="area-3-5" class="level4">
-<h4 class="anchored" data-anchor-id="area-3-5">Area 3</h4>
+<section id="area-3-4" class="level4">
+<h4 class="anchored" data-anchor-id="area-3-4">Area 3</h4>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -720,8 +635,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="exploitation-rates-5" class="level4">
-<h4 class="anchored" data-anchor-id="exploitation-rates-5">Exploitation Rates</h4>
+<section id="exploitation-rates-4" class="level4">
+<h4 class="anchored" data-anchor-id="exploitation-rates-4">Exploitation Rates</h4>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -735,8 +650,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="steelhead-trout" class="level2">
 <h2 class="anchored" data-anchor-id="steelhead-trout">Steelhead Trout</h2>
-<section id="area-3-6" class="level4">
-<h4 class="anchored" data-anchor-id="area-3-6">Area 3</h4>
+<section id="area-3-5" class="level4">
+<h4 class="anchored" data-anchor-id="area-3-5">Area 3</h4>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -753,8 +668,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="streams" class="level4">
 <h4 class="anchored" data-anchor-id="streams">Streams</h4>
 </section>
-<section id="exploitation-rates-6" class="level4">
-<h4 class="anchored" data-anchor-id="exploitation-rates-6">Exploitation Rates</h4>
+<section id="exploitation-rates-5" class="level4">
+<h4 class="anchored" data-anchor-id="exploitation-rates-5">Exploitation Rates</h4>
 </section>
 </section>
 <section id="references" class="level1">
