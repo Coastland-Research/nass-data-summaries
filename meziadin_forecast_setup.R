@@ -148,7 +148,6 @@ sibreg <- ggplot(predictions, aes(x = runyear)) +
 # grid.arrange(sibreg, naive, nrow = 2)
 
 # Read in Meziadin age data -----------------------------------------------
-
 mez_age <- read_csv("data/mez_fishwheel.p.csv")
 
 # # new data to 2022
@@ -307,3 +306,4 @@ for (file in file_list) {
 
 print(pred_allyrs)
 write.csv(pred_allyrs, "mez_forecasts_new.csv", row.names = FALSE)
+
