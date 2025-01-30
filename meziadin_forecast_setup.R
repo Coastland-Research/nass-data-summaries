@@ -48,13 +48,13 @@ all_mezdata <- bind_rows(TR_TE_wide, datanew)
 
 # Returns vs Predicted - read in forecastR predictions data -------------------------
 
-predictions <- read.csv("data/mez_predictions.csv")
+predictions <- read.csv("data/mez_forecasts_new.csv")
 
 predictions <- full_join(all_mezdata, predictions, by="runyear") %>%
-  filter(!is.na(predicted.return)) %>%
-  mutate(predicted.return = as.numeric(predicted.return),
-         p25 = as.numeric(p25),
-         p75 = as.numeric(p75)) 
+  filter(!is.na(predicted_return)) %>%
+  mutate(predicted_return = as.numeric(gsub(",","", predicted_return)),
+         p25 = as.numeric(gsub(",","", p25)),
+         p75 = as.numeric(gsub(",","", p75)))
 
 # Plot Meziadin total returns by year (no age breakdown)
 ggplot(all_mezdata, aes(x = runyear, y = `Meziadin_Total Return`)) +
@@ -76,7 +76,7 @@ ggplot(all_mezdata, aes(x = runyear, y = `Meziadin_Total Return`)) +
 ###
 sibreg <- ggplot(predictions, aes(x = runyear)) +
   geom_col(aes(y = `Meziadin_Total Return`, fill = "Actual Return"), color = "seagreen") +
-  geom_point(aes(y = predicted.return, color = "Predicted Return (+/- 25% and 75% prob.)")) +
+  geom_point(aes(y = predicted_return, color = "Predicted Return (+/- 25% and 75% prob.)")) +
   geom_errorbar(
     aes(ymin = p25, ymax = p75, color = "Predicted Return (+/- 25% and 75% prob.)"),
     width = 0.2
@@ -104,52 +104,50 @@ sibreg <- ggplot(predictions, aes(x = runyear)) +
   )
 
 ###
-# NAIVE MODEL:
-predictions_naive <- read.csv("data/mez_predictions_naive.csv")
-
-predictions_naive <- full_join(all_mezdata, predictions_naive, by="runyear") %>%
-  filter(!is.na(predicted.return)) %>%
-  mutate(predicted.return = as.numeric(predicted.return),
-         p25 = as.numeric(p25),
-         p75 = as.numeric(p75)) 
-
-### Add a line showing the pre-season forecasts
-
-naive <- ggplot(predictions_naive, aes(x = runyear)) +
-  geom_col(aes(y = `Meziadin_Total Return`, fill = "Actual Return"), color = "seagreen") +
-  geom_point(aes(y = predicted.return, color = "Predicted Return (+/- 25% and 75% prob.)")) +
-  geom_errorbar(
-    aes(ymin = p25, ymax = p75, color = "Predicted Return (+/- 25% and 75% prob.)"),
-    width = 0.2
-  ) +
-  theme_minimal() +
-  labs(
-    x = "Run Year",
-    y = "Total Return to Meziadin"
-  ) +
-  scale_x_continuous(breaks = round(seq(min(predictions$runyear), max(predictions$runyear), by = 1), 1)) +
-  scale_y_continuous(labels = scales::label_comma()) +
-  scale_fill_manual(
-    values = c("Actual Return" = "seagreen"),
-    name = NULL  # Remove "fill" label
-  ) +
-  scale_color_manual(
-    values = c("Predicted Return (+/- 25% and 75% prob.)" = "black"),
-    name = NULL  # Remove "colour" label
-  ) +
-  ggtitle("Naive Model") +
-  theme(
-    axis.text.x = element_text(angle = 60, vjust = 0.5),
-    axis.text.y = element_text(angle = 60),
-    legend.position = "top" 
-  )
-
-grid.arrange(sibreg, naive, nrow = 2)
+# # NAIVE MODEL:
+# NEEDS TO BE UPDATED WITH NEW DATASET
+# predictions_naive <- read.csv("data/mez_predictions_naive.csv")
+# 
+# predictions_naive <- full_join(all_mezdata, predictions_naive, by="runyear") %>%
+#   filter(!is.na(predicted.return)) %>%
+#   mutate(predicted.return = as.numeric(predicted.return),
+#          p25 = as.numeric(p25),
+#          p75 = as.numeric(p75)) 
+# 
+# ### Add a line showing the pre-season forecasts
+# 
+# naive <- ggplot(predictions_naive, aes(x = runyear)) +
+#   geom_col(aes(y = `Meziadin_Total Return`, fill = "Actual Return"), color = "seagreen") +
+#   geom_point(aes(y = predicted.return, color = "Predicted Return (+/- 25% and 75% prob.)")) +
+#   geom_errorbar(
+#     aes(ymin = p25, ymax = p75, color = "Predicted Return (+/- 25% and 75% prob.)"),
+#     width = 0.2
+#   ) +
+#   theme_minimal() +
+#   labs(
+#     x = "Run Year",
+#     y = "Total Return to Meziadin"
+#   ) +
+#   scale_x_continuous(breaks = round(seq(min(predictions$runyear), max(predictions$runyear), by = 1), 1)) +
+#   scale_y_continuous(labels = scales::label_comma()) +
+#   scale_fill_manual(
+#     values = c("Actual Return" = "seagreen"),
+#     name = NULL  # Remove "fill" label
+#   ) +
+#   scale_color_manual(
+#     values = c("Predicted Return (+/- 25% and 75% prob.)" = "black"),
+#     name = NULL  # Remove "colour" label
+#   ) +
+#   ggtitle("Naive Model") +
+#   theme(
+#     axis.text.x = element_text(angle = 60, vjust = 0.5),
+#     axis.text.y = element_text(angle = 60),
+#     legend.position = "top" 
+#   )
+# 
+# grid.arrange(sibreg, naive, nrow = 2)
 
 # Read in Meziadin age data -----------------------------------------------
-
-# mez_age <- read_csv("data/Mez scale data - Andy.csv") %>%
-#   rename(runyear = Year)
 
 mez_age <- read_csv("data/mez_fishwheel.p.csv")
 
@@ -245,24 +243,26 @@ mez_forecastr <- mez_forecastr %>%
 
 write.csv(mez_forecastr, "~/coastland/nass-data-summaries/data/mez_forecastr.csv", row.names = FALSE)
 
+forecasts <- read_csv("data/ForecastSummary.csv")
+
 # 2024 run prediction -----------------------------------------------------
 # File for 2024 forecasting year (to compare forecast with actual 2024 run):
 
-# mez_24 <- age_mezdata_long %>%
-#   subset(select = -c(p.age3, p.age4, p.age5, p.age6, Total, 
+# mez_95 <- age_mezdata_long %>%
+#   subset(select = -c(p.age3, p.age4, p.age5, p.age6, Total,
 #                      `Meziadin_Total Return`)) %>%
 #   rename(Run_Year = runyear, Age_Class = `Age Class`, Average_Terminal_Run = tr_count) %>%
-#   filter(Run_Year != "2024") %>% 
+#   filter(Run_Year != "1995") %>%
 #   mutate(Brood_Year = Run_Year - as.numeric(Age_Class),
 #          Stock_Name = "Meziadin",
 #          Stock_Species = "Sockeye",
 #          Stock_Abundance = "Terminal Run",
-#          Forecasting_Year = "2024") %>%
+#          Forecasting_Year = "1995") %>%
 #   select(Stock_Name, Stock_Species, Stock_Abundance, Forecasting_Year, Run_Year, Brood_Year,
 #          Age_Class, Average_Terminal_Run) %>%
 #   mutate(Average_Terminal_Run = ifelse(is.na(Average_Terminal_Run), 0, Average_Terminal_Run))
 # 
-# mez_24 <- mez_24 %>%
+# mez_95 <- mez_95 %>%
 #   mutate(
 #     Stock_Name = ifelse(row_number() == 1, Stock_Name, ""),
 #     Stock_Species = ifelse(row_number() == 1, Stock_Species, ""),
@@ -271,5 +271,39 @@ write.csv(mez_forecastr, "~/coastland/nass-data-summaries/data/mez_forecastr.csv
 #   ) %>%
 #   mutate(Average_Terminal_Run = replace(Average_Terminal_Run, Average_Terminal_Run==0, 1))
 # 
-# # write csv
-# write.csv(mez_24, "~/coastland/nass-data-summaries/data/mez_24.csv", row.names = FALSE)
+# # # write csv
+# write.csv(mez_95, "~/coastland/nass-data-summaries/data/mez_annualpredictions/mez_95.csv", row.names = FALSE)
+
+
+# create dataframe containing forecastR predictions from each year --------
+csv_directory <- "data/mez_annualpredictions/"
+
+file_list <- list.files(path = csv_directory, pattern = "*.csv", full.names = TRUE)
+
+pred_allyrs <- data.frame(runyear = integer(), 
+                            predicted_return = numeric(), 
+                            p25 = numeric(), 
+                            p75 = numeric())
+
+for (file in file_list) {
+  # Extract the year from the file name (assuming year is part of the name)
+  runyear <- as.numeric(sub(".*?([0-9]{4}).*", "\\1", basename(file)))
+  
+  # Read the CSV file
+  data <- read.csv(file, row.names = 1)
+  
+  # Extract the required columns (assuming column names match "PointFC", "p25", "p75")
+  # Adjust column names or indexes if needed
+  pointFC <- data["PointFC", "Total"]
+  p25 <- data["p25", "Total"]
+  p75 <- data["p75", "Total"]
+  
+  # Add the data to the combined dataframe
+  pred_allyrs <- rbind(pred_allyrs, data.frame(runyear = runyear, 
+                                                   predicted_return = pointFC, 
+                                                   p25 = p25, 
+                                                   p75 = p75))
+}
+
+print(pred_allyrs)
+write.csv(pred_allyrs, "mez_forecasts_new.csv", row.names = FALSE)
