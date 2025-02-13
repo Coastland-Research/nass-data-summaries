@@ -13,7 +13,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-
 ```{r}
 #| include: false
 
@@ -26,19 +25,19 @@ library(gridExtra)
 library(RColorBrewer)
 ```
 
-
 ## Background
+
 This resource document shows information on salmon escapement and harvest (Canadian and total exploitation) in the Nass watershed. We display escapement for Area 3 (Nass) overall, escapement by Conservation Unit and stream, and exploitation rates for each salmon species. TRTC for steelhead trout in the Nass watershed is also presented. We are also working to forecast sockeye returns for the Meziadin system specifically, and show preliminary results from forecast models here.
 
 ## Data Sources
+
 Data on each salmon species' escapement by Conservation Unit comes from the NUSEDS database.
 
-Meziadin sockeye return and age class data comes from the Meziadin fishway counts and from [ ]
+Meziadin sockeye return and age class data comes from the Meziadin fishway counts and from \[ \]
 
-Data on TRTC, Canadian harvest, and SEAK harvest comes from [ ]
+Data on TRTC, Canadian harvest, and SEAK harvest comes from \[ \]
 
 ## Summary
-
 
 ```{r}
 #| warning: false
@@ -85,7 +84,7 @@ ggplot(esc_reshaped, aes(x = species, y = value, fill=variable)) +
 
 Map showing the Nass watershed extent (figure taken from Peter Hall's CSAS paper on Skeena / Nass )
 
-![Map](nass-map.png){width=400}
+![Map](nass-map.png){width="400"}
 
 ## Sockeye Salmon
 
@@ -141,6 +140,7 @@ ggplot(nass_TR, aes(x = runyear, y = `Nass_Total Return`)) +
 ```
 
 #### Area 3
+
 ```{r load and format data}
 #| include: false
 #| message: false
@@ -174,7 +174,8 @@ pe<-ggplot(esc.plots, aes(x = Year, y = Fish, fill = factor(Type,levels=c("Total
 pe
 ```
 
-####  Annual Sockeye Escapement by Conservation Unit
+#### Annual Sockeye Escapement by Conservation Unit
+
 ```{r load CU data}
 #| include: false
 #| message: false
@@ -209,7 +210,9 @@ for (i in 1:length(unique(area3$CU_NAME))){
 }
 
 ```
-####  Annual Sockeye Escapement by CU and Stream
+
+#### Annual Sockeye Escapement by CU and Stream
+
 ```{r plot annual escapement by CU and stream}
 #| warning: false
 #| message: false
@@ -239,7 +242,9 @@ for (i in 1:length(unique(area3$CU_NAME))){
 }
 
 ```
-####  Exploitation Rates
+
+#### Exploitation Rates
+
 ```{r sockeye er plot}
 #| warning: false
 #| message: false
@@ -351,7 +356,9 @@ ggplot(all_mezdata, aes(x = runyear, y = `Meziadin_Total Return`)) +
 ```
 
 #### Total return of Meziadin sockeye by age class, 1995-2024
+
 Data on age-3 (jack) sockeye returns were only available starting in 1995.
+
 ```{r}
 #| echo: false
 age_mezdata_long %>%
@@ -372,6 +379,7 @@ We are using *ForecastR*, an R package and Shiny app, to predict total returns o
 ForecastR uses forecasting models to predict salmon terminal run and escapement, based on data entered by the user. This data can be age-specific and include environmental or biological covariates. Multiple forecasting models can be explored, compared, and ranked using the app. Here we have started forecasting Meziadin sockeye total return using ages with no covariates, and intend to add relevant environmental and/or biological covariates to make these predictive models more informative in the future. Plots shown are using the naive model, which was found to be the best fit for ages classes .... assigns exponentially decreasing weights to past observations (i.e. more recent data points are more important for forecasting), and captures seasonal variation.
 
 #### Total Return vs Predicted Total Return by year using Sibling Regression Model
+
 ```{r}
 #| warning: false
 #| message: false
@@ -502,7 +510,6 @@ print(sibreg)
 # print(naive)
 ```
 
-
 #### Observed vs fitted return numbers using Naive model for Age Class 3
 
 Age 3 sockeye must be predicted using the naive model (forecast based on avg of the 5 previous years) because there is no younger age class to relate it to in a sibling regression.
@@ -526,7 +533,9 @@ Age 3 sockeye must be predicted using the naive model (forecast based on avg of 
 ![Variation in forecast abundance by age class](forecastplot.png)
 
 ## Chinook Salmon
+
 #### Area 3
+
 ```{r chinook esc plot}
 #| message: false
 #| echo: false
@@ -549,7 +558,8 @@ pe
 
 ```
 
-####  Annual Chinook Escapement by Conservation Unit
+#### Annual Chinook Escapement by Conservation Unit
+
 ```{r load CU data chinook}
 #| include: false
 #| message: false
@@ -584,7 +594,9 @@ for (i in 1:length(unique(area3$CU_NAME))){
 }
 
 ```
-####  Annual Chinook Escapement by CU and Stream
+
+#### Annual Chinook Escapement by CU and Stream
+
 ```{r plot chinook annual escapement by CU and stream}
 #| warning: false
 #| message: false
@@ -612,7 +624,9 @@ for (i in 1:length(unique(area3$CU_NAME))){
 }
 
 ```
-####  Exploitation Rates
+
+#### Exploitation Rates
+
 ```{r chinook er plot}
 #| warning: false
 #| message: false
@@ -634,8 +648,11 @@ per<-ggplot(er.plots, aes(x = Year, y = ER,color=Area)) +
 
 per
 ```
+
 ## Coho Salmon
-####  Area 3
+
+#### Area 3
+
 ```{r coho esc plot}
 #| message: false
 #| echo: false
@@ -657,7 +674,9 @@ pe<-ggplot(esc.plots, aes(x = Year, y = Fish, fill = factor(Type,levels=c("Total
 pe
 
 ```
-####  Annual Coho Escapement by Conservation Unit
+
+#### Annual Coho Escapement by Conservation Unit
+
 ```{r load CU data coho}
 #| include: false
 #| message: false
@@ -692,7 +711,9 @@ for (i in 1:length(unique(area3$CU_NAME))){
 }
 
 ```
-####  Annual Coho Escapement by CU and Stream
+
+#### Annual Coho Escapement by CU and Stream
+
 ```{r plot coho annual escapement by CU and stream}
 #| warning: false
 #| message: false
@@ -719,7 +740,9 @@ for (i in 1:length(unique(area3$CU_NAME))){
   print(pl)
 }
 ```
-####  Exploitation Rates
+
+#### Exploitation Rates
+
 ```{r coho er plot}
 #| warning: false
 #| message: false
@@ -741,8 +764,11 @@ per<-ggplot(er.plots, aes(x = Year, y = ER,color=Area)) +
 
 per
 ```
+
 ## Pink Salmon (even years)
-####  Area 3
+
+#### Area 3
+
 ```{r pink even esc plot}
 #| message: false
 #| echo: false
@@ -765,7 +791,8 @@ pe
 
 ```
 
-####  Even-Year Pink Escapement by Conservation Unit
+#### Even-Year Pink Escapement by Conservation Unit
+
 ```{r load CU data pink}
 #| include: false
 #| message: false
@@ -801,7 +828,9 @@ for (i in 1:length(unique(area3$CU_NAME))){
 }
 
 ```
-####  Even-Year Pink Escapement by CU and Stream
+
+#### Even-Year Pink Escapement by CU and Stream
+
 ```{r plot pink annual escapement by CU and stream}
 #| warning: false
 #| message: false
@@ -830,7 +859,9 @@ for (i in 1:length(unique(area3$CU_NAME))){
   print(pl)
 }
 ```
-####  Exploitation Rates
+
+#### Exploitation Rates
+
 ```{r pink er plot}
 #| warning: false
 #| message: false
@@ -854,7 +885,9 @@ per
 ```
 
 ## Pink Salmon (odd years)
-####  Area 3
+
+#### Area 3
+
 ```{r pink odd esc plot}
 #| message: false
 #| echo: false
@@ -877,7 +910,8 @@ pe
 
 ```
 
-####  Odd-Year Pink Escapement by Conservation Unit
+#### Odd-Year Pink Escapement by Conservation Unit
+
 ```{r load CU data pink odd}
 #| include: false
 #| message: false
@@ -912,7 +946,9 @@ for (i in 1:length(unique(area3$CU_NAME))){
 }
 
 ```
-####  Odd-Year Pink Escapement by CU and Stream
+
+#### Odd-Year Pink Escapement by CU and Stream
+
 ```{r plot pink odd annual escapement by CU and stream}
 #| warning: false
 #| message: false
@@ -940,7 +976,9 @@ for (i in 1:length(unique(area3$CU_NAME))){
   print(pl)
 }
 ```
-####  Exploitation Rates
+
+#### Exploitation Rates
+
 ```{r pink odd er plot}
 #| warning: false
 #| message: false
@@ -962,8 +1000,11 @@ per<-ggplot(er.plots, aes(x = Year, y = ER,color=Area)) +
 
 per
 ```
+
 ## Chum Salmon
-####  Area 3
+
+#### Area 3
+
 ```{r chum esc plot}
 #| message: false
 #| echo: false
@@ -986,7 +1027,8 @@ pe
 
 ```
 
-####  Annual Chum Escapement by Conservation Unit
+#### Annual Chum Escapement by Conservation Unit
+
 ```{r load CU data chum}
 #| include: false
 #| message: false
@@ -1020,7 +1062,9 @@ for (i in 1:length(unique(area3$CU_NAME))){
 }
 
 ```
-####  Annual Chum Escapement by CU and Stream
+
+#### Annual Chum Escapement by CU and Stream
+
 ```{r plot chum annual escapement by CU and stream}
 #| warning: false
 #| message: false
@@ -1047,7 +1091,9 @@ for (i in 1:length(unique(area3$CU_NAME))){
   print(pl)
 }
 ```
-####  Exploitation Rates
+
+#### Exploitation Rates
+
 ```{r chum er plot}
 #| warning: false
 #| message: false
@@ -1069,8 +1115,11 @@ per<-ggplot(er.plots, aes(x = Year, y = ER,color=Area)) +
 
 per
 ```
+
 ## Steelhead Trout
-####  Area 3
+
+#### Area 3
+
 ```{r load steelhead data}
 #| include: false
 
@@ -1099,11 +1148,11 @@ sh
 
 ```
 
-####  Conservation Units
+#### Conservation Units
 
-####  Streams
+#### Streams
 
-####  Exploitation Rates
+#### Exploitation Rates
 
 ```{r steelhead er plot}
 #| message: false
@@ -1130,6 +1179,7 @@ sh
 # per
 
 ```
+
 # References
 
 Nisga'a Lisims Government. 2023. 2023 Nass River Salmon Stock Assessment Update - Friday, 14 July. Public update from the Nisga'a Lisims Government Fisheries and Wildlife Department.
@@ -1137,4 +1187,3 @@ Nisga'a Lisims Government. 2023. 2023 Nass River Salmon Stock Assessment Update 
 Pacific Salmon Foundation. 2016. The Nass Area: Cumulative Pressures on Salmon Habitat (summary report cards), Vancouver, BC.
 
 Vélez-Espino, L.A., Parken, C.K., Clemons, E.R., Peterson, R., Ryding, K., Folkes, M., and Pestal, G. 2019. ForecastR: tools to automate procedures for forecasting of salmonid terminal run and escapement. Final Report submitted to the Southern Boundary Restoration and Enhancement Fund, Pacific Salmon Commission, Vancouver BC. 117 p.
-
